@@ -61,6 +61,3 @@ You can find the generated root html file in ```./doc/build/html/``` as ```index
 This non-local implementation of Zcash ReadtheDocs found [here](http://zcash.readthedocs.io/en/latest/index.html)
 
 The dashboard corresponding to this environment is located [here](https://readthedocs.org/projects/zcash/)
-
-
-Random line to test webhooks
