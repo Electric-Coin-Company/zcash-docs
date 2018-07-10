@@ -1,3 +1,5 @@
+:orphan:
+
 .. _zcash_mining_guide:
 
 Zcash Mining Guide

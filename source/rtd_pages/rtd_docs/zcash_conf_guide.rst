@@ -1,3 +1,5 @@
+:orphan:
+
 .. _zcash_conf_guide:
 
 Zcash.conf Guide

@@ -82,16 +82,16 @@ Versioning
 
 ZIPs are strictly versioned. The versioning scheme starts with "Draft 1", "Draft 2",
 etc., for how ever many drafts are needed. When and if the document is considered by
-its authors and the `ZIP Editor`_ to be stable, it becomes "Version 1". Any particular
+its authors and the ZIP Editor to be stable, it becomes "Version 1". Any particular
 ZIP might not reach this stage. Subsequent revisions, if any, are called "Version 2",
 etc. for how ever many revisions are needed.
 
 A ZIP also has a "Change history", separate from the document itself, giving a brief
-summary of the changes made in each version. See `Structure of the ZIPs Repository`_
+summary of the changes made in each version. See Structure of the ZIPs Repository
 for detail on how the versions are represented.
 
 The source files for a ZIP are maintained under revision control in the `ZIPs 
-Repository`_, but the revision history of that repository MAY contain intermediate 
+Repository <https://github.com/zcash/zips>`_ , but the revision history of that repository MAY contain intermediate 
 commits that do not correspond to document versions.
 
 ZIP Editors
@@ -187,10 +187,10 @@ exception that spam may be deleted without an explanation.
 Note that it is not the primary responsibility of the ZIP Editors to review
 proposals for security, correctness, or implementability.
 
-Please send all ZIP-related communications either by email to <zips@z.cash>, or by
-opening an issue on the `ZIPs issue tracker`_. However if a communication concerns
+Please send all ZIP-related communications either by email to <zips@z.cash> , or by
+opening an issue on the `ZIPs issue tracker`. However if a communication concerns
 a potential security vulnerability that could affect Zcash users, the
-`Coordinated Security Disclosure Procedure`_ SHOULD be followed.
+`Coordinated Security Disclosure Procedure' SHOULD be followed.
 
 `ZIPs issue tracker <https://github.com/zcash/zips/issues>`_
 
@@ -208,13 +208,13 @@ Withdrawal of authorship is recorded in the ZIP metadata. An author who has
 changed their name, formally or informally, can also ask for their name to be
 updated on the ZIP metadata; the result will not include their previous name
 unless they ask for it to. (As a technical caveat, the previous name may still
-be visible in previous git revisions of the `ZIPs Repository`_ that remain
+be visible in previous git revisions of the `ZIPs Repository` that remain
 publically accessible, although it may be possible to fix that by a force-push.)
 
 Relation to the Zcash Protocol Specification
 --------------------------------------------
 
-The `Zcash Protocol Specification`_ describes aspects of the
+The `Zcash Protocol Specification` describes aspects of the
 
 The canonical description of Zcash consensus and security requirements is the 
 protocol specification. It is the responsibility of the ZIP Editors and the 
@@ -341,7 +341,7 @@ The README.rst file MUST include instructions to build the PDF (including
 build dependencies for at least Debian-like systems).
 
 The typographical conventions used by a LaTeX-formatted ZIP SHOULD be
-consistent, as far as possible, with those used in the `Zcash protocol specification`_.
+consistent, as far as possible, with those used in the `Zcash protocol specification`.
 It is desirable, but not strictly necessary, that the macros used in
 the protocol specification also be used in LaTeX-formatted ZIPs. This
 facilitates editing accepted proposals into the main specification.
@@ -444,11 +444,11 @@ This document is derived heavily from Bitcoin's BIP 1, authored by Amir Taaki,
 which in turn was derived from Python's PEP-0001. In many places text was simply 
 copied and modified. The authors of PEP-0001 (Barry Warsaw, Jeremy Hylton, and 
 David Goodger) and BIP 1 (Amir Taaki) are not responsible for any use of their 
-text or ideas in the Zcash Improvement Process. The `I2P Proposal Process`_
+text or ideas in the Zcash Improvement Process. The `I2P Proposal Process`
 and the RFC Process also influenced this document.
 
 Please direct all comments to the ZIP Editors by email to <zips@z.cash> or by
-filing an issue in the `ZIPs issue tracker`_.
+filing an issue in the `ZIPs issue tracker`.
 
 
 ZIP List

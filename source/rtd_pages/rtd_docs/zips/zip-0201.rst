@@ -5,8 +5,6 @@
 ZIP 0201
 ++++++++
 
-========
-
 ::
 
   ZIP: 201
@@ -19,9 +17,9 @@ ZIP 0201
 Terminology
 ===========
 
-The key words "MUST", "MUST NOT", "SHOULD", and "MAY" in this document are to be interpreted as described in RFC 2119. [#RFC2119]_
+The key words "MUST", "MUST NOT", "SHOULD", and "MAY" in this document are to be interpreted as described in RFC 2119. [#RFC2119]
 
-The terms "branch" and "network upgrade" in this document are to be interpreted as described in ZIP 200. [#zip-0200]_
+The terms "branch" and "network upgrade" in this document are to be interpreted as described in ZIP 200. [#zip-0200]
 
 The terms below are to be interpreted as follows:
 

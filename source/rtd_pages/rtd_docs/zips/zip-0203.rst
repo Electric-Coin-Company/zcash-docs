@@ -5,8 +5,6 @@
 ZIP 0203
 ++++++++
 
-========
-
 ::
 
   ZIP: 203
@@ -75,7 +73,7 @@ For Overwinter, tx expiry will be set to a default that can be overridden by a f
 
 To view:
 listtransactions has a new filter attribute, showing expired transactions only:
-    listtransactions "*" 10 0 "expired"
+listtransactions "*" 10 0 "expired"
 
 WalletTxToJSON shows a boolean expired true/false.
 
@@ -89,7 +87,7 @@ Default will be user configurable with flag `txblockexpirydelta`.
 Deployment
 ------------
 
-This feature will be deployed with Overwinter. The activation blockheight proposal is in [#zip-0201]_.
+This feature will be deployed with Overwinter. The activation blockheight proposal is in [#zip-0201].
 
 
 Reference Implementation

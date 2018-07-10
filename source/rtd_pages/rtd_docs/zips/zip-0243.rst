@@ -5,8 +5,6 @@
 ZIP 0243
 ++++++++
 
-========
-
 ::
 
   ZIP: 243
@@ -21,11 +19,11 @@ ZIP 0243
 Terminology
 ===========
 
-The key words "MUST" and "MUST NOT" in this document are to be interpreted as described in RFC 2119. [#RFC2119]_
+The key words "MUST" and "MUST NOT" in this document are to be interpreted as described in RFC 2119. [#RFC2119]
 
-The terms "branch" and "network upgrade" in this document are to be interpreted as described in ZIP 200. [#zip-0200]_
+The terms "branch" and "network upgrade" in this document are to be interpreted as described in ZIP 200. [#zip-0200]
 
-The term "Sapling" in this document is to be interpreted as described in ZIP XXX. [#zip-0XXX]_
+The term "Sapling" in this document is to be interpreted as described in ZIP XXX. [#zip-0XXX]
 
 
 Abstract
@@ -68,25 +66,25 @@ A new transaction digest algorithm is defined::
        c. value of the output spent by this input (8-byte little endian)
        d. nSequence of the input (4-byte little endian)
 
-The new algorithm is based on the transaction digest algorithm defined in ZIP 143 [#zip-0143]_.
+The new algorithm is based on the transaction digest algorithm defined in ZIP 143 [#zip-0143].
 
-The new algorithm MUST be used for signatures created over the Sapling transaction format [#zip-0XXX]_.
+The new algorithm MUST be used for signatures created over the Sapling transaction format [#zip-0XXX].
 Combined with the new consensus rule that v3 transaction formats will be invalid from the Sapling upgrade
-[#zip-0XXX]_, this effectively means that all transaction signatures from the Sapling activation height will
-use the new algorithm [#zip-0XXX]_.
+[#zip-0XXX], this effectively means that all transaction signatures from the Sapling activation height will
+use the new algorithm [#zip-0XXX].
 
-The BLAKE2b-256 personalization field [#BLAKE2-personalization]_ is set to::
+The BLAKE2b-256 personalization field [#BLAKE2-personalization] is set to::
 
   "ZcashSigHash" || CONSENSUS_BRANCH_ID
 
 ``CONSENSUS_BRANCH_ID`` is the little-endian encoding of ``BRANCH_ID`` for the epoch of the block containing
-the transaction. [#zip-0200]_ Domain separation of the signature hash across parallel branches provides replay
+the transaction. [#zip-0200] Domain separation of the signature hash across parallel branches provides replay
 protection: transactions targeted for one branch will have invalid signatures on other branches.
 
 Transaction creators MUST specify the epoch they want their transaction to be mined in. Across a network
 upgrade, this means that if a transaction is not mined before the activation height, it will never be mined.
 
-Semantics of the original sighash types are as in ZIP 143 [#zip-0143]_.
+Semantics of the original sighash types are as in ZIP 143 [#zip-0143].
 
 Field definitions
 -----------------
@@ -274,7 +272,7 @@ TBC
 Deployment
 ==========
 
-This proposal is deployed with the Sapling network upgrade. [#zip-0XXX]_
+This proposal is deployed with the Sapling network upgrade. [#zip-0XXX]
 
 
 Backward compatibility

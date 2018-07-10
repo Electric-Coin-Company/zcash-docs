@@ -1,3 +1,5 @@
+:orphan:
+
 .. _supported_platform_policy:
 
 Supported Platform Policy

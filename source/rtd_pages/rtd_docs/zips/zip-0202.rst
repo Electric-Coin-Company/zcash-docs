@@ -5,8 +5,6 @@
 ZIP 0202
 ++++++++
 
-========
-
 ::
 
   ZIP: 202
@@ -242,7 +240,7 @@ Ultimately, a client can determine if a transaction is truly intended for the cl
 Deployment
 ==========
 
-This proposal will be deployed with the Overwinter network upgrade. The activation block height proposal is in [#zip-0201]_.
+This proposal will be deployed with the Overwinter network upgrade. The activation block height proposal is in [#zip-0201].
 
 Backwards compatibility
 =======================

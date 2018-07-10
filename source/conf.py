@@ -68,10 +68,7 @@ language = None
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path .
-exclude_patterns = ['rtd_pages/rel_notes/*.rst',
-                    'rtd_pages/bitcoin_rel_notes/*.rst',
-                    'rtd_pages/archive_git/*.rst',
-                    'rtd_pages/archive_wiki/*.rst']
+#exclude_patterns = []
 
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = 'sphinx'

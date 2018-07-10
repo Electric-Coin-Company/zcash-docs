@@ -1,3 +1,5 @@
+:orphan:
+
 .. _code_of_conduct:
 
 Contributor Code of Conduct
