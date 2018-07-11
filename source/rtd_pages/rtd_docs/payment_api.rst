@@ -9,7 +9,7 @@ Overview
 Zcash extends the Bitcoin Core API with new RPC calls to support private Zcash payments.
 
 .. important::
- 
+
    Zcash payments make use of **two** address formats:
 
    | ``taddr`` - address for transparent funds (just like a Bitcoin address, value stored in UTXOs)
@@ -39,7 +39,7 @@ RPC Calls by Category
 +++++++++++++++++++++
 
 :fa:`university` Accounting_
-    
+
 z_getbalance_ , z_gettotalbalance_
 
 :fa:`address-book` Addresses_
@@ -60,7 +60,7 @@ z_listreceivedbyaddress_ , z_listunspent_ , z_sendmany_ , z_shieldcoinbase_
 
 .. admonition:: RPC Parameter Conventions
 
-   .. list-table:: 
+   .. list-table::
 
       * - **Parameter**
         - **Definition**
@@ -71,10 +71,10 @@ z_listreceivedbyaddress_ , z_listunspent_ , z_sendmany_ , z_shieldcoinbase_
       * - address
         - *Accepts both private and transparent addresses.*
       * - amount
-        - *JSON format double-precision number with 1 ZC expressed as 1.00000000.*
+        - *JSON format double-precision number with 1 ZEC expressed as 1.00000000.*
       * - memo
-        - | *Metadata expressed in hexadecimal format.  Limited to 512 bytes, the* 
-          | *current size of the memo field of a private transaction.  Zero padding* 
+        - | *Metadata expressed in hexadecimal format.  Limited to 512 bytes, the*
+          | *current size of the memo field of a private transaction.  Zero padding*
           | *is automatic.*
 
 .. _Accounting:
@@ -89,7 +89,7 @@ Accounting
 |                      | | [minconf=1]       | | wallet. Optionally set the minimum number of confirmations a                    |
 |z_getbalance          |                     | | transaction must have in order to be included in the balance.                   |
 |                      |                     | | Use 0 to unconfirmed transactions.                                              |
-|                      |                     +-----------------------------------------------------------------------------------+ 
+|                      |                     +-----------------------------------------------------------------------------------+
 |                      |                     |``./zcash-cli z_getbalance ztKNzxa8uZ1f...``                                       |
 |                      |                     |                                                                                   |
 |                      |                     |.. code-block:: javascript                                                         |
@@ -102,7 +102,7 @@ Accounting
 |z_gettotalbalance     |                     | | or transparent transaction must have in order to be included                    |
 |                      |                     | | in the balance. Use 0 to count unconfirmed transactions.                        |
 |                      |                     |                                                                                   |
-|                      |                     +-----------------------------------------------------------------------------------+ 
+|                      |                     +-----------------------------------------------------------------------------------+
 |                      |                     |``./zcash-cli z_gettotalbalance``                                                  |
 |                      |                     |                                                                                   |
 |                      |                     |.. code-block:: javascript                                                         |
@@ -123,7 +123,7 @@ Addresses
 +----------------------+---------------------+-----------------------------------------------------------------------------------+
 |**Command**           | **Parameters**      | **Description**                                                                   |
 +----------------------+---------------------+-----------------------------------------------------------------------------------+
-|.. _z_getnewaddress:  |                     | | Return a new zaddr for sending and receiving payments. The                      | 
+|.. _z_getnewaddress:  |                     | | Return a new zaddr for sending and receiving payments. The                      |
 |                      |                     | | spending key for this zaddr will be added to the node’s wallet.                 |
 |z_getnewaddress       |                     +-----------------------------------------------------------------------------------+
 |                      |                     |``./zcash-cli z_getnewaddress``                                                    |
@@ -131,7 +131,7 @@ Addresses
 |                      |                     |.. code-block:: javascript                                                         |
 |                      |                     |                                                                                   |
 |                      |                     |   zcU1Cd6zYyZCd2VJF8yKgmzjxdiiU1rgTTjEwoN1CGUWCziPkU                              |
-|                      |                     |   TXUjXmX7TMqdMNsTfuiGN1jQoVN4kGxUR4sAPN4XZ7pxb                                   |                                                           
+|                      |                     |   TXUjXmX7TMqdMNsTfuiGN1jQoVN4kGxUR4sAPN4XZ7pxb                                   |
 |                      |                     |                                                                                   |
 +----------------------+---------------------+-----------------------------------------------------------------------------------+
 |.. _z_listaddresses:  |                     | | Returns a list of all the zaddrs in this node’s wallet for                      |
@@ -144,7 +144,7 @@ Addresses
 |                      |                     |                                                                                   |
 |                      |                     |   [                                                                               |
 |                      |                     |      "zcU1Cd6zYyZCd2VJ...",                                                       |
-|                      |                     |      "zcddV3rosTRpWqNj..."                                                        |                                                           
+|                      |                     |      "zcddV3rosTRpWqNj..."                                                        |
 |                      |                     |   ]                                                                               |
 +----------------------+---------------------+-----------------------------------------------------------------------------------+
 |.. _z_validateaddress:| zaddr               | Return information about a given zaddr                                            |
@@ -333,23 +333,23 @@ Payment
 |                            |                          |                                                                                   |
 |                            |                          | | When sending coinbase funds to a zaddr, the                                     |
 |                            |                          | | node's wallet does not allow any change. Put another way,                       |
-|                            |                          | | spending a partial amount of a coinbase utxo is not allowed.                    | 
+|                            |                          | | spending a partial amount of a coinbase utxo is not allowed.                    |
 |                            |                          | | This is not a consensus rule but a local wallet rule due to                     |
 |                            |                          | | the current implementation of z_sendmany. In future, this                       |
 |                            |                          | | may be removed.                                                                 |
 |                            |                          |                                                                                   |
 |                            |                          +-----------------------------------------------------------------------------------+
-|                            |                          || ``./zcash-cli z_sendmany ztKNzxa8u...``                                          | 
+|                            |                          || ``./zcash-cli z_sendmany ztKNzxa8u...``                                          |
 |                            |                          || ``'[{"address": "ztWcr4...", "amount": 0.001},``                                 |
 |                            |                          || ``{"address": "ztXGs...", "amount": 0.002}]'``                                   |
 |                            |                          |                                                                                   |
 |                            |                          |.. code-block:: javascript                                                         |
 |                            |                          |                                                                                   |
-|                            |                          |   opid-58a078dc-a5d8-48de-bf8b-3d1...                                             |                                                                                   
-|                            |                          |                                                                                   |  
+|                            |                          |   opid-58a078dc-a5d8-48de-bf8b-3d1...                                             |
+|                            |                          |                                                                                   |
 |                            |                          || Optionally set the minimum number of confirmations which a                       |
 |                            |                          || private or transparent transaction must have in order to be                      |
-|                            |                          || used as an input. When sending from a zaddr, minconf must                        | 
+|                            |                          || used as an input. When sending from a zaddr, minconf must                        |
 |                            |                          || must be greater than zero. Optionally set a transaction fee,                     |
 |                            |                          || which by default is 0.0001 ZEC. Any transparent change will                      |
 |                            |                          || be sent to a new transparent address. Any private change will                    |
@@ -383,7 +383,7 @@ Payment
 |                            |                          |.. code-block:: javascript                                                         |
 |                            |                          |                                                                                   |
 |                            |                          |   {                                                                               |
-|                            |                          |    "remainingUTXOs": 0,                                                           |       
+|                            |                          |    "remainingUTXOs": 0,                                                           |
 |                            |                          |    "remainingValue": 0.00000000,                                                  |
 |                            |                          |    "shieldingUTXOs": 1,                                                           |
 |                            |                          |    "shieldingValue": 10.00000000,                                                 |
@@ -429,7 +429,7 @@ Asynchronous calls return an OperationStatus object which is a JSON object with 
 .. important::
    Depending on the type of asynchronous call, there may be other key-value pairs.  For example, a ``z_sendmany``
    operation will also include the following in an OperationStatus object:
-   
+
     | **method** : name of operation ( e.g. ``z_sendmany``)
     | **params** : an object containing the parameters to ``z_sendmany``
 
@@ -484,7 +484,7 @@ It is currently not possible to cancel operations.
 |.. _z_getoperationstatus:| [operationids]      | | Return OperationStatus JSON objects for all operations                           |
 |                         |                     | | the node is currently aware of. Operationids is an optional                      |
 |z_getoperationstatus     |                     | | array to filter which operations you want to receive status                      |
-|                         |                     | | objects for. Output is a list of operation status objects.                       |                                                                    
+|                         |                     | | objects for. Output is a list of operation status objects.                       |
 |                         |                     |                                                                                    |
 |                         |                     +------------------------------------------------------------------------------------+
 |                         |                     |``./zcash-cli z_getoperationstatus``                                                |
@@ -530,12 +530,12 @@ It is currently not possible to cancel operations.
 |                         |                     |                                                                                    |
 |                         |                     |.. code-block:: javascript                                                          |
 |                         |                     |                                                                                    |
-|                         |                     |   [                                                                                |                                        
+|                         |                     |   [                                                                                |
 |                         |                     |    "opid-58a078dc-a5d8-48de-bf8b-3d1f71...",                                       |
 |                         |                     |    "opid-59a078dc-a5d8-48de-bf8b-3d1f71...",                                       |
 |                         |                     |    "opid-58a078dc-a5d8-48de-bf8b-3d1f71..."                                        |
 |                         |                     |   ]                                                                                |
-|                         |                     |                                                                                    | 
+|                         |                     |                                                                                    |
 +-------------------------+---------------------+------------------------------------------------------------------------------------+
 
 Asynchronous RPC Call Error Codes
@@ -549,17 +549,17 @@ Zcash error codes are defined in :fa:`github` `rpcprotocol.h <https://github.com
    * - **Value**
      - **Meaning**
    * - ``-8``
-     - RPC_INVALID_PARAMETER_ 
+     - RPC_INVALID_PARAMETER_
    * - ``-5``
      - RPC_INVALID_ADDRESS_OR_KEY_
    * - ``-4``
-     - RPC_WALLET_ERROR_ 
+     - RPC_WALLET_ERROR_
    * - ``-6``
-     - RPC_WALLET_INSUFFICIENT_FUNDS_  
-   * - ``-16`` 
-     - RPC_WALLET_ENCRYPTION_FAILED_ 
-   * - ``-12`` 
-     - RPC_WALLET_KEYPOOL_RAN_OUT_ 
+     - RPC_WALLET_INSUFFICIENT_FUNDS_
+   * - ``-16``
+     - RPC_WALLET_ENCRYPTION_FAILED_
+   * - ``-12``
+     - RPC_WALLET_KEYPOOL_RAN_OUT_
 
 RPC_INVALID_PARAMETER
 +++++++++++++++++++++
@@ -569,7 +569,7 @@ RPC_INVALID_PARAMETER
    * - ``RPC_INVALID_PARAMETER``
      - **Invalid, missing or duplicate parameter**
    * - Minconf cannot be zero when sending from zaddr
-     - | *Cannot accept minimum confirmation value of* 
+     - | *Cannot accept minimum confirmation value of*
        | *zero when sending from zaddr*
    * - Minconf cannot be negative
      - | Cannot accept negative minimum confirmation
@@ -583,18 +583,18 @@ RPC_INVALID_PARAMETER
    * - No recipients
      - Missing recipient addresses.
    * - Memo must be in hexadecimal format
-     - | Encrypted memo field data must be in hexadecimal 
+     - | Encrypted memo field data must be in hexadecimal
        | format.
-   * - Memo size of __ is too big, maximum allowed is __ 
-     - | Encrypted memo field data exceeds maximum size  
+   * - Memo size of __ is too big, maximum allowed is __
+     - | Encrypted memo field data exceeds maximum size
        | of 512 bytes.
-   * - | From address does not belong to this node, zaddr 
+   * - | From address does not belong to this node, zaddr
        | spending key not found.
      - Sender address spending key not found.
-   * - Invalid parameter, expected object 
+   * - Invalid parameter, expected object
      - Expected object.
    * - Invalid parameter, unknown key: __
-     - Unknown key. 
+     - Unknown key.
    * - Invalid parameter, expected valid size
      - Invalid size.
    * - Invalid parameter, expected hex txid
@@ -615,12 +615,12 @@ RPC_INVALID_PARAMETER
      - Invalid or negative amount.
    * - Invalid parameter, too many zaddr outputs
      - z_address outputs exceed maximum allowed.
-   * - | Invalid parameter, expected memo data in  
+   * - | Invalid parameter, expected memo data in
        | hexadecimal format
      - Encrypted memo field is not in hexadecimal format.
-   * - | Invalid parameter, size of memo is larger than 
-       | maximum allowed __ 
-     - | Encrypted memo field data exceeds maximum size 
+   * - | Invalid parameter, size of memo is larger than
+       | maximum allowed __
+     - | Encrypted memo field data exceeds maximum size
        | of 512 bytes.
 
 
@@ -635,37 +635,37 @@ RPC_INVALID_ADDRESS_OR_KEY
     - z_address spending key not found.
   * - Invalid output address, not a valid taddr.
     - Transparent output address is invalid.
-  * - Invalid from address, should be a taddr or zaddr. 
+  * - Invalid from address, should be a taddr or zaddr.
     - Sender address is invalid.
-  * - | From address does not belong to this node, zaddr 
+  * - | From address does not belong to this node, zaddr
       | spending key not found.
     - Sender address spending key not found.
 
 
 RPC_WALLET_INSUFFICIENT_FUNDS
-+++++++++++++++++++++++++++++ 
++++++++++++++++++++++++++++++
 
 .. list-table::
 
   * - ``RPC_WALLET_INSUFFICIENT_FUNDS``
     - **Not enough funds in wallet or account**
-  * - | Insufficient funds, no UTXOs found for taddr from 
+  * - | Insufficient funds, no UTXOs found for taddr from
       | address.
     - Insufficient funds for sending address.
-  * - | Could not find any non-coinbase UTXOs to spend. 
-      | Coinbase UTXOs can only be sent to a single zaddr 
+  * - | Could not find any non-coinbase UTXOs to spend.
+      | Coinbase UTXOs can only be sent to a single zaddr
       | recipient.
     - Must send Coinbase UTXO to a single z_address.
   * - Could not find any non-coinbase UTXOs to spend.
     - No available non-coinbase UTXOs.
   * - | Insufficient funds, no unspent notes found for zaddr
       | from address.
-    - Insufficient funds for sending address. 
-  * - | Insufficient transparent funds, have __, need __ 
+    - Insufficient funds for sending address.
+  * - | Insufficient transparent funds, have __, need __
       | plus fee __
     - Insufficient funds from transparent address.
-  * - | Insufficient protected funds, have __, need __ 
-      | plus fee __ 
+  * - | Insufficient protected funds, have __, need __
+      | plus fee __
     - Insufficient funds from shielded address.
 
 RPC_WALLET_ERROR
@@ -677,14 +677,14 @@ RPC_WALLET_ERROR
     - **Unspecified problem with wallet**
   * - Could not find previous JoinSplit anchor
     - Try restarting node with `-reindex`.
-  * - | Error decrypting output note of previous 
+  * - | Error decrypting output note of previous
       | JoinSplit: __
-    - 
+    -
   * - Could not find witness for note commitment
     - Try restarting node with `-rescan`.
   * - Witness for note commitment is null
     - Missing witness for note commitment.
-  * - | Witness for spendable note does not have same 
+  * - | Witness for spendable note does not have same
       | anchor as change input
     - Invalid anchor for spendable note witness.
   * - Not enough funds to pay miners fee
@@ -693,9 +693,9 @@ RPC_WALLET_ERROR
     -  Raw transaction data is null.
   * - Missing hex data for signed transaction
     - Hex value for signed transaction is null.
-  * - | Send raw transaction did not return an error 
+  * - | Send raw transaction did not return an error
       | or a txid.
-    - 
+    -
 
 RPC_WALLET_ENCRYPTION_FAILED
 ++++++++++++++++++++++++++++
@@ -704,8 +704,8 @@ RPC_WALLET_ENCRYPTION_FAILED
 
   * - ``RPC_WALLET_ENCRYPTION_FAILED``
     - **Failed to encrypt the wallet**
-  * - Failed to sign transaction     
-    - | Transaction was not signed, sign transaction 
+  * - Failed to sign transaction
+    - | Transaction was not signed, sign transaction
       | and retry.
 
 RPC_WALLET_KEYPOOL_RAN_OUT
@@ -715,6 +715,6 @@ RPC_WALLET_KEYPOOL_RAN_OUT
 
   * - ``RPC_WALLET_KEYPOOL_RAN_OUT``
     - **Keypool ran out, call keypoolrefill first**
-  * - | Could not generate a taddr to use as a change 
+  * - | Could not generate a taddr to use as a change
       | address
     - Call keypoolrefill and retry.
