@@ -213,7 +213,7 @@ Key Management
 |                       |                        |    | Please ensure you have specified the                                         |
 |                       |                        |    | directory to export to in zcash.conf                                         |
 |                       |                        |                                                                                   |
-|                       |                        |    .. code-block:: bash                                                           |
+|                       |                        |    .. code-block:: javascript                                                     |
 |                       |                        |                                                                                   |
 |                       |                        |       exportdir=/home/user1/zcash                                                 |
 |                       |                        |                                                                                   |
