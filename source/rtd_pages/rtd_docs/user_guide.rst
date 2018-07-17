@@ -376,7 +376,8 @@ First, you want to obtain Zcash. You can purchase them from an exchange, from ot
 Generating a t-addr
 +++++++++++++++++++
 
-Let's generate a t-addr first.
+Let's generate a t-addr first. If you are running zcashd for the first time, you 
+can issue ``zcash-cli getaddressesbyaccount ""`` to view existing addresses. 
 
 .. code-block:: bash
 
