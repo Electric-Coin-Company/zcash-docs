@@ -15,7 +15,7 @@ System Requirements
     | :fa:`linux` 64-bit Linux (easiest with a Debian-based distribution)
     | :fa:`th-list` A compiler for C++11 if building from source. Gcc 6.x and above has full C++11 support, and gcc 4.8 and above supports some but not all features. Zcash will not compile with versions of gcc lower than 4.8.
     | :fa:`database` At least 4GB of RAM to generate shielded transactions.
-    | :fa:`database` At least 8GB of RAM to successfully run all of of the tests.
+    | :fa:`database` At least 8GB of RAM to successfully run all of the tests.
 
 Zcash runs on port numbers that are 100 less than the corresponding Bitcoin port number. They are:
 
@@ -51,10 +51,10 @@ Check your compiler version and ensure that it support C++11. If you're using a 
 
 If you are developing on different branches of Zcash, there may be an issue with different versions of linked libraries. Try ``make clean`` and build again.
 
-Running Zcashd
+Running zcashd
 --------------
 
-| Trying to start Zcashd for the first time, it fails with:
+| Trying to start zcashd for the first time, it fails with:
 
 .. code-block:: bash
 
@@ -62,7 +62,7 @@ Running Zcashd
 
 You didn't fetch the parameters necessary for zk-SNARK proofs. If you installed the Debian package, run `zcash-fetch-params`. If you built from source, run `./zcutil/fetch-params.sh`.
 
-Zcashd crashes with the message:
+zcashd crashes with the message:
 
 .. code-block:: bash
    

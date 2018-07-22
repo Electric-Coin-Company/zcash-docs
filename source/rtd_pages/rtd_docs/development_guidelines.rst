@@ -21,7 +21,7 @@ and a few other distinct features.
 Testing
 -------
 
-Add unit tests for zcash under ``./src/gtest``. 
+Add unit tests for Zcash under ``./src/gtest``. 
 
 To list all tests, run ``./src/zcash-gtest --gtest_list_tests``.
 
@@ -55,7 +55,7 @@ If you're on our team, you can do ``@zkbot <command>`` to tell zkbot to do thing
 
 * ``r+ [commithash]`` this will test the merge and then actually commit the merge into the repo if the tests succeed.
 * ``try`` this will test the merge and nothing else.
-* ``rollup`` this is like ``r+`` but for insignificant changes. Use this when we want to test a bunch of merges at once to save buildbot time.
+* ``rollup`` this is like ``r+`` but for insignificant changes. Use this when we want to test a bunch of merges at once to save Buildbot time.
 
 More instructions are found here: http://ci.z.cash:12477/
 

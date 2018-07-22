@@ -30,7 +30,7 @@ confidentiality of transaction metadata. For more technical details, please chec
     :fa:`file-code-o` Deprecation Policy 
       A release is considered deprecated 16 weeks after the release day. 
       There is an automatic deprecation shutdown feature which will halt the 
-      node some time after this 16 week time period. The automatic feature 
+      node sometime after this 16 week time period. The automatic feature 
       is based on block height and can be explicitly disabled.
 
 .. _start:
@@ -63,7 +63,7 @@ Answers to common questions from our users can be found in the `FAQ <https://z.c
       Software and Protocol Development
 
     :fa:`handshake-o` `Community-Collaboration <https://chat.zcashcommunity.com/channel/community-collaboration>`_ 
-      Other open source development related to zcash
+      Other open source development related to Zcash
 
     :fa:`users` `The-Zcash-Foundation <https://chat.zcashcommunity.com/channel/the-zcash-foundation>`_ 
       A room to define and develop the `Zcash Foundation <https://z.cash.foundation>`_ An organization to steward the community, protocol, and science around Zcash.

@@ -131,7 +131,7 @@ Controlling a running Zcash/zcashd process
 |                         |                                                                                                          |
 |                         |    rpcpassword=YourSuperGreatPasswordNumber_DO_NOT_USE_THIS                                              |
 +-------------------------+----------------------------------------------------------------------------------------------------------+
-| rpcclienttimeout        | | How many seconds zcash will wait for a complete RPC HTTP request.                                      |
+| rpcclienttimeout        | | How many seconds Zcash will wait for a complete RPC HTTP request.                                      |
 |                         | | after the HTTP connection is established.                                                              |
 |                         |                                                                                                          |
 |                         | .. code-block:: bash                                                                                     |
@@ -199,19 +199,19 @@ Miscellaneous Options
 +-------------------------+----------------------------------------------------------------------------------------------------------+
 |**Parameter**            | **Description & Example**                                                                                |
 +-------------------------+----------------------------------------------------------------------------------------------------------+
-| gen                     | Enable attempt to mine zcash.                                                                            |
+| gen                     | Enable attempt to mine Zcash.                                                                            |
 |                         |                                                                                                          |
 |                         | .. code-block:: bash                                                                                     |
 |                         |                                                                                                          |
 |                         |    gen=0                                                                                                 |
 +-------------------------+----------------------------------------------------------------------------------------------------------+
-| genproclimit            | Set the number of threads to be used for mining zcash (-1 = all cores).                                  |
+| genproclimit            | Set the number of threads to be used for mining Zcash (-1 = all cores).                                  |
 |                         |                                                                                                          |
 |                         | .. code-block:: bash                                                                                     |
 |                         |                                                                                                          |
 |                         |    genproclimit=1                                                                                        |
 +-------------------------+----------------------------------------------------------------------------------------------------------+
-| equihashsolver          | | Specify a different Equihash solver (e.g. "tromp") to try to mine zcash                                |
+| equihashsolver          | | Specify a different Equihash solver (e.g. "tromp") to try to mine Zcash                                |
 |                         | | faster when gen=1.                                                                                     |
 |                         |                                                                                                          |
 |                         | .. code-block:: bash                                                                                     |
@@ -225,7 +225,7 @@ Miscellaneous Options
 |                         |                                                                                                          |
 |                         |    keypool=100                                                                                           |
 +-------------------------+----------------------------------------------------------------------------------------------------------+
-| paytxfee                | | Pay an optional transaction fee every time you send zcash.  Transactions with fees                     |
+| paytxfee                | | Pay an optional transaction fee every time you send Zcash. Transactions with fees                      |
 |                         | | are more likely than free transactions to be included in generated blocks, so may                      |
 |                         | | be validated sooner. This setting does not affect private transactions created with                    |
 |                         | | ``z_sendmany``                                                                                         |
