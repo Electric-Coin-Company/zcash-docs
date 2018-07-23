@@ -35,12 +35,12 @@ the data directory which is ``~/.zcash/`` unless it's been overridden with ``dat
 
 ``exportdir=path/to/chosen/export/directory``
 
-You may chose any directory within the home directory as the location for export & backup files. If the directory 
+You may choose any directory within the home directory as the location for export & backup files. If the directory 
 doesn't exist, it will be created.
 
 .. note::
 
-   Zcashd will need to be stopped and restarted for edits in the config file to take effect. 
+   zcashd will need to be stopped and restarted for edits in the config file to take effect. 
 
 Using ``backupwallet``
 ++++++++++++++++++++++

@@ -23,7 +23,7 @@ Welcome! This guide is intended to get you running on the official Zcash network
 	| :fa:`hdd-o` ``10GB`` of free Disk (*the size of the block chain increases over time*)
 
 
-.. note:: Currently we only officially support Linux (Debian), but we are actively investigating development for other operating systems and platforms(e.g. OSX, Ubuntu, Windows, Fedora). 
+.. note:: Currently we only officially support Linux (Debian), but we are actively investigating development for other operating systems and platforms(e.g. macOS, Ubuntu, Windows, Fedora). 
 
 
 Please let us know if you run into snags. We plan to make it less memory/CPU intensive and support more architectures and operating systems in the future.
@@ -33,7 +33,7 @@ If you are installing Zcash for the first time, please skip to the :ref:`Install
 Upgrading?
 ----------
 
-If you're on a Debian-based distribution, you can follow the :ref:`install-debian-bin-packages-guide` to install zcash on your system. Otherwise, you can update your local snapshot of our code:
+If you're on a Debian-based distribution, you can follow the :ref:`install-debian-bin-packages-guide` to install Zcash on your system. Otherwise, you can update your local snapshot of our code:
 
 .. code-block:: bash
 
@@ -300,7 +300,7 @@ To run it in the background (without the node metrics screen that is normally di
 
     [Press Ctrl+C to exit] [Set 'showmetrics=0' to hide]
     
-   Notice ``319430``, in the above output, after the ``Block height`` field, this means your Zcashd is fully sync.
+   Notice ``319430``, in the above output, after the ``Block height`` field, this means your zcashd is fully synced.
    Alternatively, if you were *NOT* fully synced your output would look similar to below:
 
    .. code-block:: console
@@ -475,7 +475,7 @@ As Zcash is an extension of bitcoin, zcash-cli supports all commands that are pa
 
 For a full list of new commands that are not part of bitcoin API (mostly addressing operations on z-addrs) see :ref:`payment_api`
 
-To list all zcash commands:
+To list all Zcash commands:
 
 .. code-block:: bash
     
