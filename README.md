@@ -24,12 +24,18 @@ pip install sphinx_rtd_theme sphinx sphinx-autobuild sphinx_fontawesome
 
 ### macOS
 
-Verify version of OS:
+If you are using `brew`, please issue the following:
+
+```bash
+brew install python3
+pip3 install sphinx_rtd_theme sphinx sphinx-autobuild sphinx_fontawesome
+```
+
+If you are not using `brew`, please verify version of OS:
 
 ```bash
 sw_vers -productVersion
 ```
-
 Using this version download the according pacakge, or follow the install from source insturctions here:
 
 https://www.macports.org/install.php
