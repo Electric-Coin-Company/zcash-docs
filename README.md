@@ -3,59 +3,95 @@
 
 
 This repo contains material, code, and resources for Zcash ReadtheDocs environment. It is intended as a staging area for existing
-documentation to be updated during the ReadtheDocs migration. Additionally, it provides a local and non-local development environment using [Sphinx](http://www.sphinx-doc.org/en/master/)
-and [ReadtheDocs](https://readthedocs.org/).
+documentation to be updated during the ReadtheDocs migration. Additionally, it provides a local and non-local development environment using [Sphinx](http://www.sphinx-doc.org/en/master/), 
+[ReadtheDocs](https://readthedocs.org/), and [Python3+](https://www.python.org/)
 
 ## Installation
-If you are using Ubuntu 16.04, please install the required packages below:
+Below you will find setup instructions for a few common platforms. Please follow the procedure specific to your respective platform.
+
+### Linux
+Install PIP:
 
 ```bash
 sudo apt-get install python-pip
+```
+
+Get required packages for ReadtheDocs build:
+
+```bash
 pip install sphinx_rtd_theme sphinx sphinx-autobuild sphinx_fontawesome
 ```
+
+### macOS
+
+Verify version of OS:
+
+```bash
+sw_vers -productVersion
+```
+
+Using this version download the according pacakge, or follow the install from source insturctions here:
+
+https://www.macports.org/install.php
+
+Once you have succefully installed macports, configure sphinx using the below commands:
+
+```bash
+sudo port install py36-sphinx
+sudo port select --set python python36
+sudo port select --set sphinx py36-sphinx
+```
+
+### Windows
+Install PIP:
+
+```bash
+easy_install pip
+```
+
+Get required packages for ReadtheDocs build:
+
+```bash
+pip install sphinx_rtd_theme sphinx sphinx-autobuild sphinx_fontawesome
+```
+
+If you are unable to build the above packages, please compile them from source:
+
+[sphinx_rtd_theme] (https://github.com/rtfd/sphinx_rtd_theme)
+
+[sphinx_fontawesome] (https://github.com/fraoustin/sphinx_fontawesome)
 
 ## Setup
 To use the Zcash ReadtheDocs development environment, please issue the following command:
 
 ```bash
-git clone ssh://git@github.com/mdr0id/zcash.git
-git checkout zc_readthedocs
-cd ./zcash/doc
+git clone https://gitlab.com/mdr0id/test-rtd-docs.git
+cd test-rtd-docs
 ```
 
 Here you will notice some important directories and files:
-
-:file_folder: bitcoin-release-notes
-
-:file_folder: build
-
-:page_facing_up: Doxyfile
 
 :page_facing_up: make.bat
 
 :page_facing_up: Makefile
 
-:file_folder: man
-
-:file_folder: release-notes
-
 :file_folder: source
 
 ### Local Development
 There are several options to create targets from the ReadtheDocs development environment. The core functionality 
-is maintained in the below files, located in ```./doc/source/``` :
+is maintained in the below files, located in ```./source/``` :
 
 :page_facing_up: conf.py   (configuration file used to support local/non-local environment)
 
 :page_facing_up: index.rst (root page for ReadtheDocs to generate sibling documents)
 
 #### Build
-If you are current in the ```doc``` dir issue the following command to generate a local html instance of ReadtheDocs:
+If you are current in the project root directory issue the following command to generate a local html instance of ReadtheDocs:
 
 ```bash
 make html
 ```
-You can find the generated root html file in ```./doc/build/html/``` as ```index.html```
+You can find the generated root html file in ```./build/html/``` as ```index.html```
 
 ### Non-Local Development
 This non-local implementation of Zcash ReadtheDocs found [here](http://zcash.readthedocs.io/en/latest/index.html)
