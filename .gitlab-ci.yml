@@ -5,7 +5,7 @@ stages:
   - cleanup
 
 before_script:
-  - apt-get git
+  - apk add git
   
 build_job:
   image: python:3.6-alpine
