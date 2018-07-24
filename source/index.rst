@@ -11,7 +11,7 @@ Zcash Documentation
 What is Zcash?
 --------------
 
-`Zcash <https://z.cash/>`_ is an implementation of the "Zerocash" protocol.
+`Zcash <https://z.cash/>`__ is an implementation of the "Zerocash" protocol.
 Based on Bitcoin's code, it intends to offer a far higher standard of privacy
 through a sophisticated zero-knowledge proving scheme that preserves
 confidentiality of transaction metadata. For more technical details, please check out our `Protocol Specification <https://github.com/zcash/zips/raw/master/protocol/protocol.pdf>`_.

@@ -209,11 +209,12 @@ Key Management
 |                       |                        | | existing file with that name will be overwritten. No                            |
 |                       |                        | | value is returned but a JSON-RPC error will be reported                         |
 |                       |                        | | if a failure occurred.                                                          |
+|                       |                        |                                                                                   |
 |                       |                        | .. note::                                                                         |
 |                       |                        |    | Please ensure you have specified the                                         |
 |                       |                        |    | directory to export to in zcash.conf                                         |
 |                       |                        |                                                                                   |
-|                       |                        |    .. code-block:: javascript                                                     |
+|                       |                        |    .. code-block:: bash                                                           |
 |                       |                        |                                                                                   |
 |                       |                        |       exportdir=/home/user1/zcash                                                 |
 |                       |                        |                                                                                   |

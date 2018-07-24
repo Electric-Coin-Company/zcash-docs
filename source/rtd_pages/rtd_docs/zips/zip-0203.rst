@@ -87,7 +87,7 @@ Default will be user configurable with flag `txblockexpirydelta`.
 Deployment
 ------------
 
-This feature will be deployed with Overwinter. The activation blockheight proposal is in [#zip-0201].
+This feature will be deployed with Overwinter. The activation blockheight proposal is in [#zip-0201]_ .
 
 
 Reference Implementation

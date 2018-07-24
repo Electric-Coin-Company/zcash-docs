@@ -167,7 +167,7 @@ any of the following reasons:
      - it violates any specific "MUST" or "MUST NOT" rule in this document
    * - ``0018``
      - | the expressed political views of an author of the document are inimical
-       | to the `Zcash Code of Conduct`_ (except in the case of an update removing
+       | to the :ref:`code_of_conduct` (except in the case of an update removing
        | that author)
    * - ``0019``
      - it is not authorized by the stated ZIP Authors
@@ -187,10 +187,10 @@ exception that spam may be deleted without an explanation.
 Note that it is not the primary responsibility of the ZIP Editors to review
 proposals for security, correctness, or implementability.
 
-Please send all ZIP-related communications either by email to <zips@z.cash> , or by
-opening an issue on the `ZIPs issue tracker`. However if a communication concerns
-a potential security vulnerability that could affect Zcash users, the
-`Coordinated Security Disclosure Procedure' SHOULD be followed.
+Please send all ZIP related communications either by email to `<zips@z.cash>` , or by
+opening an issue on the `ZIPs issue tracker <https://github.com/zcash/zcash/issues>`__ . 
+However if a communication concerns a potential security vulnerability that could 
+affect Zcash users, the `Coordinated Security Disclosure Procedure` SHOULD be followed.
 
 `ZIPs issue tracker <https://github.com/zcash/zips/issues>`_
 
