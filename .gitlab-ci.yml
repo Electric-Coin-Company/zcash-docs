@@ -1,0 +1,17 @@
+stages:
+  - build
+  - test
+  - deploy
+  - cleanup
+  
+build_job:
+  image: python:3.6-alpine
+  stage: build
+  script: 
+  - pip install sphinx
+  - pip install sphinx_rtd_theme
+  - pip install sphinx-autobuild 
+  - pip install sphinx_fontawesome
+  - git clone https://gitlab.com/mdr0id/test-rtd-docs.git
+  - cd test-rtd-docs/
+  - make html
