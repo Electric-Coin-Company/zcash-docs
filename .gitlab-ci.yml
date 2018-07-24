@@ -3,6 +3,9 @@ stages:
   - test
   - deploy
   - cleanup
+
+before_script:
+  - apt-get git
   
 build_job:
   image: python:3.6-alpine
