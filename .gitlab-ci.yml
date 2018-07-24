@@ -5,7 +5,7 @@ stages:
   - cleanup
 
 before_script:
-  - apk add git
+  - apk add git make
   
 build_job:
   image: python:3.6-alpine
