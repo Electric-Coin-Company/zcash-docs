@@ -28,6 +28,7 @@ pages:
   image: python:3.6-alpine
   stage: stage_site
   script:
+  - pwd
   - cd test-rtd-docs/
   - make html
   - mv build/html public
