@@ -29,6 +29,7 @@ pages:
   stage: stage_site
   script:
   - make html
+  - mv build/html
   artifacts:
         paths:
         - public
