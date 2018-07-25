@@ -16,9 +16,7 @@ build_job:
   - git clone https://gitlab.com/mdr0id/test-rtd-docs.git
   - cd test-rtd-docs/
   - make html
-  artifacts:
-        paths:
-        - public
+
 
   
 .test_job:
@@ -32,8 +30,7 @@ pages:
   image: python:3.6-alpine
   stage: stage_site
   script:
-  - ls
-  - mv build/html public
+  - make html
   artifacts:
         paths:
         - public
