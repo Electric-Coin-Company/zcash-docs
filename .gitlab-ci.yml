@@ -24,7 +24,7 @@ test_job:
   - print "test_job not implemented"
   allow_failure: true
   
-stage_site_job:
+pages:
   image: python:3.6-alpine
   stage: stage_site
   script:
