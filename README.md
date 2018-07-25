@@ -31,12 +31,12 @@ brew install python3
 pip3 install sphinx_rtd_theme sphinx sphinx-autobuild sphinx_fontawesome
 ```
 
-If you are not using `brew`, please verify version of OS:
+If you are **not** using `brew`, please verify version of OS:
 
 ```bash
 sw_vers -productVersion
 ```
-Using this version download the according pacakge, or follow the install from source insturctions here:
+Using the version output from ``sw_vers -productVersion``, download the according package or follow the install from source instructions here:
 
 https://www.macports.org/install.php
 
@@ -52,13 +52,13 @@ sudo port select --set sphinx py36-sphinx
 Install PIP:
 
 ```bash
-easy_install pip
+easy_install pip3
 ```
 
 Get required packages for ReadtheDocs build:
 
 ```bash
-pip install sphinx_rtd_theme sphinx sphinx-autobuild sphinx_fontawesome
+pip3 install sphinx_rtd_theme sphinx sphinx-autobuild sphinx_fontawesome
 ```
 
 If you are unable to build the above packages, please compile them from source:
