@@ -1,6 +1,7 @@
 stages:
   - build
   - test
+  - stage_site
   - deploy
   - cleanup
 
@@ -10,11 +11,38 @@ before_script:
 build_job:
   image: python:3.6-alpine
   stage: build
-  script: 
-  - pip install sphinx
-  - pip install sphinx_rtd_theme
-  - pip install sphinx-autobuild 
-  - pip install sphinx_fontawesome
+  script:
+  - pip install sphinx sphinx_rtd_theme sphinx-autobuild sphinx_fontawesome
   - git clone https://gitlab.com/mdr0id/test-rtd-docs.git
   - cd test-rtd-docs/
   - make html
+  
+test_job:
+  image: python:3.6-alpine
+  stage: test
+  script: 
+  - print "test_job not implemented"
+  
+stage_site_job:
+  image: python:3.6-alpine
+  stage: stage_site
+  script:
+  - sphinx-build -d _build/doctrees . _build/html
+  - mv _build/html test
+  artifacts:
+        paths:
+        - test
+  only:
+  - master
+  
+deploy_job:
+  image: python:3.6-alpine
+  stage: test
+  script: 
+  - print "deploy_job not implemented"
+
+cleanup_job:
+  image: python:3.6-alpine
+  stage: test
+  script: 
+  - print "cleanup_job not implemented"
