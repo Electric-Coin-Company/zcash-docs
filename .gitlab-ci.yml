@@ -32,7 +32,7 @@ stage_site_job:
   - git clone https://gitlab.com/mdr0id/test-rtd-docs.git
   - cd test-rtd-docs/
   - make html
-  - mv _build/html public
+  - mv build/html public
   artifacts:
         paths:
         - public
