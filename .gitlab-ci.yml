@@ -17,7 +17,7 @@ build_job:
   - cd test-rtd-docs/
   - make html
   
-test_job:
+.test_job:
   image: python:3.6-alpine
   stage: test
   script: 
@@ -28,9 +28,6 @@ pages:
   image: python:3.6-alpine
   stage: stage_site
   script:
-  - pwd
-  - cd test-rtd-docs/
-  - make html
   - mv build/html public
   artifacts:
         paths:
@@ -38,14 +35,14 @@ pages:
   only:
   - master
   
-deploy_job:
+.deploy_job:
   image: python:3.6-alpine
   stage: deploy
   script: 
   - print "deploy_job not implemented"
   allow_failure: true
 
-cleanup_job:
+.cleanup_job:
   image: python:3.6-alpine
   stage: cleanup
   script: 
