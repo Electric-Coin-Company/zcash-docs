@@ -1,3 +1,14 @@
+ # /************************************************************************
+ #  File: .gitlab-ci.yml
+ #  Author: mdr0id
+ #  Date: 7/25/2018
+ #  Description:  Used to setup runners/jobs for RTD
+ #  Usage: Commit source and the pipeline will trigger the according jobs
+ #
+ #  Known bugs/missing features:
+ #
+ # ************************************************************************/
+
 stages:
   - build
   - test
@@ -5,10 +16,13 @@ stages:
   - deploy
   - cleanup
 
+# setup the essential pacakges for RTD to build gracefully; parallels 
+# user-guide README
 before_script:
   - apk add git make
   - pip install sphinx sphinx_rtd_theme sphinx-autobuild sphinx_fontawesome
-  
+
+# main job to build the RTD stack in the docker runner  
 build_job:
   image: python:3.6-alpine
   stage: build
@@ -17,13 +31,16 @@ build_job:
   - cd test-rtd-docs/
   - make html
 
+# ignore test_job
 .test_job:
   image: python:3.6-alpine
   stage: test
   script: 
   - print "test_job not implemented"
   allow_failure: true
-  
+
+# serve the RTD html files to the staging domain:
+# https://mdr0id.gitlab.io/test-rtd-docs/
 pages:
   image: python:3.6-alpine
   stage: stage_site
@@ -36,6 +53,7 @@ pages:
   only:
   - master
   
+#ignore deploy_job  
 .deploy_job:
   image: python:3.6-alpine
   stage: deploy
@@ -43,6 +61,7 @@ pages:
   - print "deploy_job not implemented"
   allow_failure: true
 
+#ignore cleanup_job
 .cleanup_job:
   image: python:3.6-alpine
   stage: cleanup
