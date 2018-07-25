@@ -28,6 +28,7 @@ pages:
   image: python:3.6-alpine
   stage: stage_site
   script:
+  - ls
   - mv build/html public
   artifacts:
         paths:
