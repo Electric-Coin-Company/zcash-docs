@@ -31,7 +31,7 @@ stage_site_job:
   - pip install sphinx sphinx_rtd_theme sphinx-autobuild sphinx_fontawesome
   - git clone https://gitlab.com/mdr0id/test-rtd-docs.git
   - cd test-rtd-docs/
-  - sphinx-build -d _build/doctrees . _build/html
+  - make html
   - mv _build/html public
   artifacts:
         paths:
