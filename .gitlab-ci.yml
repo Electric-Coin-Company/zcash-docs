@@ -7,18 +7,16 @@ stages:
 
 before_script:
   - apk add git make
+  - pip install sphinx sphinx_rtd_theme sphinx-autobuild sphinx_fontawesome
   
 build_job:
   image: python:3.6-alpine
   stage: build
   script:
-  - pip install sphinx sphinx_rtd_theme sphinx-autobuild sphinx_fontawesome
   - git clone https://gitlab.com/mdr0id/test-rtd-docs.git
   - cd test-rtd-docs/
   - make html
 
-
-  
 .test_job:
   image: python:3.6-alpine
   stage: test
