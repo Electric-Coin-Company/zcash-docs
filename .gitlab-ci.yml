@@ -28,8 +28,6 @@ pages:
   image: python:3.6-alpine
   stage: stage_site
   script:
-  - pip install sphinx sphinx_rtd_theme sphinx-autobuild sphinx_fontawesome
-  - git clone https://gitlab.com/mdr0id/test-rtd-docs.git
   - cd test-rtd-docs/
   - make html
   - mv build/html public
