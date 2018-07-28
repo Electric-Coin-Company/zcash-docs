@@ -51,7 +51,7 @@ pages:
         paths:
         - public
   only:
-  - master
+  - stage
   
 #ignore deploy_job  
 .deploy_job:
