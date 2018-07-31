@@ -11,7 +11,8 @@ the protocol for future network upgrades. It includes versioning, replay
 protection for network upgrades, performance improvements for transparent 
 transactions, a new feature of transaction expiry, and more.
 
-Overwinter activated successfully at block ``347500``
+Overwinter activated successfully at block ``347500``,  mined at June 25, 
+2018 20:42 UTC-04:00
 
 Common Issues
 +++++++++++++
@@ -55,3 +56,5 @@ Node sync is stuck before Overwinter activation height
     The command `clearbanned` will temporarily fix the issue by removing all 
     banned peers from your banned list, however they will be re-added slowly. 
     Occasionally running the `clearbanned` command could speed up the syncing process.
+
+.. important:: For more details regarding the Overwinter upgrade, please click `here <https://z.cash/support/network-upgrade-guide.html>`_
