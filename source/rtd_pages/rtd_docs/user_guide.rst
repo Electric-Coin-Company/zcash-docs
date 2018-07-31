@@ -53,6 +53,7 @@ If you're on a Debian-based distribution, you can follow the :ref:`install-debia
    If you are upgrading from testnet, make sure that your ``~/.zcash`` directory contains only ``zcash.conf`` to start with, and that your ``~/.zcash/zcash.conf`` does not contain ``testnet=1`` or ``addnode=testnet.z.cash``. 
    If the build fails, move aside your ``zcash`` directory and try again by following the instructions in the :ref:`installation` section below.
 
+.. important:: If you have ran into any issues upgrading to Overwinter, please see the :ref:`nu_dev_guide`
 
 Setup
 -----
