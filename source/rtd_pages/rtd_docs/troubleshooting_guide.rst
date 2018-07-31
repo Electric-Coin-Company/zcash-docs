@@ -89,3 +89,4 @@ The command has added the key, but your node is currently scanning the blockchai
 
    First search the issues section (https://github.com/zcash/zcash/issues) to see if someone else has posted a similar issue and if not, feel free to report your problem there. Please provide as much information about what you've tried and what failed so others can properly assess your situation to help.
 
+.. important:: If you have ran into any issues upgrading to Overwinter, please see the :ref:`nu_dev_guide`
