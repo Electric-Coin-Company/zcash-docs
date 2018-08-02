@@ -36,8 +36,7 @@ There are three kinds of ZIP:
 3. A **Process ZIP** describes a process surrounding Zcash, or proposes a change
    to (or an event in) a process. Examples include procedures, guidelines,
    changes to the decision-making process, and changes to the tools or
-   environment used in Zcash development. All Process ZIPs, and only
-   Process ZIPs, have numbers less than 100.
+   environment used in Zcash development.
 
 ZIP Work Flow
 -------------
