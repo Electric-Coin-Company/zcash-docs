@@ -157,7 +157,7 @@ Reviewers will investigate your PR and provide feedback. Generally the comments 
 
 > **Concept ACK** - Agree with the idea and overall direction, but have neither reviewed nor tested the code changes.
 
-> **utACK (untested ACK) **- Reviewed and agree with the code changes but haven't actually tested them.
+> **utACK (untested ACK)**- Reviewed and agree with the code changes but haven't actually tested them.
 
 > **Tested ACK** - Reviewed the code changes and have verified the functionality or bug fix.
 
