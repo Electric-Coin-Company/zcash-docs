@@ -89,6 +89,7 @@ License
    rtd_pages/rtd_docs/payment_api.rst
    rtd_pages/rtd_docs/index_zips.rst
    rtd_pages/rtd_docs/nu_dev_guide.rst
+   rtd_pages/rtd_docs/ux_wallet_checklist.rst
    
 
 .. .. toctree::

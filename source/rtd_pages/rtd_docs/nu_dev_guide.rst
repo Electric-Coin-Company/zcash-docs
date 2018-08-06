@@ -3,16 +3,120 @@
 Network Upgrade Developer Guide
 ===============================
 
-Overwinter
-----------
+We recommend all wallets, exchanges, and clients that accept/support Zcash to follow 
+these guidelines to prepare for the upcoming network upgrade. Network upgrades on 
+a bi-annual basis to maintain the Zcash network.
+
+Below is general advice that applies to all network upgrades:
+
+:fa:`arrow-circle-right` Keep your zcashd node updated
+    Check that you are running the latest stable version of `zcashd <https://z.cash/download.html>`_
+
+:fa:`arrow-circle-right` Version verifiability
+    Clearly state the version of Zcash in a place users can find it.
+    Somewhere inside the client’s user interface, state the protocol
+    name and version number (available from the getblockchaininfo method). 
+    This allows users to check what version of Zcash their client is running.
+
+:fa:`arrow-circle-right` Pre-upgrade notification
+    Inform users that a network upgrade is happening 
+    before it happens. 4000 blocks (approximately a week) in advance, tell 
+    users a network upgrade is happening soon, and that transactions will be 
+    unavailable for about an hour at the activation block height.
+
+:fa:`arrow-circle-right` Defensive transition
+    Disable the initiation of new transactions starting 24 blocks (approximately
+    one hour) before the activation block-height. If a user sends a transaction 
+    right before the upgrade, it is likely to not make it onto the chain. 
+    This can cause user confusion and frustration.
+
+:fa:`arrow-circle-right` Post-upgrade notification
+    Tell users when the upgrade has finished and re-enable initiation of 
+    transactions. Notify users with a message or at their next login after 
+    the network transition.
+
+:fa:`snowflake-o` Overwinter
+----------------------------
 
 Overwinter is the first network upgrade for Zcash. Its purpose is strengthening 
 the protocol for future network upgrades. It includes versioning, replay 
 protection for network upgrades, performance improvements for transparent 
 transactions, a new feature of transaction expiry, and more.
 
-Overwinter activated successfully at block ``347500``,  mined at June 25, 
-2018 20:42 UTC-04:00
+Overwinter activated successfully at block ``347500``,  mined at ``June 25``, 
+``2018 20:42 UTC-04:00``
+
+:fa:`arrow-circle-right` Transaction formatting
+    All transactions must use the new transaction format from Overwinter and onwards. 
+    Make sure that you can parse these “v3” transactions (write a parser for them if 
+    you aren’t using our code). Previous formats will not be valid after the Overwinter 
+    upgrade, so if you create transactions, the “v3” format must be used after the 
+    upgrade has activated (but not until then). Hardware wallets and SPV clients 
+    are particularly affected here. See ZIPs `202 <https://github.com/zcash/zips/blob/master/zip-0202.rst>`_
+    and `203 <https://github.com/zcash/zips/blob/master/zip-0203.rst>`_ .
+
+:fa:`arrow-circle-right` Transaction version number
+     The 4-byte transaction version will have its most significant bit set from 
+     Overwinter and onwards, for two-way replay protection of Overwinter and 
+     unambiguous transaction parsing of all current and future formats. For 
+     example, existing “v1” and “v2” transactions use version numbers “1” 
+     and “2”, but “v3” Overwinter transactions will use the unsigned version
+     number “(1 << 31) | 3” in the transaction serialization format. See ZIP 
+     `202 <https://github.com/zcash/zips/blob/master/zip-0202.rst>`_ .
+
+:fa:`arrow-circle-right` Version group IDs
+    A transaction version will be uniquely paired with a version group ID to 
+    ensure unambiguous transaction parsing. For example, a “v3” transaction 
+    will always have the version group ID "0x03C48270" in its serialization 
+    format, even after future network upgrades. See ZIP `202
+    <https://github.com/zcash/zips/blob/master/zip-0202.rst>`_ .
+
+:fa:`arrow-circle-right` Branch IDs
+    Each network upgrade has an associated branch ID that identifies its 
+    consensus rules. For two-way replay protection, creating transactions
+    will require the branch ID of the current chain tip when signing a 
+    transaction (in the BLAKE2b personalization field.) You can obtain 
+    the branch ID of any block height from the getblock API. See ZIP 
+    `200 <https://github.com/zcash/zips/blob/master/zip-0200.rst>`_ .
+
+:fa:`arrow-circle-right` Signature hashing
+    There are new SegWit-like features in this upgrade, such as transaction 
+    signatures committing to values of the inputs. We suggest reusing code 
+    from SegWit (e.g. for hashing transparent outputs) when implementing the 
+    new SignatureHash function. See ZIP `143 <https://github.com/zcash/zips/blob/master/zip-0143.rst>`_ .
+
+:fa:`arrow-circle-right` Transaction expiry
+    We recommend that you do use the default expiry height (20 blocks/~1 hours) 
+    and follow these UX guidelines so that Zcash users can develop a consistent 
+    expectation of when Zcash transactions expire and what happens. Zee ZIP 
+    `203 <https://github.com/zcash/zips/blob/master/zip-0203.rst>`_ .
+
+
+This isn't an exhaustive list of the changes. Look at the Overwinter Zcash 
+Improvement Proposals (ZIPs) below for complete details on the changes that 
+will be made. The five ZIPs cover network handshaking, transaction format, 
+transaction expiry, signature hashing, and network upgrade mechanisms.
+
+    - ``ZIP 143`` `Transaction Signature Verification for Overwinter <https://github.com/zcash/zips/blob/master/zip-0143.rst>`_
+    - ``ZIP 200`` `Network Upgrade Mechanism <https://github.com/zcash/zips/blob/master/zip-0200.rst>`_
+    - ``ZIP 201`` `Network Peer Management for Overwinter <https://github.com/zcash/zips/blob/master/zip-0201.rst>`_
+    - ``ZIP 202`` `Version 3 Transaction Format for Overwinter <https://github.com/zcash/zips/blob/master/zip-0202.rst>`_
+    - ``ZIP 203`` `Transaction Expiry <https://github.com/zcash/zips/blob/master/zip-0203.rst>`_
+
+The network upgrade is coordinated via an on-chain activation mechanism.
+
+Zcashd v1.1.0 (and future releases) running protocol version ``170005`` will 
+activate Overwinter at block 347500 at which point only v3 transactions 
+are processed. Older versions of Zcashd <= 1.0.14, running protocol 
+versions <= 170004, will partition themselves away from the main network 
+into a legacy chain.
+
+Wipeout protection is provided by the new transaction format and signature 
+hashing scheme. Blocks from the legacy chain will not be accepted by the 
+upgraded network. That is, the upgraded network is permanent, and
+Zcashd v1.1.0 (and future releases) can not reorganize back to the 
+older non-upgraded chain.
+
 
 Common Issues
 +++++++++++++
@@ -56,5 +160,3 @@ Node sync is stuck before Overwinter activation height
     The command `clearbanned` will temporarily fix the issue by removing all 
     banned peers from your banned list, however they will be re-added slowly. 
     Occasionally running the `clearbanned` command could speed up the syncing process.
-
-.. important:: For more details regarding the Overwinter upgrade, please click `here <https://z.cash/support/network-upgrade-guide.html>`_
