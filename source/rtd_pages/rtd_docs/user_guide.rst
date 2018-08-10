@@ -156,6 +156,8 @@ Now we need to get the Zcash software from the repository:
 
 This will fetch our Sprout proving and verifying keys (the final ones created in the `Parameter Generation Ceremony <https://github.com/zcash/mpc>`_ , and place them into ``~/.zcash-params/``. These keys are just under 911MB in size, so it may take some time to download them.
 
+Users running testnet or regtest nodes will need to run ``./zcutil/fetch-params.sh --testnet`` to download the additional dummy Sapling testnet parameters required.
+
 The message printed by ``git checkout`` about a "detached head" is normal and does not indicate a problem.
 
 .. _ugBuild:
