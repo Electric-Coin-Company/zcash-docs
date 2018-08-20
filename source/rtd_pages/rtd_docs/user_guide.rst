@@ -19,7 +19,7 @@ Welcome! This guide is intended to get you running on the official Zcash network
 
 	| :fa:`linux` ``64-bit`` Linux OS
 	| :fa:`microchip` ``64-bit`` Processor
-	| :fa:`database` ``3GB`` of free RAM
+	| :fa:`database` ``5GB`` of free RAM
 	| :fa:`hdd-o` ``10GB`` of free Disk (*the size of the block chain increases over time*)
 
 
@@ -53,7 +53,7 @@ If you're on a Debian-based distribution, you can follow the :ref:`install-debia
    If you are upgrading from testnet, make sure that your ``~/.zcash`` directory contains only ``zcash.conf`` to start with, and that your ``~/.zcash/zcash.conf`` does not contain ``testnet=1`` or ``addnode=testnet.z.cash``. 
    If the build fails, move aside your ``zcash`` directory and try again by following the instructions in the :ref:`installation` section below.
 
-.. important:: If you have ran into any issues upgrading to Overwinter, please see the :ref:`nu_dev_guide`
+.. important:: If you ran into any issues upgrading to Overwinter, please see the :ref:`nu_dev_guide`
 
 Setup
 -----
