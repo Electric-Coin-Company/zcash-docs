@@ -3,9 +3,6 @@
 Glossary
 ========
 
-Addresses
-+++++++++
-
 .. _address:
 .. _addresses:
 
