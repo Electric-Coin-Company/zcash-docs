@@ -38,6 +38,7 @@ Confirmation
 
 Cryptography
     Cryptography is the branch of mathematics that lets us create mathematical proofs that provide high levels of security and privacy. Services like online commerce and banking already use cryptography and in many countries, are required by law to protect customers and their data. In the case of Zcash, cryptography is used to:
+    
     #. protect user privacy (via `zk-SNARKs`_)
     #. make it impossible for anybody to spend funds from another user's wallet
     #. corrupt the block chain
@@ -147,12 +148,12 @@ Sol/s
 .. _TAZ:
 
 TAZ
-    TAZ is the three code for the valueless Zcash `testnet`_ currency.
+    TAZ is the three letter code for the valueless Zcash `testnet`_ currency.
 
 .. _testnet:
 
 Testnet
-    The Zcash testnet is an alternative `blockchain`_ that attempts to mimic the main `Zcash network`_ for testing purposes. Testnet coins (sometimes referred to as `TAZ`_) are distinct from actual `ZEC`_ and do not have value. Developers and users can experiement with the testnet without having to use valuable currency. The testnet is also used to test `network upgrades`_ and their `activation`_ before committing to the upgrade on the main `Zcash network`_.
+    The Zcash testnet is an alternative `blockchain`_ that attempts to mimic the main `Zcash network`_ for testing purposes. Testnet coins (sometimes referred to as `TAZ`_) are distinct from actual `ZEC`_ and do not have value. Developers and users can experiment with the testnet without having to use valuable currency. The testnet is also used to test `network upgrades`_ and their `activation`_ before committing to the upgrade on the main `Zcash network`_.
 
 .. _transaction:
 .. _transactions:
@@ -208,7 +209,7 @@ Zcash network
 .. _Zcash protocol:
 
 Zcash
-    Zcash is an in-production cryptocurrency implementation of the Zerocash protocol, with security fixes and improvements to performance and functionality. It bridges the existing transparent payment scheme used by Bitcoin with a `shielded` payment scheme secured by `zk-SNARKs`_. It implements the `Equihash`_ proof-of-work `mining`_ algorithm. Both the network and the associated currency are referred to as `Zcash` with `ZEC`_ refering specifically to the currency.
+    Zcash is an in-production cryptocurrency implementation of the Zerocash protocol, with security fixes and improvements to performance and functionality. It bridges the existing transparent payment scheme used by Bitcoin with a `shielded` payment scheme secured by `zk-SNARKs`_. It implements the `Equihash`_ proof-of-work `mining`_ algorithm. Both the network and the associated currency are referred to as `Zcash` with `ZEC`_ referring specifically to the currency.
 
 .. _Zcash Foundation:
 
@@ -229,7 +230,7 @@ ZECC
 .. _Zerocash:
 
 Zerocash
-    Zerocash is a cryptographic protocol invented by Eli Ben-Sasson, Alessandro Chiesa, Christina Garman, Matthew Green, Ian Miers, Eran Tromer, and Madars Virza in 2014. It improves on the earlier `Zerocoin`_ protocol developed by some of the same authors both in functionality and effiency. 
+    Zerocash is a cryptographic protocol invented by Eli Ben-Sasson, Alessandro Chiesa, Christina Garman, Matthew Green, Ian Miers, Eran Tromer, and Madars Virza in 2014. It improves on the earlier `Zerocoin`_ protocol developed by some of the same authors both in functionality and efficiency. 
     
 .. _Zerocoin:
 
