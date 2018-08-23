@@ -7,13 +7,13 @@ Glossary
 .. _addresses:
 
 Address
-    A Zcash address is similar to a physical address or an email. It is the only information you need to provide for someone to send you `ZEC`_. There are two types of addresses in Zcash: a `shielded address`_ and a `transparent address`_.
+    A Zcash address is similar to a physical address or an email address. It is the only information you need to provide for someone to send you `ZEC`_. There are two types of addresses in Zcash: a `shielded address`_ and a `transparent address`_.
 
 .. _block:
 .. _blocks:
 
 Block
-    A block is a record in the Zcash blockchain that contains new transactions sent on the network. Pending inclusion in a block, a transaction is kept in the `mempool`_ in an `unconfirmed`_ state. Roughly every 2.5 minutes, on average, a new block is appended to the `blockchain`_ through `mining`_ and the transactions included receive their first `confirmation`_.
+    A block is a record in the Zcash blockchain that contains a set of transactions sent on the network. Pending inclusion in a block, a transaction is kept in the `mempool`_ in an `unconfirmed`_ state. Roughly every 2.5 minutes, on average, a new block is appended to the `blockchain`_ through `mining`_ and the transactions included receive their first `confirmation`_.
 
 .. _block reward:
 .. _block rewards:
@@ -41,7 +41,7 @@ Cryptography
     
     #. protect user privacy (via `zk-SNARKs`_)
     #. make it impossible for anybody to spend funds from another user's wallet
-    #. corrupt the block chain
+    #. prevent corruption of the blockchain database
 
 .. _encrypted memo:
 
@@ -88,6 +88,11 @@ Multi-signature
 
 Network upgrade
     A network upgrade is a `software-updates-required` release of the Zcash software. After `activation`_ of a network upgrade, network nodes running older versions that are not compatible with the upgrade will be forked onto an outdated `blockchain`_ and will require a software upgrade to rejoin the main network. This is sometimes referred to as a `hard fork` upgrade. 
+
+.. _Overwinter:
+
+Overwinter
+    Overwinter is the first `network upgrade`_ for Zcash. Its purpose is strengthening the protocol for future network upgrades. It includes versioning, replay protection for network upgrades, performance improvements for transparent transactions and the `transaction expiry`_ feature. Overwinter `activated`_ at `block`_ height 347500.
     
 .. _payment disclosure:
 
@@ -109,6 +114,11 @@ Public parameters
 
 Rollback
     A rollback is when a blockchain is rewound to a previous state and a set of the most recent `blocks`_ and the `transactions`_ they contain are discarded. Zcash has a rollback limit of 100 blocks.
+
+.. _sapling:
+
+Sapling
+    Sapling is a `network upgrade`_ that introduces significant efficiency improvements for shielded transactions that will pave the way for broad mobile, exchange and vendor adoption of Zcash shielded addresses. Sapling is scheduled to `activate`_ at `block`_ height 419200. 
     
 .. _selective disclosure:    
     
@@ -132,11 +142,6 @@ Shielded transaction
 
 Signature
     A cryptographic signature is a mathematical scheme that allows someone to authenticate digital information. When your Zcash `wallet`_ signs a transaction with the appropriate `private key`_, the network can confirm that the signature matches the `ZEC`_ being spent. This signing is confirmed publicly for `transparent addresses`_ and through the use of `zk-SNARKs`_ for `shielded addresses`_. 
-
-.. _spending key:
-
-Spending key
-    A spending key is a type of `private key`_ that allows any user in possession of it to spend the balance of the associated `address`_. For `shielded addresses`_, possessing the spending key also allows the user to view the address' balance and `transaction`_ data. 
     
 .. _hash rate:
 .. _solution rate:
@@ -145,6 +150,16 @@ Spending key
 Sol/s
     Sol/s refers to solutions per second and measures the rate at which `Equihash`_ solutions are found. Each one of those solutions is tested against the current target (after adding to the block header and hashing), in the same way that in Bitcoin each nonce variation is tested against the target.
 
+.. _spending key:
+
+Spending key
+    A spending key is a type of `private key`_ that allows any user in possession of it to spend the balance of the associated `address`_. For `shielded addresses`_, possessing the spending key also allows the user to view the address' balance and `transaction`_ data.
+
+.. _Sprout:
+
+Sprout
+    Sprout is the first version of Zcash, launched on October 28, 2016. 
+    
 .. _TAZ:
 
 TAZ
@@ -171,7 +186,7 @@ Transaction expiry
 .. _transaction fees:
 
 Transaction fee
-    A transaction fee is an additional value added to a `transaction`_ used to incentivize `miners`_ to include the transaction into a `block`_. Transactions with low or no fee may still be mined but transactions with the default fee or higher will be preferred. If a transaction has too low of a fee, it may stay in the `mempool`_ until the `transaction expires`_.
+    A transaction fee is an additional value added to a `transaction`_ used to incentivize `miners`_ to include the transaction into a `block`_. Transactions with low or no fee may still be mined but transactions with the default fee or higher will be preferred. If a transaction has too low of a fee, it may stay in the `mempool`_ until the `transaction expires`_. The fee value is not protected for transactions containing `shielded addresses`_ and therefore it is recommended to always use the default fee of `.0001 ZEC`. Unique fees may result in loss of privacy in some cases.
 
 .. _taddr:
 .. _transparent address:    
@@ -187,9 +202,11 @@ Transparent transaction
 
 .. _upgrade activation:
 .. _activation:
+.. _activate:
+.. _activated:
 
 Upgrade activation
-    An upgrade activation is a specific block height that triggers a `network upgrade`_. 
+    An upgrade activation is a specific `block`_ height that triggers a `network upgrade`_. 
     
 .. _viewing key:
 
