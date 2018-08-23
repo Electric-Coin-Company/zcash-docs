@@ -7,13 +7,13 @@ Glossary
 .. _addresses:
 
 Address
-    A Zcash address is similar to a physical address or an email. It is the only information you need to provide for someone to send you `ZEC`_. There are two types of addresses in Zcash: a `shielded address`_ and a `transparent address`_.
+    A Zcash address is similar to a physical address or an email address. It is the only information you need to provide for someone to send you `ZEC`_. There are two types of addresses in Zcash: a `shielded address`_ and a `transparent address`_.
 
 .. _block:
 .. _blocks:
 
 Block
-    A block is a record in the Zcash blockchain that contains new transactions sent on the network. Pending inclusion in a block, a transaction is kept in the `mempool`_ in an `unconfirmed`_ state. Roughly every 2.5 minutes, on average, a new block is appended to the `blockchain`_ through `mining`_ and the transactions included receive their first `confirmation`_.
+    A block is a record in the Zcash blockchain that contains a set of transactions sent on the network. Pending inclusion in a block, a transaction is kept in the `mempool`_ in an `unconfirmed`_ state. Roughly every 2.5 minutes, on average, a new block is appended to the `blockchain`_ through `mining`_ and the transactions included receive their first `confirmation`_.
 
 .. _block reward:
 .. _block rewards:
@@ -41,7 +41,7 @@ Cryptography
     
     #. protect user privacy (via `zk-SNARKs`_)
     #. make it impossible for anybody to spend funds from another user's wallet
-    #. corrupt the block chain
+    #. prevent corruption of the blockchain database
 
 .. _encrypted memo:
 
