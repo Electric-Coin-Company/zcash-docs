@@ -164,5 +164,5 @@ texinfo_documents = [
 ]
 
 html_context = {
-    'script_files': ['//code.jquery.com/jquery-2.2.4.min.js', '_static/js/transifex-api.js', '//cdn.transifex.com/live.js']
+    'script_files': ['_static/jquery.js', '_static/underscore.js', '_static/doctools.js', '_static/js/transifex-api.js', '//cdn.transifex.com/live.js']
 }
