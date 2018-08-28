@@ -721,4 +721,4 @@ RPC_WALLET_KEYPOOL_RAN_OUT
     - Call keypoolrefill and retry.
 
 
-.. important:: To view a list of the complete API, please click `here <https://zcash-rpc.github.io/>`_ 
+.. important:: To view a community maintained list of the API, please click `here <https://zcash-rpc.github.io/>`_ 
