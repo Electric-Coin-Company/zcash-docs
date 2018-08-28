@@ -35,6 +35,66 @@ Below is general advice that applies to all network upgrades:
     transactions. Notify users with a message or at their next login after 
     the network transition.
 
+:fa:`leaf` Sapling
+------------------
+
+Sapling is a network upgrade that introduces significant efficiency improvements for shielded transactions that will pave the way for broad mobile, exchange and vendor adoption of Zcash shielded addresses.
+
+:fa:`arrow-circle-right` Transaction formatting
+    All transactions must use the new transaction format from Sapling onwards. Make sure that you can parse these `v4` transactions. Previous formats will not be valid after the Sapling upgrade, so if you create transactions, the `v4` format must be used after the upgrade has activated (but not until then). Hardware wallets and SPV clients are particularly affected here.
+
+   See `ZIP 243 <https://github.com/zcash/zips/blob/master/zip-0243.rst>`_. Test vectors for ZIP 243 have been pushed and are being reviewed.
+
+Also see `Sapling Protocol Specification <https://github.com/zcash/zips/blob/master/protocol/protocol.pdf>`_.
+
+
+General Guidelines
+++++++++++++++++++
+
+Using zcashd unmodified
+^^^^^^^^^^^^^^^^^^^^^^^
+
+If you use the RPC as provided in the zcashd client, which is true for *most* exchanges and general users of Zcash:
+
+We are still working on finishing Sapling support for our RPC, the changes to the RPC will be detailed in a list here as they become available.
+
+Using custom code to create/sign/send transactions
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+If you manually create transactions, the following changes are `critical`. Reference section 7.1 of the `Sapling specification <https://github.com/zcash/zips/blob/master/protocol/protocol.pdf>`_ for complete details:
+
+- The transactions version number **MUST** be 4
+- The version group ID **MUST** be 0x892F2085
+- At least one of tx_in_count, nShieldedSpend, and nJoinSplit **MUST** be nonzero
+- If version ≥ 4 and nShieldedSpend + nShieldedOutput > 0 then:
+
+  - Let bvk and SigHash be as defined in §4.12 **‘Balance and Binding Signature (Sapling)’**;
+  - bindingSig **MUST** represent a valid signature under the *transaction binding verification key* bvk of SigHash - i.e. BindingSig.Verify\ :sub:`bvk`\ (SigHash, bindingSig) = 1.
+- If version ≥ 4 and nShieldedSpend + nShieldedOutput = 0, then valueBalance **MUST** be 0.
+- A coinbase transaction  **MUST NOT** have any *JoinSplit descriptions, Spend description, or Output descriptions*. 
+- valueBalance **MUST** be in the range {-MAX_MONEY .. MAX_MONEY}.
+
+In addition, consensus rules associated with each JoinSplit description (§7.2 **‘Encoding of JoinSplit Descriptions’**) each Spend description (§7.3 **‘Encoding of Spend Descriptions’**) and each Output description (§7.4 **‘Encoding of Output Descriptions’**) **MUST** be followed.
+
+Mining Pools
+^^^^^^^^^^^^
+
+Mining pools running the Stratum protocol will have to make some changes as well.
+
+The ``hashRreserved`` field in the Stratum Protocol will have to be replaced by the ``hashFinalSaplingRoot`` field from the block header (§7.5 **‘Block Header’**).
+
+Testing
++++++++
+
+Sapling is currently activated on testnet. To test transactions you’ll want to follow the :ref:`testnet_guide`.
+
+Until version 2.0.1 is released, currently supported Sapling RPCs are behind the `experimental features` flag. Developers must specify ``-experimentalfeatures`` and ``-developersapling`` when starting up their testnet node to interact with Sapling shielded addresses. 
+
+Alternatively, developers can use these features in regtest mode.
+
+The next Sapling release, 2.0.1, will have wider range of support for Sapling addresses. 
+
+    
 :fa:`snowflake-o` Overwinter
 ----------------------------
 
@@ -152,11 +212,8 @@ mandatory-script-verify-flag-failed
 Node sync is stuck before Overwinter activation height
     This bug occurs when you are starting a fresh node or restarting a node that 
     is not synced to above the Overwinter activation height (block 347500) and 
-    causes the node to sync very slowly. We are aware of this bug and have 
-    written a fix but it will not be live until the 2.0.0 release which is 
-    scheduled for mid-August. The bug has to do with your node incorrectly 
+    causes the node to sync very slowly. The bug has to do with your node incorrectly 
     banning peer nodes. The end result is your node will sync very slowly as 
     it will not be able to maintain as many connections to other nodes as usual. 
-    The command `clearbanned` will temporarily fix the issue by removing all 
-    banned peers from your banned list, however they will be re-added slowly. 
-    Occasionally running the `clearbanned` command could speed up the syncing process.
+
+    This issue has been fixed in 2.0.0. Please `update your client <https://z.cash/download.html>`_  to 2.0.0 or above.
