@@ -163,6 +163,8 @@ texinfo_documents = [
      'Miscellaneous'),
 ]
 
-html_context = {
-    'script_files': ['_static/jquery.js', '_static/underscore.js', '_static/doctools.js', '_static/js/transifex-api.js', '//cdn.transifex.com/live.js']
-}
+# Add additional JS files
+def setup(app):
+    app.add_javascript('//cdn.transifex.com/live.js')
+    app.add_javascript('js/transifex-api.js')
+
