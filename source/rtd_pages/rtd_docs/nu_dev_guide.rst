@@ -86,7 +86,7 @@ The ``hashRreserved`` field in the Stratum Protocol will have to be replaced by 
 Testing
 +++++++
 
-Sapling is currently activated on testnet. To test transactions you’ll want to follow the `instructions <https://zcash.readthedocs.io/en/latest/rtd_pages/rtd_docs/user_guide.html#testnet>`_ for configuring a node on testnet.
+Sapling is currently activated on testnet. To test transactions you’ll want to follow the :ref:`testnet_guide`.
 
 Until version 2.0.1 is released, currently supported Sapling RPCs are behind the `experimental features` flag. Developers must specify ``-experimentalfeatures`` and ``-developersapling`` when starting up their testnet node to interact with Sapling shielded addresses. 
 
