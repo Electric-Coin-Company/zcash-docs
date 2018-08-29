@@ -1,3 +1,5 @@
+:orphan:
+
 .. _testnet_guide:
 
 Testnet Guide
