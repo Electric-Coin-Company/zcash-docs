@@ -56,6 +56,8 @@ Using zcashd unmodified
 
 If you use the RPC as provided in the zcashd client, which is true for *most* exchanges and general users of Zcash, you must update your zcashd node to at least verison 2.0.0.
 
+Additionally, Sapling introduces new parameters which must be downloaded by running the ``fetch-params.sh`` script. These new parameters are placed in the same directory as the older Sprout parameters.
+
 We are still working on finishing Sapling support for our RPC, the changes to the RPC will be detailed in a list here as they become available.
 
 Using custom code to create/sign/send transactions
