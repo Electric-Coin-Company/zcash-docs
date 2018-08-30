@@ -83,6 +83,16 @@ There is also additional documentation under [doc/payment-api.md](https://github
 
 The command has added the key, but your node is currently scanning the blockchain for any transactions related to that key, causing there to be a delay before it returns. This immediate rescan is the default setting for `z_importkey`, which you can override by adding `false` to the command if you simply want to import the key, i.e. `zcash-cli z_importkey $KEY false`
 
+If, when attempting to execute the ``sendrawtransaction`` RPC method, you receive the error:
+
+.. code-block:: bash
+
+   AcceptToMemoryPool: absurdly high fees
+
+This is most likely caused by not specifying an output address to receive the change when creating the transaction (``createrawtransaction``). This RPC call, unlike ``sendmany`` and ``z_sendmany``, does not do this automatically.
+
+With ``createrawtransaction``, the fee is simply the sum of the inputs minus the sum of the outputs. If this difference is larger than 0.0021 ZEC (210000 zatoshis), the assumption is that this is unintentional, and the transaction is not sent. If you really do wish to send a transaction with a large fee, add ``true`` to the end of the ``sendrawtransaction`` command line. This will allow an arbitrarily high fee.
+
 #### 
 
 .. admonition:: What if my question isn't answered here?

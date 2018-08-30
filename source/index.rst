@@ -1,6 +1,6 @@
 .. _root:
 
-.. image:: rtd_pages/rtd_docs/images/zcash-logo-gold.png
+.. image:: rtd_pages/images/zcash-logo-gold.png
    :scale: 15
    :align: right
 
@@ -85,20 +85,18 @@ License
    :caption: Documents
    :hidden:
 
-   rtd_pages/rtd_docs/user_guide.rst
-   rtd_pages/rtd_docs/payment_api.rst
-   rtd_pages/rtd_docs/testnet_guide.rst
-   rtd_pages/rtd_docs/index_zips.rst
-   rtd_pages/rtd_docs/nu_dev_guide.rst
-   rtd_pages/rtd_docs/ux_wallet_checklist.rst
-   rtd_pages/rtd_docs/glossary.rst
-   
-
-.. .. toctree::
-..   :caption: Archive
-..   :hidden:
-
-..   rtd_pages/archive_git/index
-..   rtd_pages/archive_wiki/index
-..   rtd_pages/bitcoin_rel_notes/index
-..   rtd_pages/rel_notes/index_rel_notes.rst
+   rtd_pages/user_guide.rst
+   rtd_pages/install_debian_bin_packages.rst
+   rtd_pages/troubleshooting_guide.rst
+   rtd_pages/development_guidelines.rst
+   rtd_pages/payment_api.rst
+   rtd_pages/index_zips.rst
+   rtd_pages/nu_dev_guide.rst
+   rtd_pages/wallet_backup.rst
+   rtd_pages/zcash_conf_guide.rst
+   rtd_pages/zcash_mining_guide.rst
+   rtd_pages/ux_wallet_checklist.rst
+   rtd_pages/supported_platform_policy.rst
+   rtd_pages/security_warnings.rst
+   rtd_pages/code_of_conduct.rst
+   rtd_pages/glossary.rst

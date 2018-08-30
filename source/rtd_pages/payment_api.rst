@@ -719,3 +719,6 @@ RPC_WALLET_KEYPOOL_RAN_OUT
   * - | Could not generate a taddr to use as a change
       | address
     - Call keypoolrefill and retry.
+
+
+.. important:: To view a community maintained list of the API, please click `here <https://zcash-rpc.github.io/>`_ 
