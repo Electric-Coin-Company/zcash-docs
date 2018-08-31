@@ -82,21 +82,28 @@ License
    For license information please see :ref:`License` 
 
 .. toctree::
-   :caption: Documents
+   :caption: Using Zcashd
    :hidden:
 
    rtd_pages/user_guide.rst
    rtd_pages/install_debian_bin_packages.rst
    rtd_pages/troubleshooting_guide.rst
-   rtd_pages/development_guidelines.rst
    rtd_pages/payment_api.rst
-   rtd_pages/index_zips.rst
-   rtd_pages/nu_dev_guide.rst
    rtd_pages/wallet_backup.rst
    rtd_pages/zcash_conf_guide.rst
    rtd_pages/zcash_mining_guide.rst
-   rtd_pages/ux_wallet_checklist.rst
-   rtd_pages/supported_platform_policy.rst
    rtd_pages/security_warnings.rst
-   rtd_pages/code_of_conduct.rst
    rtd_pages/glossary.rst
+
+
+.. toctree::
+   :caption: Developers & Contributors
+   :hidden:
+
+   rtd_pages/development_guidelines.rst
+   rtd_pages/supported_platform_policy.rst
+   rtd_pages/index_zips.rst
+   rtd_pages/nu_dev_guide.rst
+   rtd_pages/ux_wallet_checklist.rst
+   rtd_pages/code_of_conduct.rst
+   
