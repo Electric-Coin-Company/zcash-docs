@@ -54,7 +54,7 @@ General Guidelines
 Using zcashd unmodified
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-If you use the RPC as provided in the zcashd client, which is true for *most* exchanges and general users of Zcash, you must update your zcashd node to at least verison 2.0.0.
+If you use the RPC as provided in the zcashd client, which is true for *most* exchanges and general users of Zcash, you must update your zcashd node to at least version 2.0.0.
 
 Additionally, Sapling introduces new parameters which must be downloaded by running the ``fetch-params.sh`` script. These new parameters are placed in the same directory as the older Sprout parameters.
 
@@ -65,9 +65,9 @@ Using custom code to create/sign/send transactions
 
 If you manually create transactions, the following changes are `critical`. Reference section 7.1 of the `Sapling specification <https://github.com/zcash/zips/blob/master/protocol/protocol.pdf>`_ for complete details:
 
-- The transactions version number **MUST** be 4
-- The version group ID **MUST** be 0x892F2085
-- At least one of tx_in_count, nShieldedSpend, and nJoinSplit **MUST** be nonzero
+- The transactions version number **MUST** be 4.
+- The version group ID **MUST** be 0x892F2085.
+- At least one of tx_in_count, nShieldedSpend, and nJoinSplit **MUST** be nonzero.
 - If version ≥ 4 and nShieldedSpend + nShieldedOutput > 0 then:
 
   - Let bvk and SigHash be as defined in §4.12 **‘Balance and Binding Signature (Sapling)’**;
@@ -83,7 +83,7 @@ Mining Pools
 
 Mining pools running the Stratum protocol will have to make some changes as well.
 
-The ``hashRreserved`` field in the Stratum Protocol will have to be replaced by the ``hashFinalSaplingRoot`` field from the block header (§7.5 **‘Block Header’**).
+The ``hashReserved`` field in the Stratum Protocol will have to be replaced by the ``hashFinalSaplingRoot`` field from the block header (§7.5 **‘Block Header’**).
 
 Testing
 +++++++
