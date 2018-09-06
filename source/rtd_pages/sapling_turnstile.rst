@@ -8,7 +8,7 @@ Sapling Turnstile
 Overview
 --------
 
-The Sapling network upgrade requires a new type of shielded address to support the usability and security improvements it offers. Sapling shielded addresses start with "zs" where the legacy, Sprout shielded addresses start with "zc".
+The Sapling network upgrade requires a new type of shielded address to support the new usability and security improvements it brings to Zcash. Sapling shielded addresses start with "zs" whereas the legacy, Sprout shielded addresses start with "zc".
 
 The Sapling turnstile is an auditing mechanism for the number of ZEC in circulation. Shielded ZEC cannot be accounted for in the total monetary supply because balances remain private to the owners of shielded address private keys. The Sapling turnstile provides accounting for the ZEC held in Sprout shielded addresses as they are migrated to Sapling shielded addresses.
 
@@ -45,7 +45,7 @@ Example
 
    She initiates the first transaction, to the first fresh transparent address revealing 10 ZEC in address ``t1abc...``. This leaves 4.6726 ZEC in the legacy address accounting for the first transaction fee. Once confirmed, Alice sends 9.999 ZEC (accounting for the second transaction fee) from ``t1abc...`` to her new shielded Sapling address.
 
-   She waits a couple of hours before initiating the second transfer, revealing 4.0001 ZEC in address ``t1dce...``. This leaves 0.6724 ZEC in the legacy address accounting for the third transaction fee. Once confirmed, she finishes the second transfer by sending 4 ZEC (accounting for the fourth transaction fee) to the same Sapling address. The balance in the shielded Sapling address is now 13.999 ZEC.
+   She waits a couple of hours before initiating the second transfer, revealing 4.0001 ZEC in address ``t1def...``. This leaves 0.6724 ZEC in the legacy address accounting for the third transaction fee. Once confirmed, she finishes the second transfer by sending 4 ZEC (accounting for the fourth transaction fee) to the same Sapling address. The balance in the shielded Sapling address is now 13.999 ZEC.
 
    She waits for the next day to initiate the third and final transfer, revealing 0.6723 ZEC (accounting for the fifth transaction fee) in address ``t1xyz...``. Once the transaction is confirmed, the legacy Sprout address is now empty and a may be discarded. She finishes the final transfer by sending 0.6722 ZEC (accounting for the sixth transaction fee) to her Sapling address which now has a balance of 14.6721 ZEC (the original balance minus six transaction fees).
    
