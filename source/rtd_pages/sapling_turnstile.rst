@@ -27,7 +27,7 @@ There are several privacy recommendations that users should follow in order to r
 
 :fa:`arrow-circle-right` Use transparent addresses once for migrating shielded funds
 
-  - Do not use transparent addresses which have already received funds to it.
+  - Do not use transparent addresses which have already received funds.
   - Discard transparent addresses after migration is completed.
   - Use a unique transparent address for each balance migration.
 
