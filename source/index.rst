@@ -105,6 +105,7 @@ License
    rtd_pages/supported_platform_policy.rst
    rtd_pages/index_zips.rst
    rtd_pages/nu_dev_guide.rst
+   rtd_pages/librustzcash_arch.rst
    rtd_pages/ux_wallet_checklist.rst
    rtd_pages/code_of_conduct.rst
    
