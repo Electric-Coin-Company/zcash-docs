@@ -95,14 +95,17 @@ WINDOWS (cross-compile)
        As of 5/1/2018 this platform is not fully supported. However, we are actively working to complete the components to support this.
 
        To view active work on this platform, see: :fa:`github` `#3172 <https://github.com/zcash/zcash/pull/3172>`_
-       
-    
+           
 MAC
-    .. note:: 
-    
-       As of 5/1/2018 this platform is not fully supported. However, we are actively working to complete the components to support this.
+    First install Homebrew: 
+        .. code-block:: bash
+       
+            /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-       To view active work on this platform, see: :fa:`github` `#2820 <https://github.com/zcash/zcash/pull/2820>`_
+    Second install packages:
+        .. code-block:: bash
+
+            brew install git pkgconfig automake autoconf wget curl gcc libtool
     
 CENTOS 7+
     .. code-block:: bash
