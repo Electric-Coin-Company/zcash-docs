@@ -97,15 +97,25 @@ WINDOWS (cross-compile)
        To view active work on this platform, see: :fa:`github` `#3172 <https://github.com/zcash/zcash/pull/3172>`_
            
 MAC
-    First install Homebrew: 
+    1. Install Homebrew: 
         .. code-block:: bash
        
             /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-    Second install packages:
+    2. Install packages:
         .. code-block:: bash
 
             brew install git pkgconfig automake autoconf wget curl gcc libtool
+    
+    3. Install ``pip`` :
+        .. code-block:: bash
+
+            sudo easy_install pip
+    
+    4. Install python modules for rpc-tests
+        .. code-block:: bash
+
+            sudo pip install pyblake2 pyzmq
     
 CENTOS 7+
     .. code-block:: bash
