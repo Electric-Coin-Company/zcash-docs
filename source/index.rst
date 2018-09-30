@@ -87,6 +87,7 @@ License
 
    rtd_pages/user_guide.rst
    rtd_pages/install_debian_bin_packages.rst
+   rtd_pages/install_binary_tarball.rst
    rtd_pages/troubleshooting_guide.rst
    rtd_pages/payment_api.rst
    rtd_pages/wallet_backup.rst
