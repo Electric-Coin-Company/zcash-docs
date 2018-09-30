@@ -62,6 +62,7 @@ There are a couple options to setup Zcash for the first time.
 
     1. If you would like to install binary packages for Debian-based operating systems, see :ref:`install-debian-bin-packages-guide`
     2. If you would like to compile Zcash from source, please continue to the :ref:`Installation` section.
+    3. If you would like to install via a binary tarball download, see :ref:`install-binary-tarball-guide`.
 
 .. _installation:
 
