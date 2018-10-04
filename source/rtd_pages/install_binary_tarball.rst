@@ -17,7 +17,7 @@ After downloading but before extracting, verify that the checksum of the tarball
 
 Result: ``0597b7d5b6c4e4aa4a1981d7e5870e2e83f7b75622937ed61529b0a459255066``
 
-This checksum was generated from our gitian deterministic build process. View all gitian signatures.
+This checksum was generated from our gitian deterministic build process. `View all gitian signatures <https://github.com/zcash/gitian.sigs/tree/master/v2.0.0>`_.
 
 Once you've verified that it matches, extract the files and move the binaries into your executables $PATH: 
 
