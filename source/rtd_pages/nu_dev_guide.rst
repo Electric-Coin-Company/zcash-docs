@@ -45,6 +45,11 @@ Sapling is a network upgrade that introduces significant efficiency improvements
 
    See `ZIP 243 <https://github.com/zcash/zips/blob/master/zip-0243.rst>`_. Test vectors for ZIP 243 have been pushed and are being reviewed.
 
+:fa:`arrow-circle-right` Shielded HD Wallets
+    All Sapling addresses will use hierarchical deterministic key generation according to `ZIP 32 <https://github.com/zcash/zips/blob/master/zip-0032.rst>`_ (``keypath m/32'/133'/k' on mainnet``). Transparent and Sprout addresses will still use traditional key generation.
+    
+    See `ZIP 32 <https://github.com/zcash/zips/blob/master/zip-0032.rst>`_.
+
 Also see `Sapling Protocol Specification <https://github.com/zcash/zips/blob/master/protocol/protocol.pdf>`_.
 
 
@@ -54,11 +59,11 @@ General Guidelines
 Using zcashd unmodified
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-If you use the RPC as provided in the zcashd client, which is true for *most* exchanges and general users of Zcash, you must update your zcashd node to at least version 2.0.0.
+If you use the RPC as provided in the zcashd client, which is true for *most* exchanges and general users of Zcash, you must update your zcashd node to at least version 2.0.1.
+
+For an updated list of specific parameter changes for Sapling in the zcashd wallet RPC, please see: :download:`Sapling RPC Updates v2.0.1 <pdfs/Sapling-RPC-Updates-v2.0.1.pdf>` (PDF).
 
 Additionally, Sapling introduces new parameters which must be downloaded by running the ``fetch-params.sh`` script. These new parameters are placed in the same directory as the older Sprout parameters.
-
-We are still working on finishing Sapling support for our RPC, the changes to the RPC will be detailed in a list here as they become available.
 
 Using custom code to create/sign/send transactions
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
