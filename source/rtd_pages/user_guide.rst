@@ -97,7 +97,7 @@ WINDOWS (cross-compile)
 
        To view active work on this platform, see: :fa:`github` `#3172 <https://github.com/zcash/zcash/pull/3172>`_
            
-MACOS 10.12+)
+MACOS 10.12+
     1. Install macOS command line tools:
         .. code-block:: bash
 
