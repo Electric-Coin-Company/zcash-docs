@@ -67,7 +67,7 @@ End Goal
 
 - no_std support for hardware wallets and other projects
 
-- In the mean time, everything is CI’d and developed together
+- In the meantime, everything is CI’d and developed together
 
 - The coolest, most awesome crypto codebase written in Rust anywhere in the world
 
