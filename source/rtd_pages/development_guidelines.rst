@@ -103,7 +103,7 @@ To checkout an existing branch (assuming you are in ``zcash`` directory):
     git checkout [existing_branch_name]
 
 If you are fixing a bug or implementing a new feature, you likely will want to create a new branch. 
-If you are reviewing code or working on exisiting branches, you likely will checkout an existing 
+If you are reviewing code or working on existing branches, you likely will checkout an existing 
 branch. To view the list of current Zcash Github issues, click `here <https://github.com/zcash/zcash/issues>`_ . 
 
 .. _Make & Commit Changes:
@@ -123,7 +123,7 @@ list of patches and identify which one is being searched for. Do not use "auto-c
 keywords -- tickets should be closed manually. The auto-close keywords are "close[ds]", 
 "resolve[ds]", and "fix(e[ds])?"
 
-While continuing to do developement on a branch, keep in mind that other approved commits 
+While continuing to do development on a branch, keep in mind that other approved commits 
 are getting merged into ``master``.  In order to ensure there are minimal to no merge conflicts, 
 we need ``rebase`` with master.
 
@@ -156,7 +156,7 @@ This output should be consistent with your ``.git/config``:
         pushurl = DISABLED
 
 Once you have confirmed your branch/remote is valid, issue the following commands 
-(assumes you have **NO** existing uncommited changes):
+(assumes you have **NO** existing uncommitted changes):
 
 .. code-block:: bash
     
@@ -164,7 +164,7 @@ Once you have confirmed your branch/remote is valid, issue the following command
     git rebase upstream/master
     git push -f
 
-If you have uncommited changes, use ``git stash`` to preserve them:
+If you have uncommitted changes, use ``git stash`` to preserve them:
 
 .. code-block:: bash
 
@@ -174,12 +174,12 @@ If you have uncommited changes, use ``git stash`` to preserve them:
     git push -f
     git stash pop
 
-Using ``git stash`` allows you to temporarly store your changes while you rebase 
-with ``master``. Without this, you will rebase with master and loose your local changes.
+Using ``git stash`` allows you to temporarily store your changes while you rebase 
+with ``master``. Without this, you will rebase with master and lose your local changes.
 
-Before commiting changes, ensure your commit messages follow these guidelines:
+Before committing changes, ensure your commit messages follow these guidelines:
 
-    1. Seperate subject from body with a blank line
+    1. Separate subject from body with a blank line
     2. Limit the subject line to 50 characters
     3. Capitalize the subject line
     4. Do not end the subject line with a period
@@ -194,7 +194,7 @@ Once synced with ``master``, let's commit our changes:
     git commit -m 'Message describing commit'
     git push
 
-Now that all the files changed have been commited, let's continue to Create Pull Request section.
+Now that all the files changed have been committed, let's continue to Create Pull Request section.
 
 .. _Create Pull Request:
 
@@ -237,7 +237,7 @@ In order to merge your PR with ``master``, you will need to convince the reviewe
 
 .. important:: If your PR introduces code that does not have existing tests to ensure it operates gracefully, you **MUST** also create these tests to accompany your PR.
 
-Reviewers will investigate your PR and provide feedback. Generally the comments are explicity 
+Reviewers will investigate your PR and provide feedback. Generally the comments are explicitly 
 requesting code changes or clarifying implementations. Otherwise Reviewers will reply with PR terminology:
 
     - **Concept ACK** - Agree with the idea and overall direction, but have neither reviewed nor tested the code changes.
@@ -389,7 +389,7 @@ you have also followed :ref:`Create Pull Request` and :ref:`Deploy / Merge PR` s
 Testing
 *******
 
-To ensure the existing zcash code is tested, we use the following tools:
+To ensure the existing Zcash code is tested, we use the following tools:
 
 Gtest
 ~~~~~

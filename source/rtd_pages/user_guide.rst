@@ -385,7 +385,7 @@ First, you want to obtain Zcash. You can purchase them from an exchange, from ot
 
 .. attention:: **Wallet Backup**
    
-   To ensure you have properly backedup your wallet, we **strongly** encourage you to review the :ref:`wallet_backup` .
+   To ensure you have properly backed up your wallet, we **strongly** encourage you to review the :ref:`wallet_backup` .
 
 
 Generating a t-addr
