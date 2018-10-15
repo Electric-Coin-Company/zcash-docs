@@ -215,7 +215,7 @@ Linux
        mkdir -p ~/.zcash
 
 macOS
-    Your data directory is already generated at `~/Library/Application Support/Zcash`.
+    Your data directory is already generated at ``~/Library/Application Support/Zcash``.
 
 Mainnet
 *******
