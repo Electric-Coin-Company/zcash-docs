@@ -17,7 +17,7 @@ Getting Started
 
 Welcome! This guide is intended to get you running on the official Zcash network. To ensure your Zcash client behaves gracefully throughout the setup process, please check your system meets the following requirements:
 
-	| :fa:`linux` ``64-bit`` Linux OS
+	| :fa:`linux` ``64-bit`` Linux OS or :fa:`apple` ``64-bit`` MacOS 10.12+
 	| :fa:`microchip` ``64-bit`` Processor
 	| :fa:`database` ``5GB`` of free RAM
 	| :fa:`hdd-o` ``10GB`` of free Disk (*the size of the block chain increases over time*)
@@ -97,7 +97,7 @@ WINDOWS (cross-compile)
 
        To view active work on this platform, see: :fa:`github` `#3172 <https://github.com/zcash/zcash/pull/3172>`_
            
-MAC
+MACOS 10.12+
     1. Install Homebrew: 
         .. code-block:: bash
        
@@ -106,7 +106,7 @@ MAC
     2. Install packages:
         .. code-block:: bash
 
-            brew install git pkgconfig automake autoconf wget curl gcc libtool
+            brew install git pkgconfig automake autoconf wget gcc libtool coreutils
     
     3. Install ``pip`` :
         .. code-block:: bash
@@ -137,8 +137,11 @@ CENTOS 7+
        scl enable devtoolset-3 bash
     
 
-Please see our :ref:`supported_platform_policy` for additional details.
+.. note:: Please see our :ref:`supported_platform_policy` for additional details.
 
+Dependency Version Check
+************************
+	  
 Next, we need to ensure we have the correct version of ``gcc`` , ``g++`` , and ``binutils``
 
     1. **gcc/g++ 4.9 or later is required.** 
@@ -158,6 +161,9 @@ Next, we need to ensure we have the correct version of ``gcc`` , ``g++`` , and `
     2. **binutils 2.22 or later is required.**
 
         Use ``as --version`` to check which version you have, and upgrade if necessary.
+
+Downloading Zcash source
+************************
 
 Now we need to get the Zcash software from the repository:
 
