@@ -40,7 +40,7 @@ Using the version output from ``sw_vers -productVersion``, download the accordin
 
 https://www.macports.org/install.php
 
-Once you have succefully installed macports, configure sphinx using the below commands:
+Once you have successfully installed macports, configure sphinx using the below commands:
 
 ```bash
 sudo port install py36-sphinx

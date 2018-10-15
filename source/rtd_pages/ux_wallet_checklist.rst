@@ -81,7 +81,7 @@ Tell the user the expected remaining time to expiry
     Users should be able to see how much time/blocks are remaining until their transaction expires. 
     Once confirmed (10+ confirmations), unmark the sent transaction visibly in a “complete” state.
 
-If expired, visibly mark the transaction expired and and notify the user
+If expired, visibly mark the transaction expired and notify the user
     Rather than deleting the attempted transaction, keep the expired transaction in the log,
     but distinguished as such. We also encourage giving users suggestions on 
     `troubleshooting their transaction <https://z.cash/support/faq.html#transaction-not-mined>`_ .
@@ -91,7 +91,7 @@ Viewing Keys
 
 Use viewing keys for watch only wallets
     Share a `viewing key <https://blog.z.cash/viewing-keys-selective-disclosure/>`_ with yourself to create a 
-    allet that tracks your funds while keeping your main funds offline. Watch-only wallets are the first 
+    wallet that tracks your funds while keeping your main funds offline. Watch-only wallets are the first 
     application of viewing keys; we exploring additional use cases as well.
 
 Secure communication channel
@@ -174,7 +174,7 @@ Predictability
 
 Visibility
     Discoverability shouldn’t involve luck or chance. If a page requires scrolling, 
-    int that more content is below the screen by showing half of an image. If there 
+    indicate that more content is below the screen by showing half of an image. If there 
     are some screens you want users to find, the menu that links to those pages 
     persists everywhere.
 
