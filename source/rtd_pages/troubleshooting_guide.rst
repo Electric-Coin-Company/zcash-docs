@@ -77,7 +77,7 @@ To get help with the RPC interface from the command line, use `zcash-cli help` t
 
 To get help with a particular command, use ``zcash-cli help $COMMAND``. 
 
-There is also additional documentation under [doc/payment-api.md](https://github.com/zcash/zcash/blob/v1.0.4/doc/payment-api.md). 
+There is also additional documentation under :ref:`payment_api` . 
 
 ``zcash-cli` stops responding after I use the command `z_importkey``
 
