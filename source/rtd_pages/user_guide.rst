@@ -232,18 +232,15 @@ Place a configuration file inside your data directory using the following comman
 
 .. warning:: Note that this will overwrite any ``zcash.conf`` settings you may have added from testnet. (If you want to run on testnet, you can retain a `zcash.conf` from testnet.)
 
-Linux
-	     
+Linux     
     .. code-block:: bash
 
        echo "addnode=mainnet.z.cash" >~/.zcash/zcash.conf
 
 macOS
+    .. code-block:: bash
 
-    .. code-block::bash
-
-        echo "addnode=mainnet.z.cash" >~/Library/Application Support/Zcash/zcash.conf
-
+       echo "addnode=mainnet.z.cash" >~/Library/Application Support/Zcash/zcash.conf
        
 Example configured for ``mainnet`` :
 
