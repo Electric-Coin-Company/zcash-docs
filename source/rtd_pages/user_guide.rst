@@ -97,27 +97,40 @@ WINDOWS (cross-compile)
 
        To view active work on this platform, see: :fa:`github` `#3172 <https://github.com/zcash/zcash/pull/3172>`_
            
-MAC
-    1. Install Homebrew: 
+MACOS 10.12+ (Using the Terminal application)
+    1. Install macOS command line tools:
+        .. code-block:: bash
+
+	    xcode-select --install
+
+    2. Install Homebrew: 
         .. code-block:: bash
        
             /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-    2. Install packages:
+    3. Install packages:
         .. code-block:: bash
 
-            brew install git pkgconfig automake autoconf wget curl gcc libtool
+            brew install git pkgconfig automake autoconf wget libtool coreutils
     
-    3. Install ``pip`` :
+    4. Install ``pip`` :
         .. code-block:: bash
 
             sudo easy_install pip
     
-    4. Install python modules for rpc-tests
+    5. Install python modules for rpc-tests
         .. code-block:: bash
 
             sudo pip install pyblake2 pyzmq
-    
+
+    .. note::
+
+       There is an existing bug for macOS Mojave (10.14) that causes a failure in building Zcash. A work around for this includes one more step:
+
+       .. code-block:: bash
+
+	   open /Library/Developer/CommandLineTools/Packages/macOS_SDK_headers_for_macOS_10.14.pkg
+
 CENTOS 7+
     .. code-block:: bash
 
@@ -137,8 +150,11 @@ CENTOS 7+
        scl enable devtoolset-3 bash
     
 
-Please see our :ref:`supported_platform_policy` for additional details.
+.. note:: Please see our :ref:`supported_platform_policy` for additional details.
 
+Dependency Version Check
+************************
+	  
 Next, we need to ensure we have the correct version of ``gcc`` , ``g++`` , and ``binutils``
 
     1. **gcc/g++ 4.9 or later is required.** 
@@ -158,6 +174,9 @@ Next, we need to ensure we have the correct version of ``gcc`` , ``g++`` , and `
     2. **binutils 2.22 or later is required.**
 
         Use ``as --version`` to check which version you have, and upgrade if necessary.
+
+Downloading Zcash source
+************************
 
 Now we need to get the Zcash software from the repository:
 
@@ -196,26 +215,33 @@ Following the steps below will create your zcashd configuration file which can b
 
 .. tip:: For a complete list of parameters used in ``zcash.conf``, please check out :ref:`zcash_conf_guide`
 
-Create the `~/.zcash` directory:
+Linux
+    Create the data directory:
 
-.. code-block:: bash
+    .. code-block:: bash
    
-   mkdir -p ~/.zcash
+       mkdir -p ~/.zcash
 
+macOS
+    Your data directory is already generated at ``~/Library/Application Support/Zcash``.
 
 Mainnet
 *******
 
-Place a configuration file at `~/.zcash/zcash.conf` using the following commands:
+Place a configuration file inside your data directory using the following commands:
 
 .. warning:: Note that this will overwrite any ``zcash.conf`` settings you may have added from testnet. (If you want to run on testnet, you can retain a `zcash.conf` from testnet.)
 
+Linux     
+    .. code-block:: bash
 
-.. code-block:: bash
+       echo "addnode=mainnet.z.cash" >~/.zcash/zcash.conf
 
-   echo "addnode=mainnet.z.cash" >~/.zcash/zcash.conf
+macOS
+    .. code-block:: bash
 
-
+       echo "addnode=mainnet.z.cash" >~/Library/Application Support/Zcash/zcash.conf
+       
 Example configured for ``mainnet`` :
 
 :fa:`file` ``zcash.conf`` 
@@ -249,11 +275,19 @@ Enabling CPU Mining
 
 If you want to enable CPU mining, run these commands:
 
-.. code-block:: bash
+Linux
+    .. code-block:: bash
 
-   echo 'gen=1' >> ~/.zcash/zcash.conf
-   echo "genproclimit=-1" >> ~/.zcash/zcash.conf
+       echo 'gen=1' >> ~/.zcash/zcash.conf
+       echo "genproclimit=-1" >> ~/.zcash/zcash.conf
 
+macOS
+    .. code-block:: bash
+
+	echo 'gen=1' >> ~/Library/Application Support/Zcash/zcash.conf
+	echo "genproclimit=-1" >> ~/Library/Application Support/Zcash/zcash.conf
+
+       
 Setting ``genproclimit=-1`` mines on the maximum number of threads possible on your CPU. If you want to mine with a lower number of threads, set ``genproclimit`` equal to the number of threads you would like to mine on.
 
 The default miner is not efficient, but has been well reviewed. To use a much more efficient but unreviewed solver, you can run this command:
