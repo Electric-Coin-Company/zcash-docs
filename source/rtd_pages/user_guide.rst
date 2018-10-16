@@ -97,7 +97,7 @@ WINDOWS (cross-compile)
 
        To view active work on this platform, see: :fa:`github` `#3172 <https://github.com/zcash/zcash/pull/3172>`_
            
-MACOS 10.12+
+MACOS 10.12+ (Using the Terminal application)
     1. Install macOS command line tools:
         .. code-block:: bash
 
@@ -122,7 +122,15 @@ MACOS 10.12+
         .. code-block:: bash
 
             sudo pip install pyblake2 pyzmq
-    
+
+    .. note::
+
+       There is an existing bug for macOS Mojave (10.14) that causes a failure in building Zcash. A work around for this includes one more step:
+
+       .. code-block:: bash
+
+	   open /Library/Developer/CommandLineTools/Packages/macOS_SDK_headers_for_macOS_10.14.pkg
+
 CENTOS 7+
     .. code-block:: bash
 
