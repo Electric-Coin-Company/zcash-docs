@@ -93,13 +93,7 @@ The ``hashReserved`` field in the Stratum Protocol will have to be replaced by t
 Testing
 +++++++
 
-Sapling is currently activated on testnet. To test transactions you’ll want to follow the :ref:`testnet_guide`.
-
-Until version 2.0.1 is released, currently supported Sapling RPCs are behind the `experimental features` flag. Developers must specify ``-experimentalfeatures`` and ``-developersapling`` when starting up their testnet node to interact with Sapling shielded addresses. 
-
-Alternatively, developers can use these features in regtest mode.
-
-The next Sapling release, 2.0.1, will have wider range of support for Sapling addresses. 
+Sapling is currently activated on testnet. To test transactions you’ll want to follow the :ref:`testnet_guide`. Alternatively, developers can use these features in regtest mode.
 
     
 :fa:`snowflake-o` Overwinter
