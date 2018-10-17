@@ -79,6 +79,23 @@ UBUNTU/DEBIAN
 	   autoconf libtool ncurses-dev unzip git python python-zmq \
 	   zlib1g-dev wget curl bsdmainutils automake
 
+    .. note::
+
+        If you plan to cross-compile for Windows (that is, use your Linux system to build a Windows binary), there are a few additional setup steps. As of 2018-10-16 we have tested this using Ubuntu 18.04 (“Bionic Beaver”).
+
+        Install the mingw-w64 package:
+
+    	.. code-block:: bash
+
+    	   sudo apt-get install mingw-w64
+
+        The following two commands will display a current selection and prompt you for a new selection. Make sure the 'posix' compiler variants are selected for gcc and g++.
+
+    	.. code-block:: bash
+
+    	   sudo update-alternatives --config x86_64-w64-mingw32-gcc
+    	   sudo update-alternatives --config x86_64-w64-mingw32-g++
+
 FEDORA
 	.. code-block:: bash
 
@@ -90,13 +107,6 @@ RHEL (including Scientific Linux)
     - Install devtoolset-3 and autotools-latest (if not previously installed).
     - Run ``scl enable devtoolset-3 'scl enable autotools-latest bash'`` and do the remainder of the build in the shell that this starts.
 
-WINDOWS (cross-compile)
-    .. note:: 
-    
-       As of 5/1/2018 this platform is not fully supported. However, we are actively working to complete the components to support this.
-
-       To view active work on this platform, see: :fa:`github` `#3172 <https://github.com/zcash/zcash/pull/3172>`_
-           
 MACOS 10.12+ (Using the Terminal application)
     1. Install macOS command line tools:
         .. code-block:: bash
@@ -201,6 +211,14 @@ Ensure you have successfully installed all system package dependencies as descri
 .. code-block:: bash
    
    ./zcutil/build.sh -j$(nproc)
+
+.. note::
+
+    To build a Windows binary on another platform (as described in the Ubuntu/Debian section above), add a ``HOST`` environment variable setting with value ``x86_64-w64-mingw32`` to the build command, like this:
+
+    .. code-block:: bash
+
+       HOST=x86_64-w64-mingw32 ./zcutil/build.sh -j$(nproc)
 
 .. attention:: If you recieved any errors, from the above command, please check out our :ref:`troubleshooting-guide`
 
