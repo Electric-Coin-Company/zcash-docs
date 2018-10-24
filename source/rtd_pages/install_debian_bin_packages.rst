@@ -80,7 +80,7 @@ Remove the old signing key:
 
 .. code-block:: bash
 
-    sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys AEFD26F966E279CD
+    sudo apt-key del 63C4A2169C1B2FA2
 
 Remove the list item from local apt:
 
