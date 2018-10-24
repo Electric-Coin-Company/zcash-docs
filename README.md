@@ -71,7 +71,7 @@ If you are unable to build the above packages, please compile them from source:
 To use the Zcash ReadtheDocs development environment, please issue the following command:
 
 ```bash
-git clone https://gitlab.com/mdr0id/test-rtd-docs.git
+git clone https://gitlab.com/zcash-docs/zcash-docs.git
 cd test-rtd-docs
 ```
 
@@ -103,4 +103,3 @@ You can find the generated root html file in ```./build/html/``` as ```index.htm
 This non-local implementation of Zcash ReadtheDocs found [here](http://zcash.readthedocs.io/en/latest/index.html)
 
 The dashboard corresponding to this environment is located [here](https://readthedocs.org/projects/zcash/)
-
