@@ -72,7 +72,7 @@ To use the Zcash ReadtheDocs development environment, please issue the following
 
 ```bash
 git clone https://gitlab.com/zcash-docs/zcash-docs.git
-cd test-rtd-docs
+cd zcash-docs
 ```
 
 Here you will notice some important directories and files:
