@@ -63,6 +63,30 @@ If you see the error when updating to a new version of zcashd:
 ``The following signatures were invalid: KEYEXPIRED 1539886450``
 
 Follow the instructions at :ref:`updating_signing_keys`
+
+**Revoked Key error**
+
+If you see the error when updating to a new version of zcashd:
+
+``The following signatures were invalid: REVKEYSIG AEFD26F966E279CD``
+
+Remove the key marked as revoked:
+
+.. code-block:: bash
+
+    sudo apt-key del AEFD26F966E279CD
+
+Then retrieve the updated key:
+
+.. code-block:: bash
+
+    wget -qO - https://apt.z.cash/zcash.asc | sudo apt-key add -
+
+Then update the list again:
+
+.. code-block:: bash
+
+    sudo apt-get update
    
 Tor
 ---
@@ -92,7 +116,7 @@ Update the repository list:
 
 .. code-block:: bash
 
-    apt-get update
+    sudo apt-get update
 
 Then retrieve new key:
 
@@ -110,6 +134,6 @@ Then update the list again:
 
 .. code-block:: bash
 
-    apt-get update
+    sudo apt-get update
 
 At this point you should be able to upgrade with the new public key.
