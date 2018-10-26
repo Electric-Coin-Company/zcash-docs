@@ -120,7 +120,7 @@ The total amount received by address "myaddress"
 
 **Parameters**
 
-1. ``miniconf``    *(numeric, optional, default=1)* 
+1. ``minconf``    *(numeric, optional, default=1)* 
     Only include transactions confirmed at least this many times.
 
 **Output**
@@ -586,7 +586,7 @@ Return a list of amounts recieved by a zaddr belonging to the node's wallet.
 
 **Parameters**
 
-  1. miniconf         *(numeric, optional, default=1)* 
+  1. minconf         *(numeric, optional, default=1)* 
       The minimum confirmations to filter*
   2. maxconf          *(numeric, optional, default=9999999)* 
       The maximum confirmations to filter
