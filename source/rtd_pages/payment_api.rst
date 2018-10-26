@@ -181,7 +181,7 @@ spending key for this zaddr will be added to the node’s wallet.
 
 **Examples**
 
-Create a new shielded address (as of v2.0.0 Sprout is default)
+Create a new shielded address (as of v2.0.0 and v2.0.1 Sprout is default)
 
 .. code-block:: javascript
 
@@ -195,7 +195,7 @@ Create a new Sapling shielded address
 
     zcash-cli getnewaddress sapling
 
-    Add example of sapling address
+    zs1z7rejlpsa98s2rrrfkwmaxu53e4ue0ulcrw0h4x5g8jl04tak0d3mm47vdtahatqrlkngh9sly
 
 ----    
 
@@ -395,6 +395,14 @@ existing file with that name will be overwritten. No
 value is returned but a JSON-RPC error will be reported
 if a failure occurred.
 
+As of Sapling activation, the shielded private keys in 
+this file will be separated into legacy shielded private 
+keys under the title Zkeys and Sapling shielded private 
+keys. The export also includes (as of Sapling activation) 
+a comment with an HD wallet seed and associated fingerprint, 
+both as hex strings. This seed is only for the wallet’s 
+Sapling shielded keys and addresses.
+
 **Examples** 
 
 Export a wallet 
@@ -431,7 +439,10 @@ affecting the newly-added keys, which may take several
 minutes. Filename is the file to import. The path is
 relative to zcashd’s working directory. No value is
 returned but a JSON-RPC error will be reported if a
-failure occurred. 
+failure occurred. This command does not yet support importing HD 
+seeds and will import Sapling addresses in a standard form 
+(non-HD). To backup and restore the full wallet inclusive of 
+the Sapling HD seed, use the backupwallet command.
 
 **Examples** 
 
