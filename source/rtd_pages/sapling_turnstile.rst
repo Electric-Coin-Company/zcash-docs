@@ -20,10 +20,20 @@ To achieve this, owners of shielded ZEC will be required to send their balances 
 .. image:: images/turnstile2.png
    :align: center
 
+Migration Tool
+--------------
+
+We plan to release a Sapling migration tool to help users who have funds stored in older Sprout addresses migrate them to a newer Sapling address.
+
+If you are a user who stores funds in older Sprout addresses, we recommend you wait for this new tool before migrating your funds. We expect to release it in 2019 Q1.
+
+The primary goal for development of this tool is protecting the users' privacy via automation to avoid human error or misunderstanding (yes, even advanced users). With that disclaimer, we are providing privacy recommendations below for users who are not going to listen to this advice and proceed with manual migration.
+
+	   
 Privacy Recommendations
 ------------------------------------------
 
-There are several privacy recommendations that users should follow in order to retain privacy during migration.
+There are several privacy recommendations that users should follow in order to retain privacy during a manual migration.
 
 :fa:`arrow-circle-right` Use transparent addresses once for migrating shielded funds
 
@@ -35,15 +45,16 @@ There are several privacy recommendations that users should follow in order to r
 
   - Some users might prefer to not reveal the exact shielded balance in a single transfer.
   - Remember to use a unique, unused transparent addresses for splitting a balance across transfers.
-  - A balance that is evenly divided across multiple migrations will have a higher chance of association.
-  - Split balances will also have a higher chance of association the closer they are in block time. 
+  - A balance that is evenly divided across multiple migrations will have a higher chance of correlation..
+  - Split balances will also have a higher chance of correlation the closer they are in block time. 
 
 .. note::
 
    Splitting a shielded balance into multiple transfers is a matter of user preference and might not be the best approach for everyone. Using unused transparent addresses for the Sapling migration and discarding afterwards is **highly recommended for all users**.
+
    
-Example
--------
+Examples
+--------
 
    Alice has a shielded balance of 14.6727 ZEC and doesn't want to reveal that a single address holds that exact value as she migrates to a new Sapling shielded address. She decides that paying six transaction fees to migrate is worth the cost to not reveal the total balance.
 
@@ -54,6 +65,12 @@ Example
    She waits a couple of hours before initiating the second transfer, revealing 4.0001 ZEC in address ``t1def...``. This leaves 0.6724 ZEC in the legacy address accounting for the third transaction fee. Once confirmed, she finishes the second transfer by sending 4 ZEC (accounting for the fourth transaction fee) to the same Sapling address. The balance in the shielded Sapling address is now 13.999 ZEC.
 
    She waits for the next day to initiate the third and final transfer, revealing 0.6723 ZEC (accounting for the fifth transaction fee) in address ``t1xyz...``. Once the transaction is confirmed, the legacy Sprout address is now empty and a may be discarded. She finishes the final transfer by sending 0.6722 ZEC (accounting for the sixth transaction fee) to her Sapling address which now has a balance of 14.6721 ZEC (the original balance minus six transaction fees).
+
+.. note::
+
+   If fees are not a concern, users are advised to split balances transactions which send values in powers of ten (.001, .01, .1, 1, 10, 100, 1000, etc.). A user with a balance of 139.34 ZEC using this method would migrate 100 ZEC once,10 ZEC three times,1 ZEC nine times,.1 ZEC three times and .01 ZEC four times. This adds up to 20 migrations and 40 transactions. At the default fee rate (.0001 ZEC per transaction) this would cost .004 ZEC.
+
+   If time is not a concern, users are advised to delay migrating their split balances over intervals of time that are sufficiently random (between 2 and 100+ hours). A user with 40 transactions to complete their migration of 20 balances using this method could pick 40 random hour intervals in which to send the transactions.
    
 Additional Reading
 ------------------
