@@ -87,7 +87,7 @@ Accounting
 
 1. ``"address"``  *(string)* 
     The selected address. It may be a transparent or private address.
-2. ``miniconf``    *(numeric, optional, default=1)* 
+2. ``minconf``    *(numeric, optional, default=1)* 
     Only include transactions confirmed at least this many times.
 
 **Output**
