@@ -185,7 +185,7 @@ Create a new shielded address (as of v2.0.0 and v2.0.1 Sprout is default)
 
 .. code-block:: javascript
 
-    zcash-cli getnewaddress
+    zcash-cli z_getnewaddress
 
     zcU1Cd6zYyZCd2VJF8yKgmzjxdiiU1rgTTjEwoN1CGUWCziPkUTXUjXmX7TMqdMNsTfuiGN1jQoVN4kGxUR4sAPN4XZ7pxb
 
@@ -193,7 +193,7 @@ Create a new Sapling shielded address
 
 .. code-block:: javascript
 
-    zcash-cli getnewaddress sapling
+    zcash-cli z_getnewaddress sapling
 
     zs1z7rejlpsa98s2rrrfkwmaxu53e4ue0ulcrw0h4x5g8jl04tak0d3mm47vdtahatqrlkngh9sly
 
