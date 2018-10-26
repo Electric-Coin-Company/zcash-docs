@@ -32,9 +32,6 @@ To support multiple users in a single node’s wallet, consider using ``getnewad
 List of Zcash API commands
 --------------------------
 
-.. note:: Optional parameters are denoted in ``[square brackets]``.
-
-
 RPC Calls by Category
 +++++++++++++++++++++
 
@@ -601,7 +598,9 @@ Return a list of amounts recieved by a zaddr belonging to the node's wallet.
     "jsindex" : n             *(numeric)* 
       The joinsplit index
     "jsoutindex" : n          *(numeric)* 
-      The output index of the joinsplit
+      [sprout] The output index of the joinsplit
+    "outindex" : n          *(numeric)* 
+      [sapling] The output index
     "confirmations" : n       *(numeric)* 
       The number of confirmations
     "spendable" : true|false  *(boolean)* 
