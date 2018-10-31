@@ -54,7 +54,7 @@ The backup will be an exact copy of the current state of your wallet.dat file st
 
 If your original `wallet.dat` file becomes inaccessible for whatever reason, you can use your backup by copying it into your data directory and renaming the copy to `wallet.dat`.
 
-If you generate new addresses in your wallet after using ``backupwallet``, they will not be reflected in the backup file. If you generate new Sapling shielded addresses in your wallet after using ``backupwallet``, restoring that wallet file and calling ``z_getnewaddress sapling`` will regenerate keys in the same order that they were created originally.
+If you generate new addresses in your wallet after using ``backupwallet``, they will not be reflected in the backup file. Due to the deterministic property of HD wallets, if you generate new Sapling shielded addresses in your wallet after using ``backupwallet``, then restoring that wallet file and calling ``z_getnewaddress sapling`` will regenerate keys in the same order that they were created originally. After recreating keys with this method, it is recommended to restart the client using ``-rescan`` to force the client to check for prior transactions and properly update the balances of those addresses. 
 
 Using ``z_exportwallet`` & ``z_importwallet``
 +++++++++++++++++++++++++++++++++++++++++++++
