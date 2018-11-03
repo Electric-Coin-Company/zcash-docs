@@ -9,6 +9,8 @@
  #
  # ************************************************************************/
 
+image: python:3.6-alpine
+
 stages:
   - build
   - test
@@ -19,30 +21,24 @@ stages:
 # setup the essential pacakges for RTD to build gracefully; parallels 
 # user-guide README
 before_script:
-  - apk add git make
+  - apk add make
   - pip install sphinx sphinx_rtd_theme sphinx-autobuild sphinx_fontawesome
 
 # main job to build the RTD stack in the docker runner  
 build_job:
-  image: python:3.6-alpine
   stage: build
   script:
-  - git clone https://gitlab.com/mdr0id/test-rtd-docs.git
-  - cd test-rtd-docs/
   - make html
 
 # ignore test_job
 .test_job:
-  image: python:3.6-alpine
   stage: test
   script: 
   - print "test_job not implemented"
   allow_failure: true
 
-# serve the RTD html files to the staging domain:
-# https://mdr0id.gitlab.io/test-rtd-docs/
+# serve the RTD html files on staging branch on GitLab pages
 pages:
-  image: python:3.6-alpine
   stage: stage_site
   script:
   - make html
@@ -53,17 +49,15 @@ pages:
   only:
   - stage
   
-#ignore deploy_job  
+# ignore deploy_job  
 .deploy_job:
-  image: python:3.6-alpine
   stage: deploy
   script: 
   - print "deploy_job not implemented"
   allow_failure: true
 
-#ignore cleanup_job
+# ignore cleanup_job
 .cleanup_job:
-  image: python:3.6-alpine
   stage: cleanup
   script: 
   - print "cleanup_job not implemented"
