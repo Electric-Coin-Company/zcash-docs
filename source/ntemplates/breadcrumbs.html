@@ -1,4 +1,9 @@
+{% if display_gitlab %}
+    <a href="https://{{ gitlab_host|default("gitlab.com") }}/
+    {{ gitlab_user }}/{{ gitlab_repo }}/blob/{{ gitlab_version }}
+    {{ conf_py_path }}{{ pagename }}{{ suffix }}" class="fa fa-gitlab">&nbsp;
+    Edit on GitLab</a>
+{% endif %}
 {%- extends "sphinx_rtd_theme/breadcrumbs.html" %}
-
 {% block breadcrumbs_aside %}
 {% endblock %}
