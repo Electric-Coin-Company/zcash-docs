@@ -22,20 +22,13 @@ stages:
 # user-guide README
 before_script:
   - apk add make git
-  - pip install sphinx sphinx_rtd_theme sphinx-autobuild sphinx_fontawesome
+  - pip3 install sphinx sphinx_rtd_theme sphinx-autobuild sphinx_fontawesome
 
 # main job to build the RTD stack in the docker runner  
 build_job:
   stage: build
   script:
   - make html
-
-# ignore test_job
-.test_job:
-  stage: test
-  script: 
-  - print "test_job not implemented"
-  allow_failure: true
 
 # serve the RTD html files on staging branch on GitLab pages
 pages:
@@ -49,16 +42,10 @@ pages:
   only:
   - stage
   
-# ignore deploy_job  
+# ignore deploy_job; this will be used to push pdfs, per version, in future  
 .deploy_job:
   stage: deploy
   script: 
   - print "deploy_job not implemented"
   allow_failure: true
 
-# ignore cleanup_job
-.cleanup_job:
-  stage: cleanup
-  script: 
-  - print "cleanup_job not implemented"
-  allow_failure: true
