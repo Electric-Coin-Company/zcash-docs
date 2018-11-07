@@ -18,8 +18,6 @@ import sys
 import sphinx_fontawesome
 #sys.path.insert(0, os.path.abspath('extensions'))
 
-
-
 # -- Project information -----------------------------------------------------
 
 project = u'Zcash Documentation'
@@ -105,6 +103,16 @@ html_static_path = ['nstatic']
 #local_dirs = ['locale/']
 #gettext_compact = False
 
+
+# -- Options for displaying GitLab content -------------------------------------------------
+
+html_context = {
+    "display_gitlab": True, # Integrate Gitlab
+    "gitlab_user": "zcash-docs", # Username
+    "gitlab_repo": "zcash-docs", # Repo name
+    "gitlab_version": "master", # Version
+    "conf_py_path": "/source/" # Path in the checkout to the docs root
+}
 
 
 # -- Options for HTMLHelp output ---------------------------------------------
