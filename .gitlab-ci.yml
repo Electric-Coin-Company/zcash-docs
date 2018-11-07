@@ -46,6 +46,6 @@ pages:
 .deploy_job:
   stage: deploy
   script: 
-  - print "deploy_job not implemented"
+  - echo "deploy_job not implemented"
   allow_failure: true
 
