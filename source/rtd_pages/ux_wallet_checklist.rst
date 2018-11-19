@@ -137,7 +137,7 @@ Feedback
 
 Priming
     Tell people what they can expect and what they should do. For example, 
-    :download:`explaining <images/ux-checklist-interaction.png>` that a camera is needed 
+    `explaining <https://z.cash/wp-content/uploads/2018/11/source_rtd_pages_images_ux-checklist-interaction.png>`_ that a camera is needed 
     to scan QR codes before you ask for camera permissions is likely to have users who want 
     that feature to accept it.
 
@@ -193,7 +193,7 @@ Account Information
     Show the balance, minimum spendable, maximum spendable, and other account-specific information.
 
 Fee Information 
-    :download:`Show <images/ux-checklist-content.png>` how much the fee is, what % of the 
+    `Show <https://z.cash/wp-content/uploads/2018/11/source_rtd_pages_images_ux-checklist-content.png>`_ how much the fee is, what % of the 
     transaction it is, and if it’s added on top or included.
 
 Simplify Jargon
@@ -205,7 +205,7 @@ Navigation
 ++++++++++
 
 Persistence
-    The navigation bar should :download:`always be visible <images/ux-checklist-navigation.png>`
+    The navigation bar should `always be visible <ihttps://z.cash/wp-content/uploads/2018/11/source_rtd_pages_images_ux-checklist-navigation.png>`_
     on every screen. If it isn’t, users don’t know what to do next or don’t know how to do the next thing.
 
 Uniformity 
@@ -232,7 +232,7 @@ Visual Design
 Alignment
     Every element in the UI should be aligned with one or more other elements. Alignment provides 
     cognitive stability and creates visual relationships. In this same vein, 
-    :download:`left-align large blocks of text <images/ux-checklist-design1.png>`
+    `left-align large blocks of text <https://z.cash/wp-content/uploads/2018/11/source_rtd_pages_images_ux-checklist-design1.png>`_
     as users need to expend more energy to track the lines. Eyes fatigue faster, 
     comprehension slows, but the users may not be aware why.
 
@@ -241,12 +241,12 @@ Proximity
     For the same reason, visually separate unrelated items.
 
 Repetition
-    Use repetition to :download:`create a hierarchy of visual styles <images/ux-checklist-design2.png>` . 
+    Use repetition to `create a hierarchy of visual styles <https://z.cash/wp-content/uploads/2018/11/source_rtd_pages_images_ux-checklist-design2.png>`_ . 
     This principle applies to fonts but also colors, textures, and graphical elements. (For instance, 
     all titles should be of one size, all buttons are square, all colors are in a color palette, etc.) 
     Reusing elements of visual styles in visual elements creates cohesiveness.
 
 Contrast 
-    Text is :download:`easily readable <images/ux-checklist-design3.png>` when stark, complementary 
+    Text is `easily readable <https://z.cash/wp-content/uploads/2018/11/source_rtd_pages_images_ux-checklist-design3.png>`_ when stark, complementary 
     colors are used A lack of contrast between text and background strains the eyes because they don’t
     know which color to focus on.
