@@ -205,7 +205,7 @@ Navigation
 ++++++++++
 
 Persistence
-    The navigation bar should `always be visible <ihttps://z.cash/wp-content/uploads/2018/11/source_rtd_pages_images_ux-checklist-navigation.png>`_
+    The navigation bar should `always be visible <https://z.cash/wp-content/uploads/2018/11/source_rtd_pages_images_ux-checklist-navigation.png>`_
     on every screen. If it isn’t, users don’t know what to do next or don’t know how to do the next thing.
 
 Uniformity 
