@@ -50,8 +50,7 @@ where it is useful to propose a more formal specification, will a ZIP be written
 
 Each potential ZIP must have one or more *authors* -- people who write the ZIP using the 
 style and format described below, shepherd the discussions in the appropriate forums, and 
-attempt to build community consensus around the idea. The authors of a ZIP are authorized
-to make ... The `ZIP Editors`_
+attempt to build community consensus around the idea. See :ref:`ZIP Editors`
 
 Vetting an idea publicly before going as far as writing a ZIP is meant to save both the 
 potential authors and the wider community time. The Zcash issue tracker contains many ideas 
@@ -92,6 +91,8 @@ for detail on how the versions are represented.
 The source files for a ZIP are maintained under revision control in the `ZIPs 
 Repository <https://github.com/zcash/zips>`_ , but the revision history of that repository MAY contain intermediate 
 commits that do not correspond to document versions.
+
+.. _zip editors:
 
 ZIP Editors
 -----------
@@ -213,8 +214,6 @@ publicly accessible, although it may be possible to fix that by a force-push.)
 Relation to the Zcash Protocol Specification
 --------------------------------------------
 
-The `Zcash Protocol Specification` describes aspects of the
-
 The canonical description of Zcash consensus and security requirements is the 
 protocol specification. It is the responsibility of the ZIP Editors and the 
 authors of the protocol specification to maintain consistency between the 
@@ -246,10 +245,6 @@ deferred, the ZIP editor can re-assign it to draft status.
 A ZIP can also be "Rejected". Perhaps after all is said and done it was not a good 
 idea. It is still important to have a record of this fact.
 
-The possible paths of the status of ZIPs are as follows:
-
-<img src=ZIP-0001/process.png></img>
-
 Some Informational and Process ZIPs may also have a status of "Active" if they are 
 never meant to be completed. E.g. ZIP 1 (this ZIP).
 
@@ -268,8 +263,6 @@ Each ZIP should have the following parts:
   ZIP Editor makes an explicit exception to resolve a license incompatibility
   with a work from which the ZIP is derived. In the latter case the license 
   MUST be explicitly stated in the ZIP metadata and MUST satisfy the
-  `Open Source Definition`_ (interpreted to apply to documentation).
-
   `Open Source Definition <https://opensource.org/osd-annotated>`_
 
 * Specification -- The technical specification should describe the syntax and 

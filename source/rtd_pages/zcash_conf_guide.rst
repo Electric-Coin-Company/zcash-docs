@@ -203,7 +203,7 @@ Miscellaneous Options
 |                         |                                                                                                          |
 |                         | .. code-block:: bash                                                                                     |
 |                         |                                                                                                          |
-|                         |    gen=0                                                                                                 |
+|                         |    gen=1                                                                                                 |
 +-------------------------+----------------------------------------------------------------------------------------------------------+
 | genproclimit            | Set the number of threads to be used for mining Zcash (-1 = all cores).                                  |
 |                         |                                                                                                          |
