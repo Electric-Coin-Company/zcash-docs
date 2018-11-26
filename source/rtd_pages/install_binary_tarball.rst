@@ -25,7 +25,7 @@ Once you've verified that it matches, extract the files and move the binaries in
 
     tar -xvf zcash-2.0.2-linux64.tar.gz
 
-    mv -t /usr/local/bin/ zcash-2.0.1/bin/* 
+    mv -t /usr/local/bin/ zcash-2.0.2/bin/* 
 
 Now that Zcash is installed, run this command to download the parameters used to create and verify shielded transactions:
 
