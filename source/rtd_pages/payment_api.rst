@@ -181,7 +181,7 @@ spending key for this zaddr will be added to the node’s wallet.
 
 **Examples**
 
-Create a new shielded address (as of v2.0.0 and v2.0.1 Sprout is default)
+Create a new shielded address (as of v2.0.2 Sapling is default; v2.0.0 and v2.0.1 Sprout is default )
 
 .. code-block:: javascript
 
