@@ -7,13 +7,13 @@ Binary Tarball Download & Setup
 
 The Zcash company provides a binary tarball for download.
 
-`Download Tarball for v2.0.2 <https://z.cash/downloads/zcash-2.0.1-linux64.tar.gz>`_
+`Download Tarball for v2.0.2 <https://z.cash/downloads/zcash-2.0.2-linux64.tar.gz>`_
 
 After downloading but before extracting, verify that the checksum of the tarball matches the hash below:
 
 .. code-block:: bash
 
-   sha256sum zcash-2.0.1-linux64.tar.gz
+   sha256sum zcash-2.0.2-linux64.tar.gz
 
 Result: ``1cd0f61140e2139296fda10f627133dd6d053ce1f61d34b2f50dff696d56f13f``
 
@@ -23,7 +23,7 @@ Once you've verified that it matches, extract the files and move the binaries in
 
 .. code-block:: bash
 
-    tar -xvf zcash-2.0.1-linux64.tar.gz
+    tar -xvf zcash-2.0.2-linux64.tar.gz
 
     mv -t /usr/local/bin/ zcash-2.0.1/bin/* 
 
