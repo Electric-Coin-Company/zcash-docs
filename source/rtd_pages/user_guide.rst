@@ -40,11 +40,11 @@ If you're on a Debian-based distribution, you can follow the :ref:`install-debia
    git fetch origin
 
 | Ensure you check the current release version from :fa:`github` `here <https://github.com/zcash/zcash>`_ .
-| If ``v2.0.1`` was current, issue the following commands:
+| If ``v2.0.2`` was current, issue the following commands:
 
 .. code-block:: bash
 
-   git checkout v2.0.1
+   git checkout v2.0.2
    ./zcutil/fetch-params.sh
    ./zcutil/build.sh -j$(nproc)
 
@@ -194,7 +194,7 @@ Now we need to get the Zcash software from the repository:
 
    git clone https://github.com/zcash/zcash.git
    cd zcash/
-   git checkout v2.0.1
+   git checkout v2.0.2
    ./zcutil/fetch-params.sh
 
 This will fetch both our Sprout proving and verifying keys (the final ones created in the `Parameter Generation Ceremony <https://github.com/zcash/mpc>`_) in addition to the parameters generated in the `Sapling MPC <https://blog.z.cash/completion-of-the-sapling-mpc/>`_ which are used once Sapling activates, and place them into  ``~/.zcash-params/``.  These keys are just under 1.7GB in size, so it may take some time to download them. Users upgrading from earlier ``1.x`` releases will need to download the additional Sapling parameters which are just under 800MB in size.
