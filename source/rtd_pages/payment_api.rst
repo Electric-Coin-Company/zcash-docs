@@ -53,7 +53,7 @@ z_getoperationresult_ , z_getoperationstatus_ , z_listoperationids_
 
 :fa:`barcode` Payment_
 
-z_listreceivedbyaddress_ , z_listunspent_ , z_sendmany_ , z_shieldcoinbase_
+z_listreceivedbyaddress_ , z_listunspent_ , z_sendmany_ , z_shieldcoinbase_ , z_mergetoaddress_
 
 .. admonition:: RPC Parameter Conventions
 
@@ -770,6 +770,87 @@ Shield transparent coinbase funds by sending to a shielded z-address.
   .. code-block:: javascript
 
       zcash-cli z_shieldcoinbase "t1M72Sfpbz1BPpXFHz9m3CdqATR44Jvaydd" "ztfaW34Gj9FrnGUEf833ywDVL62NWXBM81u6EQnM6VR45eYnXhwztecW1SjxA7JrmAXKJhxhj3vDNEpVCQoSvVoSpmbhtjf"
+
+----
+
+.. _z_mergetoaddress:
+
+**Command:** ``z_mergetoaddress``
+
+**Parameters**
+
+  1. fromaddresses           *(array, required)*
+      | A JSON array with addresses.
+      | The following special strings are accepted inside the array:
+      |  "ANY_TADDR":   Merge UTXOs from any taddrs belonging to the wallet.
+      |  "ANY_SPROUT":  Merge notes from any Sprout zaddrs belonging to the wallet.
+      |  "ANY_SAPLING": Merge notes from any Sapling zaddrs belonging to the wallet.
+      |  ["address", ... ]: A list of taddrs or a zaddrs
+      | If a special string is given, any given addresses of that type will be counted as duplicates and cause an error.
+  2. "toaddress"             *(string, required)*
+      The taddr or zaddr to send the funds to.
+  3. fee                     *(numeric, optional, default=0.0001)*
+      The fee amount to attach to this transaction.
+  4. transparent_limit       *(numeric, optional, default=50)*
+      Limit on the maximum number of UTXOs to merge.  Set to 0 to use node option -mempooltxinputlimit (before Overwinter), or as many as will fit in the transaction (after Overwinter).
+  5. shielded_limit          *(numeric, optional, default=20 Sprout or 200 Sapling Notes)*
+      Limit on the maximum number of notes to merge.  Set to 0 to merge as many as will fit in the transaction.
+  6. "memo"                  *(string, optional)*
+      Encoded as hex. When toaddress is a zaddr, this will be stored in the memo field of the new note.
+
+
+**Output**
+
+  "remainingUTXOs": xxx               *(numeric)*
+    Number of UTXOs still available for merging.
+  "remainingTransparentValue": xxx    *(numeric)*
+    Value of UTXOs still available for merging.
+  "remainingNotes": xxx               *(numeric)*
+    Number of notes still available for merging.
+  "remainingShieldedValue": xxx       *(numeric)*
+    Value of notes still available for merging.
+  "mergingUTXOs": xxx                 *(numeric)*
+    Number of UTXOs being merged.
+  "mergingTransparentValue": xxx      *(numeric)*
+    Value of UTXOs being merged.
+  "mergingNotes": xxx                 *(numeric)*
+    Number of notes being merged.
+  "mergingShieldedValue": xxx         *(numeric)*
+    Value of notes being merged.
+  "opid": xxx                         *(string)*
+    An operationid to pass to z_getoperationstatus to get the result of the operation.
+
+**Description**
+
+WARNING: z_mergetoaddress is an experimental feature.
+To enable it, restart zcashd with the -experimentalfeatures and
+-zmergetoaddress commandline options, or add these two lines
+to the zcash.conf file:
+
+experimentalfeatures=1
+zmergetoaddress=1
+
+Merge multiple UTXOs and notes into a single UTXO or note.  Coinbase UTXOs are ignored; use `z_shieldcoinbase`
+to combine those into a single note.
+
+This is an asynchronous operation, and UTXOs selected for merging will be locked.  If there is an error, they
+are unlocked.  The RPC call `listlockunspent` can be used to return a list of locked UTXOs.
+
+The number of UTXOs and notes selected for merging can be limited by the caller.  If the transparent limit
+parameter is set to zero, and Overwinter is not yet active, the -mempooltxinputlimit option will determine the
+number of UTXOs.  After Overwinter has activated -mempooltxinputlimit is ignored and having a transparent
+input limit of zero will mean limit the number of UTXOs based on the size of the transaction.  Any limit is
+constrained by the consensus rule defining a maximum transaction size of 100000 bytes before Sapling, and 2000000
+bytes once Sapling activates.
+
+
+**Examples**
+
+Send funds from one or more addresses to a single one.
+
+  .. code-block:: javascript
+
+      zcash-cli z_mergetoaddress '["ANY_SAPLING", "t1M72Sfpbz1BPpXFHz9m3CdqATR44Jvaydd"]' ztestsapling19rnyu293v44f0kvtmszhx35lpdug574twc0lwyf4s7w0umtkrdq5nfcauxrxcyfmh3m7slemqsj
 
 ----
 
