@@ -11,7 +11,7 @@ First install the following dependency so you can talk to our repository using H
 
 .. code-block:: bash
 
-   sudo apt-get install apt-transport-https
+   sudo apt-get install apt-transport-https wget gnupg2
 
 Next add the Zcash master signing key to apt's trusted keyring:
 
@@ -20,7 +20,7 @@ Next add the Zcash master signing key to apt's trusted keyring:
    wget -qO - https://apt.z.cash/zcash.asc | sudo apt-key add -
 
 
-``Key fingerprint = A2CB 84F2 48C7 DDC9 6C2C 55C8 AEFD 26F9 66E2 79CD``
+``Key fingerprint = 3FE6 3B67 F85E A808 DE9B  880E 6DEF 3BAF 2727 66C0``
 
 Add the repository to your sources:
 
