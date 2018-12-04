@@ -36,6 +36,24 @@ Finally, update the cache of sources and install Zcash:
 
 Lastly you can run ``zcash-fetch-params`` to fetch the zero-knowledge parameters, and set up `~/.zcash/zcash.conf` before running Zcash as your local user, as documented in the :ref:`user_guide`. 
 
+**Missing Public Key Error**
+
+If you see:
+
+``The following signatures couldn't be verified because the public key is not available: NO_PUBKEY C2A798EF998940FA``
+
+Get the new key either directly from the `z.cash site <https://apt.z.cash/zcash.asc>`_:
+
+``wget -qO - https://apt.z.cash/zcash.asc | sudo apt-key add -``
+
+or download from a public keyserver:
+
+``sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 6DEF3BAF272766C0``
+
+to retrieve the new key and resolve this error.
+
+For any other signing key issues see :ref:`updating_signing_keys`
+
 Troubleshooting
 ---------------
 
@@ -55,18 +73,6 @@ On Ubuntu Trusty, you can install gcc/g++ 4.9 as follows:
    sudo add-apt-repository ppa:ubuntu-toolchain-r/test
    sudo apt-get update
    sudo apt-get install g++-4.9
-
-**Public Key & Invalid Signatures errors**
-
-If you an error when updating to a new version of zcashd such as:
-
-``The following signatures couldn't be verified because the public key is not available: NO_PUBKEY C2A798EF998940FA``
-
-``The following signatures were invalid: KEYEXPIRED 1539886450``
-
-``The following signatures were invalid: REVKEYSIG AEFD26F966E279CD``
-
-Follow the instructions at :ref:`updating_signing_keys`
    
 Tor
 ---
@@ -79,22 +85,6 @@ Updating Signing Keys
 ---------------------
 
 If your Debian binary package isn't updating due to an error with the public key, you can resolve the problem by updating to the new key. 
-
-**No Public Key error**
-
-If you see:
-
-``The following signatures couldn't be verified because the public key is not available: NO_PUBKEY C2A798EF998940FA``
-
-Get the new key with either:
-
-``wget -qO - https://apt.z.cash/zcash.asc | sudo apt-key add -``
-
-or:
-
-``sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 6DEF3BAF272766C0``
-
-to retrieve the new key and resolve this error.
 
 **Revoked Key error**
 
