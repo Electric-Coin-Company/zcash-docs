@@ -56,17 +56,49 @@ On Ubuntu Trusty, you can install gcc/g++ 4.9 as follows:
    sudo apt-get update
    sudo apt-get install g++-4.9
 
-**Public Key Expiration error**
+**Public Key & Invalid Signatures errors**
 
-If you see the error when updating to a new version of zcashd:
+If you an error when updating to a new version of zcashd such as:
+
+``The following signatures couldn't be verified because the public key is not available: NO_PUBKEY C2A798EF998940FA``
 
 ``The following signatures were invalid: KEYEXPIRED 1539886450``
 
+``The following signatures were invalid: REVKEYSIG AEFD26F966E279CD``
+
 Follow the instructions at :ref:`updating_signing_keys`
+   
+Tor
+---
+
+The repository is also accessible via Tor, after installing the `apt-transport-tor` package, at the address zcaptnv5ljsxpnjt.onion. Use the following pattern in your sources.list file: ``deb [arch=amd64] tor+http://zcaptnv5ljsxpnjt.onion/ jessie main``
+
+.. _updating_signing_keys:
+
+Updating Signing Keys
+---------------------
+
+If your Debian binary package isn't updating due to an error with the public key, you can resolve the problem by updating to the new key. due to an expired public key, you'll need to replace it with the updated key and apt information.
+
+**No Public Key error**
+
+If you see:
+
+``The following signatures couldn't be verified because the public key is not available: NO_PUBKEY C2A798EF998940FA``
+
+Get the new key with either:
+
+``wget -qO - https://apt.z.cash/zcash.asc | sudo apt-key add -``
+
+or:
+
+``sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 6DEF3BAF272766C0``
+
+to retrieve the new key and resolve this error.
 
 **Revoked Key error**
 
-If you see the error when updating to a new version of zcashd:
+If you see:
 
 ``The following signatures were invalid: REVKEYSIG AEFD26F966E279CD``
 
@@ -87,18 +119,13 @@ Then update the list again:
 .. code-block:: bash
 
     sudo apt-get update
-   
-Tor
----
 
-The repository is also accessible via Tor, after installing the `apt-transport-tor` package, at the address zcaptnv5ljsxpnjt.onion. Use the following pattern in your sources.list file: ``deb [arch=amd64] tor+http://zcaptnv5ljsxpnjt.onion/ jessie main``
 
-.. _updating_signing_keys:
+**Expired Key error**
 
-Updating Signing Keys
----------------------
+If you see:
 
-If your Debian binary package isn't updating due to an expired public key, you'll need to replace it with the updated key and apt information.
+``The following signatures were invalid: KEYEXPIRED 1539886450``
 
 Remove the old signing key:
 
