@@ -78,7 +78,7 @@ The repository is also accessible via Tor, after installing the `apt-transport-t
 Updating Signing Keys
 ---------------------
 
-If your Debian binary package isn't updating due to an error with the public key, you can resolve the problem by updating to the new key. due to an expired public key, you'll need to replace it with the updated key and apt information.
+If your Debian binary package isn't updating due to an error with the public key, you can resolve the problem by updating to the new key. 
 
 **No Public Key error**
 
