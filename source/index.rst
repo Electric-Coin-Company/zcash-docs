@@ -103,6 +103,7 @@ License
    :caption: Developers & Contributors
    :hidden:
 
+   rtd_pages/zig.rst
    rtd_pages/development_guidelines.rst
    rtd_pages/supported_platform_policy.rst
    rtd_pages/index_zips.rst
