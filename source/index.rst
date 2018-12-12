@@ -91,6 +91,7 @@ License
    rtd_pages/troubleshooting_guide.rst
    rtd_pages/payment_api.rst
    rtd_pages/wallet_backup.rst
+   rtd_pages/addresses.rst
    rtd_pages/sapling_turnstile.rst   
    rtd_pages/zcash_conf_guide.rst
    rtd_pages/zcash_mining_guide.rst
@@ -106,6 +107,7 @@ License
    rtd_pages/supported_platform_policy.rst
    rtd_pages/index_zips.rst
    rtd_pages/nu_dev_guide.rst
+   rtd_pages/testnet_guide.rst
    rtd_pages/librustzcash_arch.rst
    rtd_pages/ux_wallet_checklist.rst
    rtd_pages/code_of_conduct.rst
