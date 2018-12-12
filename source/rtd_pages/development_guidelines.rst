@@ -440,9 +440,9 @@ RPC tests are implemented in Python under the qa/rpc-tests/ directory.
 Continuous Integration
 ----------------------
 
-Watch the `Buildbot <https://ci.z.cash/>`_.
+:fa:`arrow-circle-right` `Buildbot <https://ci.z.cash/>`_
 
-Buildbot: https://ci.z.cash/
+:fa:`arrow-circle-right` `Homu <https://ci.z.cash/queue/zcash>`_
 
 Releases
 --------
