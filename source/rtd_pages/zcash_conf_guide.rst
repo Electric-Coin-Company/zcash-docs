@@ -119,24 +119,36 @@ Controlling a running Zcash/zcashd process
 |                         |                                                                                                          |
 |                         |    rpcbind=<addr>                                                                                        |
 +-------------------------+----------------------------------------------------------------------------------------------------------+
-| rpcuser                 | You must set rpcuser and rpcpassword to secure the JSON-RPC api                                          |
+| rpcuser                 | You must set rpcuser to secure the JSON-RPC api                                                          |
 |                         |                                                                                                          |
 |                         | .. code-block:: bash                                                                                     |
 |                         |                                                                                                          |
 |                         |    rpcuser=<username>                                                                                    |
 +-------------------------+----------------------------------------------------------------------------------------------------------+
-| rpcpassword             | You must set rpcuser and rpcpassword to secure the JSON-RPC api                                          |
+| rpcpassword             | If you set an rpcpassword, be sure it is sufficiently-secure, see the                                    |
+|                         | notes below.                                                                                             |
+|                         |                                                                                                          |
+|                         |                                                                                                          |
+|                         | When no rpcpassword is specified, the daemon now uses a special                                          |
+|                         | ‘cookie’ file for authentication. This file is generated with                                            |
+|                         | random content when the daemon starts, and deleted when it                                               |
+|                         | exits. Its contents are used as authentication token. Read                                               |
+|                         | access to this file controls who can access through RPC. By default                                      |
+|                         | it is stored in the data directory but its location can be overridden                                    |
+|                         | with the option -rpccookiefile.                                                                          |
 |                         |                                                                                                          |
 |                         | .. code-block:: bash                                                                                     |
 |                         |                                                                                                          |
 |                         |    rpcpassword=<password>                                                                                |
 |                         |                                                                                                          |
+|                         |                                                                                                          |
 |                         | .. warning::                                                                                             |
 |                         |                                                                                                          |
-|                         |    | You should still set a secure password even if you don't expose                                     |
-|                         |    | the RPC port to external interfaces, because of the existence of DNS                                |
-|                         |    | rebinding attacks (see https://en.wikipedia.org/wiki/DNS_rebinding for                              |
-|                         |    | more information).                                                                                  |
+|                         |    | You should still set a secure password (or rely on the auth cookie                                  |
+|                         |    | that is generated when you don't supply the rpcpassword option)                                     |
+|                         |    | even if you don't expose the RPC port to external interfaces,                                       |
+|                         |    | because of the existence of DNS rebinding attacks (see                                              |
+|                         |    | https://en.wikipedia.org/wiki/DNS_rebinding for more information).                                  |
 |                         |    |                                                                                                     |
 |                         |    | To generate a password that contains enough randomness to protect your                              |
 |                         |    | keys, you could use the following command (on Linux)...                                             |
