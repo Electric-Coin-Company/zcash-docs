@@ -123,13 +123,28 @@ Controlling a running Zcash/zcashd process
 |                         |                                                                                                          |
 |                         | .. code-block:: bash                                                                                     |
 |                         |                                                                                                          |
-|                         |    rpcuser=Ulysses                                                                                       |
+|                         |    rpcuser=<username>                                                                                    |
 +-------------------------+----------------------------------------------------------------------------------------------------------+
 | rpcpassword             | You must set rpcuser and rpcpassword to secure the JSON-RPC api                                          |
 |                         |                                                                                                          |
 |                         | .. code-block:: bash                                                                                     |
 |                         |                                                                                                          |
-|                         |    rpcpassword=YourSuperGreatPasswordNumber_DO_NOT_USE_THIS                                              |
+|                         |    rpcpassword=<password>                                                                                |
+|                         |                                                                                                          |
+|                         | .. warning::                                                                                             |
+|                         |                                                                                                          |
+|                         |    | You should still set a secure password even if you don't expose                                     |
+|                         |    | the RPC port to external interfaces, because of the existence of DNS                                |
+|                         |    | rebinding attacks (see https://en.wikipedia.org/wiki/DNS_rebinding for                              |
+|                         |    | more information).                                                                                  |
+|                         |    |                                                                                                     |
+|                         |    | To generate a password that contains enough randomness to protect your                              |
+|                         |    | keys, you could use the following command (on Linux)...                                             |
+|                         |                                                                                                          |
+|                         | .. code-block:: bash                                                                                     |
+|                         |                                                                                                          |
+|                         |    $  dd if=/dev/random bs=32 count=1 2>/dev/null | base64                                               |
+|                         |                                                                                                          |
 +-------------------------+----------------------------------------------------------------------------------------------------------+
 | rpcclienttimeout        | | How many seconds Zcash will wait for a complete RPC HTTP request.                                      |
 |                         | | after the HTTP connection is established.                                                              |
@@ -139,23 +154,25 @@ Controlling a running Zcash/zcashd process
 |                         |    rpcclienttimeout=30                                                                                   |
 +-------------------------+----------------------------------------------------------------------------------------------------------+
 | rpcallowip              | | By default, only RPC connections from localhost are allowed.                                           |
-|                         | | Specify as many rpcallowip= settings as you like to allow                                              |
-|                         | | connections from other hosts, either as a single IPv4/IPv6                                             |
-|                         | | or with a subnet specification.                                                                        |
+|                         | | Specify as many rpcallowip= settings as you require to allow                                           |
+|                         | | insecure connections from other hosts, either as a single IPv4/IPv6                                    |
+|                         | | or with a subnet specification. Without further security controls,                                     |
+|                         | | an attacker who can see your network traffic will be able to take                                      |
+|                         | | over your node.                                                                                        |
 |                         |                                                                                                          |
-|                         | .. note::                                                                                                |
+|                         | .. warning::                                                                                             |
 |                         |                                                                                                          |
-|                         |    | Opening up the RPC port to hosts outside your local trusted network                                 |
-|                         |    | is NOT RECOMMENDED, because the rpcpassword is transmitted over the                                 |
-|                         |    | network unencrypted and also because anyone that can authenticate on                                |
-|                         |    | the RPC port can steal your keys + take over the account running zcashd                             |
-|                         |    | For more information see https://github.com/zcash/zcash/issues/1497                                 |
+|                         |    | Using the RPC port over a remote interface is NOT RECOMMENDED, because                              |
+|                         |    | that will cause the rpcpassword to be transmitted over the network                                  |
+|                         |    | unencrypted, allowing any observer to steal your keys + Zcash and take                              |
+|                         |    | over the account running zcashd                                                                     |
+|                         |    | (see https://github.com/zcash/zcash/issues/1497).                                                   |
 |                         |                                                                                                          |
 |                         | .. code-block:: bash                                                                                     |
 |                         |                                                                                                          |
-|                         |    rpcallowip=10.1.1.34/255.255.255.0                                                                    |
-|                         |    rpcallowip=1.2.3.4/24                                                                                 |
-|                         |    rpcallowip=2001:db8:85a3:0:0:8a2e:370:7334/96                                                         |
+|                         |    rpcallowip=127.0.0.1/255.255.255.0                                                                    |
+|                         |    rpcallowip=127.0.0.1/24                                                                               |
+|                         |    rpcallowip=\:\:1/96                                                                                   |
 +-------------------------+----------------------------------------------------------------------------------------------------------+
 | rpcport                 | Listen for RPC connections on this TCP port:                                                             |
 |                         |                                                                                                          |
