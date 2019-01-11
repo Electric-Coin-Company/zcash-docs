@@ -125,9 +125,7 @@ Controlling a running Zcash/zcashd process
 |                         |                                                                                                          |
 |                         |    rpcuser=<username>                                                                                    |
 +-------------------------+----------------------------------------------------------------------------------------------------------+
-| rpcpassword             | [Optional]: rpcpassword is *optional*.                                                                   |
-|                         |                                                                                                          |
-|                         | | If you specify this option, be sure it is sufficiently-secure, see the                                 |
+| rpcpassword             | | If you specify this option, be sure it is sufficiently-secure, see the                                 |
 |                         | | notes below.                                                                                           |
 |                         |                                                                                                          |
 |                         | | When no rpcpassword option is specified, the daemon now uses a special                                 |
