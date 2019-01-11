@@ -125,29 +125,18 @@ Controlling a running Zcash/zcashd process
 |                         |                                                                                                          |
 |                         |    rpcuser=<username>                                                                                    |
 +-------------------------+----------------------------------------------------------------------------------------------------------+
-| rpcpassword             | | If you set an rpcpassword, be sure it is sufficiently-secure, see the                                  |
+| rpcpassword             | [Optional]: rpcpassword is *optional*.                                                                   |
+|                         |                                                                                                          |
+|                         | | If you specify this option, be sure it is sufficiently-secure, see the                                 |
 |                         | | notes below.                                                                                           |
 |                         |                                                                                                          |
-|                         |                                                                                                          |
-|                         | | When no rpcpassword is specified, the daemon now uses a special                                        |
+|                         | | When no rpcpassword option is specified, the daemon now uses a special                                 |
 |                         | | ‘cookie’ file for authentication. This file is generated with                                          |
 |                         | | random content when the daemon starts, and deleted when it                                             |
-|                         | | exits. Its contents are used as authentication token. Read                                             |
+|                         | | exits. Its contents are used as an authentication token. Read                                          |
 |                         | | access to this file controls who can access through RPC. By default                                    |
 |                         | | it is stored in the data directory but its location can be overridden                                  |
 |                         | | with the option -rpccookiefile.                                                                        |
-|                         |                                                                                                          |
-| rpcpassword             | If you set an rpcpassword, be sure it is sufficiently-secure, see the                                    |
-|                         | notes below.                                                                                             |
-|                         |                                                                                                          |
-|                         |                                                                                                          |
-|                         | When no rpcpassword is specified, the daemon now uses a special                                          |
-|                         | ‘cookie’ file for authentication. This file is generated with                                            |
-|                         | random content when the daemon starts, and deleted when it                                               |
-|                         | exits. Its contents are used as authentication token. Read                                               |
-|                         | access to this file controls who can access through RPC. By default                                      |
-|                         | it is stored in the data directory but its location can be overridden                                    |
-|                         | with the option -rpccookiefile.                                                                          |
 |                         |                                                                                                          |
 |                         | .. code-block:: bash                                                                                     |
 |                         |                                                                                                          |
@@ -189,14 +178,14 @@ Controlling a running Zcash/zcashd process
 |                         |    | Using the RPC port over a remote interface is NOT RECOMMENDED, because                              |
 |                         |    | that will cause the rpcpassword to be transmitted over the network                                  |
 |                         |    | unencrypted, allowing any observer to steal your keys + Zcash and take                              |
-|                         |    | over the account running zcashd                                                                     |
+|                         |    | over the OS account running zcashd                                                                  |
 |                         |    | (see https://github.com/zcash/zcash/issues/1497).                                                   |
 |                         |                                                                                                          |
 |                         | .. code-block:: bash                                                                                     |
 |                         |                                                                                                          |
 |                         |    rpcallowip=127.0.0.1/255.255.255.0                                                                    |
 |                         |    rpcallowip=127.0.0.1/24                                                                               |
-|                         |    rpcallowip=\:\:1/96                                                                                   |
+|                         |    rpcallowip=::1/128                                                                                    |
 +-------------------------+----------------------------------------------------------------------------------------------------------+
 | rpcport                 | Listen for RPC connections on this TCP port:                                                             |
 |                         |                                                                                                          |
