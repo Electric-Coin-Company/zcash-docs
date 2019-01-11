@@ -119,7 +119,7 @@ Controlling a running Zcash/zcashd process
 |                         |                                                                                                          |
 |                         |    rpcbind=<addr>                                                                                        |
 +-------------------------+----------------------------------------------------------------------------------------------------------+
-| rpcuser                 | You must set rpcuser to secure the JSON-RPC api                                                          |
+| rpcuser                 | If you set an rpcpassword using that option, you must also set rpcuser.                                  |
 |                         |                                                                                                          |
 |                         | .. code-block:: bash                                                                                     |
 |                         |                                                                                                          |
