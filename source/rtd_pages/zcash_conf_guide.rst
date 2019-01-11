@@ -125,6 +125,18 @@ Controlling a running Zcash/zcashd process
 |                         |                                                                                                          |
 |                         |    rpcuser=<username>                                                                                    |
 +-------------------------+----------------------------------------------------------------------------------------------------------+
+| rpcpassword             | | If you set an rpcpassword, be sure it is sufficiently-secure, see the                                  |
+|                         | | notes below.                                                                                           |
+|                         |                                                                                                          |
+|                         |                                                                                                          |
+|                         | | When no rpcpassword is specified, the daemon now uses a special                                        |
+|                         | | ‘cookie’ file for authentication. This file is generated with                                          |
+|                         | | random content when the daemon starts, and deleted when it                                             |
+|                         | | exits. Its contents are used as authentication token. Read                                             |
+|                         | | access to this file controls who can access through RPC. By default                                    |
+|                         | | it is stored in the data directory but its location can be overridden                                  |
+|                         | | with the option -rpccookiefile.                                                                        |
+|                         |                                                                                                          |
 | rpcpassword             | If you set an rpcpassword, be sure it is sufficiently-secure, see the                                    |
 |                         | notes below.                                                                                             |
 |                         |                                                                                                          |
