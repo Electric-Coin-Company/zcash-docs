@@ -24,7 +24,7 @@ To achieve this, owners of shielded ZEC will be required to send their balances 
 Checking the Pool Totals
 ------------------------
 
-It's possible to use your own node to check the total value in each shielded pool (Sprout and Sapling, currently) with a single RPC call to "getblockchaininfo". One way to issue that is to call ``zcash-cli getblockchaininfo`` on a computer running a properly-functioning zcashd. The resulting JSON blob contains the totals in the valuePool field.
+It's possible to use your own node to check the total value in each shielded pool (Sprout and Sapling, currently) with a single RPC call to "getblockchaininfo". One way to issue that is to call ``zcash-cli getblockchaininfo`` on a computer running a properly-functioning zcashd. The resulting JSON blob contains the perceived totals in the valuePool field. If the value corresponding with the "monitored" json key within the "Sprout" or "Sapling" entries are true, then your values for the pools are correct. If either of them are false, then your figures are wrong and you shouldn't rely on them, and you will need to reindex your node with ``zcashd -reindex`` to turn "monitored" to "true" at which point you can trust those figures.
 
 Migration Tool
 --------------
