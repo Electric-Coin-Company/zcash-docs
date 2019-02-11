@@ -20,7 +20,7 @@ Welcome! This guide is intended to get you running on the official Zcash network
 	| :fa:`linux` ``64-bit`` Linux OS
 	| :fa:`microchip` ``64-bit`` Processor
 	| :fa:`database` ``5GB`` of free RAM
-	| :fa:`hdd-o` ``10GB`` of free Disk (*the size of the block chain increases over time*)
+	| :fa:`hdd-o` ``25GB`` of free Disk (*the size of the block chain increases over time*)
 
 
 .. note:: Currently we only officially support Linux (Debian), but we are actively investigating development for other operating systems and platforms(e.g. macOS, Ubuntu, Windows, Fedora). 
