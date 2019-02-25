@@ -383,8 +383,12 @@ Below describes a standard workflow for developing code in the zcash repository:
 This will allow you to create/edit existing Zcash code, and build it locally. 
 If you want to submit a PR for this newly created code, please refer back to
 :ref:`Make & Commit Changes` section. After completing those steps, please ensure
-you have also followed :ref:`Create Pull Request` and :ref:`Deploy / Merge PR` sections. 
-    
+you have also followed :ref:`Create Pull Request` and :ref:`Deploy / Merge PR` sections.
+
+Coding
+******
+
+See the `Developer notes <https://github.com/zcash/zcash/blob/master/doc/developer-notes.md>`_ documentation which details coding style, thread handling and additional tips.
 
 Testing
 *******
@@ -444,8 +448,8 @@ Continuous Integration
 
 :fa:`arrow-circle-right` `Homu <https://ci.z.cash/queue/zcash>`_
 
-Releases
---------
+Release Versioning
+------------------
 
 Starting from Zcash v1.0.0-beta1, Zcash version numbers and release tags take one of the following forms:
 
@@ -458,3 +462,11 @@ Starting from Zcash v1.0.0-beta1, Zcash version numbers and release tags take on
     v<X>.<Y>.<Z>-<N>
 
 Alpha releases used a different convention: ``v0.11.2.z<N>`` (because Zcash was forked from Bitcoin v0.11.2).
+
+Release Process
+---------------
+
+For details on zcashd release processes, see:
+
+- `Release Process <https://github.com/zcash/zcash/blob/master/doc/hotfix-process.md>`_
+- `Hotfix Release Process <https://github.com/zcash/zcash/blob/master/doc/hotfix-process.md>`_

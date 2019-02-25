@@ -68,7 +68,7 @@ z_listreceivedbyaddress_ , z_listunspent_ , z_sendmany_ , z_shieldcoinbase_ , z_
       * - address
         - *Accepts both private and transparent addresses.*
       * - amount
-        - *JSON format double-precision number with 1 ZEC expressed as 1.00000000.*
+        - *JSON format decimal number with at most 8 digits of precision, where 1 ZEC is expressed as 1.00000000.*
       * - memo
         - | *Metadata expressed in hexadecimal format.  Limited to 512 bytes, the*
           | *current size of the memo field of a private transaction.  Zero padding*
@@ -770,6 +770,8 @@ Shield transparent coinbase funds by sending to a shielded z-address.
   .. code-block:: javascript
 
       zcash-cli z_shieldcoinbase "t1M72Sfpbz1BPpXFHz9m3CdqATR44Jvaydd" "ztfaW34Gj9FrnGUEf833ywDVL62NWXBM81u6EQnM6VR45eYnXhwztecW1SjxA7JrmAXKJhxhj3vDNEpVCQoSvVoSpmbhtjf"
+
+**See also** :ref:`shield_coinbase`
 
 ----
 
