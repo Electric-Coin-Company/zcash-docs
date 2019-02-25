@@ -96,6 +96,8 @@ License
    rtd_pages/zcash_conf_guide.rst
    rtd_pages/zcash_mining_guide.rst
    rtd_pages/security_warnings.rst
+   rtd_pages/files.rst
+   rtd_pages/tor.rst
    rtd_pages/glossary.rst
 
 
@@ -112,4 +114,6 @@ License
    rtd_pages/librustzcash_arch.rst
    rtd_pages/ux_wallet_checklist.rst
    rtd_pages/code_of_conduct.rst
+   rtd_pages/dnsseed_policy.rst
+   
    
