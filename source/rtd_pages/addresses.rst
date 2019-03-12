@@ -104,6 +104,12 @@ Transparent addresses work similarly to Bitcoin addresses and do not offer priva
 :fa:`arrow-circle-right` Many wallets only support transparent addresses.
     
 :fa:`arrow-circle-right` Coinbase transactions (AKA block rewards and miner fee payouts) can only be sent to transparent addresses.
+
+.. _value_pools:
+    
+Value Pools
+-----------
+Since there are 3 distinct address types (transparent, Sapling and Sprout), this means there are 3 *value pools* in which ZEC can be held. All ZEC held in transparent addresses are part of the *transparent value pool*, all ZEC held in Sapling addresses are part of the *Sapling value pool* and all ZEC held in Sprout addresses are part of the *Sprout value pool*. The sum of the pools is equal to the total amount of ZEC in circulation.
    
 Additional Reading
 ------------------

@@ -15,25 +15,28 @@ The Sapling turnstile is an auditing mechanism for the number of ZEC in circulat
 .. image:: images/turnstile.png
    :align: center
 
-To achieve this, owners of shielded ZEC will be required to send their balances to a transparent address before sending to Sapling shielded addresses. Balance transfers from shielded addresses to transparent addresses reveal the value and become associated with the transparent addresses. Transfers from transparent addresses back into shielded addresses reshield the value.
+There are two levels to this mechanism: user and consensus. The user level mechanism refers to the `zcashd` RPC which prohibits any transaction from being sent directly from a Sprout address to a Sapling address (and vice versa). Users **must** use a transparent address as an intermediary which will obviously expose the balance being migrated. As described in :ref:`zcash_addresses`, all balance transfers from shielded addresses to transparent addresses reveal the value and become associated with those transparent addresses. Transfers from those transparent addresses back into shielded addresses reshield the value. This process is shown in the diagram below.
 
 .. image:: images/turnstile2.png
    :align: center
 
+The consensus level mechanism allows a direct Sprout to Sapling transaction to take place but requires the balance be *passed through* the transparent value pool (see: :ref:`value_pools`) before landing in a Sapling address, thus exposing the value without requiring the use of a transparent address. Because this may not be obvious to users (and therefore a privacy risk), a UX decision was made to limit availability in the RPC. A migration tool is under development to make use of this consensus level mechanism. See :ref:`migration_tool` below.
 
 Checking the Pool Totals
 ------------------------
 
 It's possible to use your own node to check the total value in each shielded pool (Sprout and Sapling, currently) with a single RPC call to "getblockchaininfo". One way to issue that is to call ``zcash-cli getblockchaininfo`` on a computer running a properly-functioning zcashd. The resulting JSON blob contains the perceived totals in the valuePool field. If the value corresponding with the "monitored" json key within the "Sprout" or "Sapling" entries are true, then your values for the pools are correct. If either of them are false, then your figures are wrong and you shouldn't rely on them, and you will need to reindex your node with ``zcashd -reindex`` to turn "monitored" to "true" at which point you can trust those figures.
 
+.. _migration_tool:
+
 Migration Tool
 --------------
 
 We plan to release a Sapling migration tool to help users who have funds stored in older Sprout addresses migrate them to a newer Sapling address.
 
-If you are a user who stores funds in older Sprout addresses, we recommend you wait for this new tool before migrating your funds. We expect to release it in 2019 Q1.
+If you are a user who stores funds in older Sprout addresses, we recommend you wait for this new tool before migrating your funds. This tool is specified in a `Draft ZIP <https://github.com/zcash/zips/pull/197/files>`_.
 
-The primary goal for development of this tool is protecting the users' privacy via automation to avoid human error or misunderstanding (yes, even advanced users). With that disclaimer, we are providing privacy recommendations below for users who are not going to listen to this advice and proceed with manual migration.
+The primary goal for development of this tool is protecting the users' privacy via automation to avoid human error or misunderstanding (yes, even advanced users). It also makes use of the consensus level migration mechanism where manual migration requires the use of transparent addresses described in the Overview section of this page. With that disclaimer, we are providing privacy recommendations below for users who still want to proceed with manual migration.
 
 	   
 Privacy Recommendations
