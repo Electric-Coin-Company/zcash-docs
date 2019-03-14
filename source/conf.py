@@ -21,7 +21,7 @@ import sphinx_fontawesome
 # -- Project information -----------------------------------------------------
 
 project = u'Zcash Documentation'
-copyright = u'2018, Paige Peterson & Marshall Gaucher'
+copyright = u'2019, Paige Peterson & Marshall Gaucher'
 author = u'Paige Peterson & Marshall Gaucher'
 
 # The short X.Y version
