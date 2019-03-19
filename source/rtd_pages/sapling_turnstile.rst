@@ -2,15 +2,15 @@
 
 .. _sapling_turnstile:
 
-Sapling Turnstile
-==========================
+Sprout to Sapling Turnstile Migration
+=====================================
 
 Overview
 --------
 
 The Sapling network upgrade requires a new type of shielded address to support the new usability and security improvements it brings to Zcash. Sapling shielded addresses start with "zs" whereas the legacy, Sprout shielded addresses start with "zc".
 
-The Sapling turnstile is an auditing mechanism for the number of ZEC in circulation. Shielded ZEC cannot be accounted for in the total monetary supply because balances remain private to the owners of shielded address private keys. The Sapling turnstile provides accounting for the ZEC held in Sprout shielded addresses as they are migrated to Sapling shielded addresses.
+The Sprout to Sapling turnstile migration is an auditing mechanism for the number of ZEC in circulation. Shielded ZEC cannot be accounted for in the total monetary supply because balances remain private to the owners of shielded address private keys. This turnstile migration provides accounting for the ZEC held in Sprout shielded addresses as they are moved to the newer Sapling shielded addresses.
 
 .. image:: images/turnstile.png
    :align: center
@@ -22,21 +22,23 @@ There are two levels to this mechanism: user and consensus. The user level mecha
 
 The consensus level mechanism allows a direct Sprout to Sapling transaction to take place but requires the balance be *passed through* the transparent value pool (see: :ref:`value_pools`) before landing in a Sapling address, thus exposing the value without requiring the use of a transparent address. Because this may not be obvious to users (and therefore a privacy risk), a UX decision was made to limit availability in the RPC. A migration tool is under development to make use of this consensus level mechanism. See :ref:`migration_tool` below.
 
-Checking the Pool Totals
-------------------------
+Checking the Value Pool Totals
+------------------------------
 
-It's possible to use your own node to check the total value in each shielded pool (Sprout and Sapling, currently) with a single RPC call to "getblockchaininfo". One way to issue that is to call ``zcash-cli getblockchaininfo`` on a computer running a properly-functioning zcashd. The resulting JSON blob contains the perceived totals in the valuePool field. If the value corresponding with the "monitored" json key within the "Sprout" or "Sapling" entries are true, then your values for the pools are correct. If either of them are false, then your figures are wrong and you shouldn't rely on them, and you will need to reindex your node with ``zcashd -reindex`` to turn "monitored" to "true" at which point you can trust those figures.
+It's possible to use your own node to check the total value in each shielded value pool  with a single RPC call to `getblockchaininfo`. One way to issue that is to call ``zcash-cli getblockchaininfo`` on a computer running a properly-functioning zcashd. The resulting JSON blob contains the perceived totals in the valuePool field. If the value corresponding with the "monitored" json key within the "Sprout" or "Sapling" entries are true, then your values for the pools are correct. If either of them are false, then your figures are wrong and you shouldn't rely on them, and you will need to reindex your node with ``zcashd -reindex`` to turn "monitored" to "true" at which point you can trust those figures.
+
+The value pools are also monitored at the third-party website `zcha.in <https://zcha.in/statistics/network>`_.
 
 .. _migration_tool:
 
 Migration Tool
 --------------
 
-We plan to release a Sapling migration tool to help users who have funds stored in older Sprout addresses migrate them to a newer Sapling address.
+We plan to release a Sprout to Sapling migration tool to help users who have funds stored in older Sprout addresses migrate them to a newer Sapling address without accidentally leaking data which could publicly correlate them to their balances.
 
 If you are a user who stores funds in older Sprout addresses, we recommend you wait for this new tool before migrating your funds. This tool is specified in a `Draft ZIP <https://github.com/zcash/zips/pull/197/files>`_.
 
-The primary goal for development of this tool is protecting the users' privacy via automation to avoid human error or misunderstanding (yes, even advanced users). It also makes use of the consensus level migration mechanism where manual migration requires the use of transparent addresses described in the Overview section of this page. With that disclaimer, we are providing privacy recommendations below for users who still want to proceed with manual migration.
+The primary goal for development of this tool is protecting the users' privacy via automation to avoid human error or misunderstanding (yes, even advanced users). It makes use of the consensus level migration mechanism instead of manual migration which requires the use of transparent addresses described in the Overview section of this page. With that disclaimer, we are providing privacy recommendations below for users who still want to proceed with manual migration.
 
 	   
 Privacy Recommendations
