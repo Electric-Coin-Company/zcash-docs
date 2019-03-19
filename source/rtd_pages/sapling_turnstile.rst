@@ -1,21 +1,21 @@
 :orphan:
 
-.. _sapling_turnstile:
+.. _sapling_migration:
 
-Sprout to Sapling Turnstile Migration
-=====================================
+Sprout to Sapling Migration
+===========================
 
 Overview
 --------
 
 The Sapling network upgrade requires a new type of shielded address to support the new usability and security improvements it brings to Zcash. Sapling shielded addresses start with "zs" whereas the legacy, Sprout shielded addresses start with "zc".
 
-The Sprout to Sapling turnstile migration is an auditing mechanism for the number of ZEC in circulation. Shielded ZEC cannot be accounted for in the total monetary supply because balances remain private to the owners of shielded address private keys. This turnstile migration provides accounting for the ZEC held in Sprout shielded addresses as they are moved to the newer Sapling shielded addresses.
+The Sprout to Sapling migration is an auditing mechanism for the number of ZEC in circulation. Shielded ZEC cannot be accounted for in the total monetary supply because balances remain private to the owners of shielded address private keys. This migration provides accounting for the ZEC held in Sprout shielded addresses as they are moved to the newer Sapling shielded addresses using `turnstiles <https://zcash.readthedocs.io/en/latest/rtd_pages/addresses.html#turnstiles>`_ .
 
 .. image:: images/turnstile.png
    :align: center
 
-There are two levels to this mechanism: user and consensus. The user level mechanism refers to the `zcashd` RPC which prohibits any transaction from being sent directly from a Sprout address to a Sapling address (and vice versa). Users **must** use a transparent address as an intermediary which will obviously expose the balance being migrated. As described in :ref:`zcash_addresses`, all balance transfers from shielded addresses to transparent addresses reveal the value and become associated with those transparent addresses. Transfers from those transparent addresses back into shielded addresses reshield the value. This process is shown in the diagram below.
+There are two levels to this mechanism: user and consensus. The user level mechanism refers to the `zcashd` RPC which prohibits any transaction from being sent directly from a Sprout address to a Sapling address (and vice versa). For sending between Sprout and Sapling addresses, users of RPCs (such as `z_sendmany` and `z_mergettoaddress`) **must** use a transparent address as an intermediary which will obviously expose the balance being migrated. As described in :ref:`zcash_addresses`, all balance transfers from shielded addresses to transparent addresses reveal the value and become associated with those transparent addresses. Transfers from those transparent addresses back into shielded addresses reshield the value. This process is shown in the diagram below.
 
 .. image:: images/turnstile2.png
    :align: center
