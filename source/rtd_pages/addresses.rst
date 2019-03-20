@@ -55,7 +55,7 @@ ZEC can be sent between transparent and shielded addresses. Therefore, there are
 Shielded Addresses
 ------------------------------------------
 	   
-Shielded addresses are the address type that use zero-knowledge proofs to allow transaction data to be encrypted but remain verifiable by network nodes. Sapling shielded addresses are the primary shielded addresses as of the `Sapling network upgrade activation <https://z.cash/upgrade/sapling>`_. The legacy, Sprout addresses are still supported but will likely be deprecated in future. To learn about migrating from Sprout to Sapling addresses, see :ref:`sapling_turnstile` documentation.
+Shielded addresses are the address type that use zero-knowledge proofs to allow transaction data to be encrypted but remain verifiable by network nodes. Sapling shielded addresses are the primary shielded addresses as of the `Sapling network upgrade activation <https://z.cash/upgrade/sapling>`_. The legacy, Sprout addresses are still supported but will likely be deprecated in future. To learn about migrating from Sprout to Sapling addresses, see :ref:`sapling_migration` documentation.
 
 .. figure:: images/simple-z.png
    :align: center
@@ -113,7 +113,15 @@ Since there are 3 distinct address types (transparent, Sapling and Sprout), this
 
 Turnstiles
 ----------
-For each shielded value pool (see above), there exists a turnstile which can calculate the expected amount of ZEC held in it. Since ZEC must be mined to a transparent address before being sent to any shielded address, the value entering either the Sprout or Sapling value pools is visible. Similarly, because ZEC cannot be sent directly between shielded pools without revealing the value (see: :ref:`sapling_turnstile`), the value exiting a shielded pool is visible. This allows for publicly tracking the total value held by shielded pools without having the ability to know individual shielded address balances.
+For each shielded value pool (see above), there exists a turnstile which can calculate the expected amount of ZEC held in it. Since ZEC must be mined to a transparent address before being sent to any shielded address, the value entering either the Sprout or Sapling value pools is visible. Similarly, because ZEC cannot be sent directly between shielded value pools without revealing the amount (see: :ref:`sapling_migration`), the value exiting a shielded value pool is also visible. This allows for publicly tracking the total value held by shielded pools without having the ability to know individual shielded address balances.
+
+As A Defense Mechanism Against Balance Violations
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+While maintaining proper balances in Zcash transactions are primarily checked through other means (such as zero-knowledge proofs), the turnstiles are a way to publicly validate this property on a per-value pool basis. From there, defensive measures can be implemented to contain balance violations within an affected value pool.
+
+A new consensus rule in Zcash is being implemented for this very purpose. As defined in `ZIP 209: Prohibit Negative Shielded Value Pool <https://github.com/zcash/zips/pull/210/files>`_, the rule states:
+
+> If the "Sprout value pool balance" or "Sapling value pool balance" were to become negative as a result of accepting a block, then all nodes MUST reject the block as invalid.
    
 Additional Reading
 ------------------
