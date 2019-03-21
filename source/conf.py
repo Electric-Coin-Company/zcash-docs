@@ -175,4 +175,4 @@ texinfo_documents = [
 def setup(app):
     app.add_javascript('//cdn.transifex.com/live.js')
     app.add_javascript('js/transifex-api.js')
-
+    app.add_stylesheet('css/custom.css')
