@@ -64,8 +64,9 @@ h6 {
   font-size: 1rem;
 }
 
-a {
+a, a:visited {
   color: #00b2e3;
+  text-decoration: none;
 }
 
 a:hover {
@@ -85,6 +86,13 @@ hr {
 
 .wy-side-nav-search {
   background-color: #00b2e3;
+}
+
+.wy-side-nav-search .icon.icon-home::before {
+  content: url('../images/zcash-icon-black.svg');
+  width: 20px;
+  height: 22px;
+  vertical-align: middle;
 }
 
 .wy-side-nav-search > a:hover, .wy-side-nav-search .wy-dropdown > a:hover {
@@ -115,6 +123,10 @@ hr {
 
 .wy-menu-vertical li.current {
   background-color: #e6e7e8;
+}
+
+.wy-nav-content-wrap .wy-nav-content {
+  max-width: 1200px;
 }
 
 .wy-nav-content .rst-content h1 .headerlink, .wy-nav-content .rst-content h2 .headerlink, .wy-nav-content .rst-content .toctree-wrapper p.caption .headerlink, .wy-nav-content .rst-content h3 .headerlink, .wy-nav-content .rst-content h4 .headerlink, .wy-nav-content .rst-content h5 .headerlink, .wy-nav-content .rst-content h6 .headerlink, .wy-nav-content .rst-content dl dt .headerlink, .wy-nav-content .rst-content p.caption .headerlink, .wy-nav-content .rst-content table > caption .headerlink {
@@ -254,7 +266,7 @@ hr {
     font-size: 1rem;
 }
 
-.rst-content .rst-footer-buttons .btn.btn-neutral {
+.rst-content .rst-footer-buttons .btn.btn-neutral, .rst-content .rst-footer-buttons .btn.btn-neutral:visited {
     background-color: transparent !important;
     color: #212529 !important;
     border: 0 none transparent;
