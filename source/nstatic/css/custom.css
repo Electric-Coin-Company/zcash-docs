@@ -84,28 +84,35 @@ hr {
   margin: 1.875rem 0;
 }
 
-.wy-side-nav-search {
+.wy-side-nav-search, .wy-nav-top {
   background-color: #00b2e3;
 }
 
-.wy-side-nav-search .icon.icon-home::before {
-  content: url('../images/zcash-icon-black.svg');
-  width: 20px;
-  height: 22px;
+.wy-side-nav-search .icon.icon-home::before, .wy-nav-top a::before {
+  content: url('../images/zcash-icon-white.svg');
+  width: 22px;
+  height: 25px;
   vertical-align: middle;
+  display: inline-block;
+}
+
+.wy-nav-top a::before {
+  margin-right: .25em;
 }
 
 .wy-side-nav-search > a:hover, .wy-side-nav-search .wy-dropdown > a:hover {
   background-color: transparent;
   text-decoration: none;
-  color: #000;
+  color: #FFF;
 }
 
-.wy-side-nav-search > a, .wy-side-nav-search .wy-dropdown > a {
-  font-family: 'robotolight',Arial,Helvetica Neue,Helvetica,sans-serif;
+.wy-side-nav-search > a, .wy-side-nav-search .wy-dropdown > a, .wy-nav-top a, .wy-nav-top a:hover {
+  font-family: 'robotomedium',Arial,Helvetica Neue,Helvetica,sans-serif;
   line-height: 1.5;
   font-weight: 100;
-  color: #000;
+  font-size: 1.125rem;
+  color: #FFF;
+  text-decoration: none;
 }
 
 .wy-nav-side {
