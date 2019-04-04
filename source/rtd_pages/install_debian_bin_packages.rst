@@ -5,7 +5,7 @@
 Debian Binary Packages Setup
 ============================
 
-Zcash Company operates a package repository for 64-bit Debian-based distributions. If you'd like to try out the binary packages, you can set it up on your system and install Zcash from there.
+The Electric Coin Company operates a package repository for 64-bit Debian-based distributions. If you'd like to try out the binary packages, you can set it up on your system and install Zcash from there.
 
 First install the following dependency so you can talk to our repository using HTTPS:
 
