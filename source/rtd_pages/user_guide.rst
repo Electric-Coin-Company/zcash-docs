@@ -449,7 +449,7 @@ can issue ``zcash-cli getaddressesbyaccount ""`` to view existing addresses.
 .. code-block:: bash
 
    $ ./src/zcash-cli getnewaddress
-   t14oHp2v54vfmdgQ3v3SNuQga8JKHTNi2a1
+   t1example4vfmdgQ3v3SNuQga8JKHTNi2a1
 
 Listing t-addr
 ++++++++++++++
@@ -468,7 +468,7 @@ Now let's generate a z-addr.
 .. code-block:: bash
    
    $ ./src/zcash-cli z_getnewaddress
-   zcBqWB8VDjVER7uLKb4oHp2v54v2a1jKd9o4FY7mdgQ3gDfG8MiZLvdQga8JK3t58yjXGjQHzMzkGUxSguSs6ZzqpgTNiZG
+   zs1examplea4lqxrtmlpkayj0hxpfdd3ve62xhd7jds8c2a8tqz5kekplt469eza5wu8djdvpauezv
 
 This creates a private address and stores its key in your local wallet file. Give this address to the sender!
 
@@ -476,7 +476,7 @@ A z-addr is pretty large, so it's easy to make mistakes with them. Let's put it 
 
 .. code-block:: bash
 
-   $ ZADDR='zcBqWB8VDjVER7uLKb4oHp2v54v2a1jKd9o4FY7mdgQ3gDfG8MiZLvdQga8JK3t58yjXGjQHzMzkGUxSguSs6ZzqpgTNiZG'
+   $ ZADDR='zs1examplea4lqxrtmlpkayj0hxpfdd3ve62xhd7jds8c2a8tqz5kekplt469eza5wu8djdvpauezv'
 
 Listing z-addr
 ++++++++++++++
@@ -492,7 +492,7 @@ You should see something like:
 .. code-block:: json
 
    [
-      "zcBqWB8VDjVER7uLKb4oHp2v54v2a1jKd9o4FY7mdgQ3gDfG8MiZLvdQga8JK3t58yjXGjQHzMzkGUxSguSs6ZzqpgTNiZG"
+      "zs1examplea4lqxrtmlpkayj0hxpfdd3ve62xhd7jds8c2a8tqz5kekplt469eza5wu8djdvpauezv"
    ]
 
 Sending coins with your z-addr
@@ -502,7 +502,7 @@ If someone gives you their z-addr...
 
 .. code-block:: bash
 
-   $ FRIEND='zcCDe8krwEt1ozWmGZhBDWrcUfmK3Ue5D5z1f6u2EZLLCjQq7mBRkaAPb45FUH4Tca91rF4R1vf983ukR71kHyXeED4quGV'
+   $ FRIEND='zs1exampleakux6zswvlvsrcuku6540kw3l8jcft8n8hwnq6ma57canydsn3r05nxylrmcew82ja59'
 
 You can send 0.8 ZEC by doing...
 
@@ -510,7 +510,7 @@ You can send 0.8 ZEC by doing...
    
    $ ./src/zcash-cli z_sendmany "$ZADDR" "[{\"amount\": 0.8, \"address\": \"$FRIEND\"}]"
 
-After waiting about a minute, you can check to see if the operation has finished and produced a result:
+After waiting a few seconds, you can check to see if the operation has finished and produced a result:
 
 .. code-block:: bash
 
@@ -520,13 +520,13 @@ After waiting about a minute, you can check to see if the operation has finished
 
    [
     {
-        "id" : "opid-4eafcaf3-b028-40e0-9c29-137da5612f63",
+        "id" : "opid-bc8f822c-68df-419e-ae8f-b14b7aca29fd",
         "status" : "success",
-        "creation_time" : 1473439760,
+        "creation_time" : 1554693337,
         "result" : {
-            "txid" : "3b85cab48629713cc0caae99a49557d7b906c52a4ade97b944f57b81d9b0852d"
+            "txid" : "2979318b051a63281caa23e181ac02d367f1611374981ccd812708d13c3ed550"
         },
-        "execution_secs" : 51.64785629
+        "execution_secs" : 2.25543096
     }
    ]
 
