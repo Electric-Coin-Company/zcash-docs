@@ -129,7 +129,46 @@ hr {
 }
 
 .wy-menu-vertical li.current {
-  background-color: #e6e7e8;
+  background-color: transparent;
+}
+
+.wy-menu-vertical li.current ul {
+  padding-bottom: 0.4045rem;
+}
+
+.wy-menu-vertical li.on a span.toctree-expand, .wy-menu-vertical li.current > a span.toctree-expand {
+  color: #FFF;
+}
+
+.wy-menu-vertical li.on a:hover span.toctree-expand, .wy-menu-vertical li.current > a:hover span.toctree-expand {
+  color: #000;
+}
+
+.wy-menu-vertical li.toctree-l3, .wy-menu-vertical li.toctree-l4 {
+  font-size: 1em;
+}
+
+.wy-menu-vertical li.toctree-l1.current > a, .wy-menu-vertical li.toctree-l2.current li.toctree-l3 > a, .wy-menu-vertical li.toctree-l3.current li.toctree-l4 > a {
+  border-color: transparent;
+  background-color: transparent;
+}
+
+.wy-menu-vertical li.on a, .wy-menu-vertical li.current > a, .wy-menu-vertical li.toctree-l2.current > a {
+  background-color: transparent;
+  color: #fff;
+}
+
+.wy-menu-vertical li.on a:hover, .wy-menu-vertical li.current > a:hover {
+  background-color: transparent;
+}
+
+.wy-menu-vertical li.current a:hover {
+  background-color: #FFF !important;
+  color: #000;
+}
+
+.wy-menu-vertical li.toctree-l2 a, .wy-menu-vertical li.toctree-l3 a, .wy-menu-vertical li.toctree-l4 a {
+  color: #FFF;
 }
 
 .wy-nav-content-wrap .wy-nav-content {
