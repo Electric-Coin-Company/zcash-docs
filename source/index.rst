@@ -96,6 +96,8 @@ License
    rtd_pages/zcash_conf_guide.rst
    rtd_pages/zcash_mining_guide.rst
    rtd_pages/security_warnings.rst
+   rtd_pages/files.rst
+   rtd_pages/tor.rst
    rtd_pages/glossary.rst
 
 
