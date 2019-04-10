@@ -19,7 +19,7 @@ Block
 .. _block rewards:
 
 Block reward
-    A block reward is new `ZEC`_ released into the network after the successful `mining`_ of a block. For the first four years, the block reward in Zcash is split into a `miners' reward` and a `founders' reward`. During this time, miners receive 80% (or 10 `ZEC`_) per block with the remaining 20% (or 2.5 ZEC) split between a range of beneficiaries including a `Zcash Company`_ strategic reserve, the `Zcash Foundation`_ and many stakeholders including Zcash founders, employees, investors and advisors. After 850,000 `blocks`_, the block reward halves for the first time and miners start to receive 100% of the block reward (6.25 ZEC). Each subsequent 840,000 blocks triggers a new block reward halving.
+    A block reward is new `ZEC`_ released into the network after the successful `mining`_ of a block. For the first four years, the block reward in Zcash is split into a `miners' reward` and a `founders' reward`. During this time, miners receive 80% (or 10 `ZEC`_) per block with the remaining 20% (or 2.5 ZEC) split between a range of beneficiaries including an `Electric Coin Company`_ strategic reserve, the `Zcash Foundation`_ and many stakeholders including Zcash founders, employees, investors and advisors. After 850,000 `blocks`_, the block reward halves for the first time and miners start to receive 100% of the block reward (6.25 ZEC). Each subsequent 840,000 blocks triggers a new block reward halving.
     
 .. _blockchain:
 
@@ -42,6 +42,12 @@ Cryptography
     #. protect user privacy (via `zk-SNARKs`_)
     #. make it impossible for anybody to spend funds from another user's wallet
     #. prevent corruption of the blockchain database
+
+.. _Electric Coin Company:
+   _Zcash Company:
+
+Electric Coin Company
+    This is the abbreviation for the Electric Coin Company, the team behind the `Zcash protocol`_, previously known as the Zcash Company.
 
 .. _encrypted memo:
 
@@ -237,12 +243,6 @@ Zcash Foundation
 
 ZEC
     ZEC is the three letter currency code for the Zcash cryptocurrency. It is also used to help distinguish the `Zcash network`_ from the currency. Note that some exchanges use `XZC` as the Zcash currency code to conform with the `ISO 4217 <https://en.wikipedia.org/wiki/ISO_4217#X_currencies>`_ standard for currencies and similar assets not associated with a nation.
-
-.. _ZECC:
-.. _Zcash Company:
-
-ZECC
-    This is the abbreviation for Zcash Electric Coin Company, the team behind the `Zcash protocol`_. `Zcash Company` is a common alternative reference to this team.
 
 .. _Zerocash:
 

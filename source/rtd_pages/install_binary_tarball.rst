@@ -5,7 +5,7 @@
 Binary Tarball Download & Setup
 ===============================
 
-The Zcash company provides a binary tarball for download.
+The Electric Coin Company provides a binary tarball for download.
 
 `Download Tarball for v2.0.4 <https://z.cash/downloads/zcash-2.0.4-linux64.tar.gz>`_
 
