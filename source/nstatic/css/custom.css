@@ -153,6 +153,10 @@ hr {
   background-color: transparent;
 }
 
+.wy-menu-vertical li.toctree-l2.current li.toctree-l3 > a, .wy-menu-vertical li.toctree-l3.current li.toctree-l4 > a {
+  padding: .4045em 3.42em;
+}
+
 .wy-menu-vertical li.on a, .wy-menu-vertical li.current > a, .wy-menu-vertical li.toctree-l2.current > a {
   background-color: transparent;
   color: #fff;
