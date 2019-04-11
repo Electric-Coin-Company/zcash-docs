@@ -96,6 +96,16 @@ UBUNTU/DEBIAN
     	   sudo update-alternatives --config x86_64-w64-mingw32-gcc
     	   sudo update-alternatives --config x86_64-w64-mingw32-g++
 
+
+    .. note::
+
+        If you wish to run the test suite, you will need additional dependencies:
+
+        .. code-block:: bash
+
+            sudo apt-get install python-pip
+            sudo pip install pyblake2
+
 FEDORA
 	.. code-block:: bash
 
@@ -219,6 +229,23 @@ Ensure you have successfully installed all system package dependencies as descri
     .. code-block:: bash
 
        HOST=x86_64-w64-mingw32 ./zcutil/build.sh -j$(nproc)
+
+
+.. note::
+
+   If you wish to build ``zcashd`` with the Qpid Proton interface enabled, you
+   will need an additional dependency:
+
+   .. code-block:: bash
+
+      sudo apt-get install cmake
+
+   Then, Proton must be enabled during the build as follows:
+
+   .. code-block:: bash
+
+      ./zcutil/build.sh --enable-proton -j$(nproc)
+
 
 .. attention:: If you recieved any errors, from the above command, please check out our :ref:`troubleshooting-guide`
 
