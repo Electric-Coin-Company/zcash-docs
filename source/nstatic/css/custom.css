@@ -345,3 +345,7 @@ hr {
     background-color: #e6e7e8;
   }
 }
+
+.wy-side-nav-search > div.version {
+  color: #ffffff;
+}
