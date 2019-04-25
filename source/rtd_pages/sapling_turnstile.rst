@@ -22,66 +22,66 @@ There are two levels to this mechanism: user and consensus. The user level mecha
 
 The consensus level mechanism allows a direct Sprout to Sapling transaction to take place but requires the balance be *passed through* the transparent value pool (see: :ref:`value_pools`) before landing in a Sapling address, thus exposing the value without requiring the use of a transparent address. Because this may not be obvious to users (and therefore a privacy risk), a UX decision was made to limit availability in the RPC. A migration tool is under development to make use of this consensus level mechanism. See :ref:`migration_tool` below.
 
-Checking the Value Pool Totals
-------------------------------
-
-It's possible to use your own node to check the total value in each shielded value pool  with a single RPC call to `getblockchaininfo`. One way to issue that is to call ``zcash-cli getblockchaininfo`` on a computer running a properly-functioning zcashd. The resulting JSON blob contains the perceived totals in the valuePool field. If the value corresponding with the "monitored" json key within the "Sprout" or "Sapling" entries are true, then your values for the pools are correct. If either of them are false, then your figures are wrong and you shouldn't rely on them, and you will need to reindex your node with ``zcashd -reindex`` to turn "monitored" to "true" at which point you can trust those figures.
-
-The value pools are also monitored at the third-party website `zcha.in <https://zcha.in/statistics/network>`_.
-
 .. _migration_tool:
 
 Migration Tool
 --------------
 
-We plan to release a Sprout to Sapling migration tool to help users who have funds stored in older Sprout addresses migrate them to a newer Sapling address without accidentally leaking data which could publicly correlate them to their balances.
+As of version 2.0.5 of zcashd, a Sprout to Sapling migration tool will be available to help users who have funds stored in older Sprout addresses migrate them to a Sapling addresss. It is **highly recommended** that all users with funds in Sprout addresses make use of this tool instead of manual migration. 
 
-If you are a user who stores funds in older Sprout addresses, we recommend you wait for this new tool before migrating your funds. This tool is specified in a `Draft ZIP <https://github.com/zcash/zips/pull/197/files>`_.
+Since the exposure of the migrated amount potentially compromises the privacy of users, the tool works by hiding individual migration transactions among those of all users that are doing the migration at around the same time.
 
-The primary goal for development of this tool is protecting the users' privacy via automation to avoid human error or misunderstanding (yes, even advanced users). It makes use of the consensus level migration mechanism instead of manual migration which requires the use of transparent addresses described in the Overview section of this page. With that disclaimer, we are providing privacy recommendations below for users who still want to proceed with manual migration.
+The tool will migrate funds from any Sprout addresses in the wallet with a greater than .01 ZEC balance into a single destination Sapling address. The migration works by creating up to 5 transactions whenever the blockchain reaches a 500 block height interval. The transaction amounts are picked according to a random distribution. The migration will end once the wallet’s Sprout balance is below .01 ZEC.
 
-	   
-Privacy Recommendations
-------------------------------------------
+The full design of the tool is specified in `ZIP 308 <https://github.com/zcash/zips/blob/master/zip-0308.rst>`_.
 
-There are several privacy recommendations that users should follow in order to retain privacy during a manual migration.
-
-:fa:`arrow-circle-right` Use transparent addresses once for migrating shielded funds
-
-  - Do not use transparent addresses which have already received funds.
-  - Discard transparent addresses after migration is completed.
-  - Use a unique transparent address for each balance migration.
-
-:fa:`arrow-circle-right` Split balances into multiple migrations
-
-  - Some users might prefer to not reveal the exact shielded balance in a single transfer.
-  - Remember to use a unique, unused transparent addresses for splitting a balance across transfers.
-  - A balance that is evenly divided across multiple migrations will have a higher chance of correlation..
-  - Split balances will also have a higher chance of correlation the closer they are in block time. 
+Using the Migration Tool
+~~~~~~~~~~~~~~~~~~~~~~~~
+Use of the migration tool is implemented in two zcashd RPCs: ``z_setmigration`` and ``z_getmigrationstatus``. 
 
 .. note::
 
-   Splitting a shielded balance into multiple transfers is a matter of user preference and might not be the best approach for everyone. Using unused transparent addresses for the Sapling migration and discarding afterwards is **highly recommended for all users**.
+   Before running the tool, you may want to specify a specific destination address. The default is the Sapling account 0 address (aka the first address derived from the wallet's master seed). To change this, set another Sapling address by adding the ``-migrationdestaddress=<SAPLINGADDR>`` parameter in `zcash.conf`.
 
-   
-Examples
---------
+To activate the migration tool, simply run:
 
-   Alice has a shielded balance of 14.6727 ZEC and doesn't want to reveal that a single address holds that exact value as she migrates to a new Sapling shielded address. She decides that paying six transaction fees to migrate is worth the cost to not reveal the total balance.
+.. code-block:: bash
 
-   To do this, Alice generates 3 new transparent addresses ``t1abc...``, ``t1def...`` and ``t1xyz..`` and picks 3 unequal values that add up to her total balance ``10``, ``4.0001`` and ``0.6756``.
+   $ zcash-cli z_setmigration true
 
-   She initiates the first transaction, to the first fresh transparent address revealing 10 ZEC in address ``t1abc...``. This leaves 4.6726 ZEC in the legacy address accounting for the first transaction fee. Once confirmed, Alice sends 9.999 ZEC (accounting for the second transaction fee) from ``t1abc...`` to her new shielded Sapling address.
+Or to deactivate:
 
-   She waits a couple of hours before initiating the second transfer, revealing 4.0001 ZEC in address ``t1def...``. This leaves 0.6724 ZEC in the legacy address accounting for the third transaction fee. Once confirmed, she finishes the second transfer by sending 4 ZEC (accounting for the fourth transaction fee) to the same Sapling address. The balance in the shielded Sapling address is now 13.999 ZEC.
+.. code-block:: bash
 
-   She waits for the next day to initiate the third and final transfer, revealing 0.6723 ZEC (accounting for the fifth transaction fee) in address ``t1xyz...``. Once the transaction is confirmed, the legacy Sprout address is now empty and a may be discarded. She finishes the final transfer by sending 0.6722 ZEC (accounting for the sixth transaction fee) to her Sapling address which now has a balance of 14.6721 ZEC (the original balance minus six transaction fees).
+   $ zcash-cli z_setmigration false
 
 .. note::
 
-   If fees are not a concern, users are advised to split balances transactions which send values in powers of ten (.001, .01, .1, 1, 10, 100, 1000, etc.). A user with a balance of 139.34 ZEC using this method would migrate 100 ZEC once,10 ZEC three times,1 ZEC nine times,.1 ZEC three times and .01 ZEC four times. This adds up to 20 migrations and 40 transactions. At the default fee rate (.0001 ZEC per transaction) this would cost .004 ZEC.
+   You can also enable migration in `zcash.conf` by adding the ``-setmigration=1`` parameter. This will start the migration automatically after restart. If the tool is deactivated with the RPC, a restart of zcashd will reenable it.
 
-   If time is not a concern, users are advised to delay migrating their split balances over intervals of time that are sufficiently random (between 2 and 100+ hours). A user with 40 transactions to complete their migration of 20 balances using this method could pick 40 random hour intervals in which to send the transactions.
+To check the status of migration, run:
+
+.. code-block:: bash
+
+   $ zcash-cli z_getmigrationstatus
+
+Which will output the following information:
+
+.. code::
+
+   {
+     "enabled": true|false,
+     "destination_address": "zaddr",
+     "unmigrated_amount": nnn.n,
+     "unfinalized_migrated_amount": nnn.n,
+     "finalized_migrated_amount": nnn.n,
+     "finalized_migration_transactions": nnn,
+     "time_started": ttt, // Unix timestamp of first transaction
+     "migration_txids": [txids]
+   }
+
+Once every Sprout address has 0.01 ZEC or less, the tool will disable itself automatically.
+
    
 Additional Reading
 ------------------
