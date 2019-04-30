@@ -111,7 +111,8 @@ FEDORA
 
 	   sudo dnf install \
 	   git pkgconfig automake autoconf ncurses-devel python \
-	   python-zmq wget curl gtest-devel gcc gcc-c++ libtool patch
+	   python-zmq wget curl gtest-devel gcc gcc-c++ libtool \
+	   patch glibc-static libstdc++-static
 
 RHEL (including Scientific Linux)
     - Install devtoolset-3 and autotools-latest (if not previously installed).
