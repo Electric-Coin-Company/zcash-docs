@@ -231,6 +231,13 @@ Ensure you have successfully installed all system package dependencies as descri
 
        HOST=x86_64-w64-mingw32 ./zcutil/build.sh -j$(nproc)
 
+.. note::
+
+    To build an ARMv8 binary (using `g++-aarch64-linux-gnu`) on another platform (as described in the Ubuntu/Debian section above), add a ``HOST`` environment variable setting with value ``aarch64-linux-gnu`` to the build command, like this:
+
+    .. code-block:: bash
+
+       HOST=aarch64-linux-gnu ./zcutil/build.sh -j$(nproc)
 
 .. note::
 
