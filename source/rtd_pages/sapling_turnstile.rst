@@ -61,7 +61,7 @@ Or to deactivate:
 
 .. note::
 
-   You can also enable migration in `zcash.conf` by adding the ``-setmigration=1`` parameter. This will start the migration automatically after restart. If the tool is deactivated with the RPC, a restart of zcashd will reenable it.
+   You can also enable migration in `zcash.conf` by adding the ``-migration`` parameter. This will start the migration automatically after restart. If the tool is deactivated with the RPC, a restart of zcashd will reenable it.
 
 To check the status of migration, run:
 
