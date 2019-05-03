@@ -19,12 +19,12 @@ The Sprout-to-Sapling migration is an upgrade strategy for funds left in Sprout 
 .. image:: images/turnstile.png
    :align: center
 
-There are two levels to the migration: user and consensus. The user level refers to the standard `zcashd` RPCs which prohibit any transaction from being sent directly from a Sprout address to a Sapling address (and vice versa). For sending between Sprout and Sapling addresses, users of RPCs such as `z_sendmany` and `z_mergettoaddress` **must** use a transparent address as an intermediary which will obviously expose the balance being migrated. As described in :ref:`zcash_addresses`, all balance transfers from shielded addresses to transparent addresses reveal the value and become associated with those transparent addresses. Transfers from those transparent addresses back into shielded addresses reshield the value. This process is shown in the diagram below.
+There are two levels to the migration: user and consensus. The user level refers to the standard `zcashd` payment RPCs such as `z_sendmany` and `z_mergettoaddress` which prohibit any transaction from being sent directly from a Sprout address to a Sapling address (and vice versa). For sending between Sprout and Sapling addresses, users of these RPCs **must** use a transparent address as an intermediary which will obviously expose the balance being migrated. As described in :ref:`zcash_addresses`, all balance transfers from shielded addresses to transparent addresses reveal the value and become associated with those transparent addresses. Transfers from those transparent addresses back into shielded addresses reshield the value. This process is shown in the diagram below.
 
 .. image:: images/turnstile2.png
    :align: center
 
-The consensus level mechanism allows a direct Sprout to Sapling transaction to take place but requires the balance be *passed through* the transparent value pool (see: :ref:`value_pools`) before landing in a Sapling address, thus exposing the value without requiring the use of a transparent address. Because this may not be obvious to users (and therefore a privacy risk), a UX decision was made to limit availability in the standard RPC. A migration tool is available to make use of this consensus level mechanism. See :ref:`migration_tool` below.
+The consensus level mechanism allows a direct Sprout to Sapling transaction to take place but requires the balance be *passed through* the transparent value pool (see: :ref:`value_pools`) before landing in a Sapling address, thus exposing the value without a transparent address. Because this may not be obvious to users (and therefore a privacy risk), a UX decision was made to limit availability in the standard RPC. A migration tool is available to make use of this consensus level mechanism. See :ref:`migration_tool` below.
 
 .. _migration_tool:
 
