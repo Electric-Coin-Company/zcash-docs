@@ -31,7 +31,7 @@ The consensus level mechanism allows a direct Sprout to Sapling transaction to t
 Migration Tool
 --------------
 
-As of version 2.0.5 of zcashd, a Sprout to Sapling migration tool is available to help users who have funds stored in older Sprout addresses migrate them to a Sapling addresss. It is **highly recommended** that all users with funds in Sprout addresses make use of this tool instead of manual migration. 
+As of version 2.0.5-1 of zcashd, a Sprout-to-Sapling migration tool is available to help users who have funds stored in older Sprout addresses migrate them to a Sapling addresss. It is **highly recommended** that all users with funds in Sprout addresses make use of this tool instead of manual migration. 
 
 Since the exposure of the migrated amount potentially compromises the privacy of users, the tool works by hiding individual migration transactions among those of all users that are doing the migration at around the same time.
 
@@ -61,7 +61,9 @@ Or to deactivate:
 
 .. note::
 
-   You can also enable migration in `zcash.conf` by adding the ``-migration`` parameter. This will start the migration automatically after restart. If the tool is deactivated with the RPC, a restart of zcashd will reenable it.
+   Nodes will need to stay running until all funds have been transferred. If the node is shut down before completion, you will need to reactivate the tool when the node has been restarted again.
+   
+   You can also enable migration in `zcash.conf` by adding the ``-migration`` parameter. This will start the migration automatically on restart. If the tool is deactivated with the RPC, a restart of zcashd will reenable it.
 
 To check the status of migration, run:
 
