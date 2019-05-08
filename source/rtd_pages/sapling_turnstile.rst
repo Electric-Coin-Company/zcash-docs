@@ -61,7 +61,7 @@ Or to deactivate:
 
 .. note::
 
-   Nodes will need to stay running until all funds have been transferred. If the node is shut down before completion, you will need to reactivate the tool when the node has been restarted again.
+   Nodes will need to stay running until all funds have been transferred. If the node is shut down before completion, you will need to reactivate the tool when the node has been restarted.
    
    You can also enable migration in `zcash.conf` by adding the ``-migration`` parameter. This will start the migration automatically on restart. If the tool is deactivated with the RPC, a restart of zcashd will reenable it.
 
