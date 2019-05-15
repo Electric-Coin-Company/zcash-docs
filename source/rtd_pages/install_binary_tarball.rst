@@ -7,25 +7,25 @@ Binary Tarball Download & Setup
 
 The Electric Coin Company provides a binary tarball for download.
 
-`Download Tarball for v2.0.4 <https://z.cash/downloads/zcash-2.0.4-linux64.tar.gz>`_
+`Download Tarball for v2.0.5-2 <https://z.cash/downloads/zcash-2.0.5-2-linux64.tar.gz>`_
 
 After downloading but before extracting, verify that the checksum of the tarball matches the hash below:
 
 .. code-block:: bash
 
-   sha256sum zcash-2.0.4-linux64.tar.gz
+   sha256sum zcash-2.0.5-2-linux64.tar.gz
 
-Result: ``a825060f425128260b603e3524c472f4ba28ba17090bece4ac38c84b1bcf5940``
+Result: ``19755c5bffbb91be095add1b6e6e724b4c1c6f0c9c1f43353d51512cdd92e2a1``
 
-This checksum was generated from our gitian deterministic build process. `View all gitian signatures <https://github.com/zcash/gitian.sigs/tree/master/v2.0.4>`_.
+This checksum was generated from our gitian deterministic build process. `View all gitian signatures <https://github.com/zcash/gitian.sigs/tree/master/v2.0.5-2>`_.
 
 Once you've verified that it matches, extract the files and move the binaries into your executables $PATH: 
 
 .. code-block:: bash
 
-    tar -xvf zcash-2.0.4-linux64.tar.gz
+    tar -xvf zcash-2.0.5-2-linux64.tar.gz
 
-    mv -t /usr/local/bin/ zcash-2.0.4/bin/* 
+    mv -t /usr/local/bin/ zcash-2.0.5-2/bin/* 
 
 Now that Zcash is installed, run this command to download the parameters used to create and verify shielded transactions:
 
