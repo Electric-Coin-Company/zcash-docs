@@ -53,7 +53,7 @@ z_getoperationresult_ , z_getoperationstatus_ , z_listoperationids_
 
 :fa:`barcode` Payment_
 
-z_listreceivedbyaddress_ , z_listunspent_ , z_sendmany_ , z_shieldcoinbase_ , z_mergetoaddress_
+z_listreceivedbyaddress_ , z_listunspent_ , z_sendmany_ , z_shieldcoinbase_ , z_mergetoaddress_, z_setmigration_, z_getmigrationstatus_
 
 .. admonition:: RPC Parameter Conventions
 
@@ -853,6 +853,78 @@ Send funds from one or more addresses to a single one.
   .. code-block:: javascript
 
       zcash-cli z_mergetoaddress '["ANY_SAPLING", "t1M72Sfpbz1BPpXFHz9m3CdqATR44Jvaydd"]' ztestsapling19rnyu293v44f0kvtmszhx35lpdug574twc0lwyf4s7w0umtkrdq5nfcauxrxcyfmh3m7slemqsj
+
+----
+
+.. _z_setmigration:
+
+**Command:** ``z_setmigration``
+
+**Parameters**
+
+  1. enabled                *(boolean, required)*
+     'true' or 'false' to enable or disable respectively.
+
+**Output**
+
+  NONE
+
+**Description**
+
+  When enabled the Sprout-to-Sapling migration will attempt to migrate all funds from this wallet’s Sprout addresses to either the address for Sapling account 0 or the address specified by the parameter ``-migrationdestaddress``.
+
+  This migration is designed to minimize information leakage. As a result for wallets with a significant Sprout balance, this process may take several weeks. The migration works by sending, up to 5, as many transactions as possible whenever the blockchain reaches a height equal to 499 modulo 500. The transaction amounts are picked according to the random distribution specified in ZIP 308. The migration will end once the wallet’s Sprout balance is below .001 ZEC.
+
+**Examples**
+
+Enable migration.
+
+  .. code-block:: javascript
+
+      zcash-cli z_setmigration true
+  
+----
+
+.. _z_getmigrationstatus:
+
+**Command:** ``z_getmigrationstatus``
+
+**Parameters**
+
+  NONE
+
+**Output**
+
+  "enabled": true|false                    *(boolean)*
+    Whether or not migration is enabled.
+  "destination_address": "zaddr"           *(string)*
+    The Sapling address that will receive Sprout funds.
+  "unmigrated_amount": nnn.n               *(numeric)*
+    The total amount of unmigrated ZEC.
+  "unfinalized_migrated_amount": nnn.n     *(numeric)*
+    The total amount of unfinalized ZEC (less than 10 confirmations).
+  "finalized_migrated_amount": nnn.n       *(numeric)*
+    The total amount of finalized ZEC (10 or more confirmations)
+  "finalized_migration_transactions": nnn  *(numeric)*
+    The number of migration transactions involving this wallet.
+  "time_started": ttt                      *(numeric, optional)*
+    The block time of the first migration transaction as a Unix timestamp.
+  "migration_txids": [txids]               *(json array of strings)*
+    An array of all migration txids involving this wallet.
+
+**Description**
+
+  Returns information about the status of the Sprout to Sapling migration. In the result a transaction is defined as finalized if and only if it has at least ten confirmations (aka is finalized).
+
+  Note: It is possible that manually created transactions involving this wallet will be included in the result.
+
+**Examples**
+
+Check migration status.
+
+  .. code-block:: javascript
+
+      zcash-cli z_getmigrationstatus
 
 ----
 
