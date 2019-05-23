@@ -154,3 +154,75 @@ Then update the list again:
     sudo apt-get update
 
 At this point you should be able to upgrade with the new public key.
+
+Upgrading Debian 8 Jessie to Debian 9 Strech
+----------------------------------------------
+
+Before you begin upgrading from Debian 8 to Debian 9, we strongly encourage you to follow :ref:`wallet_backup` .
+
+At the very minimum, it is best to move these backup wallet files to an external USB.
+
+Once you have ensured all your keys, wallet, and conf files are backup properly it is worth reading through https://www.debian.org/releases/stable/amd64/release-notes/ch-upgrading.html
+
+Specifically, you will want to pay attention to items described in https://www.debian.org/releases/stretch/amd64/release-notes/ch-upgrading.en.html#trouble
+
+If you are comfortable with your Debain and Zcash backups, please follow the below instructions for a minimal system upgrade:
+
+1. It is recommended to have your Debian 8 Jessie system up to date before beginning. 
+
+   .. code-block:: bash
+
+       sudo apt-get update
+       sudo apt-get upgrade
+
+2. Edit your `/etc/apt/sources.list` file to replace all jessie fields with stretch.
+
+   .. code-block:: bash
+
+       sed -i 's/jessie/stretch/g' /etc/apt/sources.list
+
+   You should now notice the mirrors in `/etc/apt/sources.list` contain stretch fields, not jessie
+
+   Note: If you decide to use `stable` instead of `strech`, you may run the risk of accidently 
+   updating when Debain 10 becomes the stable version.
+
+3. Update and upgrade the list of available packages for Debain 9 Stretch.
+
+   .. code-block:: bash
+
+       sudo apt-get update
+       sudo apt-get upgrade
+
+4. Ensure you have proper disk space before completing system upgrade with latest available version
+
+   .. code-block:: bash
+
+       sudo apt-get dist-upgrade
+
+5. Once upgrade is complete, remove the packages that are no longer needed
+
+   .. code-block:: bash
+
+       sudo apt-get autoremove
+
+6. Reboot your system and sanity check the kernel version on boot
+
+    .. code-block:: bash
+
+       reboot
+    
+    System restarts
+
+    .. code-block:: bash
+
+       uname -a
+
+    OR 
+
+    .. code-block:: bash
+
+       cat /etc/debian_version
+
+You should see a Debain 9 field and the upgrade is complete!
+
+
