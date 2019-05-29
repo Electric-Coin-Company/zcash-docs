@@ -186,7 +186,7 @@ If you are comfortable with your Debian and Zcash backups, please follow the bel
    Note: If you decide to use `stable` instead of `stretch`, you may run the risk of accidentally 
    updating when Debian 10 becomes the stable version.
 
-3. Update and upgrade the list of available packages for Debain 9 Stretch.
+3. Update and upgrade the list of available packages for Debian 9 Stretch.
 
    .. code-block:: bash
 
