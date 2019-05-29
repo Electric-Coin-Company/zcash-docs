@@ -223,6 +223,6 @@ If you are comfortable with your Debian and Zcash backups, please follow the bel
 
        cat /etc/debian_version
 
-You should see a Debain 9 field and the upgrade is complete!
+You should see a Debian 9 field and the upgrade is complete!
 
 
