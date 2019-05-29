@@ -183,7 +183,7 @@ If you are comfortable with your Debian and Zcash backups, please follow the bel
 
    You should now notice the mirrors in `/etc/apt/sources.list` contain stretch fields, not jessie
 
-   Note: If you decide to use `stable` instead of `strech`, you may run the risk of accidently 
+   Note: If you decide to use `stable` instead of `stretch`, you may run the risk of accidentally 
    updating when Debain 10 becomes the stable version.
 
 3. Update and upgrade the list of available packages for Debain 9 Stretch.
