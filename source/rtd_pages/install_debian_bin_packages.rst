@@ -155,7 +155,7 @@ Then update the list again:
 
 At this point you should be able to upgrade with the new public key.
 
-Upgrading Debian 8 Jessie to Debian 9 Strech
+Upgrading Debian 8 Jessie to Debian 9 Stretch
 ----------------------------------------------
 
 Before you begin upgrading from Debian 8 to Debian 9, we strongly encourage you to follow :ref:`wallet_backup` .
