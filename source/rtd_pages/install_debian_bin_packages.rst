@@ -166,7 +166,7 @@ Once you have ensured all your keys, wallet, and conf files are backup properly 
 
 Specifically, you will want to pay attention to items described in https://www.debian.org/releases/stretch/amd64/release-notes/ch-upgrading.en.html#trouble
 
-If you are comfortable with your Debain and Zcash backups, please follow the below instructions for a minimal system upgrade:
+If you are comfortable with your Debian and Zcash backups, please follow the below instructions for a minimal system upgrade:
 
 1. It is recommended to have your Debian 8 Jessie system up to date before beginning. 
 
