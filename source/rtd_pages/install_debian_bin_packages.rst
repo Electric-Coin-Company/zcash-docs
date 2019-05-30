@@ -160,7 +160,7 @@ Upgrading Debian 8 Jessie to Debian 9 Stretch
 
 Before you begin upgrading from Debian 8 to Debian 9, we **strongly encourage** you to follow :ref:`wallet_backup` .
 
-At the very minimum, it is best to move these backup wallet files to an external USB.
+At the very minimum, it is best to copy these backup wallet files somewhere that you will be able to access independently, e.g. an external USB.
 
 Once you have ensured all your keys, wallet, and conf files are backup properly it is worth reading through https://www.debian.org/releases/stable/amd64/release-notes/ch-upgrading.html
 
