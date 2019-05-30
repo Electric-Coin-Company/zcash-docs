@@ -158,6 +158,8 @@ At this point you should be able to upgrade with the new public key.
 Upgrading Debian 8 Jessie to Debian 9 Stretch
 ----------------------------------------------
 
+Debian 8 will no longer be supported for zcashd v2.0.6 and above. The instructions here are provided as convenience for anyone still running Debian 8
+
 Before you begin upgrading from Debian 8 to Debian 9, we **strongly encourage** you to follow :ref:`wallet_backup` .
 
 At the very minimum, it is best to copy these backup wallet files somewhere that you will be able to access independently, e.g. an external USB.
@@ -223,6 +225,6 @@ If you are comfortable with your Debian and Zcash backups, please follow the bel
 
        cat /etc/debian_version
 
-You should see a Debian 9 field and the upgrade is complete! We will be phasing out support for Debian 8 in releases following v2.0.5-2.
+You should see a Debian 9 field and the upgrade is complete!
 
 
