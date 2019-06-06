@@ -14,7 +14,7 @@ The Sprout-to-Sapling migration is an upgrade strategy for funds left in Sprout 
 
 .. note::
 
-   Due to the privacy properties of shielded addresses (both Sprout and Sapling), direct auditing of the total monetary supply is impossible, `Turnstiles <https://zcash.readthedocs.io/en/latest/rtd_pages/addresses.html#turnstiles>`_ are a built in feature to monitor value entering and exiting their associated `value pools <https://zcash.readthedocs.io/en/latest/rtd_pages/addresses.html#value-pools>`_. Users may wish to `track the status of value pool totals <http://localhost:8000/rtd_pages/addresses.html#checking-the-value-pool-totals>`_.
+   Due to the privacy properties of shielded addresses (both Sprout and Sapling), direct auditing of the total monetary supply is impossible, `Turnstiles <https://zcash.readthedocs.io/en/latest/rtd_pages/addresses.html#turnstiles>`_ are a built in feature to monitor value entering and exiting their associated `value pools <https://zcash.readthedocs.io/en/latest/rtd_pages/addresses.html#value-pools>`_. Users may wish to `track the status of value pool totals <https://zcash.readthedocs.io/en/latest/rtd_pages/addresses.html#checking-the-value-pool-totals>`_.
 
 .. image:: images/turnstile.png
    :align: center
@@ -31,7 +31,7 @@ The consensus level mechanism allows a direct Sprout to Sapling transaction to t
 Migration Tool
 --------------
 
-As of version 2.0.5-1 of zcashd, a Sprout-to-Sapling migration tool is available to help users who have funds stored in older Sprout addresses migrate them to a Sapling addresss. It is **highly recommended** that all users with funds in Sprout addresses make use of this tool instead of manual migration. 
+As of version 2.0.5-2 of zcashd, a Sprout-to-Sapling migration tool is available to help users who have funds stored in older Sprout addresses migrate them to a Sapling addresss. It is **highly recommended** that all users with funds in Sprout addresses make use of this tool instead of manual migration. 
 
 Since the exposure of the migrated amount potentially compromises the privacy of users, the tool works by hiding individual migration transactions among those of all users that are doing the migration at around the same time.
 
