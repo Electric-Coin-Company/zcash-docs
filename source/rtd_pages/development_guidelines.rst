@@ -468,5 +468,5 @@ Release Process
 
 For details on zcashd release processes, see:
 
-- `Release Process <https://github.com/zcash/zcash/blob/master/doc/hotfix-process.md>`_
+- :ref:`release_process`
 - `Hotfix Release Process <https://github.com/zcash/zcash/blob/master/doc/hotfix-process.md>`_
