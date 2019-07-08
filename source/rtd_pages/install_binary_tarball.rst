@@ -15,7 +15,7 @@ After downloading but before extracting, verify that the checksum of the tarball
 
    sha256sum zcash-2.0.6-linux64.tar.gz
 
-Result: ``19755c5bffbb91be095add1b6e6e724b4c1c6f0c9c1f43353d51512cdd92e2a1``
+Result: ``3f8731a510ad800caeb47cb39988bc56059f784da364074442210f7e2befe4c4``
 
 This checksum was generated from our gitian deterministic build process. `View all gitian signatures <https://github.com/zcash/gitian.sigs/tree/master/v2.0.6>`_.
 
