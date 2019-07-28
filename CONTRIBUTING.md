@@ -1,4 +1,4 @@
-# Zcash Developement Workflow
+# Zcash Development Workflow
 This document describes the standard workflows and terminology for developers at Zcash. It is intended to provide procedures that will allow users to contribute to the open-source code base. Below are common workflows users will encounter:
 
 1. Fork Zcash Repository 
