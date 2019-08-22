@@ -115,3 +115,4 @@ License
    rtd_pages/ux_wallet_checklist.rst
    rtd_pages/code_of_conduct.rst
    rtd_pages/dnsseed_policy.rst
+   rtd_pages/insight_explorer.rst
