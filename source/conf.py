@@ -27,7 +27,7 @@ author = u'Paige Peterson & Marshall Gaucher'
 # The short X.Y version
 version = u''
 # The full version, including alpha/beta/rc tags
-release = u'2.0.7'
+release = u'2.0.7-2'
 
 # -- General configuration ---------------------------------------------------
 
