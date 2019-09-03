@@ -33,7 +33,33 @@ Below is general advice that applies to all network upgrades:
 :fa:`arrow-circle-right` Post-upgrade notification
     Tell users when the upgrade has finished and re-enable initiation of 
     transactions. Notify users with a message or at their next login after 
-    the network transition.
+    the network transition. 
+
+:fa:`certificate` Blossom
+-------------------------
+
+Blossom is the third network upgrade for Zcash.
+
+`Shorter Block Target Spacing <https://github.com/zcash/zips/blob/master/zip-0208.rst>`_
+
+This feature increases the frequency of blocks, allowing transactions to resolve faster. This will 
+improve Zcash’s usability and increase how many transactions per hour the 
+network can sustain while keeping transaction fees low. This feature has undergone
+a specification audit. It is currently being tested on testnet as part of
+the Blossom Network Upgrade Pipeline, before version 2.1.0 of zcashd
+supporting mainnet activation is released in September.
+
+
+:fa:`arrow-circle-right` Consensus Branch ID change
+    See `ZIP 206 <https://github.com/zcash/zips/blob/master/zip-0206.rst>`_
+
+:fa:`arrow-circle-right` Amount of FR to be paid in coinbase transaction
+    See `ZIP 208 <https://github.com/zcash/zips/blob/master/zip-0208.rst>`_ and `Protocol Section 7.7 <https://github.com/zcash/zips/blob/master/protocol/protocol.pdf>`_
+
+:fa:`arrow-circle-right` Function from block height to FR has changed 
+    See `ZIP 208 <https://github.com/zcash/zips/blob/master/zip-0208.rst>`_ and `Protocol Section 7.8 <https://github.com/zcash/zips/blob/master/protocol/protocol.pdf>`_
+
+
 
 :fa:`leaf` Sapling
 ------------------
