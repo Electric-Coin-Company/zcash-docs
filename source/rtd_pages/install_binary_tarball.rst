@@ -7,9 +7,9 @@ Binary Tarball Download & Setup
 
 The Electric Coin Company provides a binary tarball for download.
 
-`Download Tarball for Debian Jessie v2.0.7-3 <https://z.cash/downloads/zcash-2.0.7-3-linux64-debian-jessie.tar.gz>`_
+`Download Tarball for Debian Jessie v2.1.0 <https://z.cash/downloads/zcash-2.1.0-linux64-jessie.tar.gz>`_
 
-`Download Tarball for Debian Stretch v2.0.7-3 <https://z.cash/downloads/zcash-2.0.7-3-linux64-debian-stretch.tar.gz>`_
+`Download Tarball for Debian Stretch v2.1.0 <https://z.cash/downloads/zcash-2.1.0-linux64-stretch.tar.gz>`_
 
 After downloading but before extracting, verify that the checksum of the tarball matches the hash below for the version of the binary you downloaded:
 
@@ -17,17 +17,17 @@ Debian Jessie:
 
 .. code-block:: bash
 
-   sha256sum zcash-2.0.7-3-linux64-debian-jessie.tar.gz
+   sha256sum zcash-2.1.0-linux64-jessie.tar.gz
 
-Result: ``e7d4be58e5422d6be58543e3c41859420e0b96638bb6eba43dfaf8ad213f5cf0``
+Result: ``385720e8b9d430a54d497021491bbe65d0da5cb3e6819769a6f7481e59489f15``
 
 Debian Stretch:
 
 .. code-block:: bash
 
-   sha256sum zcash-2.0.7-3-linux64-debian-stretch.tar.gz
+   sha256sum zcash-2.1.0-linux64-stretch.tar.gz
 
-Result: ``b6961c0073c968dc30ed10a752ba657cb76acb22265dbc5f4bae7cc0395b35e4``
+Result: ``9bb4db21fee0dbce45ef2e4e7c0752c3827dc7c7117b8e4cec673c201dbce3cf``
 
 This checksum was generated from our gitian deterministic build process. `View all gitian signatures <https://github.com/zcash/gitian.sigs/tree/master>`_.
 
@@ -35,9 +35,9 @@ Once you've verified that it matches, extract the files and move the binaries in
 
 .. code-block:: bash
 
-    tar -xvf zcash-2.0.7-3-linux64.tar.gz
+    tar -xvf zcash-2.1.0-linux64.tar.gz
 
-    mv -t /usr/local/bin/ zcash-2.0.7-3/bin/* 
+    mv -t /usr/local/bin/ zcash-2.1.0/bin/* 
 
 Now that Zcash is installed, run this command to download the parameters used to create and verify shielded transactions:
 
