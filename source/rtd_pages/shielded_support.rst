@@ -167,7 +167,7 @@ What resources are available?
 What does SDK not do?  
 	We purposefully leave key management, import, export, seed generation to the specific third party wallets because our partners have told us these things are what their wallet apps do best. We have yet to implement: visibility into incoming memos, background operations that extend beyond the life of the app (not using workmanager yet), modularization of dependencies (make it easier to plug and play different tech stacks for networking, persistence, etc.).
 What is the threat model? 
-	We trust lightwalletd to be an honest server and to perform all computations correctly. We assume that the network adversary is passive. We do not handle key management, backup seeds, import, or export (leaving that to the specific wallet developer).
+	See the `Android SDK Threat Model <https://github.com/zcash/zcash-android-wallet-sdk/tree/preview/docs/ThreatModel.md>`_.
 How is this related to librustzcash?
 	It shields librustzcash from needing to know about lightwalletd, and gives it the data it needs for the computation it needs. 
 How is this related to lightwalletd? 
