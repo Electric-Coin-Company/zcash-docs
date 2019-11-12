@@ -7,9 +7,9 @@ Binary Tarball Download & Setup
 
 The Electric Coin Company provides a binary tarball for download.
 
-`Download Tarball for Debian Jessie v2.1.0-1 <https://z.cash/downloads/zcash-2.1.0-1-linux64-jessie.tar.gz>`_
+`Download Tarball for Debian Jessie v2.1.0-1 <https://z.cash/downloads/zcash-2.1.0-1-linux64-debian-jessie.tar.gz>`_
 
-`Download Tarball for Debian Stretch v2.1.0-1 <https://z.cash/downloads/zcash-2.1.0-1-linux64-stretch.tar.gz>`_
+`Download Tarball for Debian Stretch v2.1.0-1 <https://z.cash/downloads/zcash-2.1.0-1-linux64-debian-stretch.tar.gz>`_
 
 After downloading but before extracting, verify that the checksum of the tarball matches the hash below for the version of the binary you downloaded:
 
