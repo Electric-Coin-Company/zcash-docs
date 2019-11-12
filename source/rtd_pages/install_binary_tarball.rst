@@ -17,7 +17,7 @@ Debian Jessie:
 
 .. code-block:: bash
 
-   sha256sum zcash-2.1.0-1-linux64-jessie.tar.gz
+   sha256sum zcash-2.1.0-1-linux64-debian-jessie.tar.gz
 
 Result: ``ca79de0f6e37060e3abccebae6a4336f7a3017099078b05fd1eb12dc4ffd9b43``
 
@@ -25,7 +25,7 @@ Debian Stretch:
 
 .. code-block:: bash
 
-   sha256sum zcash-2.1.0-1-linux64-stretch.tar.gz
+   sha256sum zcash-2.1.0-1-linux64-debain-stretch.tar.gz
 
 Result: ``aec6b3c4178c5ceb4e7b7ed3aaa96078b88b872640c7bb38208d5bce48e3f75c``
 
