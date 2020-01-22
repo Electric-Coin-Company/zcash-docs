@@ -77,7 +77,7 @@ UBUNTU/DEBIAN
 	   sudo apt-get install \
 	   build-essential pkg-config libc6-dev m4 g++-multilib \
 	   autoconf libtool ncurses-dev unzip git python python-zmq \
-	   zlib1g-dev wget curl bsdmainutils automake
+	   zlib1g-dev curl bsdmainutils automake
 
     .. note::
 
@@ -111,7 +111,7 @@ FEDORA
 
 	   sudo dnf install \
 	   git pkgconfig automake autoconf ncurses-devel python \
-	   python-zmq wget curl gtest-devel gcc gcc-c++ libtool \
+	   python-zmq curl gtest-devel gcc gcc-c++ libtool \
 	   patch glibc-static libstdc++-static
 
 RHEL (including Scientific Linux)
@@ -132,7 +132,7 @@ MACOS 10.12+ (Using the Terminal application)
     3. Install packages:
         .. code-block:: bash
 
-            brew install git pkgconfig automake autoconf wget libtool coreutils
+            brew install git pkgconfig automake autoconf libtool coreutils
     
     4. Install ``pip`` :
         .. code-block:: bash
@@ -208,8 +208,7 @@ Now we need to get the Zcash software from the repository:
    git checkout v2.1.0-1
    ./zcutil/fetch-params.sh
 
-This will fetch both our Sprout proving and verifying keys (the final ones created in the `Parameter Generation Ceremony <https://github.com/zcash/mpc>`_) in addition to the parameters generated in the `Sapling MPC <https://blog.z.cash/completion-of-the-sapling-mpc/>`_ which are used once Sapling activates, and place them into  ``~/.zcash-params/``.  These keys are just under 1.7GB in size, so it may take some time to download them. Users upgrading from earlier ``1.x`` releases will need to download the additional Sapling parameters which are just under 800MB in size.
-
+This will fetch the parameters generated in the Sapling MPC, and place them into ``~/.zcash-params/ ``. These parameters are around 760 MB in size, so it may take some time to download them.
 The message printed by ``git checkout`` about a "detached head" is normal and does not indicate a problem.
 
 .. _ugBuild:
