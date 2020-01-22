@@ -79,7 +79,7 @@ Answers to common questions from our users can be found in the `FAQ <https://z.c
 License
 -------
 
-   For license information please see :ref:`License`
+   For license information please see :ref:`License <https://github.com/zcash/zcash/blob/master/COPYING>`_
 
 .. toctree::
    :caption: Using Zcashd
