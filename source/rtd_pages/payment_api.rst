@@ -824,13 +824,7 @@ Shield transparent coinbase funds by sending to a shielded z-address.
 
 **Description**
 
-WARNING: z_mergetoaddress is an experimental feature.
-To enable it, restart zcashd with the -experimentalfeatures and
--zmergetoaddress commandline options, or add these two lines
-to the zcash.conf file:
-
-experimentalfeatures=1
-zmergetoaddress=1
+z_mergetoaddress is no longer an experimental feature as of zcash v2.1.1
 
 Merge multiple UTXOs and notes into a single UTXO or note.  Coinbase UTXOs are ignored; use `z_shieldcoinbase`
 to combine those into a single note.
