@@ -50,28 +50,16 @@ Answers to common questions from our users can be found in the `FAQ <https://z.c
 .. admonition:: Collaborate
 
    Zcash development is an open collaborative process. If you'd like to
-   contribute, join our `chat system <https://chat.zcashcommunity.com/>`_
+   contribute, join our `chat system <https://discord.gg/PhJY6Pm>`_
    and check out some of these channels:
 
-    :fa:`comment` `Chat <https://chat.zcashcommunity.com/>`_
+    :fa:`comment` `Chat <https://discord.gg/8t4zXje>`_
       Community Chat
 
-    :fa:`comments` `Zcash <https://chat.zcashcommunity.com/channel/zcash>`_
-      General user chat
-
-    :fa:`random` `Zcash-Dev <https://chat.zcashcommunity.com/channel/zcash-dev>`_
+    :fa:`random` `Zcash-Dev <https://discord.gg/nejAVu6>`_
       Software and Protocol Development
 
-    :fa:`handshake-o` `Community-Collaboration <https://chat.zcashcommunity.com/channel/community-collaboration>`_
-      Other open source development related to Zcash
-
-    :fa:`users` `The-Zcash-Foundation <https://chat.zcashcommunity.com/channel/the-zcash-foundation>`_
-      A room to define and develop the `Zcash Foundation <https://z.cash.foundation>`_ An organization to steward the community, protocol, and science around Zcash.
-
-    :fa:`graduation-cap` `Zcash-Apprentices <https://chat.zcashcommunity.com/channel/zcash-apprentices>`_
-      A study and peer-education room
-
-    :fa:`magic` `Zcash-Wizards <https://chat.zcashcommunity.com/channel/zcash-wizards>`_
+    :fa:`magic` `Zcash-Wizards <https://discord.gg/VR7hw4q>`_
       Mad scientist brainstorming
 
 .. _License:
