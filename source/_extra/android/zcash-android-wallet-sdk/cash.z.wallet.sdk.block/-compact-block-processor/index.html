@@ -1,0 +1,172 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>CompactBlockProcessor - zcash-android-wallet-sdk</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">zcash-android-wallet-sdk</a>&nbsp;/&nbsp;<a href="../index.html">cash.z.wallet.sdk.block</a>&nbsp;/&nbsp;<a href="./index.html">CompactBlockProcessor</a><br/>
+<br/>
+<h1>CompactBlockProcessor</h1>
+<code><span class="keyword">class </span><span class="identifier">CompactBlockProcessor</span></code>
+<p>Responsible for processing the compact blocks that are received from the lightwallet server. This class encapsulates
+all the business logic required to validate and scan the blockchain and is therefore tightly coupled with
+librustzcash.</p>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-processor-info/index.html">ProcessorInfo</a></h4>
+</td>
+<td>
+<p>Data class for holding detailed information about the processor.</p>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">ProcessorInfo</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-state/index.html">State</a></h4>
+</td>
+<td>
+<p>Sealed class representing the various states of this processor.</p>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">State</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-wallet-balance/index.html">WalletBalance</a></h4>
+</td>
+<td>
+<p>Data structure to hold the total and available balance of the wallet. This is what is
+received on the balance channel.</p>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">WalletBalance</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<p>Responsible for processing the compact blocks that are received from the lightwallet server. This class encapsulates
+all the business logic required to validate and scan the blockchain and is therefore tightly coupled with
+librustzcash.</p>
+<code><span class="identifier">CompactBlockProcessor</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.block.CompactBlockProcessor$<init>(cash.z.wallet.sdk.block.CompactBlockDownloader, cash.z.wallet.sdk.transaction.TransactionRepository, cash.z.wallet.sdk.jni.RustBackendWelding, kotlin.Int)/downloader">downloader</span><span class="symbol">:</span>&nbsp;<a href="../-compact-block-downloader/index.html"><span class="identifier">CompactBlockDownloader</span></a><span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.block.CompactBlockProcessor$<init>(cash.z.wallet.sdk.block.CompactBlockDownloader, cash.z.wallet.sdk.transaction.TransactionRepository, cash.z.wallet.sdk.jni.RustBackendWelding, kotlin.Int)/repository">repository</span><span class="symbol">:</span>&nbsp;<a href="../../cash.z.wallet.sdk.transaction/-transaction-repository/index.html"><span class="identifier">TransactionRepository</span></a><span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.block.CompactBlockProcessor$<init>(cash.z.wallet.sdk.block.CompactBlockDownloader, cash.z.wallet.sdk.transaction.TransactionRepository, cash.z.wallet.sdk.jni.RustBackendWelding, kotlin.Int)/rustBackend">rustBackend</span><span class="symbol">:</span>&nbsp;<a href="../../cash.z.wallet.sdk.jni/-rust-backend-welding/index.html"><span class="identifier">RustBackendWelding</span></a><span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.block.CompactBlockProcessor$<init>(cash.z.wallet.sdk.block.CompactBlockDownloader, cash.z.wallet.sdk.transaction.TransactionRepository, cash.z.wallet.sdk.jni.RustBackendWelding, kotlin.Int)/minimumHeight">minimumHeight</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a>&nbsp;<span class="symbol">=</span>&nbsp;SAPLING_ACTIVATION_HEIGHT<span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="downloader.html">downloader</a></h4>
+</td>
+<td>
+<p>the component responsible for downloading compact blocks and persisting them
+locally for processing.</p>
+<code><span class="keyword">val </span><span class="identifier">downloader</span><span class="symbol">: </span><a href="../-compact-block-downloader/index.html"><span class="identifier">CompactBlockDownloader</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="on-chain-error-listener.html">onChainErrorListener</a></h4>
+</td>
+<td>
+<p>Callbaqck for reorgs. This callback is invoked when validation fails with the height at which
+an error was found and the lower bound to which the data will rewind, at most.</p>
+<code><span class="keyword">var </span><span class="identifier">onChainErrorListener</span><span class="symbol">: </span><span class="symbol">(</span><span class="symbol">(</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">,</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">)</span><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="on-processor-error-listener.html">onProcessorErrorListener</a></h4>
+</td>
+<td>
+<p>Callback for any critical errors that occur while processing compact blocks.</p>
+<code><span class="keyword">var </span><span class="identifier">onProcessorErrorListener</span><span class="symbol">: </span><span class="symbol">(</span><span class="symbol">(</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html"><span class="identifier">Throwable</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">)</span><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="processor-info.html">processorInfo</a></h4>
+</td>
+<td>
+<p>The flow of detailed processorInfo like the range of blocks that shall be downloaded and
+scanned. This gives the wallet a lot of insight into the work of this processor.</p>
+<code><span class="keyword">val </span><span class="identifier">processorInfo</span><span class="symbol">: </span><span class="identifier">Flow</span><span class="symbol">&lt;</span><span class="identifier">ProcessorInfo</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="progress.html">progress</a></h4>
+</td>
+<td>
+<p>The flow of progress values so that a wallet can monitor how much downloading remains
+without needing to poll.</p>
+<code><span class="keyword">val </span><span class="identifier">progress</span><span class="symbol">: </span><span class="identifier">Flow</span><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="state.html">state</a></h4>
+</td>
+<td>
+<p>The flow of state values so that a wallet can monitor the state of this class without needing
+to poll.</p>
+<code><span class="keyword">val </span><span class="identifier">state</span><span class="symbol">: </span><span class="identifier">Flow</span><span class="symbol">&lt;</span><span class="identifier">State</span><span class="symbol">&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="get-address.html">getAddress</a></h4>
+</td>
+<td>
+<p>Get address corresponding to the given account for this wallet.</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">getAddress</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.block.CompactBlockProcessor$getAddress(kotlin.Int)/accountId">accountId</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-balance-info.html">getBalanceInfo</a></h4>
+</td>
+<td>
+<p>Calculates the latest balance info. Defaults to the first account.</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">getBalanceInfo</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.block.CompactBlockProcessor$getBalanceInfo(kotlin.Int)/accountIndex">accountIndex</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a>&nbsp;<span class="symbol">=</span>&nbsp;0<span class="symbol">)</span><span class="symbol">: </span><span class="identifier">WalletBalance</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-last-downloaded-height.html">getLastDownloadedHeight</a></h4>
+</td>
+<td>
+<p>Get the height of the last block that was downloaded by this processor.</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">getLastDownloadedHeight</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-last-scanned-height.html">getLastScannedHeight</a></h4>
+</td>
+<td>
+<p>Get the height of the last block that was scanned by this processor.</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">getLastScannedHeight</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="start.html">start</a></h4>
+</td>
+<td>
+<p>Download compact blocks, verify and scan them until <a href="stop.html">stop</a> is called.</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">start</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="stop.html">stop</a></h4>
+</td>
+<td>
+<p>Sets the state to <a href="-state/-stopped.html">Stopped</a>, which causes the processor loop to exit.</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">stop</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

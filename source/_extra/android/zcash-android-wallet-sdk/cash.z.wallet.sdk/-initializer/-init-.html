@@ -1,0 +1,31 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Initializer.<init> - zcash-android-wallet-sdk</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">zcash-android-wallet-sdk</a>&nbsp;/&nbsp;<a href="../index.html">cash.z.wallet.sdk</a>&nbsp;/&nbsp;<a href="index.html">Initializer</a>&nbsp;/&nbsp;<a href="./-init-.html">&lt;init&gt;</a><br/>
+<br/>
+<h1>&lt;init&gt;</h1>
+<a name="cash.z.wallet.sdk.Initializer$&lt;init&gt;(android.content.Context, kotlin.String, kotlin.Int, kotlin.String)"></a>
+<code><span class="identifier">Initializer</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.Initializer$<init>(android.content.Context, kotlin.String, kotlin.Int, kotlin.String)/appContext">appContext</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/content/Context.html"><span class="identifier">Context</span></a><span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.Initializer$<init>(android.content.Context, kotlin.String, kotlin.Int, kotlin.String)/host">host</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a>&nbsp;<span class="symbol">=</span>&nbsp;ZcashSdk.DEFAULT_LIGHTWALLETD_HOST<span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.Initializer$<init>(android.content.Context, kotlin.String, kotlin.Int, kotlin.String)/port">port</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a>&nbsp;<span class="symbol">=</span>&nbsp;ZcashSdk.DEFAULT_LIGHTWALLETD_PORT<span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.Initializer$<init>(android.content.Context, kotlin.String, kotlin.Int, kotlin.String)/alias">alias</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a>&nbsp;<span class="symbol">=</span>&nbsp;ZcashSdk.DEFAULT_DB_NAME_PREFIX<span class="symbol">)</span></code>
+<p>Responsible for initialization, which can be considered as setup that must happen before
+synchronizing begins. This begins with one of three actions, a call to either <a href="new.html">new</a>, <a href="import.html">import</a> or
+<a href="open.html">open</a>, where the last option is the most common case--when a user is opening a wallet they have
+used before on this device.</p>
+<h3>Parameters</h3>
+<p><a name="appContext"></a>
+<code>appContext</code> - the application context, used to extract the storage paths for the databases
+and param files. A reference to the context is not held beyond initialization.</p>
+<p><a name="host"></a>
+<code>host</code> - the host that the synchronizer should use.</p>
+<p><a name="port"></a>
+<code>port</code> - the port that the synchronizer should use when connecting to the host.</p>
+<p><a name="alias"></a>
+<code>alias</code> - the alias to use for this synchronizer. Think of it as a unique name that allows
+multiple synchronizers to function in the same app. The alias is mapped to database names for the
+cache and data DBs. This value is optional and is usually not required because most apps only
+need one synchronizer.</p>
+</BODY>
+</HTML>

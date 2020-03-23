@@ -1,0 +1,248 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>cash.z.wallet.sdk.ext - zcash-android-wallet-sdk</title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">zcash-android-wallet-sdk</a>&nbsp;/&nbsp;<a href="./index.html">cash.z.wallet.sdk.ext</a><br/>
+<br/>
+<h2>Package cash.z.wallet.sdk.ext</h2>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-blocking-provider/index.html">BlockingProvider</a></h4>
+</td>
+<td>
+<code><span class="keyword">class </span><s><span class="identifier">BlockingProvider</span></s><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.properties/-read-write-property/index.html"><span class="identifier">ReadWriteProperty</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">?</span><span class="symbol">,</span>&nbsp;<span class="identifier">T</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-blocking-seed-provider/index.html">BlockingSeedProvider</a></h4>
+</td>
+<td>
+<code><span class="keyword">class </span><s><span class="identifier">BlockingSeedProvider</span></s>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.properties/-read-only-property/index.html"><span class="identifier">ReadOnlyProperty</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">?</span><span class="symbol">,</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html"><span class="identifier">ByteArray</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-bush/index.html">Bush</a></h4>
+</td>
+<td>
+<p>A collection of tiny logs (twigs) consisting of one trunk and maybe some leaves. There can only ever be one trunk.
+Trunks are created by planting a twig. Whenever a leaf sprouts, it will appear as a tag on every log message
+until clipped.</p>
+<code><span class="keyword">object </span><span class="identifier">Bush</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-composite-twig/index.html">CompositeTwig</a></h4>
+</td>
+<td>
+<p>Since there can only ever be one trunk on the bush of twigs, this class lets
+you cheat and make that trunk be a bundle of twigs.</p>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">CompositeTwig</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-twig/index.html"><span class="identifier">Twig</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-conversions/index.html">Conversions</a></h4>
+</td>
+<td>
+<code><span class="keyword">object </span><span class="identifier">Conversions</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-sample-seed-provider/index.html">SampleSeedProvider</a></h4>
+</td>
+<td>
+<code><span class="keyword">class </span><s><span class="identifier">SampleSeedProvider</span></s>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.properties/-read-only-property/index.html"><span class="identifier">ReadOnlyProperty</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">?</span><span class="symbol">,</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html"><span class="identifier">ByteArray</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-sample-spending-key-provider/index.html">SampleSpendingKeyProvider</a></h4>
+</td>
+<td>
+<code><span class="keyword">class </span><s><span class="identifier">SampleSpendingKeyProvider</span></s>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.properties/-read-write-property/index.html"><span class="identifier">ReadWriteProperty</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">?</span><span class="symbol">,</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-seed-generator/index.html">SeedGenerator</a></h4>
+</td>
+<td>
+<p>This is intentionally insecure. Wallet makers have told us storing keys is their specialty so we don't put a lot of
+energy here. A true implementation would create a key using user interaction, perhaps with a password they know that
+is never stored, along with requiring user authentication for key use (i.e. fingerprint/PIN/pattern/etc). From there,
+one of these approaches might be helpful to store the key securely:</p>
+<code><span class="keyword">class </span><s><span class="identifier">SeedGenerator</span></s></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-silent-twig/index.html">SilentTwig</a></h4>
+</td>
+<td>
+<p>A tiny log that does nothing. No one hears this twig fall in the woods.</p>
+<code><span class="keyword">class </span><span class="identifier">SilentTwig</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-twig/index.html"><span class="identifier">Twig</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-simple-provider/index.html">SimpleProvider</a></h4>
+</td>
+<td>
+<code><span class="keyword">class </span><s><span class="identifier">SimpleProvider</span></s><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.properties/-read-write-property/index.html"><span class="identifier">ReadWriteProperty</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">?</span><span class="symbol">,</span>&nbsp;<span class="identifier">T</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-troubleshooting-twig/index.html">TroubleshootingTwig</a></h4>
+</td>
+<td>
+<p>A tiny log for detecting troubles. Aim at your troubles and pull the twigger.</p>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">TroubleshootingTwig</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-twig/index.html"><span class="identifier">Twig</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-twig/index.html">Twig</a></h4>
+</td>
+<td>
+<p>A tiny log.</p>
+<code><span class="keyword">interface </span><span class="identifier">Twig</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-zcash-sdk/index.html">ZcashSdk</a></h4>
+</td>
+<td>
+<p>Wrapper for all the constant values in the SDK. It is important that these values stay fixed for
+all users of the SDK. Otherwise, if individual wallet makers are using different values, it
+becomes easier to reduce privacy by segmenting the anonymity set of users, particularly as it
+relates to network requests.</p>
+<code><span class="keyword">object </span><span class="identifier">ZcashSdk</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-zcash-sdk-common/index.html"><span class="identifier">ZcashSdkCommon</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-zcash-sdk-common/index.html">ZcashSdkCommon</a></h4>
+</td>
+<td>
+<p>Wrapper for all the constant values in the SDK. It is important that these values stay fixed for
+all users of the SDK. Otherwise, if individual wallet makers are using different values, it
+becomes easier to reduce privacy by segmenting the anonymity set of users, particularly as it
+relates to network requests.</p>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">ZcashSdkCommon</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Extensions for External Classes</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="java.math.-big-decimal/index.html">java.math.BigDecimal</a></h4>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+<h4><a href="kotlin.-double/index.html">kotlin.Double</a></h4>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+<h4><a href="kotlin.-long/index.html">kotlin.Long</a></h4>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+<h4><a href="kotlin.-string/index.html">kotlin.String</a></h4>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+<h4><a href="kotlinx.coroutines.flow.-flow/index.html">kotlinx.coroutines.flow.Flow</a></h4>
+</td>
+<td>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="currency-formatter.html">currencyFormatter</a></h4>
+</td>
+<td>
+<p>Create a number formatter for use with converting currency to strings. This probably isn't needed
+externally since the other formatting functions leverage this, instead. Leverages the default
+rounding mode for zec found in ZEC_FORMATTER.</p>
+<code><span class="keyword">fun </span><span class="identifier">currencyFormatter</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.ext$currencyFormatter(kotlin.Int, kotlin.Int)/maxDecimals">maxDecimals</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.ext$currencyFormatter(kotlin.Int, kotlin.Int)/minDecimals">minDecimals</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://docs.oracle.com/javase/6/docs/api/java/text/NumberFormat.html"><span class="identifier">NumberFormat</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="retry-simple.html">retrySimple</a></h4>
+</td>
+<td>
+<p>Execute the given block and if it fails, retry up to <a href="retry-simple.html#cash.z.wallet.sdk.ext$retrySimple(kotlin.Int, kotlin.Long, kotlin.Function1((kotlin.Int, kotlin.Unit)))/retries">retries</a> more times, using thread sleep
+instead of suspending. If none of the retries succeed then throw the final error. This function
+is intended to be called with no parameters, i.e., it is designed to use its defaults.</p>
+<code><span class="keyword">fun </span><span class="identifier">retrySimple</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.ext$retrySimple(kotlin.Int, kotlin.Long, kotlin.Function1((kotlin.Int, kotlin.Unit)))/retries">retries</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a>&nbsp;<span class="symbol">=</span>&nbsp;2<span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.ext$retrySimple(kotlin.Int, kotlin.Long, kotlin.Function1((kotlin.Int, kotlin.Unit)))/sleepTime">sleepTime</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a>&nbsp;<span class="symbol">=</span>&nbsp;20L<span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.ext$retrySimple(kotlin.Int, kotlin.Long, kotlin.Function1((kotlin.Int, kotlin.Unit)))/block">block</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="retry-up-to.html">retryUpTo</a></h4>
+</td>
+<td>
+<p>Execute the given block and if it fails, retry up to <a href="retry-up-to.html#cash.z.wallet.sdk.ext$retryUpTo(kotlin.Int, kotlin.Function1((kotlin.Throwable, )), kotlin.Long, kotlin.Function1((kotlin.Int, kotlin.Unit)))/retries">retries</a> more times. If none of the
+retries succeed then throw the final error, which can be wrapped in order to add more context.</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">retryUpTo</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.ext$retryUpTo(kotlin.Int, kotlin.Function1((kotlin.Throwable, )), kotlin.Long, kotlin.Function1((kotlin.Int, kotlin.Unit)))/retries">retries</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.ext$retryUpTo(kotlin.Int, kotlin.Function1((kotlin.Throwable, )), kotlin.Long, kotlin.Function1((kotlin.Int, kotlin.Unit)))/exceptionWrapper">exceptionWrapper</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html"><span class="identifier">Throwable</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html"><span class="identifier">Throwable</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{ it }<span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.ext$retryUpTo(kotlin.Int, kotlin.Function1((kotlin.Throwable, )), kotlin.Long, kotlin.Function1((kotlin.Int, kotlin.Unit)))/initialDelayMillis">initialDelayMillis</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a>&nbsp;<span class="symbol">=</span>&nbsp;500L<span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.ext$retryUpTo(kotlin.Int, kotlin.Function1((kotlin.Throwable, )), kotlin.Long, kotlin.Function1((kotlin.Int, kotlin.Unit)))/block">block</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="retry-with-backoff.html">retryWithBackoff</a></h4>
+</td>
+<td>
+<p>Execute the given block and if it fails, retry with an exponential backoff.</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">retryWithBackoff</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.ext$retryWithBackoff(kotlin.Function1((kotlin.Throwable, kotlin.Boolean)), kotlin.Long, kotlin.Long, kotlin.Function0((kotlin.Unit)))/onErrorListener">onErrorListener</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><span class="symbol">(</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html"><span class="identifier">Throwable</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">)</span><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.ext$retryWithBackoff(kotlin.Function1((kotlin.Throwable, kotlin.Boolean)), kotlin.Long, kotlin.Long, kotlin.Function0((kotlin.Unit)))/initialDelayMillis">initialDelayMillis</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a>&nbsp;<span class="symbol">=</span>&nbsp;1000L<span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.ext$retryWithBackoff(kotlin.Function1((kotlin.Throwable, kotlin.Boolean)), kotlin.Long, kotlin.Long, kotlin.Function0((kotlin.Unit)))/maxDelayMillis">maxDelayMillis</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a>&nbsp;<span class="symbol">=</span>&nbsp;MAX_BACKOFF_INTERVAL<span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.ext$retryWithBackoff(kotlin.Function1((kotlin.Throwable, kotlin.Boolean)), kotlin.Long, kotlin.Long, kotlin.Function0((kotlin.Unit)))/block">block</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="spiffy.html">spiffy</a></h4>
+</td>
+<td>
+<p>A tiny log formatter that makes twigs pretty spiffy.</p>
+<code><span class="keyword">fun </span><span class="identifier">spiffy</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.ext$spiffy(kotlin.Int, kotlin.String)/stackFrame">stackFrame</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a>&nbsp;<span class="symbol">=</span>&nbsp;4<span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.ext$spiffy(kotlin.Int, kotlin.String)/tag">tag</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a>&nbsp;<span class="symbol">=</span>&nbsp;"@TWIG"<span class="symbol">)</span><span class="symbol">: </span><span class="symbol">(</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="twig.html">twig</a></h4>
+</td>
+<td>
+<p>Makes a tiny log.</p>
+<code><span class="keyword">fun </span><span class="identifier">twig</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.ext$twig(kotlin.String)/message">message</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Times a tiny log.</p>
+<code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">R</span><span class="symbol">&gt;</span> <span class="identifier">twig</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.ext$twig(kotlin.String, kotlin.Function0((cash.z.wallet.sdk.ext.twig.R)))/logMessage">logMessage</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.ext$twig(kotlin.String, kotlin.Function0((cash.z.wallet.sdk.ext.twig.R)))/block">block</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<span class="identifier">R</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">R</span></code>
+<p>Times a tiny log. Execute the block of code on the clock.</p>
+<code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">R</span><span class="symbol">&gt;</span> <a href="-twig/index.html"><span class="identifier">Twig</span></a><span class="symbol">.</span><span class="identifier">twig</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.ext$twig(cash.z.wallet.sdk.ext.Twig, kotlin.String, kotlin.Function0((cash.z.wallet.sdk.ext.twig.R)))/logMessage">logMessage</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.ext$twig(cash.z.wallet.sdk.ext.Twig, kotlin.String, kotlin.Function0((cash.z.wallet.sdk.ext.twig.R)))/block">block</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<span class="identifier">R</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">R</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="twig-task.html">twigTask</a></h4>
+</td>
+<td>
+<p>Meticulously times a tiny task.</p>
+<code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">R</span><span class="symbol">&gt;</span> <span class="identifier">twigTask</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.ext$twigTask(kotlin.String, kotlin.Function0((cash.z.wallet.sdk.ext.twigTask.R)))/logMessage">logMessage</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.ext$twigTask(kotlin.String, kotlin.Function0((cash.z.wallet.sdk.ext.twigTask.R)))/block">block</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<span class="identifier">R</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">R</span></code>
+<p>A tiny log task. Execute the block of code with some twigging around the outside. For silent twigs, this adds a small
+amount of overhead at the call site but still avoids logging.</p>
+<code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">R</span><span class="symbol">&gt;</span> <a href="-twig/index.html"><span class="identifier">Twig</span></a><span class="symbol">.</span><span class="identifier">twigTask</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.ext$twigTask(cash.z.wallet.sdk.ext.Twig, kotlin.String, kotlin.Function0((cash.z.wallet.sdk.ext.twigTask.R)))/logMessage">logMessage</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.ext$twigTask(cash.z.wallet.sdk.ext.Twig, kotlin.String, kotlin.Function0((cash.z.wallet.sdk.ext.twigTask.R)))/block">block</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<span class="identifier">R</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">R</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

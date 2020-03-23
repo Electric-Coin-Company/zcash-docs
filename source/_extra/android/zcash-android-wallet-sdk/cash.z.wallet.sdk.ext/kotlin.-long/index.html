@@ -1,0 +1,36 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>cash.z.wallet.sdk.ext.kotlin.Long - zcash-android-wallet-sdk</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">zcash-android-wallet-sdk</a>&nbsp;/&nbsp;<a href="../index.html">cash.z.wallet.sdk.ext</a>&nbsp;/&nbsp;<a href="./index.html">kotlin.Long</a><br/>
+<br/>
+<h3>Extensions for kotlin.Long</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="convert-zatoshi-to-zec.html">convertZatoshiToZec</a></h4>
+</td>
+<td>
+<p>Convert a Zatoshi value into ZEC, right-padded to the given number of fraction digits,
+represented as a BigDecimal in order to preserve rounding that minimizes cumulative error when
+applied repeatedly over a sequence of calculations.
+Start with Zatoshi -&gt; End with ZEC.</p>
+<code><span class="keyword">fun </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a><span class="symbol">?</span><span class="symbol">.</span><span class="identifier">convertZatoshiToZec</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.ext$convertZatoshiToZec(kotlin.Long, kotlin.Int)/scale">scale</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a>&nbsp;<span class="symbol">=</span>&nbsp;ZEC_FORMATTER.maximumFractionDigits<span class="symbol">)</span><span class="symbol">: </span><a href="https://docs.oracle.com/javase/6/docs/api/java/math/BigDecimal.html"><span class="identifier">BigDecimal</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="convert-zatoshi-to-zec-string.html">convertZatoshiToZecString</a></h4>
+</td>
+<td>
+<p>Format a Zatoshi value into ZEC with the given number of digits, represented as a string.
+Start with Zatoshi -&gt; End with ZEC.</p>
+<code><span class="keyword">fun </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a><span class="symbol">?</span><span class="symbol">.</span><span class="identifier">convertZatoshiToZecString</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.ext$convertZatoshiToZecString(kotlin.Long, kotlin.Int, kotlin.Int)/maxDecimals">maxDecimals</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a>&nbsp;<span class="symbol">=</span>&nbsp;ZEC_FORMATTER.maximumFractionDigits<span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.ext$convertZatoshiToZecString(kotlin.Long, kotlin.Int, kotlin.Int)/minDecimals">minDecimals</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a>&nbsp;<span class="symbol">=</span>&nbsp;ZEC_FORMATTER.minimumFractionDigits<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

@@ -1,0 +1,23 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>PersistentTransactionManager.<init> - zcash-android-wallet-sdk</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">zcash-android-wallet-sdk</a>&nbsp;/&nbsp;<a href="../index.html">cash.z.wallet.sdk.transaction</a>&nbsp;/&nbsp;<a href="index.html">PersistentTransactionManager</a>&nbsp;/&nbsp;<a href="./-init-.html">&lt;init&gt;</a><br/>
+<br/>
+<h1>&lt;init&gt;</h1>
+<a name="cash.z.wallet.sdk.transaction.PersistentTransactionManager$&lt;init&gt;(android.content.Context, cash.z.wallet.sdk.transaction.TransactionEncoder, cash.z.wallet.sdk.service.LightWalletService, kotlin.String)"></a>
+<code><span class="identifier">PersistentTransactionManager</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.transaction.PersistentTransactionManager$<init>(android.content.Context, cash.z.wallet.sdk.transaction.TransactionEncoder, cash.z.wallet.sdk.service.LightWalletService, kotlin.String)/appContext">appContext</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/content/Context.html"><span class="identifier">Context</span></a><span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.transaction.PersistentTransactionManager$<init>(android.content.Context, cash.z.wallet.sdk.transaction.TransactionEncoder, cash.z.wallet.sdk.service.LightWalletService, kotlin.String)/encoder">encoder</span><span class="symbol">:</span>&nbsp;<a href="../-transaction-encoder/index.html"><span class="identifier">TransactionEncoder</span></a><span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.transaction.PersistentTransactionManager$<init>(android.content.Context, cash.z.wallet.sdk.transaction.TransactionEncoder, cash.z.wallet.sdk.service.LightWalletService, kotlin.String)/service">service</span><span class="symbol">:</span>&nbsp;<a href="../../cash.z.wallet.sdk.service/-light-wallet-service/index.html"><span class="identifier">LightWalletService</span></a><span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.transaction.PersistentTransactionManager$<init>(android.content.Context, cash.z.wallet.sdk.transaction.TransactionEncoder, cash.z.wallet.sdk.service.LightWalletService, kotlin.String)/dataDbName">dataDbName</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a>&nbsp;<span class="symbol">=</span>&nbsp;"PendingTransactions.db"<span class="symbol">)</span></code>
+<p>Constructor that creates the database and then executes a callback on it.</p>
+<a name="cash.z.wallet.sdk.transaction.PersistentTransactionManager$&lt;init&gt;(cash.z.wallet.sdk.db.PendingTransactionDb, cash.z.wallet.sdk.transaction.TransactionEncoder, cash.z.wallet.sdk.service.LightWalletService)"></a>
+<code><span class="identifier">PersistentTransactionManager</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.transaction.PersistentTransactionManager$<init>(cash.z.wallet.sdk.db.PendingTransactionDb, cash.z.wallet.sdk.transaction.TransactionEncoder, cash.z.wallet.sdk.service.LightWalletService)/db">db</span><span class="symbol">:</span>&nbsp;<a href="../../cash.z.wallet.sdk.db/-pending-transaction-db/index.html"><span class="identifier">PendingTransactionDb</span></a><span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.transaction.PersistentTransactionManager$<init>(cash.z.wallet.sdk.db.PendingTransactionDb, cash.z.wallet.sdk.transaction.TransactionEncoder, cash.z.wallet.sdk.service.LightWalletService)/encoder">encoder</span><span class="symbol">:</span>&nbsp;<a href="../-transaction-encoder/index.html"><span class="identifier">TransactionEncoder</span></a><span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.transaction.PersistentTransactionManager$<init>(cash.z.wallet.sdk.db.PendingTransactionDb, cash.z.wallet.sdk.transaction.TransactionEncoder, cash.z.wallet.sdk.service.LightWalletService)/service">service</span><span class="symbol">:</span>&nbsp;<a href="../../cash.z.wallet.sdk.service/-light-wallet-service/index.html"><span class="identifier">LightWalletService</span></a><span class="symbol">)</span></code>
+<p>Facilitates persistent attempts to ensure that an outbound transaction is completed.</p>
+<h3>Parameters</h3>
+<p><a name="db"></a>
+<code>db</code> - the database where the wallet can freely write information related to pending
+transactions. This database effectively serves as the mempool for transactions created by this
+wallet.</p>
+</BODY>
+</HTML>

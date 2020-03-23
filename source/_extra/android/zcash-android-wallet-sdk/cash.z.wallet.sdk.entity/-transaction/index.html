@@ -1,0 +1,62 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Transaction - zcash-android-wallet-sdk</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">zcash-android-wallet-sdk</a>&nbsp;/&nbsp;<a href="../index.html">cash.z.wallet.sdk.entity</a>&nbsp;/&nbsp;<a href="./index.html">Transaction</a><br/>
+<br/>
+<h1>Transaction</h1>
+<code><span class="keyword">interface </span><span class="identifier">Transaction</span></code>
+<p>Common interface between confirmed transactions on the blockchain and pending transactions being
+constructed.</p>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="id.html">id</a></h4>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">val </span><span class="identifier">id</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="memo.html">memo</a></h4>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">val </span><span class="identifier">memo</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html"><span class="identifier">ByteArray</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="value.html">value</a></h4>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">val </span><span class="identifier">value</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="../-mined-transaction/index.html">MinedTransaction</a></h4>
+</td>
+<td>
+<p>Parent type for transactions that have been mined. This is useful for putting all transactions in
+one list for things like history. A mined tx should have all properties, except possibly a memo.</p>
+<code><span class="keyword">interface </span><span class="identifier">MinedTransaction</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Transaction</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../-pending-transaction/index.html">PendingTransaction</a></h4>
+</td>
+<td>
+<code><span class="keyword">interface </span><span class="identifier">PendingTransaction</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-signed-transaction/index.html"><span class="identifier">SignedTransaction</span></a><span class="symbol">, </span><a href="./index.html"><span class="identifier">Transaction</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

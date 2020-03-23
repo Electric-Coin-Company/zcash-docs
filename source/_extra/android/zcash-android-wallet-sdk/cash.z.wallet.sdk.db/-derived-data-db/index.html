@@ -1,0 +1,68 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>DerivedDataDb - zcash-android-wallet-sdk</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">zcash-android-wallet-sdk</a>&nbsp;/&nbsp;<a href="../index.html">cash.z.wallet.sdk.db</a>&nbsp;/&nbsp;<a href="./index.html">DerivedDataDb</a><br/>
+<br/>
+<h1>DerivedDataDb</h1>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">DerivedDataDb</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">RoomDatabase</span></code>
+<p>The "Data DB," where all data derived from the compact blocks is stored. Most importantly, this
+database contains transaction information and can be queried for the current balance. The
+"blocks" table contains a copy of everything that has been scanned. In the future, that table can
+be truncated up to the last scanned block, for storage efficiency. Wallets should only read from,
+but never write to, this database.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<p>The "Data DB," where all data derived from the compact blocks is stored. Most importantly, this
+database contains transaction information and can be queried for the current balance. The
+"blocks" table contains a copy of everything that has been scanned. In the future, that table can
+be truncated up to the last scanned block, for storage efficiency. Wallets should only read from,
+but never write to, this database.</p>
+<code><span class="identifier">DerivedDataDb</span><span class="symbol">(</span><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="block-dao.html">blockDao</a></h4>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">blockDao</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-block-dao/index.html"><span class="identifier">BlockDao</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="received-dao.html">receivedDao</a></h4>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">receivedDao</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-received-dao/index.html"><span class="identifier">ReceivedDao</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="sent-dao.html">sentDao</a></h4>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">sentDao</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-sent-dao/index.html"><span class="identifier">SentDao</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="transaction-dao.html">transactionDao</a></h4>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">transactionDao</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-transaction-dao/index.html"><span class="identifier">TransactionDao</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

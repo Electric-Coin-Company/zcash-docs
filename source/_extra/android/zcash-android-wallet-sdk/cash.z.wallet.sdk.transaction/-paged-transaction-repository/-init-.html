@@ -1,0 +1,23 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>PagedTransactionRepository.<init> - zcash-android-wallet-sdk</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">zcash-android-wallet-sdk</a>&nbsp;/&nbsp;<a href="../index.html">cash.z.wallet.sdk.transaction</a>&nbsp;/&nbsp;<a href="index.html">PagedTransactionRepository</a>&nbsp;/&nbsp;<a href="./-init-.html">&lt;init&gt;</a><br/>
+<br/>
+<h1>&lt;init&gt;</h1>
+<a name="cash.z.wallet.sdk.transaction.PagedTransactionRepository$&lt;init&gt;(android.content.Context, kotlin.Int, kotlin.String)"></a>
+<code><span class="identifier">PagedTransactionRepository</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.transaction.PagedTransactionRepository$<init>(android.content.Context, kotlin.Int, kotlin.String)/context">context</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/content/Context.html"><span class="identifier">Context</span></a><span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.transaction.PagedTransactionRepository$<init>(android.content.Context, kotlin.Int, kotlin.String)/pageSize">pageSize</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a>&nbsp;<span class="symbol">=</span>&nbsp;10<span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.transaction.PagedTransactionRepository$<init>(android.content.Context, kotlin.Int, kotlin.String)/dataDbName">dataDbName</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a>&nbsp;<span class="symbol">=</span>&nbsp;ZcashSdk.DB_DATA_NAME<span class="symbol">)</span></code>
+<p>Constructor that creates the database.</p>
+<a name="cash.z.wallet.sdk.transaction.PagedTransactionRepository$&lt;init&gt;(cash.z.wallet.sdk.db.DerivedDataDb, kotlin.Int)"></a>
+<code><span class="identifier">PagedTransactionRepository</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.transaction.PagedTransactionRepository$<init>(cash.z.wallet.sdk.db.DerivedDataDb, kotlin.Int)/derivedDataDb">derivedDataDb</span><span class="symbol">:</span>&nbsp;<a href="../../cash.z.wallet.sdk.db/-derived-data-db/index.html"><span class="identifier">DerivedDataDb</span></a><span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.transaction.PagedTransactionRepository$<init>(cash.z.wallet.sdk.db.DerivedDataDb, kotlin.Int)/pageSize">pageSize</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a>&nbsp;<span class="symbol">=</span>&nbsp;10<span class="symbol">)</span></code>
+<p>Example of a repository that leverages the Room paging library to return a <a href="#">PagedList</a> of
+transactions. Consumers can register as a page listener and receive an interface that allows for
+efficiently paging data.</p>
+<h3>Parameters</h3>
+<p><a name="pageSize"></a>
+<code>pageSize</code> - transactions per page. This influences pre-fetch and memory configuration.</p>
+</BODY>
+</HTML>

@@ -1,0 +1,21 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>SeedGenerator.<init> - zcash-android-wallet-sdk</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">zcash-android-wallet-sdk</a>&nbsp;/&nbsp;<a href="../index.html">cash.z.wallet.sdk.ext</a>&nbsp;/&nbsp;<a href="index.html">SeedGenerator</a>&nbsp;/&nbsp;<a href="./-init-.html">&lt;init&gt;</a><br/>
+<br/>
+<h1>&lt;init&gt;</h1>
+<a name="cash.z.wallet.sdk.ext.SeedGenerator$&lt;init&gt;()"></a>
+<code><span class="identifier">SeedGenerator</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>This is intentionally insecure. Wallet makers have told us storing keys is their specialty so we don't put a lot of
+energy here. A true implementation would create a key using user interaction, perhaps with a password they know that
+is never stored, along with requiring user authentication for key use (i.e. fingerprint/PIN/pattern/etc). From there,
+one of these approaches might be helpful to store the key securely:</p>
+<p>https://developer.android.com/training/articles/keystore.html
+https://github.com/scottyab/AESCrypt-Android/blob/master/aescrypt/src/main/java/com/scottyab/aescrypt/AESCrypt.java
+https://github.com/iamMehedi/Secured-Preference-Store</p>
+</BODY>
+</HTML>

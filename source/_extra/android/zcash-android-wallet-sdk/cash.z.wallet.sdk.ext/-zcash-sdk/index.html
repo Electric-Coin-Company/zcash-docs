@@ -1,0 +1,54 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>ZcashSdk - zcash-android-wallet-sdk</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">zcash-android-wallet-sdk</a>&nbsp;/&nbsp;<a href="../index.html">cash.z.wallet.sdk.ext</a>&nbsp;/&nbsp;<a href="./index.html">ZcashSdk</a><br/>
+<br/>
+<h1>ZcashSdk</h1>
+<code><span class="keyword">object </span><span class="identifier">ZcashSdk</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-zcash-sdk-common/index.html"><span class="identifier">ZcashSdkCommon</span></a></code>
+<p>Wrapper for all the constant values in the SDK. It is important that these values stay fixed for
+all users of the SDK. Otherwise, if individual wallet makers are using different values, it
+becomes easier to reduce privacy by segmenting the anonymity set of users, particularly as it
+relates to network requests.</p>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-d-e-f-a-u-l-t_-d-b_-n-a-m-e_-p-r-e-f-i-x.html">DEFAULT_DB_NAME_PREFIX</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">DEFAULT_DB_NAME_PREFIX</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-d-e-f-a-u-l-t_-l-i-g-h-t-w-a-l-l-e-t-d_-h-o-s-t.html">DEFAULT_LIGHTWALLETD_HOST</a></h4>
+</td>
+<td>
+<p>The default host to use for lightwalletd.</p>
+<code><span class="keyword">val </span><span class="identifier">DEFAULT_LIGHTWALLETD_HOST</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-d-e-f-a-u-l-t_-l-i-g-h-t-w-a-l-l-e-t-d_-p-o-r-t.html">DEFAULT_LIGHTWALLETD_PORT</a></h4>
+</td>
+<td>
+<p>The default port to use for connecting to lightwalletd instances.</p>
+<code><span class="keyword">val </span><span class="identifier">DEFAULT_LIGHTWALLETD_PORT</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-s-a-p-l-i-n-g_-a-c-t-i-v-a-t-i-o-n_-h-e-i-g-h-t.html">SAPLING_ACTIVATION_HEIGHT</a></h4>
+</td>
+<td>
+<p>The height of the first sapling block. When it comes to shielded transactions, we do not need to consider any blocks
+prior to this height, at all.</p>
+<code><span class="keyword">val </span><span class="identifier">SAPLING_ACTIVATION_HEIGHT</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

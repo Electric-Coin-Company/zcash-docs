@@ -1,0 +1,96 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>CompactBlockProcessor.State - zcash-android-wallet-sdk</title>
+<link rel="stylesheet" href="../../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../../index.html">zcash-android-wallet-sdk</a>&nbsp;/&nbsp;<a href="../../index.html">cash.z.wallet.sdk.block</a>&nbsp;/&nbsp;<a href="../index.html">CompactBlockProcessor</a>&nbsp;/&nbsp;<a href="./index.html">State</a><br/>
+<br/>
+<h1>State</h1>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">State</span></code>
+<p>Sealed class representing the various states of this processor.</p>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-connected.html">Connected</a></h4>
+</td>
+<td>
+<p>Marker interface for <a href="./index.html">State</a> instances that represent when the wallet is connected.</p>
+<code><span class="keyword">interface </span><span class="identifier">Connected</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-disconnected.html">Disconnected</a></h4>
+</td>
+<td>
+<p><a href="./index.html">State</a> for when we have no connection to lightwalletd.</p>
+<code><span class="keyword">object </span><span class="identifier">Disconnected</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">State</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-downloading.html">Downloading</a></h4>
+</td>
+<td>
+<p><a href="./index.html">State</a> for when the wallet is actively downloading compact blocks because the latest
+block height available from the server is greater than what we have locally. We move out
+of this state once our local height matches the server.</p>
+<code><span class="keyword">object </span><span class="identifier">Downloading</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Connected</span><span class="symbol">, </span><span class="identifier">Syncing</span><span class="symbol">, </span><span class="identifier">State</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-initialized.html">Initialized</a></h4>
+</td>
+<td>
+<p><a href="./index.html">State</a> the initial state of the processor, once it is constructed.</p>
+<code><span class="keyword">object </span><span class="identifier">Initialized</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">State</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-scanned/index.html">Scanned</a></h4>
+</td>
+<td>
+<p><a href="./index.html">State</a> for when we are done decrypting blocks, for now.</p>
+<code><span class="keyword">class </span><span class="identifier">Scanned</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Connected</span><span class="symbol">, </span><span class="identifier">Syncing</span><span class="symbol">, </span><span class="identifier">State</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-scanning.html">Scanning</a></h4>
+</td>
+<td>
+<p><a href="./index.html">State</a> for when the blocks that have been downloaded are actively being decrypted.</p>
+<code><span class="keyword">object </span><span class="identifier">Scanning</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Connected</span><span class="symbol">, </span><span class="identifier">Syncing</span><span class="symbol">, </span><span class="identifier">State</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-stopped.html">Stopped</a></h4>
+</td>
+<td>
+<p><a href="./index.html">State</a> for when <a href="../stop.html">stop</a> has been called. For simplicity, processors should not be
+restarted but they are not prevented from this behavior.</p>
+<code><span class="keyword">object </span><span class="identifier">Stopped</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">State</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-syncing.html">Syncing</a></h4>
+</td>
+<td>
+<p>Marker interface for <a href="./index.html">State</a> instances that represent when the wallet is syncing.</p>
+<code><span class="keyword">interface </span><span class="identifier">Syncing</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-validating.html">Validating</a></h4>
+</td>
+<td>
+<p><a href="./index.html">State</a> for when the blocks that have been downloaded are actively being validated to
+ensure that there are no gaps and that every block is chain-sequential to the previous
+block, which determines whether a reorg has happened on our watch.</p>
+<code><span class="keyword">object </span><span class="identifier">Validating</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Connected</span><span class="symbol">, </span><span class="identifier">Syncing</span><span class="symbol">, </span><span class="identifier">State</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

@@ -1,0 +1,17 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>SdkSynchronizer.onProcessorErrorHandler - zcash-android-wallet-sdk</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">zcash-android-wallet-sdk</a>&nbsp;/&nbsp;<a href="../index.html">cash.z.wallet.sdk</a>&nbsp;/&nbsp;<a href="index.html">SdkSynchronizer</a>&nbsp;/&nbsp;<a href="./on-processor-error-handler.html">onProcessorErrorHandler</a><br/>
+<br/>
+<h1>onProcessorErrorHandler</h1>
+<a name="cash.z.wallet.sdk.SdkSynchronizer$onProcessorErrorHandler"></a>
+<code><span class="keyword">var </span><span class="identifier">onProcessorErrorHandler</span><span class="symbol">: </span><span class="symbol">(</span><span class="symbol">(</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html"><span class="identifier">Throwable</span></a><span class="symbol">?</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">)</span><span class="symbol">?</span></code>
+<p>A callback to invoke whenever a processor error is encountered. Returning true signals that
+the error was handled and a retry attempt should be made, if possible. This callback is not
+called on the main thread so any UI work would need to switch context to the main thread.</p>
+</BODY>
+</HTML>

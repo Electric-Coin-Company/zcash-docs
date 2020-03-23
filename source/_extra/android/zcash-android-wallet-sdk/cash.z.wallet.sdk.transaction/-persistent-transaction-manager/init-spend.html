@@ -1,0 +1,27 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>PersistentTransactionManager.initSpend - zcash-android-wallet-sdk</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">zcash-android-wallet-sdk</a>&nbsp;/&nbsp;<a href="../index.html">cash.z.wallet.sdk.transaction</a>&nbsp;/&nbsp;<a href="index.html">PersistentTransactionManager</a>&nbsp;/&nbsp;<a href="./init-spend.html">initSpend</a><br/>
+<br/>
+<h1>initSpend</h1>
+<a name="cash.z.wallet.sdk.transaction.PersistentTransactionManager$initSpend(kotlin.Long, kotlin.String, kotlin.String, kotlin.Int)"></a>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">initSpend</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.transaction.PersistentTransactionManager$initSpend(kotlin.Long, kotlin.String, kotlin.String, kotlin.Int)/zatoshiValue">zatoshiValue</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a><span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.transaction.PersistentTransactionManager$initSpend(kotlin.Long, kotlin.String, kotlin.String, kotlin.Int)/toAddress">toAddress</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.transaction.PersistentTransactionManager$initSpend(kotlin.Long, kotlin.String, kotlin.String, kotlin.Int)/memo">memo</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.transaction.PersistentTransactionManager$initSpend(kotlin.Long, kotlin.String, kotlin.String, kotlin.Int)/fromAccountIndex">fromAccountIndex</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../cash.z.wallet.sdk.entity/-pending-transaction/index.html"><span class="identifier">PendingTransaction</span></a></code>
+<p>Initialize a spend with the main purpose of creating an idea to use for tracking it until
+completion.</p>
+<h3>Parameters</h3>
+<p><a name="zatoshi"></a>
+<code>zatoshi</code> - the amount to spend.</p>
+<p><a name="toAddress"></a>
+<code>toAddress</code> - the address to which funds will be sent.</p>
+<p><a name="memo"></a>
+<code>memo</code> - the optionally blank memo associated with this transaction.</p>
+<p><a name="fromAccountIndex"></a>
+<code>fromAccountIndex</code> - the account from which to spend funds.</p>
+<p><strong>Return</strong><br/>
+the associated pending transaction whose ID can be used to monitor for changes.</p>
+</BODY>
+</HTML>

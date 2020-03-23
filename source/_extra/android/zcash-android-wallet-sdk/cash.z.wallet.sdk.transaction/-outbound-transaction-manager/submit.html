@@ -1,0 +1,22 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>OutboundTransactionManager.submit - zcash-android-wallet-sdk</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">zcash-android-wallet-sdk</a>&nbsp;/&nbsp;<a href="../index.html">cash.z.wallet.sdk.transaction</a>&nbsp;/&nbsp;<a href="index.html">OutboundTransactionManager</a>&nbsp;/&nbsp;<a href="./submit.html">submit</a><br/>
+<br/>
+<h1>submit</h1>
+<a name="cash.z.wallet.sdk.transaction.OutboundTransactionManager$submit(cash.z.wallet.sdk.entity.PendingTransaction)"></a>
+<code><span class="keyword">abstract</span> <span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">submit</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.transaction.OutboundTransactionManager$submit(cash.z.wallet.sdk.entity.PendingTransaction)/pendingTx">pendingTx</span><span class="symbol">:</span>&nbsp;<a href="../../cash.z.wallet.sdk.entity/-pending-transaction/index.html"><span class="identifier">PendingTransaction</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../cash.z.wallet.sdk.entity/-pending-transaction/index.html"><span class="identifier">PendingTransaction</span></a></code>
+<p>Submits the transaction represented by <a href="submit.html#cash.z.wallet.sdk.transaction.OutboundTransactionManager$submit(cash.z.wallet.sdk.entity.PendingTransaction)/pendingTx">pendingTx</a> to lightwalletd to broadcast to the
+network and, hopefully, include in the next block.</p>
+<h3>Parameters</h3>
+<p><a name="pendingTx"></a>
+<code>pendingTx</code> - the transaction information containing the raw bytes that will be submitted
+to lightwalletd.</p>
+<p><strong>Return</strong><br/>
+the resulting pending transaction whose ID can be used to monitor for changes.</p>
+</BODY>
+</HTML>

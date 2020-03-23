@@ -1,0 +1,51 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>FlowPagedListBuilder - zcash-android-wallet-sdk</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">zcash-android-wallet-sdk</a>&nbsp;/&nbsp;<a href="../index.html">cash.z.wallet.sdk.ext.android</a>&nbsp;/&nbsp;<a href="./index.html">FlowPagedListBuilder</a><br/>
+<br/>
+<h1>FlowPagedListBuilder</h1>
+<code><span class="keyword">class </span><span class="identifier">FlowPagedListBuilder</span><span class="symbol">&lt;</span><span class="identifier">Key</span><span class="symbol">, </span><span class="identifier">Value</span><span class="symbol">&gt;</span></code>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-main-thread-executor/index.html">MainThreadExecutor</a></h4>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">MainThreadExecutor</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://docs.oracle.com/javase/6/docs/api/java/util/concurrent/Executor.html"><span class="identifier">Executor</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<p>Creates a FlowPagedListBuilder with required parameters.</p>
+<code><span class="identifier">FlowPagedListBuilder</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.ext.android.FlowPagedListBuilder$<init>(androidx.paging.DataSource.Factory((cash.z.wallet.sdk.ext.android.FlowPagedListBuilder.Key, cash.z.wallet.sdk.ext.android.FlowPagedListBuilder.Value)), kotlin.Int)/dataSourceFactory">dataSourceFactory</span><span class="symbol">:</span>&nbsp;<span class="identifier">Factory</span><span class="symbol">&lt;</span><span class="identifier">Key</span><span class="symbol">,</span>&nbsp;<span class="identifier">Value</span><span class="symbol">&gt;</span><span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.ext.android.FlowPagedListBuilder$<init>(androidx.paging.DataSource.Factory((cash.z.wallet.sdk.ext.android.FlowPagedListBuilder.Key, cash.z.wallet.sdk.ext.android.FlowPagedListBuilder.Value)), kotlin.Int)/pageSize">pageSize</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span></code><code><span class="identifier">FlowPagedListBuilder</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.ext.android.FlowPagedListBuilder$<init>(androidx.paging.DataSource.Factory((cash.z.wallet.sdk.ext.android.FlowPagedListBuilder.Key, cash.z.wallet.sdk.ext.android.FlowPagedListBuilder.Value)), androidx.paging.PagedList.Config, cash.z.wallet.sdk.ext.android.FlowPagedListBuilder.Key, androidx.paging.PagedList.BoundaryCallback((kotlin.Any)), kotlinx.coroutines.CoroutineDispatcher, kotlinx.coroutines.CoroutineDispatcher)/dataSourceFactory">dataSourceFactory</span><span class="symbol">:</span>&nbsp;<span class="identifier">Factory</span><span class="symbol">&lt;</span><span class="identifier">Key</span><span class="symbol">,</span>&nbsp;<span class="identifier">Value</span><span class="symbol">&gt;</span><span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.ext.android.FlowPagedListBuilder$<init>(androidx.paging.DataSource.Factory((cash.z.wallet.sdk.ext.android.FlowPagedListBuilder.Key, cash.z.wallet.sdk.ext.android.FlowPagedListBuilder.Value)), androidx.paging.PagedList.Config, cash.z.wallet.sdk.ext.android.FlowPagedListBuilder.Key, androidx.paging.PagedList.BoundaryCallback((kotlin.Any)), kotlinx.coroutines.CoroutineDispatcher, kotlinx.coroutines.CoroutineDispatcher)/config">config</span><span class="symbol">:</span>&nbsp;<span class="identifier">Config</span><span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.ext.android.FlowPagedListBuilder$<init>(androidx.paging.DataSource.Factory((cash.z.wallet.sdk.ext.android.FlowPagedListBuilder.Key, cash.z.wallet.sdk.ext.android.FlowPagedListBuilder.Value)), androidx.paging.PagedList.Config, cash.z.wallet.sdk.ext.android.FlowPagedListBuilder.Key, androidx.paging.PagedList.BoundaryCallback((kotlin.Any)), kotlinx.coroutines.CoroutineDispatcher, kotlinx.coroutines.CoroutineDispatcher)/initialLoadKey">initialLoadKey</span><span class="symbol">:</span>&nbsp;<span class="identifier">Key</span><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.ext.android.FlowPagedListBuilder$<init>(androidx.paging.DataSource.Factory((cash.z.wallet.sdk.ext.android.FlowPagedListBuilder.Key, cash.z.wallet.sdk.ext.android.FlowPagedListBuilder.Value)), androidx.paging.PagedList.Config, cash.z.wallet.sdk.ext.android.FlowPagedListBuilder.Key, androidx.paging.PagedList.BoundaryCallback((kotlin.Any)), kotlinx.coroutines.CoroutineDispatcher, kotlinx.coroutines.CoroutineDispatcher)/boundaryCallback">boundaryCallback</span><span class="symbol">:</span>&nbsp;<span class="identifier">BoundaryCallback</span><span class="symbol">&lt;</span><span class="identifier">*</span><span class="symbol">&gt;</span><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.ext.android.FlowPagedListBuilder$<init>(androidx.paging.DataSource.Factory((cash.z.wallet.sdk.ext.android.FlowPagedListBuilder.Key, cash.z.wallet.sdk.ext.android.FlowPagedListBuilder.Value)), androidx.paging.PagedList.Config, cash.z.wallet.sdk.ext.android.FlowPagedListBuilder.Key, androidx.paging.PagedList.BoundaryCallback((kotlin.Any)), kotlinx.coroutines.CoroutineDispatcher, kotlinx.coroutines.CoroutineDispatcher)/notifyContext">notifyContext</span><span class="symbol">:</span>&nbsp;<span class="identifier">CoroutineDispatcher</span>&nbsp;<span class="symbol">=</span>&nbsp;Dispatchers.Main<span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.ext.android.FlowPagedListBuilder$<init>(androidx.paging.DataSource.Factory((cash.z.wallet.sdk.ext.android.FlowPagedListBuilder.Key, cash.z.wallet.sdk.ext.android.FlowPagedListBuilder.Value)), androidx.paging.PagedList.Config, cash.z.wallet.sdk.ext.android.FlowPagedListBuilder.Key, androidx.paging.PagedList.BoundaryCallback((kotlin.Any)), kotlinx.coroutines.CoroutineDispatcher, kotlinx.coroutines.CoroutineDispatcher)/fetchContext">fetchContext</span><span class="symbol">:</span>&nbsp;<span class="identifier">CoroutineDispatcher</span>&nbsp;<span class="symbol">=</span>&nbsp;Dispatchers.IO<span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="build.html">build</a></h4>
+</td>
+<td>
+<p>Constructs the <code>Flow&lt;PagedList&gt;</code>.</p>
+<code><span class="keyword">fun </span><span class="identifier">build</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Flow</span><span class="symbol">&lt;</span><span class="identifier">PagedList</span><span class="symbol">&lt;</span><span class="identifier">Value</span><span class="symbol">&gt;</span><span class="symbol">&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

@@ -1,0 +1,144 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Initializer.DefaultBirthdayStore - zcash-android-wallet-sdk</title>
+<link rel="stylesheet" href="../../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../../index.html">zcash-android-wallet-sdk</a>&nbsp;/&nbsp;<a href="../../index.html">cash.z.wallet.sdk</a>&nbsp;/&nbsp;<a href="../index.html">Initializer</a>&nbsp;/&nbsp;<a href="./index.html">DefaultBirthdayStore</a><br/>
+<br/>
+<h1>DefaultBirthdayStore</h1>
+<code><span class="keyword">class </span><span class="identifier">DefaultBirthdayStore</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">WalletBirthdayStore</span></code>
+<p>Default implementation of the <a href="../-wallet-birthday-store/index.html">WalletBirthdayStore</a> interface that loads checkpoints from the
+assets directory, in JSON format and stores the current birthday in shared preferences.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<p>Default implementation of the <a href="../-wallet-birthday-store/index.html">WalletBirthdayStore</a> interface that loads checkpoints from the
+assets directory, in JSON format and stores the current birthday in shared preferences.</p>
+<code><span class="identifier">DefaultBirthdayStore</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.Initializer.DefaultBirthdayStore$<init>(android.content.Context, kotlin.Int, kotlin.String)/appContext">appContext</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/content/Context.html"><span class="identifier">Context</span></a><span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.Initializer.DefaultBirthdayStore$<init>(android.content.Context, kotlin.Int, kotlin.String)/importedBirthdayHeight">importedBirthdayHeight</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.Initializer.DefaultBirthdayStore$<init>(android.content.Context, kotlin.Int, kotlin.String)/alias">alias</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a>&nbsp;<span class="symbol">=</span>&nbsp;DEFAULT_ALIAS<span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="alias.html">alias</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">alias</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="new-wallet-birthday.html">newWalletBirthday</a></h4>
+</td>
+<td>
+<p>Birthday that helps new wallets not have to scan from the beginning, which saves
+significant amounts of startup time. This value is created using the context passed into
+the constructor.</p>
+<code><span class="keyword">val </span><span class="identifier">newWalletBirthday</span><span class="symbol">: </span><span class="identifier">WalletBirthday</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="get-birthday.html">getBirthday</a></h4>
+</td>
+<td>
+<p>Get the birthday of the wallet, saved in this store.</p>
+<code><span class="keyword">fun </span><span class="identifier">getBirthday</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">WalletBirthday</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="has-existing-birthday.html">hasExistingBirthday</a></h4>
+</td>
+<td>
+<p>Return true when a birthday has been stored in this instance.</p>
+<code><span class="keyword">fun </span><span class="identifier">hasExistingBirthday</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="has-imported-birthday.html">hasImportedBirthday</a></h4>
+</td>
+<td>
+<p>Return true when a birthday was imported into this instance.</p>
+<code><span class="keyword">fun </span><span class="identifier">hasImportedBirthday</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="load-birthday.html">loadBirthday</a></h4>
+</td>
+<td>
+<p>Load a birthday matching the given height. This is most commonly used during import to
+find the first available checkpoint that is lower than the requested height.</p>
+<code><span class="keyword">fun </span><span class="identifier">loadBirthday</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.Initializer.DefaultBirthdayStore$loadBirthday(kotlin.Int)/birthdayHeight">birthdayHeight</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">WalletBirthday</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="set-birthday.html">setBirthday</a></h4>
+</td>
+<td>
+<p>Set the birthday of the wallet to be saved in this store.</p>
+<code><span class="keyword">fun </span><span class="identifier">setBirthday</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.Initializer.DefaultBirthdayStore$setBirthday(cash.z.wallet.sdk.Initializer.WalletBirthday)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">WalletBirthday</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Companion Object Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-d-e-f-a-u-l-t_-a-l-i-a-s.html">DEFAULT_ALIAS</a></h4>
+</td>
+<td>
+<p>The default alias to use for naming the preference file used for storage.</p>
+<code><span class="keyword">const</span> <span class="keyword">val </span><span class="identifier">DEFAULT_ALIAS</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Companion Object Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-imported-wallet-birthday-store.html">ImportedWalletBirthdayStore</a></h4>
+</td>
+<td>
+<p>A convenience constructor function for creating an instance of this class to use for
+imported wallets. It sets the stored birthday to match the given
+<code>importedBirthdayHeight</code> by finding the highest checkpoint that is below that height.</p>
+<code><span class="keyword">fun </span><span class="identifier">ImportedWalletBirthdayStore</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.Initializer.DefaultBirthdayStore.Companion$ImportedWalletBirthdayStore(android.content.Context, kotlin.Int, kotlin.String)/appContext">appContext</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/content/Context.html"><span class="identifier">Context</span></a><span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.Initializer.DefaultBirthdayStore.Companion$ImportedWalletBirthdayStore(android.content.Context, kotlin.Int, kotlin.String)/importedBirthdayHeight">importedBirthdayHeight</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.Initializer.DefaultBirthdayStore.Companion$ImportedWalletBirthdayStore(android.content.Context, kotlin.Int, kotlin.String)/alias">alias</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a>&nbsp;<span class="symbol">=</span>&nbsp;DEFAULT_ALIAS<span class="symbol">)</span><span class="symbol">: </span><span class="identifier">WalletBirthdayStore</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="load-birthday-from-assets.html">loadBirthdayFromAssets</a></h4>
+</td>
+<td>
+<p>Load the given birthday file from the assets of the given context. When no height is
+specified, we default to the file with the greatest name.</p>
+<code><span class="keyword">fun </span><span class="identifier">loadBirthdayFromAssets</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.Initializer.DefaultBirthdayStore.Companion$loadBirthdayFromAssets(android.content.Context, kotlin.Int)/context">context</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/content/Context.html"><span class="identifier">Context</span></a><span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.Initializer.DefaultBirthdayStore.Companion$loadBirthdayFromAssets(android.content.Context, kotlin.Int)/birthdayHeight">birthdayHeight</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span><span class="symbol">: </span><span class="identifier">WalletBirthday</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-new-wallet-birthday-store.html">NewWalletBirthdayStore</a></h4>
+</td>
+<td>
+<p>A convenience constructor function for creating an instance of this class to use for
+new wallets. It sets the stored birthday to match the <code>newWalletBirthday</code> checkpoint
+which is typically the most recent checkpoint available.</p>
+<code><span class="keyword">fun </span><span class="identifier">NewWalletBirthdayStore</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.Initializer.DefaultBirthdayStore.Companion$NewWalletBirthdayStore(android.content.Context, kotlin.String)/appContext">appContext</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/content/Context.html"><span class="identifier">Context</span></a><span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.Initializer.DefaultBirthdayStore.Companion$NewWalletBirthdayStore(android.content.Context, kotlin.String)/alias">alias</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a>&nbsp;<span class="symbol">=</span>&nbsp;DEFAULT_ALIAS<span class="symbol">)</span><span class="symbol">: </span><span class="identifier">WalletBirthdayStore</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

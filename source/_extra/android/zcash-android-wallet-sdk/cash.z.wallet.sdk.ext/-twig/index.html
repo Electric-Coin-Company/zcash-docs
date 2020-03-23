@@ -1,0 +1,125 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Twig - zcash-android-wallet-sdk</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">zcash-android-wallet-sdk</a>&nbsp;/&nbsp;<a href="../index.html">cash.z.wallet.sdk.ext</a>&nbsp;/&nbsp;<a href="./index.html">Twig</a><br/>
+<br/>
+<h1>Twig</h1>
+<code><span class="keyword">interface </span><span class="identifier">Twig</span></code>
+<p>A tiny log.</p>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="plus.html">plus</a></h4>
+</td>
+<td>
+<p>Bundles twigs together</p>
+<code><span class="keyword">open</span> <span class="keyword">operator</span> <span class="keyword">fun </span><span class="identifier">plus</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.ext.Twig$plus(cash.z.wallet.sdk.ext.Twig)/twig">twig</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Twig</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">Twig</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="twig.html">twig</a></h4>
+</td>
+<td>
+<p>Log the message. Simple.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">twig</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.ext.Twig$twig(kotlin.String)/logMessage">logMessage</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a>&nbsp;<span class="symbol">=</span>&nbsp;""<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Companion Object Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="clip.html">clip</a></h4>
+</td>
+<td>
+<p>Clip a leaf from the bush. Clipped leaves no longer appear in logs.</p>
+<code><span class="keyword">fun </span><span class="identifier">clip</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.ext.Twig.Companion$clip(kotlin.String)/leaf">leaf</span><span class="symbol">:</span>&nbsp;<span class="identifier">Leaf</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="plant.html">plant</a></h4>
+</td>
+<td>
+<p>Plants the twig, making it the one and only bush. Twigs can be bundled together to create the appearance of
+multiple bushes (i.e <code>Twig.plant(twigA + twigB + twigC)</code>) even though there's only ever one bush.</p>
+<code><span class="keyword">fun </span><span class="identifier">plant</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.ext.Twig.Companion$plant(cash.z.wallet.sdk.ext.Twig)/rootTwig">rootTwig</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Twig</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="prune.html">prune</a></h4>
+</td>
+<td>
+<p>Clip all leaves from the bush.</p>
+<code><span class="keyword">fun </span><span class="identifier">prune</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="sprout.html">sprout</a></h4>
+</td>
+<td>
+<p>Generate a leaf on the bush. Leaves show up in every log message as tags until they are clipped.</p>
+<code><span class="keyword">fun </span><span class="identifier">sprout</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.ext.Twig.Companion$sprout(kotlin.String)/leaf">leaf</span><span class="symbol">:</span>&nbsp;<span class="identifier">Leaf</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Extension Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="../twig.html">twig</a></h4>
+</td>
+<td>
+<p>Times a tiny log. Execute the block of code on the clock.</p>
+<code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">R</span><span class="symbol">&gt;</span> <a href="./index.html"><span class="identifier">Twig</span></a><span class="symbol">.</span><span class="identifier">twig</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.ext$twig(cash.z.wallet.sdk.ext.Twig, kotlin.String, kotlin.Function0((cash.z.wallet.sdk.ext.twig.R)))/logMessage">logMessage</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.ext$twig(cash.z.wallet.sdk.ext.Twig, kotlin.String, kotlin.Function0((cash.z.wallet.sdk.ext.twig.R)))/block">block</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<span class="identifier">R</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">R</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../twig-task.html">twigTask</a></h4>
+</td>
+<td>
+<p>A tiny log task. Execute the block of code with some twigging around the outside. For silent twigs, this adds a small
+amount of overhead at the call site but still avoids logging.</p>
+<code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">R</span><span class="symbol">&gt;</span> <a href="./index.html"><span class="identifier">Twig</span></a><span class="symbol">.</span><span class="identifier">twigTask</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.ext$twigTask(cash.z.wallet.sdk.ext.Twig, kotlin.String, kotlin.Function0((cash.z.wallet.sdk.ext.twigTask.R)))/logMessage">logMessage</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.ext$twigTask(cash.z.wallet.sdk.ext.Twig, kotlin.String, kotlin.Function0((cash.z.wallet.sdk.ext.twigTask.R)))/block">block</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<span class="identifier">R</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">R</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="../-composite-twig/index.html">CompositeTwig</a></h4>
+</td>
+<td>
+<p>Since there can only ever be one trunk on the bush of twigs, this class lets
+you cheat and make that trunk be a bundle of twigs.</p>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">CompositeTwig</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Twig</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../-silent-twig/index.html">SilentTwig</a></h4>
+</td>
+<td>
+<p>A tiny log that does nothing. No one hears this twig fall in the woods.</p>
+<code><span class="keyword">class </span><span class="identifier">SilentTwig</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Twig</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../-troubleshooting-twig/index.html">TroubleshootingTwig</a></h4>
+</td>
+<td>
+<p>A tiny log for detecting troubles. Aim at your troubles and pull the twigger.</p>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">TroubleshootingTwig</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Twig</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

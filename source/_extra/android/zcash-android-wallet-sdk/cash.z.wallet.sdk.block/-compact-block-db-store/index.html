@@ -1,0 +1,81 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>CompactBlockDbStore - zcash-android-wallet-sdk</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">zcash-android-wallet-sdk</a>&nbsp;/&nbsp;<a href="../index.html">cash.z.wallet.sdk.block</a>&nbsp;/&nbsp;<a href="./index.html">CompactBlockDbStore</a><br/>
+<br/>
+<h1>CompactBlockDbStore</h1>
+<code><span class="keyword">class </span><span class="identifier">CompactBlockDbStore</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-compact-block-store/index.html"><span class="identifier">CompactBlockStore</span></a></code>
+<p>An implementation of CompactBlockStore that persists information to a database in the given
+path. This represents the "cache db" or local cache of compact blocks waiting to be scanned.</p>
+<h3>Parameters</h3>
+<p><a name="appContext"></a>
+<code>appContext</code> - the application context. This is used for creating the database.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<p>An implementation of CompactBlockStore that persists information to a database in the given
+path. This represents the "cache db" or local cache of compact blocks waiting to be scanned.</p>
+<code><span class="identifier">CompactBlockDbStore</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.block.CompactBlockDbStore$<init>(android.content.Context, kotlin.String)/appContext">appContext</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/content/Context.html"><span class="identifier">Context</span></a><span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.block.CompactBlockDbStore$<init>(android.content.Context, kotlin.String)/dbPath">dbPath</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="db-path.html">dbPath</a></h4>
+</td>
+<td>
+<p>the absolute path to the database.</p>
+<code><span class="keyword">val </span><span class="identifier">dbPath</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="close.html">close</a></h4>
+</td>
+<td>
+<p>Close any connections to the block store.</p>
+<code><span class="keyword">fun </span><span class="identifier">close</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-latest-height.html">getLatestHeight</a></h4>
+</td>
+<td>
+<p>Gets the highest block that is currently stored.</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">getLatestHeight</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="rewind-to.html">rewindTo</a></h4>
+</td>
+<td>
+<p>Remove every block above and including the given height.</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">rewindTo</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.block.CompactBlockDbStore$rewindTo(kotlin.Int)/height">height</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="write.html">write</a></h4>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">write</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.block.CompactBlockDbStore$write(kotlin.collections.List(()))/result">result</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><span class="identifier">&lt;ERROR CLASS&gt;</span><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

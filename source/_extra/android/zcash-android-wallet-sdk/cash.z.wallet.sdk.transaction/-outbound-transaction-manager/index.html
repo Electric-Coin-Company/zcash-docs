@@ -1,0 +1,112 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>OutboundTransactionManager - zcash-android-wallet-sdk</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">zcash-android-wallet-sdk</a>&nbsp;/&nbsp;<a href="../index.html">cash.z.wallet.sdk.transaction</a>&nbsp;/&nbsp;<a href="./index.html">OutboundTransactionManager</a><br/>
+<br/>
+<h1>OutboundTransactionManager</h1>
+<code><span class="keyword">interface </span><span class="identifier">OutboundTransactionManager</span></code>
+<p>Manage outbound transactions with the main purpose of reporting which ones are still pending,
+particularly after failed attempts or dropped connectivity. The intent is to help see outbound
+transactions through to completion.</p>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="apply-mined-height.html">applyMinedHeight</a></h4>
+</td>
+<td>
+<p>Given a transaction and the height at which it was mined, update the transaction to indicate
+that it was mined.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">applyMinedHeight</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.transaction.OutboundTransactionManager$applyMinedHeight(cash.z.wallet.sdk.entity.PendingTransaction, kotlin.Int)/pendingTx">pendingTx</span><span class="symbol">:</span>&nbsp;<a href="../../cash.z.wallet.sdk.entity/-pending-transaction/index.html"><span class="identifier">PendingTransaction</span></a><span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.transaction.OutboundTransactionManager$applyMinedHeight(cash.z.wallet.sdk.entity.PendingTransaction, kotlin.Int)/minedHeight">minedHeight</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="cancel.html">cancel</a></h4>
+</td>
+<td>
+<p>Attempt to cancel a transaction.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">cancel</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.transaction.OutboundTransactionManager$cancel(cash.z.wallet.sdk.entity.PendingTransaction)/pendingTx">pendingTx</span><span class="symbol">:</span>&nbsp;<a href="../../cash.z.wallet.sdk.entity/-pending-transaction/index.html"><span class="identifier">PendingTransaction</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="encode.html">encode</a></h4>
+</td>
+<td>
+<p>Encode the pending transaction using the given spending key. This is a local operation that
+produces a raw transaction to submit to lightwalletd.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">encode</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.transaction.OutboundTransactionManager$encode(kotlin.String, cash.z.wallet.sdk.entity.PendingTransaction)/spendingKey">spendingKey</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.transaction.OutboundTransactionManager$encode(kotlin.String, cash.z.wallet.sdk.entity.PendingTransaction)/pendingTx">pendingTx</span><span class="symbol">:</span>&nbsp;<a href="../../cash.z.wallet.sdk.entity/-pending-transaction/index.html"><span class="identifier">PendingTransaction</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../cash.z.wallet.sdk.entity/-pending-transaction/index.html"><span class="identifier">PendingTransaction</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-all.html">getAll</a></h4>
+</td>
+<td>
+<p>Get all pending transactions known to this wallet as a flow that is updated anytime the list
+changes.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">getAll</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Flow</span><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="../../cash.z.wallet.sdk.entity/-pending-transaction/index.html"><span class="identifier">PendingTransaction</span></a><span class="symbol">&gt;</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="init-spend.html">initSpend</a></h4>
+</td>
+<td>
+<p>Initialize a spend with the main purpose of creating an idea to use for tracking it until
+completion.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">initSpend</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.transaction.OutboundTransactionManager$initSpend(kotlin.Long, kotlin.String, kotlin.String, kotlin.Int)/zatoshi">zatoshi</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a><span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.transaction.OutboundTransactionManager$initSpend(kotlin.Long, kotlin.String, kotlin.String, kotlin.Int)/toAddress">toAddress</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.transaction.OutboundTransactionManager$initSpend(kotlin.Long, kotlin.String, kotlin.String, kotlin.Int)/memo">memo</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.transaction.OutboundTransactionManager$initSpend(kotlin.Long, kotlin.String, kotlin.String, kotlin.Int)/fromAccountIndex">fromAccountIndex</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../cash.z.wallet.sdk.entity/-pending-transaction/index.html"><span class="identifier">PendingTransaction</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="is-valid-shielded-address.html">isValidShieldedAddress</a></h4>
+</td>
+<td>
+<p>Return true when the given address is a valid t-addr.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">isValidShieldedAddress</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.transaction.OutboundTransactionManager$isValidShieldedAddress(kotlin.String)/address">address</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="is-valid-transparent-address.html">isValidTransparentAddress</a></h4>
+</td>
+<td>
+<p>Return true when the given address is a valid z-addr.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">isValidTransparentAddress</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.transaction.OutboundTransactionManager$isValidTransparentAddress(kotlin.String)/address">address</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="monitor-by-id.html">monitorById</a></h4>
+</td>
+<td>
+<p>Generate a flow of information about the given id where a new pending transaction is emitted
+every time its state changes.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">monitorById</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.transaction.OutboundTransactionManager$monitorById(kotlin.Long)/id">id</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Flow</span><span class="symbol">&lt;</span><a href="../../cash.z.wallet.sdk.entity/-pending-transaction/index.html"><span class="identifier">PendingTransaction</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="submit.html">submit</a></h4>
+</td>
+<td>
+<p>Submits the transaction represented by <a href="submit.html#cash.z.wallet.sdk.transaction.OutboundTransactionManager$submit(cash.z.wallet.sdk.entity.PendingTransaction)/pendingTx">pendingTx</a> to lightwalletd to broadcast to the
+network and, hopefully, include in the next block.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">submit</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.transaction.OutboundTransactionManager$submit(cash.z.wallet.sdk.entity.PendingTransaction)/pendingTx">pendingTx</span><span class="symbol">:</span>&nbsp;<a href="../../cash.z.wallet.sdk.entity/-pending-transaction/index.html"><span class="identifier">PendingTransaction</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../cash.z.wallet.sdk.entity/-pending-transaction/index.html"><span class="identifier">PendingTransaction</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="../-persistent-transaction-manager/index.html">PersistentTransactionManager</a></h4>
+</td>
+<td>
+<p>Facilitates persistent attempts to ensure that an outbound transaction is completed.</p>
+<code><span class="keyword">class </span><span class="identifier">PersistentTransactionManager</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">OutboundTransactionManager</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

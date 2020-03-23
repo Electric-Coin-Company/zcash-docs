@@ -1,0 +1,19 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>SdkSynchronizer.coroutineScope - zcash-android-wallet-sdk</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">zcash-android-wallet-sdk</a>&nbsp;/&nbsp;<a href="../index.html">cash.z.wallet.sdk</a>&nbsp;/&nbsp;<a href="index.html">SdkSynchronizer</a>&nbsp;/&nbsp;<a href="./coroutine-scope.html">coroutineScope</a><br/>
+<br/>
+<h1>coroutineScope</h1>
+<a name="cash.z.wallet.sdk.SdkSynchronizer$coroutineScope"></a>
+<code><span class="keyword">lateinit</span> <span class="keyword">var </span><span class="identifier">coroutineScope</span><span class="symbol">: </span><span class="identifier">CoroutineScope</span></code>
+<p>The lifespan of this Synchronizer. This scope is initialized once the Synchronizer starts
+because it will be a child of the parentScope that gets passed into the <a href="start.html">start</a> function.
+Everything launched by this Synchronizer will be cancelled once the Synchronizer or its
+parentScope stops. This is a lateinit rather than nullable property so that it fails early
+rather than silently, whenever the scope is used before the Synchronizer has been started.</p>
+</BODY>
+</HTML>

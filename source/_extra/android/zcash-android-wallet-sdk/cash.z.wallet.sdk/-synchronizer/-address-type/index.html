@@ -1,0 +1,64 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Synchronizer.AddressType - zcash-android-wallet-sdk</title>
+<link rel="stylesheet" href="../../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../../index.html">zcash-android-wallet-sdk</a>&nbsp;/&nbsp;<a href="../../index.html">cash.z.wallet.sdk</a>&nbsp;/&nbsp;<a href="../index.html">Synchronizer</a>&nbsp;/&nbsp;<a href="./index.html">AddressType</a><br/>
+<br/>
+<h1>AddressType</h1>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">AddressType</span></code>
+<p>Represents the types of addresses, either Shielded, Transparent or Invalid.</p>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-invalid/index.html">Invalid</a></h4>
+</td>
+<td>
+<p>An instance of <a href="./index.html">AddressType</a> corresponding to an invalid address.</p>
+<code><span class="keyword">class </span><span class="identifier">Invalid</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">AddressType</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-shielded.html">Shielded</a></h4>
+</td>
+<td>
+<p>An instance of <a href="./index.html">AddressType</a> corresponding to a valid z-addr.</p>
+<code><span class="keyword">object </span><span class="identifier">Shielded</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Valid</span><span class="symbol">, </span><span class="identifier">AddressType</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-transparent.html">Transparent</a></h4>
+</td>
+<td>
+<p>An instance of <a href="./index.html">AddressType</a> corresponding to a valid t-addr.</p>
+<code><span class="keyword">object </span><span class="identifier">Transparent</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Valid</span><span class="symbol">, </span><span class="identifier">AddressType</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-valid.html">Valid</a></h4>
+</td>
+<td>
+<p>Marker interface for valid <a href="./index.html">AddressType</a> instances.</p>
+<code><span class="keyword">interface </span><span class="identifier">Valid</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="is-not-valid.html">isNotValid</a></h4>
+</td>
+<td>
+<p>A convenience method that returns true when an instance of this class is invalid.</p>
+<code><span class="keyword">val </span><span class="identifier">isNotValid</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

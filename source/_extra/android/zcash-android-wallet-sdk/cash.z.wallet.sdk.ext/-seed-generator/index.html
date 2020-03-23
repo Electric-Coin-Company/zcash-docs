@@ -1,0 +1,50 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>SeedGenerator - zcash-android-wallet-sdk</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">zcash-android-wallet-sdk</a>&nbsp;/&nbsp;<a href="../index.html">cash.z.wallet.sdk.ext</a>&nbsp;/&nbsp;<a href="./index.html">SeedGenerator</a><br/>
+<br/>
+<h1>SeedGenerator</h1>
+<code><span class="keyword">class </span><s><span class="identifier">SeedGenerator</span></s></code><br/>
+<strong>Deprecated:</strong> Do not use this because it is insecure and only intended for test code and samples. Instead, use the Android Keystore system or a 3rd party library that leverages it.<br/>
+<br/>
+<p>This is intentionally insecure. Wallet makers have told us storing keys is their specialty so we don't put a lot of
+energy here. A true implementation would create a key using user interaction, perhaps with a password they know that
+is never stored, along with requiring user authentication for key use (i.e. fingerprint/PIN/pattern/etc). From there,
+one of these approaches might be helpful to store the key securely:</p>
+<p>https://developer.android.com/training/articles/keystore.html
+https://github.com/scottyab/AESCrypt-Android/blob/master/aescrypt/src/main/java/com/scottyab/aescrypt/AESCrypt.java
+https://github.com/iamMehedi/Secured-Preference-Store</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<p>This is intentionally insecure. Wallet makers have told us storing keys is their specialty so we don't put a lot of
+energy here. A true implementation would create a key using user interaction, perhaps with a password they know that
+is never stored, along with requiring user authentication for key use (i.e. fingerprint/PIN/pattern/etc). From there,
+one of these approaches might be helpful to store the key securely:</p>
+<code><span class="identifier">SeedGenerator</span><span class="symbol">(</span><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Companion Object Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="get-device-id.html">getDeviceId</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><s><span class="identifier">getDeviceId</span></s><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.ext.SeedGenerator.Companion$getDeviceId(android.content.Context)/appContext">appContext</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/content/Context.html"><span class="identifier">Context</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

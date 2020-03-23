@@ -1,0 +1,25 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>currencyFormatter - zcash-android-wallet-sdk</title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">zcash-android-wallet-sdk</a>&nbsp;/&nbsp;<a href="index.html">cash.z.wallet.sdk.ext</a>&nbsp;/&nbsp;<a href="./currency-formatter.html">currencyFormatter</a><br/>
+<br/>
+<h1>currencyFormatter</h1>
+<a name="cash.z.wallet.sdk.ext$currencyFormatter(kotlin.Int, kotlin.Int)"></a>
+<code><span class="keyword">fun </span><span class="identifier">currencyFormatter</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.ext$currencyFormatter(kotlin.Int, kotlin.Int)/maxDecimals">maxDecimals</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.ext$currencyFormatter(kotlin.Int, kotlin.Int)/minDecimals">minDecimals</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://docs.oracle.com/javase/6/docs/api/java/text/NumberFormat.html"><span class="identifier">NumberFormat</span></a></code>
+<p>Create a number formatter for use with converting currency to strings. This probably isn't needed
+externally since the other formatting functions leverage this, instead. Leverages the default
+rounding mode for zec found in ZEC_FORMATTER.</p>
+<h3>Parameters</h3>
+<p><a name="maxDecimals"></a>
+<code>maxDecimals</code> - the number of decimal places to use in the format. Default is 6 because ZEC is
+glorious.</p>
+<p><a name="minDecimals"></a>
+<code>minDecimals</code> - the minimum number of digits to allow to the right of the decimal.</p>
+<p><strong>Return</strong><br/>
+a currency formatter, appropriate for the default locale.</p>
+</BODY>
+</HTML>

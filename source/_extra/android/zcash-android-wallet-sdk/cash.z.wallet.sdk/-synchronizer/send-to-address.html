@@ -1,0 +1,31 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Synchronizer.sendToAddress - zcash-android-wallet-sdk</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">zcash-android-wallet-sdk</a>&nbsp;/&nbsp;<a href="../index.html">cash.z.wallet.sdk</a>&nbsp;/&nbsp;<a href="index.html">Synchronizer</a>&nbsp;/&nbsp;<a href="./send-to-address.html">sendToAddress</a><br/>
+<br/>
+<h1>sendToAddress</h1>
+<a name="cash.z.wallet.sdk.Synchronizer$sendToAddress(kotlin.String, kotlin.Long, kotlin.String, kotlin.String, kotlin.Int)"></a>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">sendToAddress</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.Synchronizer$sendToAddress(kotlin.String, kotlin.Long, kotlin.String, kotlin.String, kotlin.Int)/spendingKey">spendingKey</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.Synchronizer$sendToAddress(kotlin.String, kotlin.Long, kotlin.String, kotlin.String, kotlin.Int)/zatoshi">zatoshi</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a><span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.Synchronizer$sendToAddress(kotlin.String, kotlin.Long, kotlin.String, kotlin.String, kotlin.Int)/toAddress">toAddress</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.Synchronizer$sendToAddress(kotlin.String, kotlin.Long, kotlin.String, kotlin.String, kotlin.Int)/memo">memo</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a>&nbsp;<span class="symbol">=</span>&nbsp;""<span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.Synchronizer$sendToAddress(kotlin.String, kotlin.Long, kotlin.String, kotlin.String, kotlin.Int)/fromAccountIndex">fromAccountIndex</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a>&nbsp;<span class="symbol">=</span>&nbsp;0<span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Flow</span><span class="symbol">&lt;</span><a href="../../cash.z.wallet.sdk.entity/-pending-transaction/index.html"><span class="identifier">PendingTransaction</span></a><span class="symbol">&gt;</span></code>
+<p>Sends zatoshi.</p>
+<h3>Parameters</h3>
+<p><a name="spendingKey"></a>
+<code>spendingKey</code> - the key associated with the notes that will be spent.</p>
+<p><a name="zatoshi"></a>
+<code>zatoshi</code> - the amount of zatoshi to send.</p>
+<p><a name="toAddress"></a>
+<code>toAddress</code> - the recipient's address.</p>
+<p><a name="memo"></a>
+<code>memo</code> - the optional memo to include as part of the transaction.</p>
+<p><a name="fromAccountIndex"></a>
+<code>fromAccountIndex</code> - the optional account id to use. By default, the first account is used.</p>
+<p><strong>Return</strong><br/>
+a flow of PendingTransaction objects representing changes to the state of the
+transaction. Any time the state changes a new instance will be emitted by this flow. This is
+useful for updating the UI without needing to poll. Of course, polling is always an option
+for any wallet that wants to ignore this return value.</p>
+</BODY>
+</HTML>

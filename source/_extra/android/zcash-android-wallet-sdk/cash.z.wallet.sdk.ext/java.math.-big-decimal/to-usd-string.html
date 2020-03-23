@@ -1,0 +1,25 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>toUsdString - zcash-android-wallet-sdk</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">zcash-android-wallet-sdk</a>&nbsp;/&nbsp;<a href="../index.html">cash.z.wallet.sdk.ext</a>&nbsp;/&nbsp;<a href="index.html">java.math.BigDecimal</a>&nbsp;/&nbsp;<a href="./to-usd-string.html">toUsdString</a><br/>
+<br/>
+<h1>toUsdString</h1>
+<a name="cash.z.wallet.sdk.ext$toUsdString(java.math.BigDecimal, kotlin.Int, kotlin.Int)"></a>
+<code><span class="keyword">fun </span><a href="https://docs.oracle.com/javase/6/docs/api/java/math/BigDecimal.html"><span class="identifier">BigDecimal</span></a><span class="symbol">?</span><span class="symbol">.</span><span class="identifier">toUsdString</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.ext$toUsdString(java.math.BigDecimal, kotlin.Int, kotlin.Int)/maxDecimals">maxDecimals</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a>&nbsp;<span class="symbol">=</span>&nbsp;USD_FORMATTER.maximumFractionDigits<span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.ext$toUsdString(java.math.BigDecimal, kotlin.Int, kotlin.Int)/minDecimals">minDecimals</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a>&nbsp;<span class="symbol">=</span>&nbsp;USD_FORMATTER.minimumFractionDigits<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>Format a USD value into USD with the given number of decimal places, represented as a string.
+Start with USD -&gt; end with USD.</p>
+<h3>Parameters</h3>
+<p><a name="maxDecimals"></a>
+<code>maxDecimals</code> - the number of decimal places to use in the format. Default is 6 because ZEC is
+glorious.</p>
+<p><a name="minDecimals"></a>
+<code>minDecimals</code> - the minimum number of digits to allow to the right of the decimal.</p>
+<p><strong>Return</strong><br/>
+this BigDecimal USD value represented as a string with at least <a href="to-usd-string.html#cash.z.wallet.sdk.ext$toUsdString(java.math.BigDecimal, kotlin.Int, kotlin.Int)/minDecimals">minDecimals</a> and at most
+<a href="to-usd-string.html#cash.z.wallet.sdk.ext$toUsdString(java.math.BigDecimal, kotlin.Int, kotlin.Int)/maxDecimals">maxDecimals</a>, which is 2 by default.</p>
+</BODY>
+</HTML>

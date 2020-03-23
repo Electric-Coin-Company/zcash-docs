@@ -1,0 +1,19 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>SdkSynchronizer.onCriticalErrorHandler - zcash-android-wallet-sdk</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">zcash-android-wallet-sdk</a>&nbsp;/&nbsp;<a href="../index.html">cash.z.wallet.sdk</a>&nbsp;/&nbsp;<a href="index.html">SdkSynchronizer</a>&nbsp;/&nbsp;<a href="./on-critical-error-handler.html">onCriticalErrorHandler</a><br/>
+<br/>
+<h1>onCriticalErrorHandler</h1>
+<a name="cash.z.wallet.sdk.SdkSynchronizer$onCriticalErrorHandler"></a>
+<code><span class="keyword">var </span><span class="identifier">onCriticalErrorHandler</span><span class="symbol">: </span><span class="symbol">(</span><span class="symbol">(</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html"><span class="identifier">Throwable</span></a><span class="symbol">?</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">)</span><span class="symbol">?</span></code>
+<p>A callback to invoke whenever an uncaught error is encountered. By definition, the return
+value of the function is ignored because this error is unrecoverable. The only reason the
+function has a return value is so that all error handlers work with the same signature which
+allows one function to handle all errors in simple apps. This callback is not called on the
+main thread so any UI work would need to switch context to the main thread.</p>
+</BODY>
+</HTML>

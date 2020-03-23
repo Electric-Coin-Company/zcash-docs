@@ -1,0 +1,131 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>PagedTransactionRepository - zcash-android-wallet-sdk</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">zcash-android-wallet-sdk</a>&nbsp;/&nbsp;<a href="../index.html">cash.z.wallet.sdk.transaction</a>&nbsp;/&nbsp;<a href="./index.html">PagedTransactionRepository</a><br/>
+<br/>
+<h1>PagedTransactionRepository</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">PagedTransactionRepository</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-transaction-repository/index.html"><span class="identifier">TransactionRepository</span></a></code>
+<p>Example of a repository that leverages the Room paging library to return a <a href="#">PagedList</a> of
+transactions. Consumers can register as a page listener and receive an interface that allows for
+efficiently paging data.</p>
+<h3>Parameters</h3>
+<p><a name="pageSize"></a>
+<code>pageSize</code> - transactions per page. This influences pre-fetch and memory configuration.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<p>Constructor that creates the database.</p>
+<code><span class="identifier">PagedTransactionRepository</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.transaction.PagedTransactionRepository$<init>(android.content.Context, kotlin.Int, kotlin.String)/context">context</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/content/Context.html"><span class="identifier">Context</span></a><span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.transaction.PagedTransactionRepository$<init>(android.content.Context, kotlin.Int, kotlin.String)/pageSize">pageSize</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a>&nbsp;<span class="symbol">=</span>&nbsp;10<span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.transaction.PagedTransactionRepository$<init>(android.content.Context, kotlin.Int, kotlin.String)/dataDbName">dataDbName</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a>&nbsp;<span class="symbol">=</span>&nbsp;ZcashSdk.DB_DATA_NAME<span class="symbol">)</span></code>
+<p>Example of a repository that leverages the Room paging library to return a <a href="#">PagedList</a> of
+transactions. Consumers can register as a page listener and receive an interface that allows for
+efficiently paging data.</p>
+<code><span class="identifier">PagedTransactionRepository</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.transaction.PagedTransactionRepository$<init>(cash.z.wallet.sdk.db.DerivedDataDb, kotlin.Int)/derivedDataDb">derivedDataDb</span><span class="symbol">:</span>&nbsp;<a href="../../cash.z.wallet.sdk.db/-derived-data-db/index.html"><span class="identifier">DerivedDataDb</span></a><span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.transaction.PagedTransactionRepository$<init>(cash.z.wallet.sdk.db.DerivedDataDb, kotlin.Int)/pageSize">pageSize</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a>&nbsp;<span class="symbol">=</span>&nbsp;10<span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="all-transactions.html">allTransactions</a></h4>
+</td>
+<td>
+<p>A flow of all the inbound and outbound confirmed transactions</p>
+<code><span class="keyword">open</span> <span class="keyword">val </span><span class="identifier">allTransactions</span><span class="symbol">: </span><span class="identifier">Flow</span><span class="symbol">&lt;</span><span class="identifier">PagedList</span><span class="symbol">&lt;</span><a href="../../cash.z.wallet.sdk.entity/-confirmed-transaction/index.html"><span class="identifier">ConfirmedTransaction</span></a><span class="symbol">&gt;</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="received-transactions.html">receivedTransactions</a></h4>
+</td>
+<td>
+<p>A flow of all the inbound confirmed transactions</p>
+<code><span class="keyword">open</span> <span class="keyword">val </span><span class="identifier">receivedTransactions</span><span class="symbol">: </span><span class="identifier">Flow</span><span class="symbol">&lt;</span><span class="identifier">PagedList</span><span class="symbol">&lt;</span><a href="../../cash.z.wallet.sdk.entity/-confirmed-transaction/index.html"><span class="identifier">ConfirmedTransaction</span></a><span class="symbol">&gt;</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="sent-transactions.html">sentTransactions</a></h4>
+</td>
+<td>
+<p>A flow of all the outbound confirmed transactions</p>
+<code><span class="keyword">open</span> <span class="keyword">val </span><span class="identifier">sentTransactions</span><span class="symbol">: </span><span class="identifier">Flow</span><span class="symbol">&lt;</span><span class="identifier">PagedList</span><span class="symbol">&lt;</span><a href="../../cash.z.wallet.sdk.entity/-confirmed-transaction/index.html"><span class="identifier">ConfirmedTransaction</span></a><span class="symbol">&gt;</span><span class="symbol">&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="close.html">close</a></h4>
+</td>
+<td>
+<p>Close the underlying database.</p>
+<code><span class="keyword">fun </span><span class="identifier">close</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="find-encoded-transaction-by-id.html">findEncodedTransactionById</a></h4>
+</td>
+<td>
+<p>Find the encoded transaction associated with the given id.</p>
+<code><span class="keyword">open</span> <span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">findEncodedTransactionById</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.transaction.PagedTransactionRepository$findEncodedTransactionById(kotlin.Long)/txId">txId</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../cash.z.wallet.sdk.entity/-encoded-transaction/index.html"><span class="identifier">EncodedTransaction</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="find-mined-height.html">findMinedHeight</a></h4>
+</td>
+<td>
+<p>Find the mined height that matches the given raw tx_id in bytes. This is useful for matching
+a pending transaction with one that we've decrypted from the blockchain.</p>
+<code><span class="keyword">open</span> <span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">findMinedHeight</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.transaction.PagedTransactionRepository$findMinedHeight(kotlin.ByteArray)/rawTransactionId">rawTransactionId</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html"><span class="identifier">ByteArray</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="invalidate.html">invalidate</a></h4>
+</td>
+<td>
+<p>Provides a way for other components to signal that the underlying data has been modified.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">invalidate</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="is-initialized.html">isInitialized</a></h4>
+</td>
+<td>
+<p>Returns true when this repository has been initialized and seeded with the initial checkpoint.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isInitialized</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="last-scanned-height.html">lastScannedHeight</a></h4>
+</td>
+<td>
+<p>The last height scanned by this repository.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">lastScannedHeight</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Companion Object Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-m-i-g-r-a-t-i-o-n_3_4.html">MIGRATION_3_4</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">MIGRATION_3_4</span><span class="symbol">: </span><span class="identifier">Migration</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

@@ -1,0 +1,24 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>CompactBlockProcessor.WalletBalance.<init> - zcash-android-wallet-sdk</title>
+<link rel="stylesheet" href="../../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../../index.html">zcash-android-wallet-sdk</a>&nbsp;/&nbsp;<a href="../../index.html">cash.z.wallet.sdk.block</a>&nbsp;/&nbsp;<a href="../index.html">CompactBlockProcessor</a>&nbsp;/&nbsp;<a href="index.html">WalletBalance</a>&nbsp;/&nbsp;<a href="./-init-.html">&lt;init&gt;</a><br/>
+<br/>
+<h1>&lt;init&gt;</h1>
+<a name="cash.z.wallet.sdk.block.CompactBlockProcessor.WalletBalance$&lt;init&gt;(kotlin.Long, kotlin.Long)"></a>
+<code><span class="identifier">WalletBalance</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.block.CompactBlockProcessor.WalletBalance$<init>(kotlin.Long, kotlin.Long)/totalZatoshi">totalZatoshi</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a>&nbsp;<span class="symbol">=</span>&nbsp;-1<span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.block.CompactBlockProcessor.WalletBalance$<init>(kotlin.Long, kotlin.Long)/availableZatoshi">availableZatoshi</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a>&nbsp;<span class="symbol">=</span>&nbsp;-1<span class="symbol">)</span></code>
+<p>Data structure to hold the total and available balance of the wallet. This is what is
+received on the balance channel.</p>
+<h3>Parameters</h3>
+<p><a name="totalZatoshi"></a>
+<code>totalZatoshi</code> - the total balance, ignoring funds that cannot be used.</p>
+<p><a name="availableZatoshi"></a>
+<code>availableZatoshi</code> - the amount of funds that are available for use. Typical reasons that funds
+may be unavailable include fairly new transactions that do not have enough confirmations or
+notes that are tied up because we are awaiting change from a transaction. When a note has
+been spent, its change cannot be used until there are enough confirmations.</p>
+</BODY>
+</HTML>

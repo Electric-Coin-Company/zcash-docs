@@ -1,0 +1,22 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>twigTask - zcash-android-wallet-sdk</title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">zcash-android-wallet-sdk</a>&nbsp;/&nbsp;<a href="index.html">cash.z.wallet.sdk.ext</a>&nbsp;/&nbsp;<a href="./twig-task.html">twigTask</a><br/>
+<br/>
+<h1>twigTask</h1>
+<a name="cash.z.wallet.sdk.ext$twigTask(kotlin.String, kotlin.Function0((cash.z.wallet.sdk.ext.twigTask.R)))"></a>
+<code><span class="keyword">inline</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">R</span><span class="symbol">&gt;</span> <span class="identifier">twigTask</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.ext$twigTask(kotlin.String, kotlin.Function0((cash.z.wallet.sdk.ext.twigTask.R)))/logMessage">logMessage</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.ext$twigTask(kotlin.String, kotlin.Function0((cash.z.wallet.sdk.ext.twigTask.R)))/block">block</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<span class="identifier">R</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">R</span></code>
+<p>Meticulously times a tiny task.</p>
+<a name="cash.z.wallet.sdk.ext$twigTask(cash.z.wallet.sdk.ext.Twig, kotlin.String, kotlin.Function0((cash.z.wallet.sdk.ext.twigTask.R)))"></a>
+<code><span class="keyword">inline</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">R</span><span class="symbol">&gt;</span> <a href="-twig/index.html"><span class="identifier">Twig</span></a><span class="symbol">.</span><span class="identifier">twigTask</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.ext$twigTask(cash.z.wallet.sdk.ext.Twig, kotlin.String, kotlin.Function0((cash.z.wallet.sdk.ext.twigTask.R)))/logMessage">logMessage</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.ext$twigTask(cash.z.wallet.sdk.ext.Twig, kotlin.String, kotlin.Function0((cash.z.wallet.sdk.ext.twigTask.R)))/block">block</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<span class="identifier">R</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">R</span></code>
+<p>A tiny log task. Execute the block of code with some twigging around the outside. For silent twigs, this adds a small
+amount of overhead at the call site but still avoids logging.</p>
+<p>note: being an extension function (i.e. static rather than a member of the Twig interface) allows this function to be
+    inlined and simplifies its use with suspend functions
+    (otherwise the function and its "block" param would have to suspend)</p>
+</BODY>
+</HTML>

@@ -1,0 +1,130 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>ConfirmedTransaction - zcash-android-wallet-sdk</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">zcash-android-wallet-sdk</a>&nbsp;/&nbsp;<a href="../index.html">cash.z.wallet.sdk.entity</a>&nbsp;/&nbsp;<a href="./index.html">ConfirmedTransaction</a><br/>
+<br/>
+<h1>ConfirmedTransaction</h1>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">ConfirmedTransaction</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-mined-transaction/index.html"><span class="identifier">MinedTransaction</span></a><span class="symbol">, </span><a href="../-signed-transaction/index.html"><span class="identifier">SignedTransaction</span></a></code>
+<p>A mined, shielded transaction. Since this is a <a href="../-mined-transaction/index.html">MinedTransaction</a>, it represents data
+on the blockchain.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<p>A mined, shielded transaction. Since this is a <a href="../-mined-transaction/index.html">MinedTransaction</a>, it represents data
+on the blockchain.</p>
+<code><span class="identifier">ConfirmedTransaction</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.entity.ConfirmedTransaction$<init>(kotlin.Long, kotlin.Long, kotlin.ByteArray, kotlin.Long, kotlin.Long, kotlin.Int, kotlin.Int, kotlin.ByteArray, kotlin.String, kotlin.Int, kotlin.ByteArray)/id">id</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a>&nbsp;<span class="symbol">=</span>&nbsp;0L<span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.entity.ConfirmedTransaction$<init>(kotlin.Long, kotlin.Long, kotlin.ByteArray, kotlin.Long, kotlin.Long, kotlin.Int, kotlin.Int, kotlin.ByteArray, kotlin.String, kotlin.Int, kotlin.ByteArray)/value">value</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a>&nbsp;<span class="symbol">=</span>&nbsp;0L<span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.entity.ConfirmedTransaction$<init>(kotlin.Long, kotlin.Long, kotlin.ByteArray, kotlin.Long, kotlin.Long, kotlin.Int, kotlin.Int, kotlin.ByteArray, kotlin.String, kotlin.Int, kotlin.ByteArray)/memo">memo</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html"><span class="identifier">ByteArray</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;ByteArray(0)<span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.entity.ConfirmedTransaction$<init>(kotlin.Long, kotlin.Long, kotlin.ByteArray, kotlin.Long, kotlin.Long, kotlin.Int, kotlin.Int, kotlin.ByteArray, kotlin.String, kotlin.Int, kotlin.ByteArray)/noteId">noteId</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a>&nbsp;<span class="symbol">=</span>&nbsp;0L<span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.entity.ConfirmedTransaction$<init>(kotlin.Long, kotlin.Long, kotlin.ByteArray, kotlin.Long, kotlin.Long, kotlin.Int, kotlin.Int, kotlin.ByteArray, kotlin.String, kotlin.Int, kotlin.ByteArray)/blockTimeInSeconds">blockTimeInSeconds</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a>&nbsp;<span class="symbol">=</span>&nbsp;0L<span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.entity.ConfirmedTransaction$<init>(kotlin.Long, kotlin.Long, kotlin.ByteArray, kotlin.Long, kotlin.Long, kotlin.Int, kotlin.Int, kotlin.ByteArray, kotlin.String, kotlin.Int, kotlin.ByteArray)/minedHeight">minedHeight</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a>&nbsp;<span class="symbol">=</span>&nbsp;-1<span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.entity.ConfirmedTransaction$<init>(kotlin.Long, kotlin.Long, kotlin.ByteArray, kotlin.Long, kotlin.Long, kotlin.Int, kotlin.Int, kotlin.ByteArray, kotlin.String, kotlin.Int, kotlin.ByteArray)/transactionIndex">transactionIndex</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.entity.ConfirmedTransaction$<init>(kotlin.Long, kotlin.Long, kotlin.ByteArray, kotlin.Long, kotlin.Long, kotlin.Int, kotlin.Int, kotlin.ByteArray, kotlin.String, kotlin.Int, kotlin.ByteArray)/rawTransactionId">rawTransactionId</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html"><span class="identifier">ByteArray</span></a>&nbsp;<span class="symbol">=</span>&nbsp;ByteArray(0)<span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.entity.ConfirmedTransaction$<init>(kotlin.Long, kotlin.Long, kotlin.ByteArray, kotlin.Long, kotlin.Long, kotlin.Int, kotlin.Int, kotlin.ByteArray, kotlin.String, kotlin.Int, kotlin.ByteArray)/toAddress">toAddress</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.entity.ConfirmedTransaction$<init>(kotlin.Long, kotlin.Long, kotlin.ByteArray, kotlin.Long, kotlin.Long, kotlin.Int, kotlin.Int, kotlin.ByteArray, kotlin.String, kotlin.Int, kotlin.ByteArray)/expiryHeight">expiryHeight</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.entity.ConfirmedTransaction$<init>(kotlin.Long, kotlin.Long, kotlin.ByteArray, kotlin.Long, kotlin.Long, kotlin.Int, kotlin.Int, kotlin.ByteArray, kotlin.String, kotlin.Int, kotlin.ByteArray)/raw">raw</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html"><span class="identifier">ByteArray</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;byteArrayOf()<span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="block-time-in-seconds.html">blockTimeInSeconds</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">blockTimeInSeconds</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="expiry-height.html">expiryHeight</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">expiryHeight</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="id.html">id</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">id</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="memo.html">memo</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">memo</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html"><span class="identifier">ByteArray</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="mined-height.html">minedHeight</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">minedHeight</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="note-id.html">noteId</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">noteId</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="raw.html">raw</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">raw</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html"><span class="identifier">ByteArray</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="raw-transaction-id.html">rawTransactionId</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">rawTransactionId</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html"><span class="identifier">ByteArray</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="to-address.html">toAddress</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">toAddress</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="transaction-index.html">transactionIndex</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">transactionIndex</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="value.html">value</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">value</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="equals.html">equals</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">equals</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.entity.ConfirmedTransaction$equals(kotlin.Any)/other">other</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="hash-code.html">hashCode</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">hashCode</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

@@ -1,0 +1,68 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>PendingTransactionDao - zcash-android-wallet-sdk</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">zcash-android-wallet-sdk</a>&nbsp;/&nbsp;<a href="../index.html">cash.z.wallet.sdk.db</a>&nbsp;/&nbsp;<a href="./index.html">PendingTransactionDao</a><br/>
+<br/>
+<h1>PendingTransactionDao</h1>
+<code><span class="keyword">interface </span><span class="identifier">PendingTransactionDao</span></code>
+<p>Data access object providing crud for pending transactions.</p>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="cancel.html">cancel</a></h4>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">cancel</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.db.PendingTransactionDao$cancel(kotlin.Long)/id">id</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="create.html">create</a></h4>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">create</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.db.PendingTransactionDao$create(cash.z.wallet.sdk.entity.PendingTransactionEntity)/transaction">transaction</span><span class="symbol">:</span>&nbsp;<a href="../../cash.z.wallet.sdk.entity/-pending-transaction-entity/index.html"><span class="identifier">PendingTransactionEntity</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="delete.html">delete</a></h4>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">delete</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.db.PendingTransactionDao$delete(cash.z.wallet.sdk.entity.PendingTransactionEntity)/transaction">transaction</span><span class="symbol">:</span>&nbsp;<a href="../../cash.z.wallet.sdk.entity/-pending-transaction-entity/index.html"><span class="identifier">PendingTransactionEntity</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="find-by-id.html">findById</a></h4>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">findById</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.db.PendingTransactionDao$findById(kotlin.Long)/id">id</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../cash.z.wallet.sdk.entity/-pending-transaction-entity/index.html"><span class="identifier">PendingTransactionEntity</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-all.html">getAll</a></h4>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">getAll</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Flow</span><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="../../cash.z.wallet.sdk.entity/-pending-transaction-entity/index.html"><span class="identifier">PendingTransactionEntity</span></a><span class="symbol">&gt;</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="monitor-by-id.html">monitorById</a></h4>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">monitorById</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.db.PendingTransactionDao$monitorById(kotlin.Long)/id">id</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Flow</span><span class="symbol">&lt;</span><a href="../../cash.z.wallet.sdk.entity/-pending-transaction-entity/index.html"><span class="identifier">PendingTransactionEntity</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="update.html">update</a></h4>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">update</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.db.PendingTransactionDao$update(cash.z.wallet.sdk.entity.PendingTransactionEntity)/transaction">transaction</span><span class="symbol">:</span>&nbsp;<a href="../../cash.z.wallet.sdk.entity/-pending-transaction-entity/index.html"><span class="identifier">PendingTransactionEntity</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

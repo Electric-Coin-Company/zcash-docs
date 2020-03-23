@@ -1,2 +1,5 @@
 #Ignore local build dir
 build/
+
+#Ignore weird mac dust (.DS_Store stores custom attributes of its containing folder, such as the position of icons or the choice of a background image. )
+.DS_Store

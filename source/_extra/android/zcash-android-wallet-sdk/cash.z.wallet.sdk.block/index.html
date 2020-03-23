@@ -1,0 +1,55 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>cash.z.wallet.sdk.block - zcash-android-wallet-sdk</title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">zcash-android-wallet-sdk</a>&nbsp;/&nbsp;<a href="./index.html">cash.z.wallet.sdk.block</a><br/>
+<br/>
+<h2>Package cash.z.wallet.sdk.block</h2>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-compact-block-db-store/index.html">CompactBlockDbStore</a></h4>
+</td>
+<td>
+<p>An implementation of CompactBlockStore that persists information to a database in the given
+path. This represents the "cache db" or local cache of compact blocks waiting to be scanned.</p>
+<code><span class="keyword">class </span><span class="identifier">CompactBlockDbStore</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-compact-block-store/index.html"><span class="identifier">CompactBlockStore</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-compact-block-downloader/index.html">CompactBlockDownloader</a></h4>
+</td>
+<td>
+<p>Serves as a source of compact blocks received from the light wallet server. Once started, it will use the given
+lightwallet service to request all the appropriate blocks and compact block store to persist them. By delegating to
+these dependencies, the downloader remains agnostic to the particular implementation of how to retrieve and store
+data; although, by default the SDK uses gRPC and SQL.</p>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">CompactBlockDownloader</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-compact-block-processor/index.html">CompactBlockProcessor</a></h4>
+</td>
+<td>
+<p>Responsible for processing the compact blocks that are received from the lightwallet server. This class encapsulates
+all the business logic required to validate and scan the blockchain and is therefore tightly coupled with
+librustzcash.</p>
+<code><span class="keyword">class </span><span class="identifier">CompactBlockProcessor</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-compact-block-store/index.html">CompactBlockStore</a></h4>
+</td>
+<td>
+<p>Interface for storing compact blocks.</p>
+<code><span class="keyword">interface </span><span class="identifier">CompactBlockStore</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

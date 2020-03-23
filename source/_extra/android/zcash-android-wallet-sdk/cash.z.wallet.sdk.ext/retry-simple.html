@@ -1,0 +1,25 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>retrySimple - zcash-android-wallet-sdk</title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">zcash-android-wallet-sdk</a>&nbsp;/&nbsp;<a href="index.html">cash.z.wallet.sdk.ext</a>&nbsp;/&nbsp;<a href="./retry-simple.html">retrySimple</a><br/>
+<br/>
+<h1>retrySimple</h1>
+<a name="cash.z.wallet.sdk.ext$retrySimple(kotlin.Int, kotlin.Long, kotlin.Function1((kotlin.Int, kotlin.Unit)))"></a>
+<code><span class="keyword">inline</span> <span class="keyword">fun </span><span class="identifier">retrySimple</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.ext$retrySimple(kotlin.Int, kotlin.Long, kotlin.Function1((kotlin.Int, kotlin.Unit)))/retries">retries</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a>&nbsp;<span class="symbol">=</span>&nbsp;2<span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.ext$retrySimple(kotlin.Int, kotlin.Long, kotlin.Function1((kotlin.Int, kotlin.Unit)))/sleepTime">sleepTime</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a>&nbsp;<span class="symbol">=</span>&nbsp;20L<span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.ext$retrySimple(kotlin.Int, kotlin.Long, kotlin.Function1((kotlin.Int, kotlin.Unit)))/block">block</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Execute the given block and if it fails, retry up to <a href="retry-simple.html#cash.z.wallet.sdk.ext$retrySimple(kotlin.Int, kotlin.Long, kotlin.Function1((kotlin.Int, kotlin.Unit)))/retries">retries</a> more times, using thread sleep
+instead of suspending. If none of the retries succeed then throw the final error. This function
+is intended to be called with no parameters, i.e., it is designed to use its defaults.</p>
+<h3>Parameters</h3>
+<p><a name="retries"></a>
+<code>retries</code> - the number of times to retry. Typically, this should be low.</p>
+<p><a name="sleepTime"></a>
+<code>sleepTime</code> - the amount of time to sleep in between retries. Typically, this should be an
+amount of time that is hard to perceive.</p>
+<p><a name="block"></a>
+<code>block</code> - the block of logic to try.</p>
+</BODY>
+</HTML>

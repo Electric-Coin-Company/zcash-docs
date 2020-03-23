@@ -1,0 +1,65 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>LightWalletService - zcash-android-wallet-sdk</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">zcash-android-wallet-sdk</a>&nbsp;/&nbsp;<a href="../index.html">cash.z.wallet.sdk.service</a>&nbsp;/&nbsp;<a href="./index.html">LightWalletService</a><br/>
+<br/>
+<h1>LightWalletService</h1>
+<code><span class="keyword">interface </span><span class="identifier">LightWalletService</span></code>
+<p>Service for interacting with lightwalletd. Implementers of this service should make blocking
+calls because async concerns are handled at a higher level.</p>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="get-block-range.html">getBlockRange</a></h4>
+</td>
+<td>
+<p>Return the given range of blocks.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">getBlockRange</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.service.LightWalletService$getBlockRange(kotlin.ranges.IntRange)/heightRange">heightRange</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.ranges/-int-range/index.html"><span class="identifier">IntRange</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><span class="identifier">&lt;ERROR CLASS&gt;</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-latest-block-height.html">getLatestBlockHeight</a></h4>
+</td>
+<td>
+<p>Return the latest block height known to the service.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">getLatestBlockHeight</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="shutdown.html">shutdown</a></h4>
+</td>
+<td>
+<p>Cleanup any connections when the service is shutting down and not going to be used again.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">shutdown</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="submit-transaction.html">submitTransaction</a></h4>
+</td>
+<td>
+<p>Submit a raw transaction.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">submitTransaction</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.service.LightWalletService$submitTransaction(kotlin.ByteArray)/spendTransaction">spendTransaction</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html"><span class="identifier">ByteArray</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">&lt;ERROR CLASS&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="../-light-wallet-grpc-service/index.html">LightWalletGrpcService</a></h4>
+</td>
+<td>
+<p>Implementation of LightwalletService using gRPC for requests to lightwalletd.</p>
+<code><span class="keyword">class </span><span class="identifier">LightWalletGrpcService</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">LightWalletService</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

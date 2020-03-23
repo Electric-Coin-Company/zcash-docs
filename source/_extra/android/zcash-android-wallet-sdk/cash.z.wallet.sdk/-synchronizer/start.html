@@ -1,0 +1,22 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Synchronizer.start - zcash-android-wallet-sdk</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">zcash-android-wallet-sdk</a>&nbsp;/&nbsp;<a href="../index.html">cash.z.wallet.sdk</a>&nbsp;/&nbsp;<a href="index.html">Synchronizer</a>&nbsp;/&nbsp;<a href="./start.html">start</a><br/>
+<br/>
+<h1>start</h1>
+<a name="cash.z.wallet.sdk.Synchronizer$start(kotlinx.coroutines.CoroutineScope)"></a>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">start</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.Synchronizer$start(kotlinx.coroutines.CoroutineScope)/parentScope">parentScope</span><span class="symbol">:</span>&nbsp;<span class="identifier">CoroutineScope</span><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span><span class="symbol">: </span><a href="index.html"><span class="identifier">Synchronizer</span></a></code>
+<p>Starts this synchronizer within the given scope.</p>
+<h3>Parameters</h3>
+<p><a name="parentScope"></a>
+<code>parentScope</code> - the scope to use for this synchronizer, typically something with a
+lifecycle such as an Activity. Implementations should leverage structured concurrency and
+cancel all jobs when this scope completes.</p>
+<p><strong>Return</strong><br/>
+an instance of the class so that this function can be used fluidly.</p>
+</BODY>
+</HTML>

@@ -1,0 +1,18 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>CompactBlockDownloader.<init> - zcash-android-wallet-sdk</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">zcash-android-wallet-sdk</a>&nbsp;/&nbsp;<a href="../index.html">cash.z.wallet.sdk.block</a>&nbsp;/&nbsp;<a href="index.html">CompactBlockDownloader</a>&nbsp;/&nbsp;<a href="./-init-.html">&lt;init&gt;</a><br/>
+<br/>
+<h1>&lt;init&gt;</h1>
+<a name="cash.z.wallet.sdk.block.CompactBlockDownloader$&lt;init&gt;(cash.z.wallet.sdk.service.LightWalletService, cash.z.wallet.sdk.block.CompactBlockStore)"></a>
+<code><span class="identifier">CompactBlockDownloader</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.block.CompactBlockDownloader$<init>(cash.z.wallet.sdk.service.LightWalletService, cash.z.wallet.sdk.block.CompactBlockStore)/lightwalletService">lightwalletService</span><span class="symbol">:</span>&nbsp;<a href="../../cash.z.wallet.sdk.service/-light-wallet-service/index.html"><span class="identifier">LightWalletService</span></a><span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.block.CompactBlockDownloader$<init>(cash.z.wallet.sdk.service.LightWalletService, cash.z.wallet.sdk.block.CompactBlockStore)/compactBlockStore">compactBlockStore</span><span class="symbol">:</span>&nbsp;<a href="../-compact-block-store/index.html"><span class="identifier">CompactBlockStore</span></a><span class="symbol">)</span></code>
+<p>Serves as a source of compact blocks received from the light wallet server. Once started, it will use the given
+lightwallet service to request all the appropriate blocks and compact block store to persist them. By delegating to
+these dependencies, the downloader remains agnostic to the particular implementation of how to retrieve and store
+data; although, by default the SDK uses gRPC and SQL.</p>
+</BODY>
+</HTML>

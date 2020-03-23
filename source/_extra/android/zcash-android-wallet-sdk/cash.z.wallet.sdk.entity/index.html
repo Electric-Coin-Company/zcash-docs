@@ -1,0 +1,198 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>cash.z.wallet.sdk.entity - zcash-android-wallet-sdk</title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">zcash-android-wallet-sdk</a>&nbsp;/&nbsp;<a href="./index.html">cash.z.wallet.sdk.entity</a><br/>
+<br/>
+<h2>Package cash.z.wallet.sdk.entity</h2>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-account/index.html">Account</a></h4>
+</td>
+<td>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">Account</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-block/index.html">Block</a></h4>
+</td>
+<td>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">Block</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-compact-block-entity/index.html">CompactBlockEntity</a></h4>
+</td>
+<td>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">CompactBlockEntity</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-confirmed-transaction/index.html">ConfirmedTransaction</a></h4>
+</td>
+<td>
+<p>A mined, shielded transaction. Since this is a <a href="-mined-transaction/index.html">MinedTransaction</a>, it represents data
+on the blockchain.</p>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">ConfirmedTransaction</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-mined-transaction/index.html"><span class="identifier">MinedTransaction</span></a><span class="symbol">, </span><a href="-signed-transaction/index.html"><span class="identifier">SignedTransaction</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-encoded-transaction/index.html">EncodedTransaction</a></h4>
+</td>
+<td>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">EncodedTransaction</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-signed-transaction/index.html"><span class="identifier">SignedTransaction</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-mined-transaction/index.html">MinedTransaction</a></h4>
+</td>
+<td>
+<p>Parent type for transactions that have been mined. This is useful for putting all transactions in
+one list for things like history. A mined tx should have all properties, except possibly a memo.</p>
+<code><span class="keyword">interface </span><span class="identifier">MinedTransaction</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-transaction/index.html"><span class="identifier">Transaction</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-pending-transaction/index.html">PendingTransaction</a></h4>
+</td>
+<td>
+<code><span class="keyword">interface </span><span class="identifier">PendingTransaction</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-signed-transaction/index.html"><span class="identifier">SignedTransaction</span></a><span class="symbol">, </span><a href="-transaction/index.html"><span class="identifier">Transaction</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-pending-transaction-entity/index.html">PendingTransactionEntity</a></h4>
+</td>
+<td>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">PendingTransactionEntity</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-pending-transaction/index.html"><span class="identifier">PendingTransaction</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-received/index.html">Received</a></h4>
+</td>
+<td>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">Received</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-sent/index.html">Sent</a></h4>
+</td>
+<td>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">Sent</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-signed-transaction/index.html">SignedTransaction</a></h4>
+</td>
+<td>
+<p>Interface for anything that's able to provide signed transaction bytes.</p>
+<code><span class="keyword">interface </span><span class="identifier">SignedTransaction</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-transaction/index.html">Transaction</a></h4>
+</td>
+<td>
+<p>Common interface between confirmed transactions on the blockchain and pending transactions being
+constructed.</p>
+<code><span class="keyword">interface </span><span class="identifier">Transaction</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-transaction-entity/index.html">TransactionEntity</a></h4>
+</td>
+<td>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">TransactionEntity</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="is-cancelled.html">isCancelled</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="-pending-transaction/index.html"><span class="identifier">PendingTransaction</span></a><span class="symbol">.</span><span class="identifier">isCancelled</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="is-created.html">isCreated</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="-pending-transaction/index.html"><span class="identifier">PendingTransaction</span></a><span class="symbol">.</span><span class="identifier">isCreated</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="is-creating.html">isCreating</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="-pending-transaction/index.html"><span class="identifier">PendingTransaction</span></a><span class="symbol">.</span><span class="identifier">isCreating</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="is-failed-encoding.html">isFailedEncoding</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="-pending-transaction/index.html"><span class="identifier">PendingTransaction</span></a><span class="symbol">.</span><span class="identifier">isFailedEncoding</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="is-failed-submit.html">isFailedSubmit</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="-pending-transaction/index.html"><span class="identifier">PendingTransaction</span></a><span class="symbol">.</span><span class="identifier">isFailedSubmit</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="is-failure.html">isFailure</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="-pending-transaction/index.html"><span class="identifier">PendingTransaction</span></a><span class="symbol">.</span><span class="identifier">isFailure</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="is-mined.html">isMined</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="-pending-transaction/index.html"><span class="identifier">PendingTransaction</span></a><span class="symbol">.</span><span class="identifier">isMined</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="is-pending.html">isPending</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="-pending-transaction/index.html"><span class="identifier">PendingTransaction</span></a><span class="symbol">.</span><span class="identifier">isPending</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.entity$isPending(cash.z.wallet.sdk.entity.PendingTransaction, kotlin.Int)/currentHeight">currentHeight</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a>&nbsp;<span class="symbol">=</span>&nbsp;-1<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="is-same-tx-id.html">isSameTxId</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="-pending-transaction/index.html"><span class="identifier">PendingTransaction</span></a><span class="symbol">.</span><span class="identifier">isSameTxId</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.entity$isSameTxId(cash.z.wallet.sdk.entity.PendingTransaction, cash.z.wallet.sdk.entity.MinedTransaction)/other">other</span><span class="symbol">:</span>&nbsp;<a href="-mined-transaction/index.html"><span class="identifier">MinedTransaction</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code><br/>
+<code><span class="keyword">fun </span><a href="-pending-transaction/index.html"><span class="identifier">PendingTransaction</span></a><span class="symbol">.</span><span class="identifier">isSameTxId</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.entity$isSameTxId(cash.z.wallet.sdk.entity.PendingTransaction, cash.z.wallet.sdk.entity.PendingTransaction)/other">other</span><span class="symbol">:</span>&nbsp;<a href="-pending-transaction/index.html"><span class="identifier">PendingTransaction</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="is-submit-success.html">isSubmitSuccess</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="-pending-transaction/index.html"><span class="identifier">PendingTransaction</span></a><span class="symbol">.</span><span class="identifier">isSubmitSuccess</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="is-submitted.html">isSubmitted</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="-pending-transaction/index.html"><span class="identifier">PendingTransaction</span></a><span class="symbol">.</span><span class="identifier">isSubmitted</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

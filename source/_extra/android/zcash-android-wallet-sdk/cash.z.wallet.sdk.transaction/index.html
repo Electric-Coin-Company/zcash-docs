@@ -1,0 +1,78 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>cash.z.wallet.sdk.transaction - zcash-android-wallet-sdk</title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">zcash-android-wallet-sdk</a>&nbsp;/&nbsp;<a href="./index.html">cash.z.wallet.sdk.transaction</a><br/>
+<br/>
+<h2>Package cash.z.wallet.sdk.transaction</h2>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-outbound-transaction-manager/index.html">OutboundTransactionManager</a></h4>
+</td>
+<td>
+<p>Manage outbound transactions with the main purpose of reporting which ones are still pending,
+particularly after failed attempts or dropped connectivity. The intent is to help see outbound
+transactions through to completion.</p>
+<code><span class="keyword">interface </span><span class="identifier">OutboundTransactionManager</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-paged-transaction-repository/index.html">PagedTransactionRepository</a></h4>
+</td>
+<td>
+<p>Example of a repository that leverages the Room paging library to return a <a href="#">PagedList</a> of
+transactions. Consumers can register as a page listener and receive an interface that allows for
+efficiently paging data.</p>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">PagedTransactionRepository</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-transaction-repository/index.html"><span class="identifier">TransactionRepository</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-persistent-transaction-manager/index.html">PersistentTransactionManager</a></h4>
+</td>
+<td>
+<p>Facilitates persistent attempts to ensure that an outbound transaction is completed.</p>
+<code><span class="keyword">class </span><span class="identifier">PersistentTransactionManager</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-outbound-transaction-manager/index.html"><span class="identifier">OutboundTransactionManager</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-transaction-encoder/index.html">TransactionEncoder</a></h4>
+</td>
+<td>
+<code><span class="keyword">interface </span><span class="identifier">TransactionEncoder</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-transaction-error/index.html">TransactionError</a></h4>
+</td>
+<td>
+<p>Interface for transaction errors.</p>
+<code><span class="keyword">interface </span><span class="identifier">TransactionError</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-transaction-repository/index.html">TransactionRepository</a></h4>
+</td>
+<td>
+<p>Repository of wallet transactions, providing an agnostic interface to the underlying information.</p>
+<code><span class="keyword">interface </span><span class="identifier">TransactionRepository</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-wallet-transaction-encoder/index.html">WalletTransactionEncoder</a></h4>
+</td>
+<td>
+<p>Class responsible for encoding a transaction in a consistent way. This bridges the gap by
+behaving like a stateless API so that callers can request <a href="-wallet-transaction-encoder/create-transaction.html">createTransaction</a> and receive a
+result, even though there are intermediate database interactions.</p>
+<code><span class="keyword">class </span><span class="identifier">WalletTransactionEncoder</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-transaction-encoder/index.html"><span class="identifier">TransactionEncoder</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

@@ -1,0 +1,19 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Synchronizer.onCriticalErrorHandler - zcash-android-wallet-sdk</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">zcash-android-wallet-sdk</a>&nbsp;/&nbsp;<a href="../index.html">cash.z.wallet.sdk</a>&nbsp;/&nbsp;<a href="index.html">Synchronizer</a>&nbsp;/&nbsp;<a href="./on-critical-error-handler.html">onCriticalErrorHandler</a><br/>
+<br/>
+<h1>onCriticalErrorHandler</h1>
+<a name="cash.z.wallet.sdk.Synchronizer$onCriticalErrorHandler"></a>
+<code><span class="keyword">abstract</span> <span class="keyword">var </span><span class="identifier">onCriticalErrorHandler</span><span class="symbol">: </span><span class="symbol">(</span><span class="symbol">(</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html"><span class="identifier">Throwable</span></a><span class="symbol">?</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">)</span><span class="symbol">?</span></code>
+<p>Gets or sets a global error handler. This is a useful hook for handling unexpected critical
+errors.</p>
+<p><strong>Return</strong><br/>
+true when the error has been handled and the Synchronizer should attempt to continue.
+False when the error is unrecoverable and the Synchronizer should <a href="stop.html">stop</a>.</p>
+</BODY>
+</HTML>

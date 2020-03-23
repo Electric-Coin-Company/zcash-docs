@@ -1,0 +1,123 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>CompactBlockProcessor.ProcessorInfo - zcash-android-wallet-sdk</title>
+<link rel="stylesheet" href="../../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../../index.html">zcash-android-wallet-sdk</a>&nbsp;/&nbsp;<a href="../../index.html">cash.z.wallet.sdk.block</a>&nbsp;/&nbsp;<a href="../index.html">CompactBlockProcessor</a>&nbsp;/&nbsp;<a href="./index.html">ProcessorInfo</a><br/>
+<br/>
+<h1>ProcessorInfo</h1>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">ProcessorInfo</span></code>
+<p>Data class for holding detailed information about the processor.</p>
+<h3>Parameters</h3>
+<p><a name="networkBlockHeight"></a>
+<code>networkBlockHeight</code> - the latest block available to lightwalletd that may or may not be
+downloaded by this wallet yet.</p>
+<p><a name="lastScannedHeight"></a>
+<code>lastScannedHeight</code> - the height up to which the wallet last scanned. This determines
+where the next scan will begin.</p>
+<p><a name="lastDownloadedHeight"></a>
+<code>lastDownloadedHeight</code> - the last compact block that was successfully downloaded.</p>
+<p><a name="lastDownloadRange"></a>
+<code>lastDownloadRange</code> - inclusive range to download. Meaning, if the range is 10..10,
+then we will download exactly block 10. If the range is 11..10, then we want to download
+block 11 but can't.</p>
+<p><a name="lastScanRange"></a>
+<code>lastScanRange</code> - inclusive range to scan.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<p>Data class for holding detailed information about the processor.</p>
+<code><span class="identifier">ProcessorInfo</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.block.CompactBlockProcessor.ProcessorInfo$<init>(kotlin.Int, kotlin.Int, kotlin.Int, kotlin.ranges.IntRange, kotlin.ranges.IntRange)/networkBlockHeight">networkBlockHeight</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a>&nbsp;<span class="symbol">=</span>&nbsp;-1<span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.block.CompactBlockProcessor.ProcessorInfo$<init>(kotlin.Int, kotlin.Int, kotlin.Int, kotlin.ranges.IntRange, kotlin.ranges.IntRange)/lastScannedHeight">lastScannedHeight</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a>&nbsp;<span class="symbol">=</span>&nbsp;-1<span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.block.CompactBlockProcessor.ProcessorInfo$<init>(kotlin.Int, kotlin.Int, kotlin.Int, kotlin.ranges.IntRange, kotlin.ranges.IntRange)/lastDownloadedHeight">lastDownloadedHeight</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a>&nbsp;<span class="symbol">=</span>&nbsp;-1<span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.block.CompactBlockProcessor.ProcessorInfo$<init>(kotlin.Int, kotlin.Int, kotlin.Int, kotlin.ranges.IntRange, kotlin.ranges.IntRange)/lastDownloadRange">lastDownloadRange</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.ranges/-int-range/index.html"><span class="identifier">IntRange</span></a>&nbsp;<span class="symbol">=</span>&nbsp;0..-1<span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.block.CompactBlockProcessor.ProcessorInfo$<init>(kotlin.Int, kotlin.Int, kotlin.Int, kotlin.ranges.IntRange, kotlin.ranges.IntRange)/lastScanRange">lastScanRange</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.ranges/-int-range/index.html"><span class="identifier">IntRange</span></a>&nbsp;<span class="symbol">=</span>&nbsp;0..-1<span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="has-data.html">hasData</a></h4>
+</td>
+<td>
+<p>Determines whether this instance has data.</p>
+<code><span class="keyword">val </span><span class="identifier">hasData</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="is-downloading.html">isDownloading</a></h4>
+</td>
+<td>
+<p>Determines whether this instance is actively downloading compact blocks.</p>
+<code><span class="keyword">val </span><span class="identifier">isDownloading</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="is-scanning.html">isScanning</a></h4>
+</td>
+<td>
+<p>Determines whether this instance is actively scanning or validating compact blocks.</p>
+<code><span class="keyword">val </span><span class="identifier">isScanning</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="last-downloaded-height.html">lastDownloadedHeight</a></h4>
+</td>
+<td>
+<p>the last compact block that was successfully downloaded.</p>
+<code><span class="keyword">val </span><span class="identifier">lastDownloadedHeight</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="last-download-range.html">lastDownloadRange</a></h4>
+</td>
+<td>
+<p>inclusive range to download. Meaning, if the range is 10..10,
+then we will download exactly block 10. If the range is 11..10, then we want to download
+block 11 but can't.</p>
+<code><span class="keyword">val </span><span class="identifier">lastDownloadRange</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.ranges/-int-range/index.html"><span class="identifier">IntRange</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="last-scanned-height.html">lastScannedHeight</a></h4>
+</td>
+<td>
+<p>the height up to which the wallet last scanned. This determines
+where the next scan will begin.</p>
+<code><span class="keyword">val </span><span class="identifier">lastScannedHeight</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="last-scan-range.html">lastScanRange</a></h4>
+</td>
+<td>
+<p>inclusive range to scan.</p>
+<code><span class="keyword">val </span><span class="identifier">lastScanRange</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.ranges/-int-range/index.html"><span class="identifier">IntRange</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="network-block-height.html">networkBlockHeight</a></h4>
+</td>
+<td>
+<p>the latest block available to lightwalletd that may or may not be
+downloaded by this wallet yet.</p>
+<code><span class="keyword">val </span><span class="identifier">networkBlockHeight</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="scan-progress.html">scanProgress</a></h4>
+</td>
+<td>
+<p>The amount of scan progress from 0 to 100.</p>
+<code><span class="keyword">val </span><span class="identifier">scanProgress</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>
