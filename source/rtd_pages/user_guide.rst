@@ -263,7 +263,12 @@ Ensure you have successfully installed all system package dependencies as descri
 Configuration
 -------------
 
-Following the steps below will create your zcashd configuration file which can be edited to either connect to ``mainnet`` or ``testnet`` as well as applying settings to safely access the RPC interface.
+The Zcash *configuration file* is a text file that specifies options that affect how your instance of the Zcash client operates.
+The ``zcashd`` executable reads this file only when it starts.
+You may edit the configuration file with any text editor, but performing the steps below does not require using an editor.
+The order of the lines is not important. Lines beginning with a semicolon (``;``) are treated as comments and ignored.
+
+Following these steps will create your zcashd configuration file which can be edited to either connect to ``mainnet`` or ``testnet`` as well as applying settings to safely access the RPC interface.
 
 .. tip:: For a complete list of parameters used in ``zcash.conf``, please check out :ref:`zcash_conf_guide`
 
