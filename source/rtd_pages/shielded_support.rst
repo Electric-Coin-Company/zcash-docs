@@ -18,9 +18,9 @@ A stateless server that serves light clients with blockchain information. It fet
 
 **Quick info**
 
-* Parellizeable, stateless, and containerized
-* Can run virtualized on the cloud (EC2, GCP, AZURE, Docker, etc.)
-* Not using loadbalancers, orchestrators, schedulers (yet)
+* Parallelize-able, stateless, and containerized
+* Can run virtually on the cloud (EC2, GCP, AZURE, Docker, etc.)
+* Not using load balancers, orchestrators, schedulers (yet)
 * Metrics, stress tests, and testing done (ask us)
 
 Android 
