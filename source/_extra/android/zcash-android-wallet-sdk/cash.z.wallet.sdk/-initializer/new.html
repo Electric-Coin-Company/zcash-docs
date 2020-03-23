@@ -1,0 +1,42 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Initializer.new - zcash-android-wallet-sdk</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">zcash-android-wallet-sdk</a>&nbsp;/&nbsp;<a href="../index.html">cash.z.wallet.sdk</a>&nbsp;/&nbsp;<a href="index.html">Initializer</a>&nbsp;/&nbsp;<a href="./new.html">new</a><br/>
+<br/>
+<h1>new</h1>
+<a name="cash.z.wallet.sdk.Initializer$new(kotlin.ByteArray, cash.z.wallet.sdk.Initializer.WalletBirthday, kotlin.Int, kotlin.Boolean, kotlin.Boolean)"></a>
+<code><span class="keyword">fun </span><span class="identifier">new</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.Initializer$new(kotlin.ByteArray, cash.z.wallet.sdk.Initializer.WalletBirthday, kotlin.Int, kotlin.Boolean, kotlin.Boolean)/seed">seed</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html"><span class="identifier">ByteArray</span></a><span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.Initializer$new(kotlin.ByteArray, cash.z.wallet.sdk.Initializer.WalletBirthday, kotlin.Int, kotlin.Boolean, kotlin.Boolean)/newWalletBirthday">newWalletBirthday</span><span class="symbol">:</span>&nbsp;<span class="identifier">WalletBirthday</span><span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.Initializer$new(kotlin.ByteArray, cash.z.wallet.sdk.Initializer.WalletBirthday, kotlin.Int, kotlin.Boolean, kotlin.Boolean)/numberOfAccounts">numberOfAccounts</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a>&nbsp;<span class="symbol">=</span>&nbsp;1<span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.Initializer$new(kotlin.ByteArray, cash.z.wallet.sdk.Initializer.WalletBirthday, kotlin.Int, kotlin.Boolean, kotlin.Boolean)/clearCacheDb">clearCacheDb</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a>&nbsp;<span class="symbol">=</span>&nbsp;false<span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.Initializer$new(kotlin.ByteArray, cash.z.wallet.sdk.Initializer.WalletBirthday, kotlin.Int, kotlin.Boolean, kotlin.Boolean)/clearDataDb">clearDataDb</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a>&nbsp;<span class="symbol">=</span>&nbsp;false<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html"><span class="identifier">Array</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span></code>
+<p>Initialize a new wallet with the given seed and birthday. It creates the required database
+tables and loads and configures the <a href="rust-backend.html">rustBackend</a> property for use by all other components.</p>
+<h3>Parameters</h3>
+<p><a name="seed"></a>
+<code>seed</code> - the seed to use for the newly created wallet.</p>
+<p><a name="newWalletBirthday"></a>
+<code>newWalletBirthday</code> - the birthday to use for the newly created wallet. Typically, this
+corresponds to the most recent checkpoint available since new wallets should not have any
+transactions prior to their creation.</p>
+<p><a name="numberOfAccounts"></a>
+<code>numberOfAccounts</code> - the number of accounts to create for this wallet. This is not fully
+supported so the default value of 1 is recommended.</p>
+<p><a name="clearCacheDb"></a>
+<code>clearCacheDb</code> - when true, this will delete cacheDb, if it exists, resulting in the fresh
+download of all compact blocks. Otherwise, downloading resumes from the last fetched block.</p>
+<p><a name="clearDataDb"></a>
+<code>clearDataDb</code> - when true, this will delete the dataDb, if it exists, resulting in the
+fresh scan of all blocks. Otherwise, initialization crashes when previous wallet data exists
+to prevent accidental overwrites.</p>
+<h3>Exceptions</h3>
+<p><a name="InitializerException.AlreadyInitializedException"></a>
+<code>InitializerException.AlreadyInitializedException</code> - when the blocks table already exists
+and <a href="new.html#cash.z.wallet.sdk.Initializer$new(kotlin.ByteArray, cash.z.wallet.sdk.Initializer.WalletBirthday, kotlin.Int, kotlin.Boolean, kotlin.Boolean)/clearDataDb">clearDataDb</a> is false.</p>
+<p><strong>Return</strong><br/>
+the account spending keys, corresponding to the accounts that get initialized in the
+DB.</p>
+<p><strong>Return</strong><br/>
+the spending key(s) associated with this wallet, for convenience.</p>
+</BODY>
+</HTML>

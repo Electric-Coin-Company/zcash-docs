@@ -1,0 +1,250 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>SdkSynchronizer - zcash-android-wallet-sdk</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">zcash-android-wallet-sdk</a>&nbsp;/&nbsp;<a href="../index.html">cash.z.wallet.sdk</a>&nbsp;/&nbsp;<a href="./index.html">SdkSynchronizer</a><br/>
+<br/>
+<h1>SdkSynchronizer</h1>
+<code><span class="identifier">@ExperimentalCoroutinesApi</span> <span class="keyword">class </span><span class="identifier">SdkSynchronizer</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-synchronizer/index.html"><span class="identifier">Synchronizer</span></a></code>
+<p>A Synchronizer that attempts to remain operational, despite any number of errors that can occur.
+It acts as the glue that ties all the pieces of the SDK together. Each component of the SDK is
+designed for the potential of stand-alone usage but coordinating all the interactions is non-
+trivial. So the Synchronizer facilitates this, acting as reference that demonstrates how all the
+pieces can be tied together. Its goal is to allow a developer to focus on their app rather than
+the nuances of how Zcash works.</p>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="balances.html">balances</a></h4>
+</td>
+<td>
+<p>A stream of balance values, separately reflecting both the available and total balance.</p>
+<code><span class="keyword">val </span><span class="identifier">balances</span><span class="symbol">: </span><span class="identifier">Flow</span><span class="symbol">&lt;</span><span class="identifier">WalletBalance</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="cleared-transactions.html">clearedTransactions</a></h4>
+</td>
+<td>
+<p>A flow of all the transactions that are on the blockchain.</p>
+<code><span class="keyword">val </span><span class="identifier">clearedTransactions</span><span class="symbol">: </span><span class="identifier">Flow</span><span class="symbol">&lt;</span><span class="identifier">PagedList</span><span class="symbol">&lt;</span><a href="../../cash.z.wallet.sdk.entity/-confirmed-transaction/index.html"><span class="identifier">ConfirmedTransaction</span></a><span class="symbol">&gt;</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="coroutine-scope.html">coroutineScope</a></h4>
+</td>
+<td>
+<p>The lifespan of this Synchronizer. This scope is initialized once the Synchronizer starts
+because it will be a child of the parentScope that gets passed into the <a href="start.html">start</a> function.
+Everything launched by this Synchronizer will be cancelled once the Synchronizer or its
+parentScope stops. This is a lateinit rather than nullable property so that it fails early
+rather than silently, whenever the scope is used before the Synchronizer has been started.</p>
+<code><span class="keyword">lateinit</span> <span class="keyword">var </span><span class="identifier">coroutineScope</span><span class="symbol">: </span><span class="identifier">CoroutineScope</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="on-chain-error-handler.html">onChainErrorHandler</a></h4>
+</td>
+<td>
+<p>A callback to invoke whenever a chain error is encountered. These occur whenever the
+processor detects a missing or non-chain-sequential block (i.e. a reorg).</p>
+<code><span class="keyword">var </span><span class="identifier">onChainErrorHandler</span><span class="symbol">: </span><span class="symbol">(</span><span class="symbol">(</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">,</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">)</span><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="on-critical-error-handler.html">onCriticalErrorHandler</a></h4>
+</td>
+<td>
+<p>A callback to invoke whenever an uncaught error is encountered. By definition, the return
+value of the function is ignored because this error is unrecoverable. The only reason the
+function has a return value is so that all error handlers work with the same signature which
+allows one function to handle all errors in simple apps. This callback is not called on the
+main thread so any UI work would need to switch context to the main thread.</p>
+<code><span class="keyword">var </span><span class="identifier">onCriticalErrorHandler</span><span class="symbol">: </span><span class="symbol">(</span><span class="symbol">(</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html"><span class="identifier">Throwable</span></a><span class="symbol">?</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">)</span><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="on-processor-error-handler.html">onProcessorErrorHandler</a></h4>
+</td>
+<td>
+<p>A callback to invoke whenever a processor error is encountered. Returning true signals that
+the error was handled and a retry attempt should be made, if possible. This callback is not
+called on the main thread so any UI work would need to switch context to the main thread.</p>
+<code><span class="keyword">var </span><span class="identifier">onProcessorErrorHandler</span><span class="symbol">: </span><span class="symbol">(</span><span class="symbol">(</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html"><span class="identifier">Throwable</span></a><span class="symbol">?</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">)</span><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="on-submission-error-handler.html">onSubmissionErrorHandler</a></h4>
+</td>
+<td>
+<p>A callback to invoke whenever a server error is encountered while submitting a transaction to
+lightwalletd. Returning true signals that the error was handled and a retry attempt should be
+made, if possible. This callback is not called on the main thread so any UI work would need
+to switch context to the main thread.</p>
+<code><span class="keyword">var </span><span class="identifier">onSubmissionErrorHandler</span><span class="symbol">: </span><span class="symbol">(</span><span class="symbol">(</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html"><span class="identifier">Throwable</span></a><span class="symbol">?</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">)</span><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="pending-transactions.html">pendingTransactions</a></h4>
+</td>
+<td>
+<p>A flow of all the outbound pending transaction that have been sent but are awaiting
+confirmations.</p>
+<code><span class="keyword">val </span><span class="identifier">pendingTransactions</span><span class="symbol">: </span><span class="identifier">Flow</span><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="../../cash.z.wallet.sdk.entity/-pending-transaction/index.html"><span class="identifier">PendingTransaction</span></a><span class="symbol">&gt;</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="processor.html">processor</a></h4>
+</td>
+<td>
+<p>saves the downloaded compact blocks to the cache and then scans those blocks for
+data related to this wallet.</p>
+<code><span class="keyword">val </span><span class="identifier">processor</span><span class="symbol">: </span><a href="../../cash.z.wallet.sdk.block/-compact-block-processor/index.html"><span class="identifier">CompactBlockProcessor</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="processor-info.html">processorInfo</a></h4>
+</td>
+<td>
+<p>Indicates the latest information about the blocks that have been processed by the SDK. This
+is very helpful for conveying detailed progress and status to the user.</p>
+<code><span class="keyword">val </span><span class="identifier">processorInfo</span><span class="symbol">: </span><span class="identifier">Flow</span><span class="symbol">&lt;</span><span class="identifier">ProcessorInfo</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="progress.html">progress</a></h4>
+</td>
+<td>
+<p>Indicates the download progress of the Synchronizer. When progress reaches 100, that
+signals that the Synchronizer is in sync with the network. Balances should be considered
+inaccurate and outbound transactions should be prevented until this sync is complete. It is
+a simplified version of <a href="processor-info.html">processorInfo</a>.</p>
+<code><span class="keyword">val </span><span class="identifier">progress</span><span class="symbol">: </span><span class="identifier">Flow</span><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="received-transactions.html">receivedTransactions</a></h4>
+</td>
+<td>
+<p>A flow of all transactions related to receiving funds.</p>
+<code><span class="keyword">val </span><span class="identifier">receivedTransactions</span><span class="symbol">: </span><span class="identifier">Flow</span><span class="symbol">&lt;</span><span class="identifier">PagedList</span><span class="symbol">&lt;</span><a href="../../cash.z.wallet.sdk.entity/-confirmed-transaction/index.html"><span class="identifier">ConfirmedTransaction</span></a><span class="symbol">&gt;</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="sent-transactions.html">sentTransactions</a></h4>
+</td>
+<td>
+<p>A flow of all transactions related to sending funds.</p>
+<code><span class="keyword">val </span><span class="identifier">sentTransactions</span><span class="symbol">: </span><span class="identifier">Flow</span><span class="symbol">&lt;</span><span class="identifier">PagedList</span><span class="symbol">&lt;</span><a href="../../cash.z.wallet.sdk.entity/-confirmed-transaction/index.html"><span class="identifier">ConfirmedTransaction</span></a><span class="symbol">&gt;</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="status.html">status</a></h4>
+</td>
+<td>
+<p>Indicates the status of this Synchronizer. This implementation basically simplifies the
+status of the processor to focus only on the high level states that matter most. Whenever the
+processor is finished scanning, the synchronizer updates transaction and balance info and
+then emits a <a href="../-synchronizer/-status/-s-y-n-c-e-d.html">SYNCED</a> status.</p>
+<code><span class="keyword">val </span><span class="identifier">status</span><span class="symbol">: </span><span class="identifier">Flow</span><span class="symbol">&lt;</span><span class="identifier">Status</span><span class="symbol">&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="cancel-spend.html">cancelSpend</a></h4>
+</td>
+<td>
+<p>Attempts to cancel a transaction that is about to be sent. Typically, cancellation is only
+an option if the transaction has not yet been submitted to the server.</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">cancelSpend</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.SdkSynchronizer$cancelSpend(cash.z.wallet.sdk.entity.PendingTransaction)/transaction">transaction</span><span class="symbol">:</span>&nbsp;<a href="../../cash.z.wallet.sdk.entity/-pending-transaction/index.html"><span class="identifier">PendingTransaction</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-address.html">getAddress</a></h4>
+</td>
+<td>
+<p>Gets the address for the given account.</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">getAddress</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.SdkSynchronizer$getAddress(kotlin.Int)/accountId">accountId</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="is-valid-shielded-addr.html">isValidShieldedAddr</a></h4>
+</td>
+<td>
+<p>Returns true when the given address is a valid z-addr. Invalid addresses will throw an
+exception. Valid z-addresses have these characteristics: //TODO copy info from related ZIP</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">isValidShieldedAddr</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.SdkSynchronizer$isValidShieldedAddr(kotlin.String)/address">address</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="is-valid-transparent-addr.html">isValidTransparentAddr</a></h4>
+</td>
+<td>
+<p>Returns true when the given address is a valid t-addr. Invalid addresses will throw an
+exception. Valid t-addresses have these characteristics: //TODO copy info from related ZIP</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">isValidTransparentAddr</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.SdkSynchronizer$isValidTransparentAddr(kotlin.String)/address">address</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="refresh-balance.html">refreshBalance</a></h4>
+</td>
+<td>
+<p>Calculate the latest balance, based on the blocks that have been scanned and transmit this
+information into the flow of <a href="balances.html">balances</a>.</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">refreshBalance</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="send-to-address.html">sendToAddress</a></h4>
+</td>
+<td>
+<p>Sends zatoshi.</p>
+<code><span class="keyword">fun </span><span class="identifier">sendToAddress</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.SdkSynchronizer$sendToAddress(kotlin.String, kotlin.Long, kotlin.String, kotlin.String, kotlin.Int)/spendingKey">spendingKey</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.SdkSynchronizer$sendToAddress(kotlin.String, kotlin.Long, kotlin.String, kotlin.String, kotlin.Int)/zatoshi">zatoshi</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a><span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.SdkSynchronizer$sendToAddress(kotlin.String, kotlin.Long, kotlin.String, kotlin.String, kotlin.Int)/toAddress">toAddress</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.SdkSynchronizer$sendToAddress(kotlin.String, kotlin.Long, kotlin.String, kotlin.String, kotlin.Int)/memo">memo</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.SdkSynchronizer$sendToAddress(kotlin.String, kotlin.Long, kotlin.String, kotlin.String, kotlin.Int)/fromAccountIndex">fromAccountIndex</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Flow</span><span class="symbol">&lt;</span><a href="../../cash.z.wallet.sdk.entity/-pending-transaction/index.html"><span class="identifier">PendingTransaction</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="start.html">start</a></h4>
+</td>
+<td>
+<p>Starts this synchronizer within the given scope. For simplicity, attempting to start an
+instance that has already been started will throw a <a href="../../cash.z.wallet.sdk.exception/-synchronizer-exception/-false-start.html">SynchronizerException.FalseStart</a>
+exception. This reduces the complexity of managing resources that must be recycled. Instead,
+each synchronizer is designed to have a long lifespan and should be started from an activity,
+application or session.</p>
+<code><span class="keyword">fun </span><span class="identifier">start</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.SdkSynchronizer$start(kotlinx.coroutines.CoroutineScope)/parentScope">parentScope</span><span class="symbol">:</span>&nbsp;<span class="identifier">CoroutineScope</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-synchronizer/index.html"><span class="identifier">Synchronizer</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="stop.html">stop</a></h4>
+</td>
+<td>
+<p>Stop this synchronizer and all of its child jobs. Once a synchronizer has been stopped it
+should not be restarted and attempting to do so will result in an error. Also, this function
+will throw an exception if the synchronizer was never previously started.</p>
+<code><span class="keyword">fun </span><span class="identifier">stop</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="validate-address.html">validateAddress</a></h4>
+</td>
+<td>
+<p>Validates the given address, returning information about why it is invalid. This is a
+convenience method that combines the behavior of <a href="../-synchronizer/is-valid-shielded-addr.html">isValidShieldedAddr</a> and
+<a href="../-synchronizer/is-valid-transparent-addr.html">isValidTransparentAddr</a> into one call so that the developer doesn't have to worry about
+handling the exceptions that they throw. Rather, exceptions are converted to
+<a href="../-synchronizer/-address-type/-invalid/index.html">AddressType.Invalid</a> which has a <code>reason</code> property describing why it is invalid.</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">validateAddress</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.SdkSynchronizer$validateAddress(kotlin.String)/address">address</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">AddressType</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

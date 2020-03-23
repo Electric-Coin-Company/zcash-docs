@@ -1,0 +1,79 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>LightWalletGrpcService - zcash-android-wallet-sdk</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">zcash-android-wallet-sdk</a>&nbsp;/&nbsp;<a href="../index.html">cash.z.wallet.sdk.service</a>&nbsp;/&nbsp;<a href="./index.html">LightWalletGrpcService</a><br/>
+<br/>
+<h1>LightWalletGrpcService</h1>
+<code><span class="keyword">class </span><span class="identifier">LightWalletGrpcService</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-light-wallet-service/index.html"><span class="identifier">LightWalletService</span></a></code>
+<p>Implementation of LightwalletService using gRPC for requests to lightwalletd.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<p>Construct an instance that corresponds to the given host and port.</p>
+<code><span class="identifier">LightWalletGrpcService</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.service.LightWalletGrpcService$<init>(android.content.Context, kotlin.String, kotlin.Int, kotlin.Boolean)/appContext">appContext</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/content/Context.html"><span class="identifier">Context</span></a><span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.service.LightWalletGrpcService$<init>(android.content.Context, kotlin.String, kotlin.Int, kotlin.Boolean)/host">host</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.service.LightWalletGrpcService$<init>(android.content.Context, kotlin.String, kotlin.Int, kotlin.Boolean)/port">port</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a>&nbsp;<span class="symbol">=</span>&nbsp;DEFAULT_LIGHTWALLETD_PORT<span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.service.LightWalletGrpcService$<init>(android.content.Context, kotlin.String, kotlin.Int, kotlin.Boolean)/usePlaintext">usePlaintext</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a>&nbsp;<span class="symbol">=</span>&nbsp;appContext.resources.getBoolean(R.bool.lightwalletd_allow_very_insecure_connections)<span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="get-block-range.html">getBlockRange</a></h4>
+</td>
+<td>
+<p>Return the given range of blocks.</p>
+<code><span class="keyword">fun </span><span class="identifier">getBlockRange</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.service.LightWalletGrpcService$getBlockRange(kotlin.ranges.IntRange)/heightRange">heightRange</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.ranges/-int-range/index.html"><span class="identifier">IntRange</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><span class="identifier">&lt;ERROR CLASS&gt;</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-latest-block-height.html">getLatestBlockHeight</a></h4>
+</td>
+<td>
+<p>Return the latest block height known to the service.</p>
+<code><span class="keyword">fun </span><span class="identifier">getLatestBlockHeight</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="shutdown.html">shutdown</a></h4>
+</td>
+<td>
+<p>Cleanup any connections when the service is shutting down and not going to be used again.</p>
+<code><span class="keyword">fun </span><span class="identifier">shutdown</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="submit-transaction.html">submitTransaction</a></h4>
+</td>
+<td>
+<p>Submit a raw transaction.</p>
+<code><span class="keyword">fun </span><span class="identifier">submitTransaction</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.service.LightWalletGrpcService$submitTransaction(kotlin.ByteArray)/spendTransaction">spendTransaction</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html"><span class="identifier">ByteArray</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">&lt;ERROR CLASS&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Companion Object Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="create-default-channel.html">createDefaultChannel</a></h4>
+</td>
+<td>
+<p>Convenience function for creating the default channel to be used for all connections. It
+is important that this channel can handle transitioning from WiFi to Cellular connections
+and is properly setup to support TLS, when required.</p>
+<code><span class="keyword">fun </span><span class="identifier">createDefaultChannel</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.service.LightWalletGrpcService.Companion$createDefaultChannel(android.content.Context, kotlin.String, kotlin.Int, kotlin.Boolean)/appContext">appContext</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/content/Context.html"><span class="identifier">Context</span></a><span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.service.LightWalletGrpcService.Companion$createDefaultChannel(android.content.Context, kotlin.String, kotlin.Int, kotlin.Boolean)/host">host</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.service.LightWalletGrpcService.Companion$createDefaultChannel(android.content.Context, kotlin.String, kotlin.Int, kotlin.Boolean)/port">port</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.service.LightWalletGrpcService.Companion$createDefaultChannel(android.content.Context, kotlin.String, kotlin.Int, kotlin.Boolean)/usePlaintext">usePlaintext</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ManagedChannel</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

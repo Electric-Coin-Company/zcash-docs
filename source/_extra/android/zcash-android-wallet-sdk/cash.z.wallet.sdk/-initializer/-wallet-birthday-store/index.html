@@ -1,0 +1,92 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Initializer.WalletBirthdayStore - zcash-android-wallet-sdk</title>
+<link rel="stylesheet" href="../../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../../index.html">zcash-android-wallet-sdk</a>&nbsp;/&nbsp;<a href="../../index.html">cash.z.wallet.sdk</a>&nbsp;/&nbsp;<a href="../index.html">Initializer</a>&nbsp;/&nbsp;<a href="./index.html">WalletBirthdayStore</a><br/>
+<br/>
+<h1>WalletBirthdayStore</h1>
+<code><span class="keyword">interface </span><span class="identifier">WalletBirthdayStore</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.properties/-read-write-property/index.html"><span class="identifier">ReadWriteProperty</span></a><span class="symbol">&lt;</span><span class="identifier">R</span><span class="symbol">,</span>&nbsp;<span class="identifier">WalletBirthday</span><span class="symbol">&gt;</span></code>
+<p>Interface for classes that can handle birthday storage. This makes it possible to bridge into
+existing storage logic. Instances of this interface can also be used as property delegates,
+which enables the syntax <code>val birthday by birthdayStore</code></p>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="new-wallet-birthday.html">newWalletBirthday</a></h4>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">val </span><span class="identifier">newWalletBirthday</span><span class="symbol">: </span><span class="identifier">WalletBirthday</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="get-birthday.html">getBirthday</a></h4>
+</td>
+<td>
+<p>Get the birthday of the wallet, saved in this store.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">getBirthday</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">WalletBirthday</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-value.html">getValue</a></h4>
+</td>
+<td>
+<p>Implement readable interface in order to be able to use instances of this interface as
+property delegates.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getValue</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.Initializer.WalletBirthdayStore$getValue(cash.z.wallet.sdk.R, kotlin.reflect.KProperty((kotlin.Any)))/thisRef">thisRef</span><span class="symbol">:</span>&nbsp;<span class="identifier">R</span><span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.Initializer.WalletBirthdayStore$getValue(cash.z.wallet.sdk.R, kotlin.reflect.KProperty((kotlin.Any)))/property">property</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-property/index.html"><span class="identifier">KProperty</span></a><span class="symbol">&lt;</span><span class="identifier">*</span><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">WalletBirthday</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="has-existing-birthday.html">hasExistingBirthday</a></h4>
+</td>
+<td>
+<p>Return true when a birthday has been stored in this instance.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">hasExistingBirthday</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="has-imported-birthday.html">hasImportedBirthday</a></h4>
+</td>
+<td>
+<p>Return true when a birthday was imported into this instance.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">hasImportedBirthday</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="load-birthday.html">loadBirthday</a></h4>
+</td>
+<td>
+<p>Load a birthday matching the given height. This is most commonly used during import to
+find the first available checkpoint that is lower than the requested height.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">loadBirthday</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.Initializer.WalletBirthdayStore$loadBirthday(kotlin.Int)/birthdayHeight">birthdayHeight</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">WalletBirthday</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="set-birthday.html">setBirthday</a></h4>
+</td>
+<td>
+<p>Set the birthday of the wallet to be saved in this store.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">setBirthday</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.Initializer.WalletBirthdayStore$setBirthday(cash.z.wallet.sdk.Initializer.WalletBirthday)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">WalletBirthday</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="set-value.html">setValue</a></h4>
+</td>
+<td>
+<p>Implement writable interface in order to be able to use instances of this interface as
+property delegates.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setValue</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.Initializer.WalletBirthdayStore$setValue(cash.z.wallet.sdk.R, kotlin.reflect.KProperty((kotlin.Any)), cash.z.wallet.sdk.Initializer.WalletBirthday)/thisRef">thisRef</span><span class="symbol">:</span>&nbsp;<span class="identifier">R</span><span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.Initializer.WalletBirthdayStore$setValue(cash.z.wallet.sdk.R, kotlin.reflect.KProperty((kotlin.Any)), cash.z.wallet.sdk.Initializer.WalletBirthday)/property">property</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-property/index.html"><span class="identifier">KProperty</span></a><span class="symbol">&lt;</span><span class="identifier">*</span><span class="symbol">&gt;</span><span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.Initializer.WalletBirthdayStore$setValue(cash.z.wallet.sdk.R, kotlin.reflect.KProperty((kotlin.Any)), cash.z.wallet.sdk.Initializer.WalletBirthday)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">WalletBirthday</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

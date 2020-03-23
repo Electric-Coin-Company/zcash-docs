@@ -1,0 +1,32 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>collectWith - zcash-android-wallet-sdk</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">zcash-android-wallet-sdk</a>&nbsp;/&nbsp;<a href="../index.html">cash.z.wallet.sdk.ext</a>&nbsp;/&nbsp;<a href="index.html">kotlinx.coroutines.flow.Flow</a>&nbsp;/&nbsp;<a href="./collect-with.html">collectWith</a><br/>
+<br/>
+<h1>collectWith</h1>
+<a name="cash.z.wallet.sdk.ext$collectWith(kotlinx.coroutines.flow.Flow((cash.z.wallet.sdk.ext.collectWith.T)), kotlinx.coroutines.CoroutineScope, kotlin.Function1((cash.z.wallet.sdk.ext.collectWith.T, kotlin.Unit)))"></a>
+<code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span> <span class="identifier">Flow</span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">.</span><span class="identifier">collectWith</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.ext$collectWith(kotlinx.coroutines.flow.Flow((cash.z.wallet.sdk.ext.collectWith.T)), kotlinx.coroutines.CoroutineScope, kotlin.Function1((cash.z.wallet.sdk.ext.collectWith.T, kotlin.Unit)))/scope">scope</span><span class="symbol">:</span>&nbsp;<span class="identifier">CoroutineScope</span><span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.ext$collectWith(kotlinx.coroutines.flow.Flow((cash.z.wallet.sdk.ext.collectWith.T)), kotlinx.coroutines.CoroutineScope, kotlin.Function1((cash.z.wallet.sdk.ext.collectWith.T, kotlin.Unit)))/block">block</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><span class="identifier">T</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Utility for removing some of the boilerplate around Synchronizers and working with flows. Allows
+for collecting all the elements of a flow with a given scope this is useful when you want to
+launch multiple things in the same scope at once. Intuitively a developer may try:</p>
+<pre><code>scope.launch {
+    flow1.collect { collectingFunction1() }
+    flow2.collect { collectingFunction2() }
+}
+</code></pre>
+<p>But this results in the collections running sequentially rather than in parallel. Alternatively,
+This code produces the desired behavior but is verbose and a little unclear:</p>
+<pre><code>scope.launch { flow1.collect { collectingFunction1() } }
+scope.launch { flow1.collect { collectingFunction2() } }
+</code></pre>
+<p>This extension functions makes the intended behavior a little easier to read by focusing on the
+flow itself rather than the scope:</p>
+<pre><code>flow1.collectWith(scope, ::collectingFunction1)
+flow2.collectWith(scope, ::collectingFunction2)
+</code></pre>
+</BODY>
+</HTML>

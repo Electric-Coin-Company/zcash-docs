@@ -1,0 +1,30 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>TransactionEncoder.createTransaction - zcash-android-wallet-sdk</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">zcash-android-wallet-sdk</a>&nbsp;/&nbsp;<a href="../index.html">cash.z.wallet.sdk.transaction</a>&nbsp;/&nbsp;<a href="index.html">TransactionEncoder</a>&nbsp;/&nbsp;<a href="./create-transaction.html">createTransaction</a><br/>
+<br/>
+<h1>createTransaction</h1>
+<a name="cash.z.wallet.sdk.transaction.TransactionEncoder$createTransaction(kotlin.String, kotlin.Long, kotlin.String, kotlin.ByteArray, kotlin.Int)"></a>
+<code><span class="keyword">abstract</span> <span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">createTransaction</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.transaction.TransactionEncoder$createTransaction(kotlin.String, kotlin.Long, kotlin.String, kotlin.ByteArray, kotlin.Int)/spendingKey">spendingKey</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.transaction.TransactionEncoder$createTransaction(kotlin.String, kotlin.Long, kotlin.String, kotlin.ByteArray, kotlin.Int)/zatoshi">zatoshi</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a><span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.transaction.TransactionEncoder$createTransaction(kotlin.String, kotlin.Long, kotlin.String, kotlin.ByteArray, kotlin.Int)/toAddress">toAddress</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.transaction.TransactionEncoder$createTransaction(kotlin.String, kotlin.Long, kotlin.String, kotlin.ByteArray, kotlin.Int)/memo">memo</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html"><span class="identifier">ByteArray</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;byteArrayOf()<span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.transaction.TransactionEncoder$createTransaction(kotlin.String, kotlin.Long, kotlin.String, kotlin.ByteArray, kotlin.Int)/fromAccountIndex">fromAccountIndex</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a>&nbsp;<span class="symbol">=</span>&nbsp;0<span class="symbol">)</span><span class="symbol">: </span><a href="../../cash.z.wallet.sdk.entity/-encoded-transaction/index.html"><span class="identifier">EncodedTransaction</span></a></code>
+<p>Creates a transaction, throwing an exception whenever things are missing. When the provided
+wallet implementation doesn't throw an exception, we wrap the issue into a descriptive
+exception ourselves (rather than using double-bangs for things).</p>
+<h3>Parameters</h3>
+<p><a name="spendingKey"></a>
+<code>spendingKey</code> - the key associated with the notes that will be spent.</p>
+<p><a name="zatoshi"></a>
+<code>zatoshi</code> - the amount of zatoshi to send.</p>
+<p><a name="toAddress"></a>
+<code>toAddress</code> - the recipient's address.</p>
+<p><a name="memo"></a>
+<code>memo</code> - the optional memo to include as part of the transaction.</p>
+<p><a name="fromAccountIndex"></a>
+<code>fromAccountIndex</code> - the optional account id to use. By default, the 1st account is used.</p>
+<p><strong>Return</strong><br/>
+the successfully encoded transaction or an exception</p>
+</BODY>
+</HTML>

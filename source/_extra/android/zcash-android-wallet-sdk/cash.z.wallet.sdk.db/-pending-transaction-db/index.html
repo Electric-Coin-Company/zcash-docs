@@ -1,0 +1,45 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>PendingTransactionDb - zcash-android-wallet-sdk</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">zcash-android-wallet-sdk</a>&nbsp;/&nbsp;<a href="../index.html">cash.z.wallet.sdk.db</a>&nbsp;/&nbsp;<a href="./index.html">PendingTransactionDb</a><br/>
+<br/>
+<h1>PendingTransactionDb</h1>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">PendingTransactionDb</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">RoomDatabase</span></code>
+<p>Database for pending transaction information. Unlike with the "Data DB," the wallet is free to
+write to this database. In a way, this almost serves as a local mempool for all transactions
+initiated by this wallet. Currently, the data necessary to support expired transactions is there
+but it is not being leveraged.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<p>Database for pending transaction information. Unlike with the "Data DB," the wallet is free to
+write to this database. In a way, this almost serves as a local mempool for all transactions
+initiated by this wallet. Currently, the data necessary to support expired transactions is there
+but it is not being leveraged.</p>
+<code><span class="identifier">PendingTransactionDb</span><span class="symbol">(</span><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="pending-transaction-dao.html">pendingTransactionDao</a></h4>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">pendingTransactionDao</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-pending-transaction-dao/index.html"><span class="identifier">PendingTransactionDao</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

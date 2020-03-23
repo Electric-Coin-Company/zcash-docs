@@ -1,0 +1,27 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>retryUpTo - zcash-android-wallet-sdk</title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">zcash-android-wallet-sdk</a>&nbsp;/&nbsp;<a href="index.html">cash.z.wallet.sdk.ext</a>&nbsp;/&nbsp;<a href="./retry-up-to.html">retryUpTo</a><br/>
+<br/>
+<h1>retryUpTo</h1>
+<a name="cash.z.wallet.sdk.ext$retryUpTo(kotlin.Int, kotlin.Function1((kotlin.Throwable, )), kotlin.Long, kotlin.Function1((kotlin.Int, kotlin.Unit)))"></a>
+<code><span class="keyword">suspend</span> <span class="keyword">inline</span> <span class="keyword">fun </span><span class="identifier">retryUpTo</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.ext$retryUpTo(kotlin.Int, kotlin.Function1((kotlin.Throwable, )), kotlin.Long, kotlin.Function1((kotlin.Int, kotlin.Unit)))/retries">retries</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.ext$retryUpTo(kotlin.Int, kotlin.Function1((kotlin.Throwable, )), kotlin.Long, kotlin.Function1((kotlin.Int, kotlin.Unit)))/exceptionWrapper">exceptionWrapper</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html"><span class="identifier">Throwable</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html"><span class="identifier">Throwable</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{ it }<span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.ext$retryUpTo(kotlin.Int, kotlin.Function1((kotlin.Throwable, )), kotlin.Long, kotlin.Function1((kotlin.Int, kotlin.Unit)))/initialDelayMillis">initialDelayMillis</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a>&nbsp;<span class="symbol">=</span>&nbsp;500L<span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.ext$retryUpTo(kotlin.Int, kotlin.Function1((kotlin.Throwable, )), kotlin.Long, kotlin.Function1((kotlin.Int, kotlin.Unit)))/block">block</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Execute the given block and if it fails, retry up to <a href="retry-up-to.html#cash.z.wallet.sdk.ext$retryUpTo(kotlin.Int, kotlin.Function1((kotlin.Throwable, )), kotlin.Long, kotlin.Function1((kotlin.Int, kotlin.Unit)))/retries">retries</a> more times. If none of the
+retries succeed then throw the final error, which can be wrapped in order to add more context.</p>
+<h3>Parameters</h3>
+<p><a name="retries"></a>
+<code>retries</code> - the number of times to retry the block after the first attempt fails.</p>
+<p><a name="exceptionWrapper"></a>
+<code>exceptionWrapper</code> - a function that can wrap the final failure to add more useful information
+or context. Default behavior is to just return the final exception.</p>
+<p><a name="initialDelayMillis"></a>
+<code>initialDelayMillis</code> - the initial amount of time to wait before the first retry.</p>
+<p><a name="block"></a>
+<code>block</code> - the code to execute, which will be wrapped in a try/catch and retried whenever an
+exception is thrown up to <a href="retry-up-to.html#cash.z.wallet.sdk.ext$retryUpTo(kotlin.Int, kotlin.Function1((kotlin.Throwable, )), kotlin.Long, kotlin.Function1((kotlin.Int, kotlin.Unit)))/retries">retries</a> attempts.</p>
+</BODY>
+</HTML>

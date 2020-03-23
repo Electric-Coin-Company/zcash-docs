@@ -1,0 +1,88 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>TroubleshootingTwig - zcash-android-wallet-sdk</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">zcash-android-wallet-sdk</a>&nbsp;/&nbsp;<a href="../index.html">cash.z.wallet.sdk.ext</a>&nbsp;/&nbsp;<a href="./index.html">TroubleshootingTwig</a><br/>
+<br/>
+<h1>TroubleshootingTwig</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">TroubleshootingTwig</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-twig/index.html"><span class="identifier">Twig</span></a></code>
+<p>A tiny log for detecting troubles. Aim at your troubles and pull the twigger.</p>
+<h3>Parameters</h3>
+<p><a name="formatter"></a>
+<code>formatter</code> - a formatter for the twigs. The default one is pretty spiffy.</p>
+<p><a name="printer"></a>
+<code>printer</code> - a printer for the twigs. The default is System.err.println.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<p>A tiny log for detecting troubles. Aim at your troubles and pull the twigger.</p>
+<code><span class="identifier">TroubleshootingTwig</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.ext.TroubleshootingTwig$<init>(kotlin.Function1((kotlin.String, )), kotlin.Function1((kotlin.String, kotlin.Any)))/formatter">formatter</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a>&nbsp;<span class="symbol">=</span>&nbsp;spiffy(5)<span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.ext.TroubleshootingTwig$<init>(kotlin.Function1((kotlin.String, )), kotlin.Function1((kotlin.String, kotlin.Any)))/printer">printer</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a>&nbsp;<span class="symbol">=</span>&nbsp;System.err::println<span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="formatter.html">formatter</a></h4>
+</td>
+<td>
+<p>a formatter for the twigs. The default one is pretty spiffy.</p>
+<code><span class="keyword">val </span><span class="identifier">formatter</span><span class="symbol">: </span><span class="symbol">(</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="printer.html">printer</a></h4>
+</td>
+<td>
+<p>a printer for the twigs. The default is System.err.println.</p>
+<code><span class="keyword">val </span><span class="identifier">printer</span><span class="symbol">: </span><span class="symbol">(</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="twig.html">twig</a></h4>
+</td>
+<td>
+<p>Actually print and format the log message, unlike the SilentTwig, which does nothing.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">twig</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.ext.TroubleshootingTwig$twig(kotlin.String)/logMessage">logMessage</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Extension Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="../twig.html">twig</a></h4>
+</td>
+<td>
+<p>Times a tiny log. Execute the block of code on the clock.</p>
+<code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">R</span><span class="symbol">&gt;</span> <a href="../-twig/index.html"><span class="identifier">Twig</span></a><span class="symbol">.</span><span class="identifier">twig</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.ext$twig(cash.z.wallet.sdk.ext.Twig, kotlin.String, kotlin.Function0((cash.z.wallet.sdk.ext.twig.R)))/logMessage">logMessage</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.ext$twig(cash.z.wallet.sdk.ext.Twig, kotlin.String, kotlin.Function0((cash.z.wallet.sdk.ext.twig.R)))/block">block</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<span class="identifier">R</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">R</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../twig-task.html">twigTask</a></h4>
+</td>
+<td>
+<p>A tiny log task. Execute the block of code with some twigging around the outside. For silent twigs, this adds a small
+amount of overhead at the call site but still avoids logging.</p>
+<code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">R</span><span class="symbol">&gt;</span> <a href="../-twig/index.html"><span class="identifier">Twig</span></a><span class="symbol">.</span><span class="identifier">twigTask</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.ext$twigTask(cash.z.wallet.sdk.ext.Twig, kotlin.String, kotlin.Function0((cash.z.wallet.sdk.ext.twigTask.R)))/logMessage">logMessage</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.ext$twigTask(cash.z.wallet.sdk.ext.Twig, kotlin.String, kotlin.Function0((cash.z.wallet.sdk.ext.twigTask.R)))/block">block</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<span class="identifier">R</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">R</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

@@ -1,0 +1,100 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>SdkException - zcash-android-wallet-sdk</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">zcash-android-wallet-sdk</a>&nbsp;/&nbsp;<a href="../index.html">cash.z.wallet.sdk.exception</a>&nbsp;/&nbsp;<a href="./index.html">SdkException</a><br/>
+<br/>
+<h1>SdkException</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">SdkException</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://docs.oracle.com/javase/6/docs/api/java/lang/RuntimeException.html"><span class="identifier">RuntimeException</span></a></code>
+<p>Marker for all custom exceptions from the SDK. Making it an interface would result in more typing
+so its a supertype, instead.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<p>Marker for all custom exceptions from the SDK. Making it an interface would result in more typing
+so its a supertype, instead.</p>
+<code><span class="identifier">SdkException</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.exception.SdkException$<init>(kotlin.String, kotlin.Throwable)/message">message</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.exception.SdkException$<init>(kotlin.String, kotlin.Throwable)/cause">cause</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html"><span class="identifier">Throwable</span></a><span class="symbol">?</span><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="../-birthday-exception/index.html">BirthdayException</a></h4>
+</td>
+<td>
+<p>Exceptions related to the wallet's birthday.</p>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">BirthdayException</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">SdkException</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../-compact-block-processor-exception/index.html">CompactBlockProcessorException</a></h4>
+</td>
+<td>
+<p>Potentially user-facing exceptions that occur while processing compact blocks.</p>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">CompactBlockProcessorException</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">SdkException</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../-initializer-exception/index.html">InitializerException</a></h4>
+</td>
+<td>
+<p>Exceptions thrown by the initializer.</p>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">InitializerException</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">SdkException</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../-lightwallet-exception/index.html">LightwalletException</a></h4>
+</td>
+<td>
+<p>Exceptions thrown while interacting with lightwalletd.</p>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">LightwalletException</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">SdkException</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../-repository-exception/index.html">RepositoryException</a></h4>
+</td>
+<td>
+<p>User-facing exceptions thrown by the transaction repository.</p>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">RepositoryException</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">SdkException</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../-rust-layer-exception/index.html">RustLayerException</a></h4>
+</td>
+<td>
+<p>Exceptions thrown in the Rust layer of the SDK. We may not always be able to surface details about this
+exception so it's important for the SDK to provide helpful messages whenever these errors are encountered.</p>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">RustLayerException</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">SdkException</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../-synchronizer-exception/index.html">SynchronizerException</a></h4>
+</td>
+<td>
+<p>High-level exceptions thrown by the synchronizer, which do not fall within the umbrealla of a
+child component.</p>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">SynchronizerException</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">SdkException</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../-transaction-encoder-exception/index.html">TransactionEncoderException</a></h4>
+</td>
+<td>
+<p>Potentially user-facing exceptions thrown while encoding transactions.</p>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">TransactionEncoderException</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">SdkException</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

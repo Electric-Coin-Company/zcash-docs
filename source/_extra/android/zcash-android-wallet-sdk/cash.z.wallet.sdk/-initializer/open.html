@@ -1,0 +1,27 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Initializer.open - zcash-android-wallet-sdk</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">zcash-android-wallet-sdk</a>&nbsp;/&nbsp;<a href="../index.html">cash.z.wallet.sdk</a>&nbsp;/&nbsp;<a href="index.html">Initializer</a>&nbsp;/&nbsp;<a href="./open.html">open</a><br/>
+<br/>
+<h1>open</h1>
+<a name="cash.z.wallet.sdk.Initializer$open(cash.z.wallet.sdk.Initializer.WalletBirthday)"></a>
+<code><span class="keyword">fun </span><span class="identifier">open</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.Initializer$open(cash.z.wallet.sdk.Initializer.WalletBirthday)/birthday">birthday</span><span class="symbol">:</span>&nbsp;<span class="identifier">WalletBirthday</span><span class="symbol">)</span><span class="symbol">: </span><a href="index.html"><span class="identifier">Initializer</span></a></code>
+<p>Loads the rust library and previously used birthday for use by all other components. This is
+the most common use case for the initializer--reopening a wallet that was previously created.</p>
+<h3>Parameters</h3>
+<p><a name="birthday"></a>
+<code>birthday</code> - birthday height of the wallet. This value is passed to the
+<a href="#">CompactBlockProcessor</a> and becomes a factor in determining the lower bounds height that this
+wallet will use. This height helps with determining where to start downloading as well as how
+far back to go during a rewind. Every wallet has a birthday and the initializer depends on
+this value but does not own it.</p>
+<p><strong>Return</strong><br/>
+an instance of this class so that the function can be used fluidly. Spending keys are
+not returned because the SDK does not store them and this function is for opening a wallet
+that was created previously.</p>
+</BODY>
+</HTML>

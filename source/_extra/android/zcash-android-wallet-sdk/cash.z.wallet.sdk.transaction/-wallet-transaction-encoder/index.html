@@ -1,0 +1,72 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>WalletTransactionEncoder - zcash-android-wallet-sdk</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">zcash-android-wallet-sdk</a>&nbsp;/&nbsp;<a href="../index.html">cash.z.wallet.sdk.transaction</a>&nbsp;/&nbsp;<a href="./index.html">WalletTransactionEncoder</a><br/>
+<br/>
+<h1>WalletTransactionEncoder</h1>
+<code><span class="keyword">class </span><span class="identifier">WalletTransactionEncoder</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-transaction-encoder/index.html"><span class="identifier">TransactionEncoder</span></a></code>
+<p>Class responsible for encoding a transaction in a consistent way. This bridges the gap by
+behaving like a stateless API so that callers can request <a href="create-transaction.html">createTransaction</a> and receive a
+result, even though there are intermediate database interactions.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<p>Class responsible for encoding a transaction in a consistent way. This bridges the gap by
+behaving like a stateless API so that callers can request <a href="create-transaction.html">createTransaction</a> and receive a
+result, even though there are intermediate database interactions.</p>
+<code><span class="identifier">WalletTransactionEncoder</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.transaction.WalletTransactionEncoder$<init>(cash.z.wallet.sdk.jni.RustBackendWelding, cash.z.wallet.sdk.transaction.TransactionRepository)/rustBackend">rustBackend</span><span class="symbol">:</span>&nbsp;<a href="../../cash.z.wallet.sdk.jni/-rust-backend-welding/index.html"><span class="identifier">RustBackendWelding</span></a><span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.transaction.WalletTransactionEncoder$<init>(cash.z.wallet.sdk.jni.RustBackendWelding, cash.z.wallet.sdk.transaction.TransactionRepository)/repository">repository</span><span class="symbol">:</span>&nbsp;<a href="../-transaction-repository/index.html"><span class="identifier">TransactionRepository</span></a><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="create-transaction.html">createTransaction</a></h4>
+</td>
+<td>
+<p>Creates a transaction, throwing an exception whenever things are missing. When the provided
+wallet implementation doesn't throw an exception, we wrap the issue into a descriptive
+exception ourselves (rather than using double-bangs for things).</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">createTransaction</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.transaction.WalletTransactionEncoder$createTransaction(kotlin.String, kotlin.Long, kotlin.String, kotlin.ByteArray, kotlin.Int)/spendingKey">spendingKey</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.transaction.WalletTransactionEncoder$createTransaction(kotlin.String, kotlin.Long, kotlin.String, kotlin.ByteArray, kotlin.Int)/zatoshi">zatoshi</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a><span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.transaction.WalletTransactionEncoder$createTransaction(kotlin.String, kotlin.Long, kotlin.String, kotlin.ByteArray, kotlin.Int)/toAddress">toAddress</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.transaction.WalletTransactionEncoder$createTransaction(kotlin.String, kotlin.Long, kotlin.String, kotlin.ByteArray, kotlin.Int)/memo">memo</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html"><span class="identifier">ByteArray</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.transaction.WalletTransactionEncoder$createTransaction(kotlin.String, kotlin.Long, kotlin.String, kotlin.ByteArray, kotlin.Int)/fromAccountIndex">fromAccountIndex</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../cash.z.wallet.sdk.entity/-encoded-transaction/index.html"><span class="identifier">EncodedTransaction</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="fetch-params.html">fetchParams</a></h4>
+</td>
+<td>
+<p>Download and store the params into the given directory.</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">fetchParams</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.transaction.WalletTransactionEncoder$fetchParams(kotlin.String)/destinationDir">destinationDir</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="is-valid-shielded-address.html">isValidShieldedAddress</a></h4>
+</td>
+<td>
+<p>Utility function to help with validation. This is not called during <a href="create-transaction.html">createTransaction</a>
+because this class asserts that all validation is done externally by the UI, for now.</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">isValidShieldedAddress</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.transaction.WalletTransactionEncoder$isValidShieldedAddress(kotlin.String)/address">address</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="is-valid-transparent-address.html">isValidTransparentAddress</a></h4>
+</td>
+<td>
+<p>Utility function to help with validation. This is not called during <a href="create-transaction.html">createTransaction</a>
+because this class asserts that all validation is done externally by the UI, for now.</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">isValidTransparentAddress</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.transaction.WalletTransactionEncoder$isValidTransparentAddress(kotlin.String)/address">address</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

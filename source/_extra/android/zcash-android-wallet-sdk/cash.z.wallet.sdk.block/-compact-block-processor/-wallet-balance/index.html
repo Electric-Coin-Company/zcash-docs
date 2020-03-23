@@ -1,0 +1,61 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>CompactBlockProcessor.WalletBalance - zcash-android-wallet-sdk</title>
+<link rel="stylesheet" href="../../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../../index.html">zcash-android-wallet-sdk</a>&nbsp;/&nbsp;<a href="../../index.html">cash.z.wallet.sdk.block</a>&nbsp;/&nbsp;<a href="../index.html">CompactBlockProcessor</a>&nbsp;/&nbsp;<a href="./index.html">WalletBalance</a><br/>
+<br/>
+<h1>WalletBalance</h1>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">WalletBalance</span></code>
+<p>Data structure to hold the total and available balance of the wallet. This is what is
+received on the balance channel.</p>
+<h3>Parameters</h3>
+<p><a name="totalZatoshi"></a>
+<code>totalZatoshi</code> - the total balance, ignoring funds that cannot be used.</p>
+<p><a name="availableZatoshi"></a>
+<code>availableZatoshi</code> - the amount of funds that are available for use. Typical reasons that funds
+may be unavailable include fairly new transactions that do not have enough confirmations or
+notes that are tied up because we are awaiting change from a transaction. When a note has
+been spent, its change cannot be used until there are enough confirmations.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<p>Data structure to hold the total and available balance of the wallet. This is what is
+received on the balance channel.</p>
+<code><span class="identifier">WalletBalance</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.block.CompactBlockProcessor.WalletBalance$<init>(kotlin.Long, kotlin.Long)/totalZatoshi">totalZatoshi</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a>&nbsp;<span class="symbol">=</span>&nbsp;-1<span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.block.CompactBlockProcessor.WalletBalance$<init>(kotlin.Long, kotlin.Long)/availableZatoshi">availableZatoshi</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a>&nbsp;<span class="symbol">=</span>&nbsp;-1<span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="available-zatoshi.html">availableZatoshi</a></h4>
+</td>
+<td>
+<p>the amount of funds that are available for use. Typical reasons that funds
+may be unavailable include fairly new transactions that do not have enough confirmations or
+notes that are tied up because we are awaiting change from a transaction. When a note has
+been spent, its change cannot be used until there are enough confirmations.</p>
+<code><span class="keyword">val </span><span class="identifier">availableZatoshi</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="total-zatoshi.html">totalZatoshi</a></h4>
+</td>
+<td>
+<p>the total balance, ignoring funds that cannot be used.</p>
+<code><span class="keyword">val </span><span class="identifier">totalZatoshi</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

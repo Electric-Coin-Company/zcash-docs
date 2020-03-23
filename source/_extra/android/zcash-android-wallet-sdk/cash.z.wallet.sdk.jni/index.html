@@ -1,0 +1,38 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>cash.z.wallet.sdk.jni - zcash-android-wallet-sdk</title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">zcash-android-wallet-sdk</a>&nbsp;/&nbsp;<a href="./index.html">cash.z.wallet.sdk.jni</a><br/>
+<br/>
+<h2>Package cash.z.wallet.sdk.jni</h2>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-rust-backend/index.html">RustBackend</a></h4>
+</td>
+<td>
+<p>Serves as the JNI boundary between the Kotlin and Rust layers. Functions in this class should
+not be called directly by code outside of the SDK. Instead, one of the higher-level components
+should be used such as Wallet.kt or CompactBlockProcessor.kt.</p>
+<code><span class="keyword">class </span><span class="identifier">RustBackend</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-rust-backend-welding/index.html"><span class="identifier">RustBackendWelding</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-rust-backend-welding/index.html">RustBackendWelding</a></h4>
+</td>
+<td>
+<p>Contract defining the exposed capabilities of the Rust backend.
+This is what welds the SDK to the Rust layer.
+It is not documented because it is not intended to be used, directly.
+Instead, use the synchronizer or one of its subcomponents.</p>
+<code><span class="keyword">interface </span><span class="identifier">RustBackendWelding</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

@@ -1,0 +1,219 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>ZcashSdkCommon - zcash-android-wallet-sdk</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">zcash-android-wallet-sdk</a>&nbsp;/&nbsp;<a href="../index.html">cash.z.wallet.sdk.ext</a>&nbsp;/&nbsp;<a href="./index.html">ZcashSdkCommon</a><br/>
+<br/>
+<h1>ZcashSdkCommon</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">ZcashSdkCommon</span></code>
+<p>Wrapper for all the constant values in the SDK. It is important that these values stay fixed for
+all users of the SDK. Otherwise, if individual wallet makers are using different values, it
+becomes easier to reduce privacy by segmenting the anonymity set of users, particularly as it
+relates to network requests.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<p>Wrapper for all the constant values in the SDK. It is important that these values stay fixed for
+all users of the SDK. Otherwise, if individual wallet makers are using different values, it
+becomes easier to reduce privacy by segmenting the anonymity set of users, particularly as it
+relates to network requests.</p>
+<code><span class="identifier">ZcashSdkCommon</span><span class="symbol">(</span><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-c-l-o-u-d_-p-a-r-a-m_-d-i-r_-u-r-l.html">CLOUD_PARAM_DIR_URL</a></h4>
+</td>
+<td>
+<p>The Url that is used by default in zcashd.
+We'll want to make this externally configurable, rather than baking it into the SDK but
+this will do for now, since we're using a cloudfront URL that already redirects.</p>
+<code><span class="keyword">val </span><span class="identifier">CLOUD_PARAM_DIR_URL</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-d-b_-c-a-c-h-e_-n-a-m-e.html">DB_CACHE_NAME</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">DB_CACHE_NAME</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-d-b_-d-a-t-a_-n-a-m-e.html">DB_DATA_NAME</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">DB_DATA_NAME</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-d-e-f-a-u-l-t_-d-b_-n-a-m-e_-p-r-e-f-i-x.html">DEFAULT_DB_NAME_PREFIX</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">val </span><span class="identifier">DEFAULT_DB_NAME_PREFIX</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-d-e-f-a-u-l-t_-l-i-g-h-t-w-a-l-l-e-t-d_-h-o-s-t.html">DEFAULT_LIGHTWALLETD_HOST</a></h4>
+</td>
+<td>
+<p>The default host to use for lightwalletd.</p>
+<code><span class="keyword">open</span> <span class="keyword">val </span><span class="identifier">DEFAULT_LIGHTWALLETD_HOST</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-d-e-f-a-u-l-t_-l-i-g-h-t-w-a-l-l-e-t-d_-p-o-r-t.html">DEFAULT_LIGHTWALLETD_PORT</a></h4>
+</td>
+<td>
+<p>The default port to use for connecting to lightwalletd instances.</p>
+<code><span class="keyword">open</span> <span class="keyword">val </span><span class="identifier">DEFAULT_LIGHTWALLETD_PORT</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-d-o-w-n-l-o-a-d_-b-a-t-c-h_-s-i-z-e.html">DOWNLOAD_BATCH_SIZE</a></h4>
+</td>
+<td>
+<p>Default size of batches of blocks to request from the compact block service.</p>
+<code><span class="keyword">val </span><span class="identifier">DOWNLOAD_BATCH_SIZE</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-e-x-p-i-r-y_-o-f-f-s-e-t.html">EXPIRY_OFFSET</a></h4>
+</td>
+<td>
+<p>The amount of blocks ahead of the current height where new transactions are set to expire. This value is controlled
+by the rust backend but it is helpful to know what it is set to and should be kept in sync.</p>
+<code><span class="keyword">val </span><span class="identifier">EXPIRY_OFFSET</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-m-a-x_-b-a-c-k-o-f-f_-i-n-t-e-r-v-a-l.html">MAX_BACKOFF_INTERVAL</a></h4>
+</td>
+<td>
+<p>The default maximum amount of time to wait during retry backoff intervals. Failed loops will never wait longer than
+this before retyring.</p>
+<code><span class="keyword">val </span><span class="identifier">MAX_BACKOFF_INTERVAL</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-m-a-x_-m-e-m-o_-s-i-z-e.html">MAX_MEMO_SIZE</a></h4>
+</td>
+<td>
+<p>The maximum length of a memo.</p>
+<code><span class="keyword">val </span><span class="identifier">MAX_MEMO_SIZE</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-m-a-x_-r-e-o-r-g_-s-i-z-e.html">MAX_REORG_SIZE</a></h4>
+</td>
+<td>
+<p>The theoretical maximum number of blocks in a reorg, due to other bottlenecks in the protocol design.</p>
+<code><span class="keyword">val </span><span class="identifier">MAX_REORG_SIZE</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-m-i-n-e-r-s_-f-e-e_-z-a-t-o-s-h-i.html">MINERS_FEE_ZATOSHI</a></h4>
+</td>
+<td>
+<p>Miner's fee in zatoshi.</p>
+<code><span class="keyword">val </span><span class="identifier">MINERS_FEE_ZATOSHI</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-o-u-t-p-u-t_-p-a-r-a-m_-f-i-l-e_-n-a-m-e.html">OUTPUT_PARAM_FILE_NAME</a></h4>
+</td>
+<td>
+<p>File name for the sapling output params</p>
+<code><span class="keyword">val </span><span class="identifier">OUTPUT_PARAM_FILE_NAME</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-p-o-l-l_-i-n-t-e-r-v-a-l.html">POLL_INTERVAL</a></h4>
+</td>
+<td>
+<p>Default amount of time, in milliseconds, to poll for new blocks. Typically, this should be about half the average
+block time.</p>
+<code><span class="keyword">val </span><span class="identifier">POLL_INTERVAL</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-r-e-t-r-i-e-s.html">RETRIES</a></h4>
+</td>
+<td>
+<p>Default attempts at retrying.</p>
+<code><span class="keyword">val </span><span class="identifier">RETRIES</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-r-e-w-i-n-d_-d-i-s-t-a-n-c-e.html">REWIND_DISTANCE</a></h4>
+</td>
+<td>
+<p>Default number of blocks to rewind when a chain reorg is detected. This should be large enough to recover from the
+reorg but smaller than the theoretical max reorg size of 100.</p>
+<code><span class="keyword">val </span><span class="identifier">REWIND_DISTANCE</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-s-a-p-l-i-n-g_-a-c-t-i-v-a-t-i-o-n_-h-e-i-g-h-t.html">SAPLING_ACTIVATION_HEIGHT</a></h4>
+</td>
+<td>
+<p>The height of the first sapling block. When it comes to shielded transactions, we do not need to consider any blocks
+prior to this height, at all.</p>
+<code><span class="keyword">open</span> <span class="keyword">val </span><span class="identifier">SAPLING_ACTIVATION_HEIGHT</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-s-c-a-n_-b-a-t-c-h_-s-i-z-e.html">SCAN_BATCH_SIZE</a></h4>
+</td>
+<td>
+<p>Default size of batches of blocks to scan via librustzcash. The smaller this number the more granular information
+can be provided about scan state. Unfortunately, it may also lead to a lot of overhead during scanning.</p>
+<code><span class="keyword">val </span><span class="identifier">SCAN_BATCH_SIZE</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-s-p-e-n-d_-p-a-r-a-m_-f-i-l-e_-n-a-m-e.html">SPEND_PARAM_FILE_NAME</a></h4>
+</td>
+<td>
+<p>File name for the sappling spend params</p>
+<code><span class="keyword">val </span><span class="identifier">SPEND_PARAM_FILE_NAME</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-z-a-t-o-s-h-i_-p-e-r_-z-e-c.html">ZATOSHI_PER_ZEC</a></h4>
+</td>
+<td>
+<p>The number of zatoshi that equal 1 ZEC.</p>
+<code><span class="keyword">val </span><span class="identifier">ZATOSHI_PER_ZEC</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="../-zcash-sdk/index.html">ZcashSdk</a></h4>
+</td>
+<td>
+<p>Wrapper for all the constant values in the SDK. It is important that these values stay fixed for
+all users of the SDK. Otherwise, if individual wallet makers are using different values, it
+becomes easier to reduce privacy by segmenting the anonymity set of users, particularly as it
+relates to network requests.</p>
+<code><span class="keyword">object </span><span class="identifier">ZcashSdk</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ZcashSdkCommon</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

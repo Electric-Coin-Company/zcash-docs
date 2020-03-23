@@ -1,0 +1,20 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>CompactBlockDbStore.rewindTo - zcash-android-wallet-sdk</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">zcash-android-wallet-sdk</a>&nbsp;/&nbsp;<a href="../index.html">cash.z.wallet.sdk.block</a>&nbsp;/&nbsp;<a href="index.html">CompactBlockDbStore</a>&nbsp;/&nbsp;<a href="./rewind-to.html">rewindTo</a><br/>
+<br/>
+<h1>rewindTo</h1>
+<a name="cash.z.wallet.sdk.block.CompactBlockDbStore$rewindTo(kotlin.Int)"></a>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">rewindTo</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.block.CompactBlockDbStore$rewindTo(kotlin.Int)/height">height</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Remove every block above and including the given height.</p>
+<p>After this operation, the data store will look the same as one that has not yet stored the given block height.
+Meaning, if max height is 100 block and  rewindTo(50) is called, then the highest block remaining will be 49.</p>
+<h3>Parameters</h3>
+<p><a name="height"></a>
+<code>height</code> - the target height to which to rewind.</p>
+</BODY>
+</HTML>

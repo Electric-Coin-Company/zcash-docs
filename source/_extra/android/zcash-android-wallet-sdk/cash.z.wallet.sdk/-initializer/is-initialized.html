@@ -1,0 +1,18 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Initializer.isInitialized - zcash-android-wallet-sdk</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">zcash-android-wallet-sdk</a>&nbsp;/&nbsp;<a href="../index.html">cash.z.wallet.sdk</a>&nbsp;/&nbsp;<a href="index.html">Initializer</a>&nbsp;/&nbsp;<a href="./is-initialized.html">isInitialized</a><br/>
+<br/>
+<h1>isInitialized</h1>
+<a name="cash.z.wallet.sdk.Initializer$isInitialized"></a>
+<code><span class="keyword">val </span><span class="identifier">isInitialized</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code>
+<p>Returns true when either 'open', 'new' or 'import' have already been called. Each of those
+functions calls <code>initRustLibrary</code> before returning. The entire point of the initializer is to
+setup everything necessary for the Synchronizer to function, which mainly boils down to
+loading the rust backend.</p>
+</BODY>
+</HTML>

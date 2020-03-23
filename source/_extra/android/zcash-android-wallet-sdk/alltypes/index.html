@@ -1,0 +1,347 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>alltypes - zcash-android-wallet-sdk</title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<h3>All Types</h3>
+<table>
+<tbody>
+<tr>
+<h5><a href="../cash.z.wallet.sdk.entity/-account/index.html">cash.z.wallet.sdk.entity.Account</a></h5>
+</tr>
+<tr>
+ (extensions in package cash.z.wallet.sdk.ext)
+<h5><a href="../cash.z.wallet.sdk.ext/java.math.-big-decimal/index.html">java.math.BigDecimal</a></h5>
+</tr>
+<tr>
+<h5><a href="../cash.z.wallet.sdk.exception/-birthday-exception/index.html">cash.z.wallet.sdk.exception.BirthdayException</a></h5>
+<p>Exceptions related to the wallet's birthday.</p>
+</tr>
+<tr>
+<h5><a href="../cash.z.wallet.sdk.entity/-block/index.html">cash.z.wallet.sdk.entity.Block</a></h5>
+</tr>
+<tr>
+<h5><a href="../cash.z.wallet.sdk.db/-block-dao/index.html">cash.z.wallet.sdk.db.BlockDao</a></h5>
+<p>The data access object for blocks, used for determining the last scanned height.</p>
+</tr>
+<tr>
+<h5><a href="../cash.z.wallet.sdk.ext/-blocking-provider/index.html">cash.z.wallet.sdk.ext.BlockingProvider</a></h5>
+</tr>
+<tr>
+<h5><a href="../cash.z.wallet.sdk.ext/-blocking-seed-provider/index.html">cash.z.wallet.sdk.ext.BlockingSeedProvider</a></h5>
+</tr>
+<tr>
+<h5><a href="../cash.z.wallet.sdk.ext/-bush/index.html">cash.z.wallet.sdk.ext.Bush</a></h5>
+<p>A collection of tiny logs (twigs) consisting of one trunk and maybe some leaves. There can only ever be one trunk.
+Trunks are created by planting a twig. Whenever a leaf sprouts, it will appear as a tag on every log message
+until clipped.</p>
+</tr>
+<tr>
+<h5><a href="../cash.z.wallet.sdk.db/-compact-block-dao/index.html">cash.z.wallet.sdk.db.CompactBlockDao</a></h5>
+<p>Data access object for compact blocks in the "Cache DB."</p>
+</tr>
+<tr>
+<h5><a href="../cash.z.wallet.sdk.db/-compact-block-db/index.html">cash.z.wallet.sdk.db.CompactBlockDb</a></h5>
+<p>The "Cache DB", serving as a cache of compact blocks, waiting to be processed. This will contain
+the entire blockchain, from the birthdate of the wallet, forward. The <a href="#">CompactBlockProcessor</a>
+will copy blocks from this database, as they are scanned. In the future, those blocks can be
+deleted because they are no longer needed. Currently, this efficiency has not been implemented.</p>
+</tr>
+<tr>
+<h5><a href="../cash.z.wallet.sdk.block/-compact-block-db-store/index.html">cash.z.wallet.sdk.block.CompactBlockDbStore</a></h5>
+<p>An implementation of CompactBlockStore that persists information to a database in the given
+path. This represents the "cache db" or local cache of compact blocks waiting to be scanned.</p>
+</tr>
+<tr>
+<h5><a href="../cash.z.wallet.sdk.block/-compact-block-downloader/index.html">cash.z.wallet.sdk.block.CompactBlockDownloader</a></h5>
+<p>Serves as a source of compact blocks received from the light wallet server. Once started, it will use the given
+lightwallet service to request all the appropriate blocks and compact block store to persist them. By delegating to
+these dependencies, the downloader remains agnostic to the particular implementation of how to retrieve and store
+data; although, by default the SDK uses gRPC and SQL.</p>
+</tr>
+<tr>
+<h5><a href="../cash.z.wallet.sdk.entity/-compact-block-entity/index.html">cash.z.wallet.sdk.entity.CompactBlockEntity</a></h5>
+</tr>
+<tr>
+<h5><a href="../cash.z.wallet.sdk.block/-compact-block-processor/index.html">cash.z.wallet.sdk.block.CompactBlockProcessor</a></h5>
+<p>Responsible for processing the compact blocks that are received from the lightwallet server. This class encapsulates
+all the business logic required to validate and scan the blockchain and is therefore tightly coupled with
+librustzcash.</p>
+</tr>
+<tr>
+<h5><a href="../cash.z.wallet.sdk.exception/-compact-block-processor-exception/index.html">cash.z.wallet.sdk.exception.CompactBlockProcessorException</a></h5>
+<p>Potentially user-facing exceptions that occur while processing compact blocks.</p>
+</tr>
+<tr>
+<h5><a href="../cash.z.wallet.sdk.block/-compact-block-store/index.html">cash.z.wallet.sdk.block.CompactBlockStore</a></h5>
+<p>Interface for storing compact blocks.</p>
+</tr>
+<tr>
+<h5><a href="../cash.z.wallet.sdk.ext/-composite-twig/index.html">cash.z.wallet.sdk.ext.CompositeTwig</a></h5>
+<p>Since there can only ever be one trunk on the bush of twigs, this class lets
+you cheat and make that trunk be a bundle of twigs.</p>
+</tr>
+<tr>
+<h5><a href="../cash.z.wallet.sdk.ext.android/-computable-flow/index.html">cash.z.wallet.sdk.ext.android.ComputableFlow</a></h5>
+</tr>
+<tr>
+<h5><a href="../cash.z.wallet.sdk.entity/-confirmed-transaction/index.html">cash.z.wallet.sdk.entity.ConfirmedTransaction</a></h5>
+<p>A mined, shielded transaction. Since this is a <a href="../cash.z.wallet.sdk.entity/-mined-transaction/index.html">MinedTransaction</a>, it represents data
+on the blockchain.</p>
+</tr>
+<tr>
+<h5><a href="../cash.z.wallet.sdk.ext/-conversions/index.html">cash.z.wallet.sdk.ext.Conversions</a></h5>
+</tr>
+<tr>
+<h5><a href="../cash.z.wallet.sdk.db/-derived-data-db/index.html">cash.z.wallet.sdk.db.DerivedDataDb</a></h5>
+<p>The "Data DB," where all data derived from the compact blocks is stored. Most importantly, this
+database contains transaction information and can be queried for the current balance. The
+"blocks" table contains a copy of everything that has been scanned. In the future, that table can
+be truncated up to the last scanned block, for storage efficiency. Wallets should only read from,
+but never write to, this database.</p>
+</tr>
+<tr>
+ (extensions in package cash.z.wallet.sdk.ext)
+<h5><a href="../cash.z.wallet.sdk.ext/kotlin.-double/index.html">kotlin.Double</a></h5>
+</tr>
+<tr>
+<h5><a href="../cash.z.wallet.sdk.entity/-encoded-transaction/index.html">cash.z.wallet.sdk.entity.EncodedTransaction</a></h5>
+</tr>
+<tr>
+ (extensions in package cash.z.wallet.sdk.ext.android)
+<h5><a href="../cash.z.wallet.sdk.ext.android/androidx.paging.-data-source.-factory/index.html">androidx.paging.DataSource.Factory</a></h5>
+</tr>
+<tr>
+ (extensions in package cash.z.wallet.sdk.ext)
+<h5><a href="../cash.z.wallet.sdk.ext/kotlinx.coroutines.flow.-flow/index.html">kotlinx.coroutines.flow.Flow</a></h5>
+</tr>
+<tr>
+<h5><a href="../cash.z.wallet.sdk.ext.android/-flow-paged-list-builder/index.html">cash.z.wallet.sdk.ext.android.FlowPagedListBuilder</a></h5>
+</tr>
+<tr>
+<h5><a href="../cash.z.wallet.sdk/-initializer/index.html">cash.z.wallet.sdk.Initializer</a></h5>
+<p>Responsible for initialization, which can be considered as setup that must happen before
+synchronizing begins. This begins with one of three actions, a call to either <a href="../cash.z.wallet.sdk/-initializer/new.html">new</a>, <a href="../cash.z.wallet.sdk/-initializer/import.html">import</a> or
+<a href="../cash.z.wallet.sdk/-initializer/open.html">open</a>, where the last option is the most common case--when a user is opening a wallet they have
+used before on this device.</p>
+</tr>
+<tr>
+<h5><a href="../cash.z.wallet.sdk.exception/-initializer-exception/index.html">cash.z.wallet.sdk.exception.InitializerException</a></h5>
+<p>Exceptions thrown by the initializer.</p>
+</tr>
+<tr>
+<h5><a href="../cash.z.wallet.sdk.exception/-lightwallet-exception/index.html">cash.z.wallet.sdk.exception.LightwalletException</a></h5>
+<p>Exceptions thrown while interacting with lightwalletd.</p>
+</tr>
+<tr>
+<h5><a href="../cash.z.wallet.sdk.service/-light-wallet-grpc-service/index.html">cash.z.wallet.sdk.service.LightWalletGrpcService</a></h5>
+<p>Implementation of LightwalletService using gRPC for requests to lightwalletd.</p>
+</tr>
+<tr>
+<h5><a href="../cash.z.wallet.sdk.service/-light-wallet-service/index.html">cash.z.wallet.sdk.service.LightWalletService</a></h5>
+<p>Service for interacting with lightwalletd. Implementers of this service should make blocking
+calls because async concerns are handled at a higher level.</p>
+</tr>
+<tr>
+ (extensions in package cash.z.wallet.sdk.ext)
+<h5><a href="../cash.z.wallet.sdk.ext/kotlin.-long/index.html">kotlin.Long</a></h5>
+</tr>
+<tr>
+<h5><a href="../cash.z.wallet.sdk.entity/-mined-transaction/index.html">cash.z.wallet.sdk.entity.MinedTransaction</a></h5>
+<p>Parent type for transactions that have been mined. This is useful for putting all transactions in
+one list for things like history. A mined tx should have all properties, except possibly a memo.</p>
+</tr>
+<tr>
+<h5><a href="../cash.z.wallet.sdk.annotation/-open-for-testing/index.html">cash.z.wallet.sdk.annotation.OpenForTesting</a></h5>
+<p>Used in conjunction with the kotlin-allopen plugin to make any class with this annotation open for extension.
+Typically, we apply this to classes that we want to mock in androidTests because unit tests don't have this problem,
+it's only an issue with JUnit4 Instrumentation tests. This annotation is only leveraged in debug builds.</p>
+</tr>
+<tr>
+<h5><a href="../cash.z.wallet.sdk.transaction/-outbound-transaction-manager/index.html">cash.z.wallet.sdk.transaction.OutboundTransactionManager</a></h5>
+<p>Manage outbound transactions with the main purpose of reporting which ones are still pending,
+particularly after failed attempts or dropped connectivity. The intent is to help see outbound
+transactions through to completion.</p>
+</tr>
+<tr>
+<h5><a href="../cash.z.wallet.sdk.transaction/-paged-transaction-repository/index.html">cash.z.wallet.sdk.transaction.PagedTransactionRepository</a></h5>
+<p>Example of a repository that leverages the Room paging library to return a <a href="#">PagedList</a> of
+transactions. Consumers can register as a page listener and receive an interface that allows for
+efficiently paging data.</p>
+</tr>
+<tr>
+<h5><a href="../cash.z.wallet.sdk.entity/-pending-transaction/index.html">cash.z.wallet.sdk.entity.PendingTransaction</a></h5>
+</tr>
+<tr>
+<h5><a href="../cash.z.wallet.sdk.db/-pending-transaction-dao/index.html">cash.z.wallet.sdk.db.PendingTransactionDao</a></h5>
+<p>Data access object providing crud for pending transactions.</p>
+</tr>
+<tr>
+<h5><a href="../cash.z.wallet.sdk.db/-pending-transaction-db/index.html">cash.z.wallet.sdk.db.PendingTransactionDb</a></h5>
+<p>Database for pending transaction information. Unlike with the "Data DB," the wallet is free to
+write to this database. In a way, this almost serves as a local mempool for all transactions
+initiated by this wallet. Currently, the data necessary to support expired transactions is there
+but it is not being leveraged.</p>
+</tr>
+<tr>
+<h5><a href="../cash.z.wallet.sdk.entity/-pending-transaction-entity/index.html">cash.z.wallet.sdk.entity.PendingTransactionEntity</a></h5>
+</tr>
+<tr>
+<h5><a href="../cash.z.wallet.sdk.transaction/-persistent-transaction-manager/index.html">cash.z.wallet.sdk.transaction.PersistentTransactionManager</a></h5>
+<p>Facilitates persistent attempts to ensure that an outbound transaction is completed.</p>
+</tr>
+<tr>
+<h5><a href="../cash.z.wallet.sdk.entity/-received/index.html">cash.z.wallet.sdk.entity.Received</a></h5>
+</tr>
+<tr>
+<h5><a href="../cash.z.wallet.sdk.db/-received-dao/index.html">cash.z.wallet.sdk.db.ReceivedDao</a></h5>
+<p>The data access object for notes, used for determining whether transactions exist.</p>
+</tr>
+<tr>
+<h5><a href="../cash.z.wallet.sdk.ext.android/-refreshable-data-source-factory/index.html">cash.z.wallet.sdk.ext.android.RefreshableDataSourceFactory</a></h5>
+</tr>
+<tr>
+<h5><a href="../cash.z.wallet.sdk.exception/-repository-exception/index.html">cash.z.wallet.sdk.exception.RepositoryException</a></h5>
+<p>User-facing exceptions thrown by the transaction repository.</p>
+</tr>
+<tr>
+<h5><a href="../cash.z.wallet.sdk.jni/-rust-backend/index.html">cash.z.wallet.sdk.jni.RustBackend</a></h5>
+<p>Serves as the JNI boundary between the Kotlin and Rust layers. Functions in this class should
+not be called directly by code outside of the SDK. Instead, one of the higher-level components
+should be used such as Wallet.kt or CompactBlockProcessor.kt.</p>
+</tr>
+<tr>
+<h5><a href="../cash.z.wallet.sdk.jni/-rust-backend-welding/index.html">cash.z.wallet.sdk.jni.RustBackendWelding</a></h5>
+<p>Contract defining the exposed capabilities of the Rust backend.
+This is what welds the SDK to the Rust layer.
+It is not documented because it is not intended to be used, directly.
+Instead, use the synchronizer or one of its subcomponents.</p>
+</tr>
+<tr>
+<h5><a href="../cash.z.wallet.sdk.exception/-rust-layer-exception/index.html">cash.z.wallet.sdk.exception.RustLayerException</a></h5>
+<p>Exceptions thrown in the Rust layer of the SDK. We may not always be able to surface details about this
+exception so it's important for the SDK to provide helpful messages whenever these errors are encountered.</p>
+</tr>
+<tr>
+<h5><a href="../cash.z.wallet.sdk.ext/-sample-seed-provider/index.html">cash.z.wallet.sdk.ext.SampleSeedProvider</a></h5>
+</tr>
+<tr>
+<h5><a href="../cash.z.wallet.sdk.ext/-sample-spending-key-provider/index.html">cash.z.wallet.sdk.ext.SampleSpendingKeyProvider</a></h5>
+</tr>
+<tr>
+<h5><a href="../cash.z.wallet.sdk.exception/-sdk-exception/index.html">cash.z.wallet.sdk.exception.SdkException</a></h5>
+<p>Marker for all custom exceptions from the SDK. Making it an interface would result in more typing
+so its a supertype, instead.</p>
+</tr>
+<tr>
+<h5><a href="../cash.z.wallet.sdk/-sdk-synchronizer/index.html">cash.z.wallet.sdk.SdkSynchronizer</a></h5>
+<p>A Synchronizer that attempts to remain operational, despite any number of errors that can occur.
+It acts as the glue that ties all the pieces of the SDK together. Each component of the SDK is
+designed for the potential of stand-alone usage but coordinating all the interactions is non-
+trivial. So the Synchronizer facilitates this, acting as reference that demonstrates how all the
+pieces can be tied together. Its goal is to allow a developer to focus on their app rather than
+the nuances of how Zcash works.</p>
+</tr>
+<tr>
+<h5><a href="../cash.z.wallet.sdk.ext/-seed-generator/index.html">cash.z.wallet.sdk.ext.SeedGenerator</a></h5>
+<p>This is intentionally insecure. Wallet makers have told us storing keys is their specialty so we don't put a lot of
+energy here. A true implementation would create a key using user interaction, perhaps with a password they know that
+is never stored, along with requiring user authentication for key use (i.e. fingerprint/PIN/pattern/etc). From there,
+one of these approaches might be helpful to store the key securely:</p>
+</tr>
+<tr>
+<h5><a href="../cash.z.wallet.sdk.entity/-sent/index.html">cash.z.wallet.sdk.entity.Sent</a></h5>
+</tr>
+<tr>
+<h5><a href="../cash.z.wallet.sdk.db/-sent-dao/index.html">cash.z.wallet.sdk.db.SentDao</a></h5>
+<p>The data access object for sent notes, used for determining whether outbound transactions exist.</p>
+</tr>
+<tr>
+<h5><a href="../cash.z.wallet.sdk.entity/-signed-transaction/index.html">cash.z.wallet.sdk.entity.SignedTransaction</a></h5>
+<p>Interface for anything that's able to provide signed transaction bytes.</p>
+</tr>
+<tr>
+<h5><a href="../cash.z.wallet.sdk.ext/-silent-twig/index.html">cash.z.wallet.sdk.ext.SilentTwig</a></h5>
+<p>A tiny log that does nothing. No one hears this twig fall in the woods.</p>
+</tr>
+<tr>
+<h5><a href="../cash.z.wallet.sdk.ext/-simple-provider/index.html">cash.z.wallet.sdk.ext.SimpleProvider</a></h5>
+</tr>
+<tr>
+ (extensions in package cash.z.wallet.sdk.ext)
+<h5><a href="../cash.z.wallet.sdk.ext/kotlin.-string/index.html">kotlin.String</a></h5>
+</tr>
+<tr>
+<h5><a href="../cash.z.wallet.sdk/-synchronizer/index.html">cash.z.wallet.sdk.Synchronizer</a></h5>
+<p>Primary interface for interacting with the SDK. Defines the contract that specific
+implementations like <a href="#">MockSynchronizer</a> and <a href="../cash.z.wallet.sdk/-sdk-synchronizer/index.html">SdkSynchronizer</a> fulfill. Given the language-level
+support for coroutines, we favor their use in the SDK and incorporate that choice into this
+contract.</p>
+</tr>
+<tr>
+<h5><a href="../cash.z.wallet.sdk.exception/-synchronizer-exception/index.html">cash.z.wallet.sdk.exception.SynchronizerException</a></h5>
+<p>High-level exceptions thrown by the synchronizer, which do not fall within the umbrealla of a
+child component.</p>
+</tr>
+<tr>
+<h5><a href="../cash.z.wallet.sdk.entity/-transaction/index.html">cash.z.wallet.sdk.entity.Transaction</a></h5>
+<p>Common interface between confirmed transactions on the blockchain and pending transactions being
+constructed.</p>
+</tr>
+<tr>
+<h5><a href="../cash.z.wallet.sdk.db/-transaction-dao/index.html">cash.z.wallet.sdk.db.TransactionDao</a></h5>
+<p>The data access object for transactions, used for querying all transaction information, including
+whether transactions are mined.</p>
+</tr>
+<tr>
+<h5><a href="../cash.z.wallet.sdk.transaction/-transaction-encoder/index.html">cash.z.wallet.sdk.transaction.TransactionEncoder</a></h5>
+</tr>
+<tr>
+<h5><a href="../cash.z.wallet.sdk.exception/-transaction-encoder-exception/index.html">cash.z.wallet.sdk.exception.TransactionEncoderException</a></h5>
+<p>Potentially user-facing exceptions thrown while encoding transactions.</p>
+</tr>
+<tr>
+<h5><a href="../cash.z.wallet.sdk.entity/-transaction-entity/index.html">cash.z.wallet.sdk.entity.TransactionEntity</a></h5>
+</tr>
+<tr>
+<h5><a href="../cash.z.wallet.sdk.transaction/-transaction-error/index.html">cash.z.wallet.sdk.transaction.TransactionError</a></h5>
+<p>Interface for transaction errors.</p>
+</tr>
+<tr>
+<h5><a href="../cash.z.wallet.sdk.transaction/-transaction-repository/index.html">cash.z.wallet.sdk.transaction.TransactionRepository</a></h5>
+<p>Repository of wallet transactions, providing an agnostic interface to the underlying information.</p>
+</tr>
+<tr>
+<h5><a href="../cash.z.wallet.sdk.ext/-troubleshooting-twig/index.html">cash.z.wallet.sdk.ext.TroubleshootingTwig</a></h5>
+<p>A tiny log for detecting troubles. Aim at your troubles and pull the twigger.</p>
+</tr>
+<tr>
+<h5><a href="../cash.z.wallet.sdk.ext/-twig/index.html">cash.z.wallet.sdk.ext.Twig</a></h5>
+<p>A tiny log.</p>
+</tr>
+<tr>
+<h5><a href="../cash.z.wallet.sdk.transaction/-wallet-transaction-encoder/index.html">cash.z.wallet.sdk.transaction.WalletTransactionEncoder</a></h5>
+<p>Class responsible for encoding a transaction in a consistent way. This bridges the gap by
+behaving like a stateless API so that callers can request <a href="../cash.z.wallet.sdk.transaction/-wallet-transaction-encoder/create-transaction.html">createTransaction</a> and receive a
+result, even though there are intermediate database interactions.</p>
+</tr>
+<tr>
+<h5><a href="../cash.z.wallet.sdk.ext/-zcash-sdk/index.html">cash.z.wallet.sdk.ext.ZcashSdk</a></h5>
+<p>Wrapper for all the constant values in the SDK. It is important that these values stay fixed for
+all users of the SDK. Otherwise, if individual wallet makers are using different values, it
+becomes easier to reduce privacy by segmenting the anonymity set of users, particularly as it
+relates to network requests.</p>
+</tr>
+<tr>
+<h5><a href="../cash.z.wallet.sdk.ext/-zcash-sdk-common/index.html">cash.z.wallet.sdk.ext.ZcashSdkCommon</a></h5>
+<p>Wrapper for all the constant values in the SDK. It is important that these values stay fixed for
+all users of the SDK. Otherwise, if individual wallet makers are using different values, it
+becomes easier to reduce privacy by segmenting the anonymity set of users, particularly as it
+relates to network requests.</p>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

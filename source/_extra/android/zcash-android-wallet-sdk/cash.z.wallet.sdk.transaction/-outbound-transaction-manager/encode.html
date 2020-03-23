@@ -1,0 +1,24 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>OutboundTransactionManager.encode - zcash-android-wallet-sdk</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">zcash-android-wallet-sdk</a>&nbsp;/&nbsp;<a href="../index.html">cash.z.wallet.sdk.transaction</a>&nbsp;/&nbsp;<a href="index.html">OutboundTransactionManager</a>&nbsp;/&nbsp;<a href="./encode.html">encode</a><br/>
+<br/>
+<h1>encode</h1>
+<a name="cash.z.wallet.sdk.transaction.OutboundTransactionManager$encode(kotlin.String, cash.z.wallet.sdk.entity.PendingTransaction)"></a>
+<code><span class="keyword">abstract</span> <span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">encode</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.transaction.OutboundTransactionManager$encode(kotlin.String, cash.z.wallet.sdk.entity.PendingTransaction)/spendingKey">spendingKey</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.transaction.OutboundTransactionManager$encode(kotlin.String, cash.z.wallet.sdk.entity.PendingTransaction)/pendingTx">pendingTx</span><span class="symbol">:</span>&nbsp;<a href="../../cash.z.wallet.sdk.entity/-pending-transaction/index.html"><span class="identifier">PendingTransaction</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../cash.z.wallet.sdk.entity/-pending-transaction/index.html"><span class="identifier">PendingTransaction</span></a></code>
+<p>Encode the pending transaction using the given spending key. This is a local operation that
+produces a raw transaction to submit to lightwalletd.</p>
+<h3>Parameters</h3>
+<p><a name="spendingKey"></a>
+<code>spendingKey</code> - the spendingKey to use for constructing the transaction.</p>
+<p><a name="pendingTx"></a>
+<code>pendingTx</code> - the transaction information created by <a href="init-spend.html">initSpend</a> that will be used to
+construct a transaction.</p>
+<p><strong>Return</strong><br/>
+the resulting pending transaction whose ID can be used to monitor for changes.</p>
+</BODY>
+</HTML>

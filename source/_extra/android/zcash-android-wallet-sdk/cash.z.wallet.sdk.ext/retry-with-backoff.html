@@ -1,0 +1,25 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>retryWithBackoff - zcash-android-wallet-sdk</title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">zcash-android-wallet-sdk</a>&nbsp;/&nbsp;<a href="index.html">cash.z.wallet.sdk.ext</a>&nbsp;/&nbsp;<a href="./retry-with-backoff.html">retryWithBackoff</a><br/>
+<br/>
+<h1>retryWithBackoff</h1>
+<a name="cash.z.wallet.sdk.ext$retryWithBackoff(kotlin.Function1((kotlin.Throwable, kotlin.Boolean)), kotlin.Long, kotlin.Long, kotlin.Function0((kotlin.Unit)))"></a>
+<code><span class="keyword">suspend</span> <span class="keyword">inline</span> <span class="keyword">fun </span><span class="identifier">retryWithBackoff</span><span class="symbol">(</span><span class="keyword">noinline</span> <span class="identifier" id="cash.z.wallet.sdk.ext$retryWithBackoff(kotlin.Function1((kotlin.Throwable, kotlin.Boolean)), kotlin.Long, kotlin.Long, kotlin.Function0((kotlin.Unit)))/onErrorListener">onErrorListener</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><span class="symbol">(</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html"><span class="identifier">Throwable</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">)</span><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.ext$retryWithBackoff(kotlin.Function1((kotlin.Throwable, kotlin.Boolean)), kotlin.Long, kotlin.Long, kotlin.Function0((kotlin.Unit)))/initialDelayMillis">initialDelayMillis</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a>&nbsp;<span class="symbol">=</span>&nbsp;1000L<span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.ext$retryWithBackoff(kotlin.Function1((kotlin.Throwable, kotlin.Boolean)), kotlin.Long, kotlin.Long, kotlin.Function0((kotlin.Unit)))/maxDelayMillis">maxDelayMillis</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a>&nbsp;<span class="symbol">=</span>&nbsp;MAX_BACKOFF_INTERVAL<span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.ext$retryWithBackoff(kotlin.Function1((kotlin.Throwable, kotlin.Boolean)), kotlin.Long, kotlin.Long, kotlin.Function0((kotlin.Unit)))/block">block</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Execute the given block and if it fails, retry with an exponential backoff.</p>
+<h3>Parameters</h3>
+<p><a name="onErrorListener"></a>
+<code>onErrorListener</code> - a callback that gets the first shot at processing any error and can veto
+the retry behavior by returning false.</p>
+<p><a name="initialDelayMillis"></a>
+<code>initialDelayMillis</code> - the initial delay before retrying.</p>
+<p><a name="maxDelayMillis"></a>
+<code>maxDelayMillis</code> - the maximum delay between retrys.</p>
+<p><a name="block"></a>
+<code>block</code> - the logic to run once and then run again if it fails.</p>
+</BODY>
+</HTML>

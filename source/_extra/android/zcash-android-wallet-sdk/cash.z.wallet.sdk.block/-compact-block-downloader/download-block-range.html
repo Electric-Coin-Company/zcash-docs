@@ -1,0 +1,22 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>CompactBlockDownloader.downloadBlockRange - zcash-android-wallet-sdk</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">zcash-android-wallet-sdk</a>&nbsp;/&nbsp;<a href="../index.html">cash.z.wallet.sdk.block</a>&nbsp;/&nbsp;<a href="index.html">CompactBlockDownloader</a>&nbsp;/&nbsp;<a href="./download-block-range.html">downloadBlockRange</a><br/>
+<br/>
+<h1>downloadBlockRange</h1>
+<a name="cash.z.wallet.sdk.block.CompactBlockDownloader$downloadBlockRange(kotlin.ranges.IntRange)"></a>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">downloadBlockRange</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.block.CompactBlockDownloader$downloadBlockRange(kotlin.ranges.IntRange)/heightRange">heightRange</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.ranges/-int-range/index.html"><span class="identifier">IntRange</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code>
+<p>Requests the given range of blocks from the lightwalletService and then persists them to the
+compactBlockStore.</p>
+<h3>Parameters</h3>
+<p><a name="heightRange"></a>
+<code>heightRange</code> - the inclusive range of heights to request. For example 10..20 would
+request 11 blocks (including block 10 and block 20).</p>
+<p><strong>Return</strong><br/>
+the number of blocks that were returned in the results from the lightwalletService.</p>
+</BODY>
+</HTML>

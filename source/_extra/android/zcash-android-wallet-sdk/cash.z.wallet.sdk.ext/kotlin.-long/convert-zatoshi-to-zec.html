@@ -1,0 +1,25 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>convertZatoshiToZec - zcash-android-wallet-sdk</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">zcash-android-wallet-sdk</a>&nbsp;/&nbsp;<a href="../index.html">cash.z.wallet.sdk.ext</a>&nbsp;/&nbsp;<a href="index.html">kotlin.Long</a>&nbsp;/&nbsp;<a href="./convert-zatoshi-to-zec.html">convertZatoshiToZec</a><br/>
+<br/>
+<h1>convertZatoshiToZec</h1>
+<a name="cash.z.wallet.sdk.ext$convertZatoshiToZec(kotlin.Long, kotlin.Int)"></a>
+<code><span class="keyword">fun </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a><span class="symbol">?</span><span class="symbol">.</span><span class="identifier">convertZatoshiToZec</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.ext$convertZatoshiToZec(kotlin.Long, kotlin.Int)/scale">scale</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a>&nbsp;<span class="symbol">=</span>&nbsp;ZEC_FORMATTER.maximumFractionDigits<span class="symbol">)</span><span class="symbol">: </span><a href="https://docs.oracle.com/javase/6/docs/api/java/math/BigDecimal.html"><span class="identifier">BigDecimal</span></a></code>
+<p>Convert a Zatoshi value into ZEC, right-padded to the given number of fraction digits,
+represented as a BigDecimal in order to preserve rounding that minimizes cumulative error when
+applied repeatedly over a sequence of calculations.
+Start with Zatoshi -&gt; End with ZEC.</p>
+<h3>Parameters</h3>
+<p><a name="scale"></a>
+<code>scale</code> - the number of digits to the right of the decimal place. Right-padding will be added,
+if necessary.</p>
+<p><strong>Return</strong><br/>
+this Long Zatoshi value represented as ZEC using a BigDecimal with the given scale,
+rounded accurately out to 128 digits.</p>
+</BODY>
+</HTML>

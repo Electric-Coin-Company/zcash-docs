@@ -1,0 +1,191 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>RustBackend - zcash-android-wallet-sdk</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">zcash-android-wallet-sdk</a>&nbsp;/&nbsp;<a href="../index.html">cash.z.wallet.sdk.jni</a>&nbsp;/&nbsp;<a href="./index.html">RustBackend</a><br/>
+<br/>
+<h1>RustBackend</h1>
+<code><span class="keyword">class </span><span class="identifier">RustBackend</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-rust-backend-welding/index.html"><span class="identifier">RustBackendWelding</span></a></code>
+<p>Serves as the JNI boundary between the Kotlin and Rust layers. Functions in this class should
+not be called directly by code outside of the SDK. Instead, one of the higher-level components
+should be used such as Wallet.kt or CompactBlockProcessor.kt.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<p>Serves as the JNI boundary between the Kotlin and Rust layers. Functions in this class should
+not be called directly by code outside of the SDK. Instead, one of the higher-level components
+should be used such as Wallet.kt or CompactBlockProcessor.kt.</p>
+<code><span class="identifier">RustBackend</span><span class="symbol">(</span><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="clear.html">clear</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">clear</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.jni.RustBackend$clear(kotlin.Boolean, kotlin.Boolean)/clearCacheDb">clearCacheDb</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a>&nbsp;<span class="symbol">=</span>&nbsp;true<span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.jni.RustBackend$clear(kotlin.Boolean, kotlin.Boolean)/clearDataDb">clearDataDb</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a>&nbsp;<span class="symbol">=</span>&nbsp;true<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="create-to-address.html">createToAddress</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">createToAddress</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.jni.RustBackend$createToAddress(kotlin.Int, kotlin.String, kotlin.String, kotlin.Long, kotlin.ByteArray)/account">account</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.jni.RustBackend$createToAddress(kotlin.Int, kotlin.String, kotlin.String, kotlin.Long, kotlin.ByteArray)/extsk">extsk</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.jni.RustBackend$createToAddress(kotlin.Int, kotlin.String, kotlin.String, kotlin.Long, kotlin.ByteArray)/to">to</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.jni.RustBackend$createToAddress(kotlin.Int, kotlin.String, kotlin.String, kotlin.Long, kotlin.ByteArray)/value">value</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a><span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.jni.RustBackend$createToAddress(kotlin.Int, kotlin.String, kotlin.String, kotlin.Long, kotlin.ByteArray)/memo">memo</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html"><span class="identifier">ByteArray</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="derive-address.html">deriveAddress</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">deriveAddress</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.jni.RustBackend$deriveAddress(kotlin.ByteArray, kotlin.Int)/seed">seed</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html"><span class="identifier">ByteArray</span></a><span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.jni.RustBackend$deriveAddress(kotlin.ByteArray, kotlin.Int)/accountIndex">accountIndex</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code><br/>
+<code><span class="keyword">fun </span><span class="identifier">deriveAddress</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.jni.RustBackend$deriveAddress(kotlin.String)/viewingKey">viewingKey</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="derive-spending-keys.html">deriveSpendingKeys</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">deriveSpendingKeys</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.jni.RustBackend$deriveSpendingKeys(kotlin.ByteArray, kotlin.Int)/seed">seed</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html"><span class="identifier">ByteArray</span></a><span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.jni.RustBackend$deriveSpendingKeys(kotlin.ByteArray, kotlin.Int)/numberOfAccounts">numberOfAccounts</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html"><span class="identifier">Array</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="derive-viewing-key.html">deriveViewingKey</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">deriveViewingKey</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.jni.RustBackend$deriveViewingKey(kotlin.String)/spendingKey">spendingKey</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="derive-viewing-keys.html">deriveViewingKeys</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">deriveViewingKeys</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.jni.RustBackend$deriveViewingKeys(kotlin.ByteArray, kotlin.Int)/seed">seed</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html"><span class="identifier">ByteArray</span></a><span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.jni.RustBackend$deriveViewingKeys(kotlin.ByteArray, kotlin.Int)/numberOfAccounts">numberOfAccounts</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html"><span class="identifier">Array</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-address.html">getAddress</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getAddress</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.jni.RustBackend$getAddress(kotlin.Int)/account">account</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-balance.html">getBalance</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getBalance</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.jni.RustBackend$getBalance(kotlin.Int)/account">account</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-received-memo-as-utf8.html">getReceivedMemoAsUtf8</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getReceivedMemoAsUtf8</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.jni.RustBackend$getReceivedMemoAsUtf8(kotlin.Long)/idNote">idNote</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-sent-memo-as-utf8.html">getSentMemoAsUtf8</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getSentMemoAsUtf8</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.jni.RustBackend$getSentMemoAsUtf8(kotlin.Long)/idNote">idNote</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-verified-balance.html">getVerifiedBalance</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getVerifiedBalance</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.jni.RustBackend$getVerifiedBalance(kotlin.Int)/account">account</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="init.html">init</a></h4>
+</td>
+<td>
+<p>Loads the library and initializes path variables. Although it is best to only call this
+function once, it is idempotent.</p>
+<code><span class="keyword">fun </span><span class="identifier">init</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.jni.RustBackend$init(kotlin.String, kotlin.String, kotlin.String)/cacheDbPath">cacheDbPath</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.jni.RustBackend$init(kotlin.String, kotlin.String, kotlin.String)/dataDbPath">dataDbPath</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.jni.RustBackend$init(kotlin.String, kotlin.String, kotlin.String)/paramsPath">paramsPath</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">RustBackend</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="init-accounts-table.html">initAccountsTable</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">initAccountsTable</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.jni.RustBackend$initAccountsTable(kotlin.ByteArray, kotlin.Int)/seed">seed</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html"><span class="identifier">ByteArray</span></a><span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.jni.RustBackend$initAccountsTable(kotlin.ByteArray, kotlin.Int)/numberOfAccounts">numberOfAccounts</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html"><span class="identifier">Array</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="init-blocks-table.html">initBlocksTable</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">initBlocksTable</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.jni.RustBackend$initBlocksTable(kotlin.Int, kotlin.String, kotlin.Long, kotlin.String)/height">height</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.jni.RustBackend$initBlocksTable(kotlin.Int, kotlin.String, kotlin.Long, kotlin.String)/hash">hash</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.jni.RustBackend$initBlocksTable(kotlin.Int, kotlin.String, kotlin.Long, kotlin.String)/time">time</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a><span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.jni.RustBackend$initBlocksTable(kotlin.Int, kotlin.String, kotlin.Long, kotlin.String)/saplingTree">saplingTree</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="init-data-db.html">initDataDb</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">initDataDb</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="is-valid-shielded-addr.html">isValidShieldedAddr</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">isValidShieldedAddr</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.jni.RustBackend$isValidShieldedAddr(kotlin.String)/addr">addr</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="is-valid-transparent-addr.html">isValidTransparentAddr</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">isValidTransparentAddr</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.jni.RustBackend$isValidTransparentAddr(kotlin.String)/addr">addr</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="rewind-to-height.html">rewindToHeight</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">rewindToHeight</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.jni.RustBackend$rewindToHeight(kotlin.Int)/height">height</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="scan-blocks.html">scanBlocks</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">scanBlocks</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.jni.RustBackend$scanBlocks(kotlin.Int)/limit">limit</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="validate-combined-chain.html">validateCombinedChain</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">validateCombinedChain</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Companion Object Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="load.html">load</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">load</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

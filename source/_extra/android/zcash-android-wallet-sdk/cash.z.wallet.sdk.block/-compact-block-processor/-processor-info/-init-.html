@@ -1,0 +1,30 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>CompactBlockProcessor.ProcessorInfo.<init> - zcash-android-wallet-sdk</title>
+<link rel="stylesheet" href="../../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../../index.html">zcash-android-wallet-sdk</a>&nbsp;/&nbsp;<a href="../../index.html">cash.z.wallet.sdk.block</a>&nbsp;/&nbsp;<a href="../index.html">CompactBlockProcessor</a>&nbsp;/&nbsp;<a href="index.html">ProcessorInfo</a>&nbsp;/&nbsp;<a href="./-init-.html">&lt;init&gt;</a><br/>
+<br/>
+<h1>&lt;init&gt;</h1>
+<a name="cash.z.wallet.sdk.block.CompactBlockProcessor.ProcessorInfo$&lt;init&gt;(kotlin.Int, kotlin.Int, kotlin.Int, kotlin.ranges.IntRange, kotlin.ranges.IntRange)"></a>
+<code><span class="identifier">ProcessorInfo</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.block.CompactBlockProcessor.ProcessorInfo$<init>(kotlin.Int, kotlin.Int, kotlin.Int, kotlin.ranges.IntRange, kotlin.ranges.IntRange)/networkBlockHeight">networkBlockHeight</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a>&nbsp;<span class="symbol">=</span>&nbsp;-1<span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.block.CompactBlockProcessor.ProcessorInfo$<init>(kotlin.Int, kotlin.Int, kotlin.Int, kotlin.ranges.IntRange, kotlin.ranges.IntRange)/lastScannedHeight">lastScannedHeight</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a>&nbsp;<span class="symbol">=</span>&nbsp;-1<span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.block.CompactBlockProcessor.ProcessorInfo$<init>(kotlin.Int, kotlin.Int, kotlin.Int, kotlin.ranges.IntRange, kotlin.ranges.IntRange)/lastDownloadedHeight">lastDownloadedHeight</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a>&nbsp;<span class="symbol">=</span>&nbsp;-1<span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.block.CompactBlockProcessor.ProcessorInfo$<init>(kotlin.Int, kotlin.Int, kotlin.Int, kotlin.ranges.IntRange, kotlin.ranges.IntRange)/lastDownloadRange">lastDownloadRange</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.ranges/-int-range/index.html"><span class="identifier">IntRange</span></a>&nbsp;<span class="symbol">=</span>&nbsp;0..-1<span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.block.CompactBlockProcessor.ProcessorInfo$<init>(kotlin.Int, kotlin.Int, kotlin.Int, kotlin.ranges.IntRange, kotlin.ranges.IntRange)/lastScanRange">lastScanRange</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.ranges/-int-range/index.html"><span class="identifier">IntRange</span></a>&nbsp;<span class="symbol">=</span>&nbsp;0..-1<span class="symbol">)</span></code>
+<p>Data class for holding detailed information about the processor.</p>
+<h3>Parameters</h3>
+<p><a name="networkBlockHeight"></a>
+<code>networkBlockHeight</code> - the latest block available to lightwalletd that may or may not be
+downloaded by this wallet yet.</p>
+<p><a name="lastScannedHeight"></a>
+<code>lastScannedHeight</code> - the height up to which the wallet last scanned. This determines
+where the next scan will begin.</p>
+<p><a name="lastDownloadedHeight"></a>
+<code>lastDownloadedHeight</code> - the last compact block that was successfully downloaded.</p>
+<p><a name="lastDownloadRange"></a>
+<code>lastDownloadRange</code> - inclusive range to download. Meaning, if the range is 10..10,
+then we will download exactly block 10. If the range is 11..10, then we want to download
+block 11 but can't.</p>
+<p><a name="lastScanRange"></a>
+<code>lastScanRange</code> - inclusive range to scan.</p>
+</BODY>
+</HTML>

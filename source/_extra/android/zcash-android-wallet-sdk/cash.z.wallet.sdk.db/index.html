@@ -1,0 +1,100 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>cash.z.wallet.sdk.db - zcash-android-wallet-sdk</title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">zcash-android-wallet-sdk</a>&nbsp;/&nbsp;<a href="./index.html">cash.z.wallet.sdk.db</a><br/>
+<br/>
+<h2>Package cash.z.wallet.sdk.db</h2>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-block-dao/index.html">BlockDao</a></h4>
+</td>
+<td>
+<p>The data access object for blocks, used for determining the last scanned height.</p>
+<code><span class="keyword">interface </span><span class="identifier">BlockDao</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-compact-block-dao/index.html">CompactBlockDao</a></h4>
+</td>
+<td>
+<p>Data access object for compact blocks in the "Cache DB."</p>
+<code><span class="keyword">interface </span><span class="identifier">CompactBlockDao</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-compact-block-db/index.html">CompactBlockDb</a></h4>
+</td>
+<td>
+<p>The "Cache DB", serving as a cache of compact blocks, waiting to be processed. This will contain
+the entire blockchain, from the birthdate of the wallet, forward. The <a href="#">CompactBlockProcessor</a>
+will copy blocks from this database, as they are scanned. In the future, those blocks can be
+deleted because they are no longer needed. Currently, this efficiency has not been implemented.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">CompactBlockDb</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">RoomDatabase</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-derived-data-db/index.html">DerivedDataDb</a></h4>
+</td>
+<td>
+<p>The "Data DB," where all data derived from the compact blocks is stored. Most importantly, this
+database contains transaction information and can be queried for the current balance. The
+"blocks" table contains a copy of everything that has been scanned. In the future, that table can
+be truncated up to the last scanned block, for storage efficiency. Wallets should only read from,
+but never write to, this database.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">DerivedDataDb</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">RoomDatabase</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-pending-transaction-dao/index.html">PendingTransactionDao</a></h4>
+</td>
+<td>
+<p>Data access object providing crud for pending transactions.</p>
+<code><span class="keyword">interface </span><span class="identifier">PendingTransactionDao</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-pending-transaction-db/index.html">PendingTransactionDb</a></h4>
+</td>
+<td>
+<p>Database for pending transaction information. Unlike with the "Data DB," the wallet is free to
+write to this database. In a way, this almost serves as a local mempool for all transactions
+initiated by this wallet. Currently, the data necessary to support expired transactions is there
+but it is not being leveraged.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">PendingTransactionDb</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">RoomDatabase</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-received-dao/index.html">ReceivedDao</a></h4>
+</td>
+<td>
+<p>The data access object for notes, used for determining whether transactions exist.</p>
+<code><span class="keyword">interface </span><span class="identifier">ReceivedDao</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-sent-dao/index.html">SentDao</a></h4>
+</td>
+<td>
+<p>The data access object for sent notes, used for determining whether outbound transactions exist.</p>
+<code><span class="keyword">interface </span><span class="identifier">SentDao</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-transaction-dao/index.html">TransactionDao</a></h4>
+</td>
+<td>
+<p>The data access object for transactions, used for querying all transaction information, including
+whether transactions are mined.</p>
+<code><span class="keyword">interface </span><span class="identifier">TransactionDao</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

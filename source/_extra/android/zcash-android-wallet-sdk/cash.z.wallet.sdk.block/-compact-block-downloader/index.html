@@ -1,0 +1,100 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>CompactBlockDownloader - zcash-android-wallet-sdk</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">zcash-android-wallet-sdk</a>&nbsp;/&nbsp;<a href="../index.html">cash.z.wallet.sdk.block</a>&nbsp;/&nbsp;<a href="./index.html">CompactBlockDownloader</a><br/>
+<br/>
+<h1>CompactBlockDownloader</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">CompactBlockDownloader</span></code>
+<p>Serves as a source of compact blocks received from the light wallet server. Once started, it will use the given
+lightwallet service to request all the appropriate blocks and compact block store to persist them. By delegating to
+these dependencies, the downloader remains agnostic to the particular implementation of how to retrieve and store
+data; although, by default the SDK uses gRPC and SQL.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<p>Serves as a source of compact blocks received from the light wallet server. Once started, it will use the given
+lightwallet service to request all the appropriate blocks and compact block store to persist them. By delegating to
+these dependencies, the downloader remains agnostic to the particular implementation of how to retrieve and store
+data; although, by default the SDK uses gRPC and SQL.</p>
+<code><span class="identifier">CompactBlockDownloader</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.block.CompactBlockDownloader$<init>(cash.z.wallet.sdk.service.LightWalletService, cash.z.wallet.sdk.block.CompactBlockStore)/lightwalletService">lightwalletService</span><span class="symbol">:</span>&nbsp;<a href="../../cash.z.wallet.sdk.service/-light-wallet-service/index.html"><span class="identifier">LightWalletService</span></a><span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.block.CompactBlockDownloader$<init>(cash.z.wallet.sdk.service.LightWalletService, cash.z.wallet.sdk.block.CompactBlockStore)/compactBlockStore">compactBlockStore</span><span class="symbol">:</span>&nbsp;<a href="../-compact-block-store/index.html"><span class="identifier">CompactBlockStore</span></a><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="compact-block-store.html">compactBlockStore</a></h4>
+</td>
+<td>
+<p>responsible for persisting the compact blocks that are received</p>
+<code><span class="keyword">val </span><span class="identifier">compactBlockStore</span><span class="symbol">: </span><a href="../-compact-block-store/index.html"><span class="identifier">CompactBlockStore</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="lightwallet-service.html">lightwalletService</a></h4>
+</td>
+<td>
+<p>the service used for requesting compact blocks</p>
+<code><span class="keyword">val </span><span class="identifier">lightwalletService</span><span class="symbol">: </span><a href="../../cash.z.wallet.sdk.service/-light-wallet-service/index.html"><span class="identifier">LightWalletService</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="download-block-range.html">downloadBlockRange</a></h4>
+</td>
+<td>
+<p>Requests the given range of blocks from the lightwalletService and then persists them to the
+compactBlockStore.</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">downloadBlockRange</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.block.CompactBlockDownloader$downloadBlockRange(kotlin.ranges.IntRange)/heightRange">heightRange</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.ranges/-int-range/index.html"><span class="identifier">IntRange</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-last-downloaded-height.html">getLastDownloadedHeight</a></h4>
+</td>
+<td>
+<p>Return the latest block height that has been persisted into the <a href="../-compact-block-store/index.html">CompactBlockStore</a>.</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">getLastDownloadedHeight</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-latest-block-height.html">getLatestBlockHeight</a></h4>
+</td>
+<td>
+<p>Return the latest block height known by the lightwalletService.</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">getLatestBlockHeight</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="rewind-to-height.html">rewindToHeight</a></h4>
+</td>
+<td>
+<p>Rewind the storage to the given height, usually to handle reorgs.</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">rewindToHeight</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.block.CompactBlockDownloader$rewindToHeight(kotlin.Int)/height">height</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="stop.html">stop</a></h4>
+</td>
+<td>
+<p>Stop this downloader and cleanup any resources being used.</p>
+<code><span class="keyword">fun </span><span class="identifier">stop</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

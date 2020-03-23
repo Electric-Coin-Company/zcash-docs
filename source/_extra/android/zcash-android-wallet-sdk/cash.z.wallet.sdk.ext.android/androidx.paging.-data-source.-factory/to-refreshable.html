@@ -1,0 +1,19 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>toRefreshable - zcash-android-wallet-sdk</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">zcash-android-wallet-sdk</a>&nbsp;/&nbsp;<a href="../index.html">cash.z.wallet.sdk.ext.android</a>&nbsp;/&nbsp;<a href="index.html">androidx.paging.DataSource.Factory</a>&nbsp;/&nbsp;<a href="./to-refreshable.html">toRefreshable</a><br/>
+<br/>
+<h1>toRefreshable</h1>
+<a name="cash.z.wallet.sdk.ext.android$toRefreshable(androidx.paging.DataSource.Factory((cash.z.wallet.sdk.ext.android.toRefreshable.Key, cash.z.wallet.sdk.ext.android.toRefreshable.Value)))"></a>
+<code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">Key</span><span class="symbol">, </span><span class="identifier">Value</span><span class="symbol">&gt;</span> <span class="identifier">Factory</span><span class="symbol">&lt;</span><span class="identifier">Key</span><span class="symbol">,</span>&nbsp;<span class="identifier">Value</span><span class="symbol">&gt;</span><span class="symbol">.</span><span class="identifier">toRefreshable</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-refreshable-data-source-factory/index.html"><span class="identifier">RefreshableDataSourceFactory</span></a><span class="symbol">&lt;</span><span class="identifier">Key</span><span class="symbol">,</span>&nbsp;<span class="identifier">Value</span><span class="symbol">&gt;</span></code>
+<p>Allows another component to call invalidate on the most recently created datasource. Although it
+is expected that a DataSource will invalidate itself, there are times where external components
+have modified the underlying data and thereby become responsible for invalidation. In our case,
+there is more than one process updating the database. So the other process must invalidate the
+data after an update in order to trigger refreshes all the way up the stack.</p>
+</BODY>
+</HTML>

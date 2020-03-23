@@ -1,0 +1,25 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>convertZatoshiToZecString - zcash-android-wallet-sdk</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">zcash-android-wallet-sdk</a>&nbsp;/&nbsp;<a href="../index.html">cash.z.wallet.sdk.ext</a>&nbsp;/&nbsp;<a href="index.html">kotlin.Long</a>&nbsp;/&nbsp;<a href="./convert-zatoshi-to-zec-string.html">convertZatoshiToZecString</a><br/>
+<br/>
+<h1>convertZatoshiToZecString</h1>
+<a name="cash.z.wallet.sdk.ext$convertZatoshiToZecString(kotlin.Long, kotlin.Int, kotlin.Int)"></a>
+<code><span class="keyword">fun </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a><span class="symbol">?</span><span class="symbol">.</span><span class="identifier">convertZatoshiToZecString</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.ext$convertZatoshiToZecString(kotlin.Long, kotlin.Int, kotlin.Int)/maxDecimals">maxDecimals</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a>&nbsp;<span class="symbol">=</span>&nbsp;ZEC_FORMATTER.maximumFractionDigits<span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.ext$convertZatoshiToZecString(kotlin.Long, kotlin.Int, kotlin.Int)/minDecimals">minDecimals</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a>&nbsp;<span class="symbol">=</span>&nbsp;ZEC_FORMATTER.minimumFractionDigits<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>Format a Zatoshi value into ZEC with the given number of digits, represented as a string.
+Start with Zatoshi -&gt; End with ZEC.</p>
+<h3>Parameters</h3>
+<p><a name="maxDecimals"></a>
+<code>maxDecimals</code> - the number of decimal places to use in the format. Default is 6 because ZEC is
+better than USD.</p>
+<p><a name="minDecimals"></a>
+<code>minDecimals</code> - the minimum number of digits to allow to the right of the decimal.</p>
+<p><strong>Return</strong><br/>
+this Zatoshi value represented as ZEC, in a string with at least <a href="convert-zatoshi-to-zec-string.html#cash.z.wallet.sdk.ext$convertZatoshiToZecString(kotlin.Long, kotlin.Int, kotlin.Int)/minDecimals">minDecimals</a> and at
+most <a href="convert-zatoshi-to-zec-string.html#cash.z.wallet.sdk.ext$convertZatoshiToZecString(kotlin.Long, kotlin.Int, kotlin.Int)/maxDecimals">maxDecimals</a></p>
+</BODY>
+</HTML>

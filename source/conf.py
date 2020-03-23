@@ -100,6 +100,8 @@ html_static_path = ['nstatic']
 #
 # html_sidebars = {}
 
+html_extra_path = ['_extra']
+
 #local_dirs = ['locale/']
 #gettext_compact = False
 

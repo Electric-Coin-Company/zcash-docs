@@ -1,0 +1,24 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>SdkSynchronizer.validateAddress - zcash-android-wallet-sdk</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">zcash-android-wallet-sdk</a>&nbsp;/&nbsp;<a href="../index.html">cash.z.wallet.sdk</a>&nbsp;/&nbsp;<a href="index.html">SdkSynchronizer</a>&nbsp;/&nbsp;<a href="./validate-address.html">validateAddress</a><br/>
+<br/>
+<h1>validateAddress</h1>
+<a name="cash.z.wallet.sdk.SdkSynchronizer$validateAddress(kotlin.String)"></a>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">validateAddress</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.SdkSynchronizer$validateAddress(kotlin.String)/address">address</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">AddressType</span></code>
+<p>Validates the given address, returning information about why it is invalid. This is a
+convenience method that combines the behavior of <a href="../-synchronizer/is-valid-shielded-addr.html">isValidShieldedAddr</a> and
+<a href="../-synchronizer/is-valid-transparent-addr.html">isValidTransparentAddr</a> into one call so that the developer doesn't have to worry about
+handling the exceptions that they throw. Rather, exceptions are converted to
+<a href="../-synchronizer/-address-type/-invalid/index.html">AddressType.Invalid</a> which has a <code>reason</code> property describing why it is invalid.</p>
+<h3>Parameters</h3>
+<p><a name="address"></a>
+<code>address</code> - the address to validate.</p>
+<p><strong>Return</strong><br/>
+an instance of <a href="../-synchronizer/-address-type/index.html">AddressType</a> providing validation info regarding the given address.</p>
+</BODY>
+</HTML>

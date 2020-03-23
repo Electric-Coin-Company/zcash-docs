@@ -1,0 +1,43 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>cash.z.wallet.sdk.ext.kotlinx.coroutines.flow.Flow - zcash-android-wallet-sdk</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">zcash-android-wallet-sdk</a>&nbsp;/&nbsp;<a href="../index.html">cash.z.wallet.sdk.ext</a>&nbsp;/&nbsp;<a href="./index.html">kotlinx.coroutines.flow.Flow</a><br/>
+<br/>
+<h3>Extensions for kotlinx.coroutines.flow.Flow</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="collect-with.html">collectWith</a></h4>
+</td>
+<td>
+<p>Utility for removing some of the boilerplate around Synchronizers and working with flows. Allows
+for collecting all the elements of a flow with a given scope this is useful when you want to
+launch multiple things in the same scope at once. Intuitively a developer may try:</p>
+<code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span> <span class="identifier">Flow</span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">.</span><span class="identifier">collectWith</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.ext$collectWith(kotlinx.coroutines.flow.Flow((cash.z.wallet.sdk.ext.collectWith.T)), kotlinx.coroutines.CoroutineScope, kotlin.Function1((cash.z.wallet.sdk.ext.collectWith.T, kotlin.Unit)))/scope">scope</span><span class="symbol">:</span>&nbsp;<span class="identifier">CoroutineScope</span><span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.ext$collectWith(kotlinx.coroutines.flow.Flow((cash.z.wallet.sdk.ext.collectWith.T)), kotlinx.coroutines.CoroutineScope, kotlin.Function1((cash.z.wallet.sdk.ext.collectWith.T, kotlin.Unit)))/block">block</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><span class="identifier">T</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="on-first.html">onFirst</a></h4>
+</td>
+<td>
+<p>Utility for performing the given action on the first emission of a flow.</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">, </span><span class="identifier">S</span><span class="symbol">&gt;</span> <span class="identifier">Flow</span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">.</span><span class="identifier">onFirst</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.ext$onFirst(kotlinx.coroutines.flow.Flow((cash.z.wallet.sdk.ext.onFirst.T)), kotlin.coroutines.SuspendFunction1((cash.z.wallet.sdk.ext.onFirst.T, cash.z.wallet.sdk.ext.onFirst.S)))/block">block</span><span class="symbol">:</span>&nbsp;<span class="keyword">suspend </span><span class="symbol">(</span><span class="identifier">T</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<span class="identifier">S</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="on-first-with.html">onFirstWith</a></h4>
+</td>
+<td>
+<p>Utility for performing the given action on the first emission of a flow and running that action
+in the given scope.</p>
+<code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">, </span><span class="identifier">S</span><span class="symbol">&gt;</span> <span class="identifier">Flow</span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">.</span><span class="identifier">onFirstWith</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.ext$onFirstWith(kotlinx.coroutines.flow.Flow((cash.z.wallet.sdk.ext.onFirstWith.T)), kotlinx.coroutines.CoroutineScope, kotlin.coroutines.SuspendFunction1((cash.z.wallet.sdk.ext.onFirstWith.T, cash.z.wallet.sdk.ext.onFirstWith.S)))/scope">scope</span><span class="symbol">:</span>&nbsp;<span class="identifier">CoroutineScope</span><span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.ext$onFirstWith(kotlinx.coroutines.flow.Flow((cash.z.wallet.sdk.ext.onFirstWith.T)), kotlinx.coroutines.CoroutineScope, kotlin.coroutines.SuspendFunction1((cash.z.wallet.sdk.ext.onFirstWith.T, cash.z.wallet.sdk.ext.onFirstWith.S)))/block">block</span><span class="symbol">:</span>&nbsp;<span class="keyword">suspend </span><span class="symbol">(</span><span class="identifier">T</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<span class="identifier">S</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

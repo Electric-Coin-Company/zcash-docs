@@ -1,0 +1,73 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>TransactionDao - zcash-android-wallet-sdk</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">zcash-android-wallet-sdk</a>&nbsp;/&nbsp;<a href="../index.html">cash.z.wallet.sdk.db</a>&nbsp;/&nbsp;<a href="./index.html">TransactionDao</a><br/>
+<br/>
+<h1>TransactionDao</h1>
+<code><span class="keyword">interface </span><span class="identifier">TransactionDao</span></code>
+<p>The data access object for transactions, used for querying all transaction information, including
+whether transactions are mined.</p>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="count.html">count</a></h4>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">count</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="count-unmined.html">countUnmined</a></h4>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">countUnmined</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="find-encoded-transaction-by-id.html">findEncodedTransactionById</a></h4>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">findEncodedTransactionById</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.db.TransactionDao$findEncodedTransactionById(kotlin.Long)/id">id</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../cash.z.wallet.sdk.entity/-encoded-transaction/index.html"><span class="identifier">EncodedTransaction</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="find-mined-height.html">findMinedHeight</a></h4>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">findMinedHeight</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.db.TransactionDao$findMinedHeight(kotlin.ByteArray)/rawTransactionId">rawTransactionId</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html"><span class="identifier">ByteArray</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-all-transactions.html">getAllTransactions</a></h4>
+</td>
+<td>
+<p>Query all transactions, joining outbound and inbound transactions into the same table.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">getAllTransactions</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.db.TransactionDao$getAllTransactions(kotlin.Int)/limit">limit</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a>&nbsp;<span class="symbol">=</span>&nbsp;Int.MAX_VALUE<span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Factory</span><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">,</span>&nbsp;<a href="../../cash.z.wallet.sdk.entity/-confirmed-transaction/index.html"><span class="identifier">ConfirmedTransaction</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-received-transactions.html">getReceivedTransactions</a></h4>
+</td>
+<td>
+<p>Query transactions, aggregating information on send/receive, sorted carefully so the newest
+data is at the top and the oldest transactions are at the bottom.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">getReceivedTransactions</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.db.TransactionDao$getReceivedTransactions(kotlin.Int)/limit">limit</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a>&nbsp;<span class="symbol">=</span>&nbsp;Int.MAX_VALUE<span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Factory</span><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">,</span>&nbsp;<a href="../../cash.z.wallet.sdk.entity/-confirmed-transaction/index.html"><span class="identifier">ConfirmedTransaction</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-sent-transactions.html">getSentTransactions</a></h4>
+</td>
+<td>
+<p>Query sent transactions that have been mined, sorted so the newest data is at the top.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">getSentTransactions</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.db.TransactionDao$getSentTransactions(kotlin.Int)/limit">limit</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a>&nbsp;<span class="symbol">=</span>&nbsp;Int.MAX_VALUE<span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Factory</span><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">,</span>&nbsp;<a href="../../cash.z.wallet.sdk.entity/-confirmed-transaction/index.html"><span class="identifier">ConfirmedTransaction</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

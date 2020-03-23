@@ -1,0 +1,22 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>PersistentTransactionManager.monitorById - zcash-android-wallet-sdk</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">zcash-android-wallet-sdk</a>&nbsp;/&nbsp;<a href="../index.html">cash.z.wallet.sdk.transaction</a>&nbsp;/&nbsp;<a href="index.html">PersistentTransactionManager</a>&nbsp;/&nbsp;<a href="./monitor-by-id.html">monitorById</a><br/>
+<br/>
+<h1>monitorById</h1>
+<a name="cash.z.wallet.sdk.transaction.PersistentTransactionManager$monitorById(kotlin.Long)"></a>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">monitorById</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.transaction.PersistentTransactionManager$monitorById(kotlin.Long)/id">id</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Flow</span><span class="symbol">&lt;</span><a href="../../cash.z.wallet.sdk.entity/-pending-transaction/index.html"><span class="identifier">PendingTransaction</span></a><span class="symbol">&gt;</span></code>
+<p>Generate a flow of information about the given id where a new pending transaction is emitted
+every time its state changes.</p>
+<h3>Parameters</h3>
+<p><a name="id"></a>
+<code>id</code> - the id to monitor.</p>
+<p><strong>Return</strong><br/>
+a flow of pending transactions that are emitted anytime the transaction associated
+withh the given id changes.</p>
+</BODY>
+</HTML>

@@ -1,0 +1,21 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>PagedTransactionRepository.findMinedHeight - zcash-android-wallet-sdk</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">zcash-android-wallet-sdk</a>&nbsp;/&nbsp;<a href="../index.html">cash.z.wallet.sdk.transaction</a>&nbsp;/&nbsp;<a href="index.html">PagedTransactionRepository</a>&nbsp;/&nbsp;<a href="./find-mined-height.html">findMinedHeight</a><br/>
+<br/>
+<h1>findMinedHeight</h1>
+<a name="cash.z.wallet.sdk.transaction.PagedTransactionRepository$findMinedHeight(kotlin.ByteArray)"></a>
+<code><span class="keyword">open</span> <span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">findMinedHeight</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.transaction.PagedTransactionRepository$findMinedHeight(kotlin.ByteArray)/rawTransactionId">rawTransactionId</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html"><span class="identifier">ByteArray</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">?</span></code>
+<p>Find the mined height that matches the given raw tx_id in bytes. This is useful for matching
+a pending transaction with one that we've decrypted from the blockchain.</p>
+<h3>Parameters</h3>
+<p><a name="rawTransactionId"></a>
+<code>rawTransactionId</code> - the id of the transaction to find.</p>
+<p><strong>Return</strong><br/>
+the mined height of the given transaction, if it is known to this wallet.</p>
+</BODY>
+</HTML>

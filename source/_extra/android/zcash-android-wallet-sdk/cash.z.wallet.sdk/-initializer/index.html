@@ -1,0 +1,225 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Initializer - zcash-android-wallet-sdk</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">zcash-android-wallet-sdk</a>&nbsp;/&nbsp;<a href="../index.html">cash.z.wallet.sdk</a>&nbsp;/&nbsp;<a href="./index.html">Initializer</a><br/>
+<br/>
+<h1>Initializer</h1>
+<code><span class="keyword">class </span><span class="identifier">Initializer</span></code>
+<p>Responsible for initialization, which can be considered as setup that must happen before
+synchronizing begins. This begins with one of three actions, a call to either <a href="new.html">new</a>, <a href="import.html">import</a> or
+<a href="open.html">open</a>, where the last option is the most common case--when a user is opening a wallet they have
+used before on this device.</p>
+<h3>Parameters</h3>
+<p><a name="appContext"></a>
+<code>appContext</code> - the application context, used to extract the storage paths for the databases
+and param files. A reference to the context is not held beyond initialization.</p>
+<p><a name="host"></a>
+<code>host</code> - the host that the synchronizer should use.</p>
+<p><a name="port"></a>
+<code>port</code> - the port that the synchronizer should use when connecting to the host.</p>
+<p><a name="alias"></a>
+<code>alias</code> - the alias to use for this synchronizer. Think of it as a unique name that allows
+multiple synchronizers to function in the same app. The alias is mapped to database names for the
+cache and data DBs. This value is optional and is usually not required because most apps only
+need one synchronizer.</p>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-default-birthday-store/index.html">DefaultBirthdayStore</a></h4>
+</td>
+<td>
+<p>Default implementation of the <a href="-wallet-birthday-store/index.html">WalletBirthdayStore</a> interface that loads checkpoints from the
+assets directory, in JSON format and stores the current birthday in shared preferences.</p>
+<code><span class="keyword">class </span><span class="identifier">DefaultBirthdayStore</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">WalletBirthdayStore</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-wallet-birthday/index.html">WalletBirthday</a></h4>
+</td>
+<td>
+<p>Model object for holding a wallet birthday. It is only used by this class.</p>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">WalletBirthday</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-wallet-birthday-store/index.html">WalletBirthdayStore</a></h4>
+</td>
+<td>
+<p>Interface for classes that can handle birthday storage. This makes it possible to bridge into
+existing storage logic. Instances of this interface can also be used as property delegates,
+which enables the syntax <code>val birthday by birthdayStore</code></p>
+<code><span class="keyword">interface </span><span class="identifier">WalletBirthdayStore</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.properties/-read-write-property/index.html"><span class="identifier">ReadWriteProperty</span></a><span class="symbol">&lt;</span><span class="identifier">R</span><span class="symbol">,</span>&nbsp;<span class="identifier">WalletBirthday</span><span class="symbol">&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<p>Responsible for initialization, which can be considered as setup that must happen before
+synchronizing begins. This begins with one of three actions, a call to either <a href="new.html">new</a>, <a href="import.html">import</a> or
+<a href="open.html">open</a>, where the last option is the most common case--when a user is opening a wallet they have
+used before on this device.</p>
+<code><span class="identifier">Initializer</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.Initializer$<init>(android.content.Context, kotlin.String, kotlin.Int, kotlin.String)/appContext">appContext</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/content/Context.html"><span class="identifier">Context</span></a><span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.Initializer$<init>(android.content.Context, kotlin.String, kotlin.Int, kotlin.String)/host">host</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a>&nbsp;<span class="symbol">=</span>&nbsp;ZcashSdk.DEFAULT_LIGHTWALLETD_HOST<span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.Initializer$<init>(android.content.Context, kotlin.String, kotlin.Int, kotlin.String)/port">port</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a>&nbsp;<span class="symbol">=</span>&nbsp;ZcashSdk.DEFAULT_LIGHTWALLETD_PORT<span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.Initializer$<init>(android.content.Context, kotlin.String, kotlin.Int, kotlin.String)/alias">alias</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a>&nbsp;<span class="symbol">=</span>&nbsp;ZcashSdk.DEFAULT_DB_NAME_PREFIX<span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="birthday.html">birthday</a></h4>
+</td>
+<td>
+<p>The birthday that was ultimately used for initializing the accounts.</p>
+<code><span class="keyword">lateinit</span> <span class="keyword">var </span><span class="identifier">birthday</span><span class="symbol">: </span><span class="identifier">WalletBirthday</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="host.html">host</a></h4>
+</td>
+<td>
+<p>the host that the synchronizer should use.</p>
+<code><span class="keyword">val </span><span class="identifier">host</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="is-initialized.html">isInitialized</a></h4>
+</td>
+<td>
+<p>Returns true when either 'open', 'new' or 'import' have already been called. Each of those
+functions calls <code>initRustLibrary</code> before returning. The entire point of the initializer is to
+setup everything necessary for the Synchronizer to function, which mainly boils down to
+loading the rust backend.</p>
+<code><span class="keyword">val </span><span class="identifier">isInitialized</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="port.html">port</a></h4>
+</td>
+<td>
+<p>the port that the synchronizer should use when connecting to the host.</p>
+<code><span class="keyword">val </span><span class="identifier">port</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="rust-backend.html">rustBackend</a></h4>
+</td>
+<td>
+<p>A wrapped version of <a href="../../cash.z.wallet.sdk.jni/-rust-backend-welding/index.html">cash.z.wallet.sdk.jni.RustBackendWelding</a> that will be passed to the
+SDK when it is constructed. It provides access to all Librustzcash features and is configured
+based on this initializer.</p>
+<code><span class="keyword">lateinit</span> <span class="keyword">var </span><span class="identifier">rustBackend</span><span class="symbol">: </span><a href="../../cash.z.wallet.sdk.jni/-rust-backend/index.html"><span class="identifier">RustBackend</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="clear.html">clear</a></h4>
+</td>
+<td>
+<p>Delete all local data related to this wallet, as though the wallet was never created on this
+device. Simply put, this call deletes the "cache db" and "data db."</p>
+<code><span class="keyword">fun </span><span class="identifier">clear</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="derive-address.html">deriveAddress</a></h4>
+</td>
+<td>
+<p>Given a seed and account index, return the associated address.</p>
+<code><span class="keyword">fun </span><span class="identifier">deriveAddress</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.Initializer$deriveAddress(kotlin.ByteArray, kotlin.Int)/seed">seed</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html"><span class="identifier">ByteArray</span></a><span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.Initializer$deriveAddress(kotlin.ByteArray, kotlin.Int)/accountIndex">accountIndex</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a>&nbsp;<span class="symbol">=</span>&nbsp;0<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>Given a viewing key string, return the associated address.</p>
+<code><span class="keyword">fun </span><span class="identifier">deriveAddress</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.Initializer$deriveAddress(kotlin.String)/viewingKey">viewingKey</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="derive-spending-keys.html">deriveSpendingKeys</a></h4>
+</td>
+<td>
+<p>Given a seed and a number of accounts, return the associated spending keys. These keys can
+be used to derive the viewing keys.</p>
+<code><span class="keyword">fun </span><span class="identifier">deriveSpendingKeys</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.Initializer$deriveSpendingKeys(kotlin.ByteArray, kotlin.Int)/seed">seed</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html"><span class="identifier">ByteArray</span></a><span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.Initializer$deriveSpendingKeys(kotlin.ByteArray, kotlin.Int)/numberOfAccounts">numberOfAccounts</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a>&nbsp;<span class="symbol">=</span>&nbsp;1<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html"><span class="identifier">Array</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="derive-viewing-key.html">deriveViewingKey</a></h4>
+</td>
+<td>
+<p>Given a spending key, return the associated viewing key.</p>
+<code><span class="keyword">fun </span><span class="identifier">deriveViewingKey</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.Initializer$deriveViewingKey(kotlin.String)/spendingKey">spendingKey</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="derive-viewing-keys.html">deriveViewingKeys</a></h4>
+</td>
+<td>
+<p>Given a seed and a number of accounts, return the associated viewing keys.</p>
+<code><span class="keyword">fun </span><span class="identifier">deriveViewingKeys</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.Initializer$deriveViewingKeys(kotlin.ByteArray, kotlin.Int)/seed">seed</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html"><span class="identifier">ByteArray</span></a><span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.Initializer$deriveViewingKeys(kotlin.ByteArray, kotlin.Int)/numberOfAccounts">numberOfAccounts</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a>&nbsp;<span class="symbol">=</span>&nbsp;1<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html"><span class="identifier">Array</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="import.html">import</a></h4>
+</td>
+<td>
+<p>Initialize a new wallet with the imported seed and birthday. It creates the required database
+tables and loads and configures the <a href="rust-backend.html">rustBackend</a> property for use by all other components.</p>
+<code><span class="keyword">fun </span><span class="identifier">import</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.Initializer$import(kotlin.ByteArray, cash.z.wallet.sdk.Initializer.WalletBirthday, kotlin.Boolean, kotlin.Boolean)/seed">seed</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html"><span class="identifier">ByteArray</span></a><span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.Initializer$import(kotlin.ByteArray, cash.z.wallet.sdk.Initializer.WalletBirthday, kotlin.Boolean, kotlin.Boolean)/previousWalletBirthday">previousWalletBirthday</span><span class="symbol">:</span>&nbsp;<span class="identifier">WalletBirthday</span><span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.Initializer$import(kotlin.ByteArray, cash.z.wallet.sdk.Initializer.WalletBirthday, kotlin.Boolean, kotlin.Boolean)/clearCacheDb">clearCacheDb</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a>&nbsp;<span class="symbol">=</span>&nbsp;false<span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.Initializer$import(kotlin.ByteArray, cash.z.wallet.sdk.Initializer.WalletBirthday, kotlin.Boolean, kotlin.Boolean)/clearDataDb">clearDataDb</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a>&nbsp;<span class="symbol">=</span>&nbsp;false<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html"><span class="identifier">Array</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="new.html">new</a></h4>
+</td>
+<td>
+<p>Initialize a new wallet with the given seed and birthday. It creates the required database
+tables and loads and configures the <a href="rust-backend.html">rustBackend</a> property for use by all other components.</p>
+<code><span class="keyword">fun </span><span class="identifier">new</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.Initializer$new(kotlin.ByteArray, cash.z.wallet.sdk.Initializer.WalletBirthday, kotlin.Int, kotlin.Boolean, kotlin.Boolean)/seed">seed</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html"><span class="identifier">ByteArray</span></a><span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.Initializer$new(kotlin.ByteArray, cash.z.wallet.sdk.Initializer.WalletBirthday, kotlin.Int, kotlin.Boolean, kotlin.Boolean)/newWalletBirthday">newWalletBirthday</span><span class="symbol">:</span>&nbsp;<span class="identifier">WalletBirthday</span><span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.Initializer$new(kotlin.ByteArray, cash.z.wallet.sdk.Initializer.WalletBirthday, kotlin.Int, kotlin.Boolean, kotlin.Boolean)/numberOfAccounts">numberOfAccounts</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a>&nbsp;<span class="symbol">=</span>&nbsp;1<span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.Initializer$new(kotlin.ByteArray, cash.z.wallet.sdk.Initializer.WalletBirthday, kotlin.Int, kotlin.Boolean, kotlin.Boolean)/clearCacheDb">clearCacheDb</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a>&nbsp;<span class="symbol">=</span>&nbsp;false<span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.Initializer$new(kotlin.ByteArray, cash.z.wallet.sdk.Initializer.WalletBirthday, kotlin.Int, kotlin.Boolean, kotlin.Boolean)/clearDataDb">clearDataDb</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a>&nbsp;<span class="symbol">=</span>&nbsp;false<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html"><span class="identifier">Array</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="open.html">open</a></h4>
+</td>
+<td>
+<p>Loads the rust library and previously used birthday for use by all other components. This is
+the most common use case for the initializer--reopening a wallet that was previously created.</p>
+<code><span class="keyword">fun </span><span class="identifier">open</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.Initializer$open(cash.z.wallet.sdk.Initializer.WalletBirthday)/birthday">birthday</span><span class="symbol">:</span>&nbsp;<span class="identifier">WalletBirthday</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">Initializer</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Companion Object Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="cache-db-path.html">cacheDbPath</a></h4>
+</td>
+<td>
+<p>Returns the path to the cache database that would correspond to the given alias.</p>
+<code><span class="keyword">fun </span><span class="identifier">cacheDbPath</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.Initializer.Companion$cacheDbPath(android.content.Context, kotlin.String)/appContext">appContext</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/content/Context.html"><span class="identifier">Context</span></a><span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.Initializer.Companion$cacheDbPath(android.content.Context, kotlin.String)/alias">alias</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="data-db-path.html">dataDbPath</a></h4>
+</td>
+<td>
+<p>Returns the path to the data database that would correspond to the given alias.</p>
+<code><span class="keyword">fun </span><span class="identifier">dataDbPath</span><span class="symbol">(</span><span class="identifier" id="cash.z.wallet.sdk.Initializer.Companion$dataDbPath(android.content.Context, kotlin.String)/appContext">appContext</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/content/Context.html"><span class="identifier">Context</span></a><span class="symbol">, </span><span class="identifier" id="cash.z.wallet.sdk.Initializer.Companion$dataDbPath(android.content.Context, kotlin.String)/alias">alias</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>
