@@ -1,9 +1,9 @@
-.. _shielded_support:
+.. _lightclient_support:
 
-Shielded Support Resources
+Light Client Support Resources
 ==========================
 
-Everything you need to integrate and support zcash shielded addresses into your light wallet.
+Everything you need to integrate and support zcash light client wallets.
 
 .. image:: images/shielded-support.png
 
