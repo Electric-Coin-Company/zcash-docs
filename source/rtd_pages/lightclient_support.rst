@@ -1,9 +1,9 @@
-.. _shielded_support:
+.. _lightclient_support:
 
-Shielded Support Resources
+Light Client Support Resources
 ==========================
 
-Everything you need to integrate and support zcash shielded addresses into your light wallet.
+Everything you need to integrate and support zcash light client wallets.
 
 .. image:: images/shielded-support.png
 
@@ -18,9 +18,9 @@ A stateless server that serves light clients with blockchain information. It fet
 
 **Quick info**
 
-* Parellizeable, stateless, and containerized. 
-* Can run virtualized on the cloud (EC2, GCP, AZURE, Docker, etc.)
-* Not using loadbalancers, orchestrators, schedulers (yet)
+* Parallelize-able, stateless, and containerized
+* Can run virtually on the cloud (EC2, GCP, AZURE, Docker, etc.)
+* Not using load balancers, orchestrators, schedulers (yet)
 * Metrics, stress tests, and testing done (ask us)
 
 Android 
@@ -36,8 +36,8 @@ We maintain a SDK that allows for wallet functionalities (address management, se
  
 **Quick info**
 
-* Native Android SDK and app, written in Kotlin 
-* Architecture: targeting ARM64, ARMv7 and x86. 
+* Native Android SDK and app, written in Kotlin
+* Architecture: targeting ARM64, ARMv7 and x86
 * APIs: We support API 16+ but we optimize for API versions 21+
 * `Android SDK Threat Model <https://github.com/zcash/zcash-android-wallet-sdk/blob/master/docs/ThreatModel.md>`_
 
@@ -53,9 +53,9 @@ We maintain a SDK that allows for wallet functionalities (address management, se
 
 **Quick info**
 
-* Native iOS SDK and app, written in Swift 
-* Started building on this later than Android. Less mature but working towards parity 
-* Targeting the latest (past two 2 years) iPhones 
+* Native iOS SDK and app, written in Swift
+* Less mature then Android SDK but working towards parity
+* Targeting the latest (past two 2 years) iPhones
 
 
 WASM 
