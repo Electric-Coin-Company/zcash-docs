@@ -12,7 +12,7 @@ ported to Zcash). It implements the `Zcash protocol <https://github.com/zcash/zi
 and a few other distinct features.
 
     - Bitcoin Core: https://github.com/bitcoin/bitcoin
-    - Zcash Protocol: https://github.com/zcash/zips/blob/master/protocol/protocol.pdf
+    - Zcash Protocol: https://zips.z.cash/protocol/protocol.pdf
 
 Zcash Github Workflow
 ---------------------
@@ -84,9 +84,8 @@ While working on the Zcash project, you are going to have bugs, features, and id
 Branching exists to aid these different tasks while you write code. Below are some conventions 
 of branching at Zcash:
 
-    1. ``master`` branch is **ALWAYS** deployable
-    2. Avoid branching directly off ``master``, instead use your local fork
-    3. Branch names **MUST** be descriptive (e.g. ``issue#_short_description``)
+    1. ``master`` branch is **ALWAYS** deployable.
+    2. Branch names **MUST** be descriptive (e.g. ``issue#_short_description``).
 
 To create a new branch (assuming you are in ``zcash`` directory):
 
@@ -114,14 +113,14 @@ Make & Commit Changes
 If you have created a new branch or checked out an existing one, it is time to make 
 changes to your local source code. Below are some formalities for commits:
 
-    1. Commit messages **MUST** be clear
-    2. Commit messages **MUST** be descriptive
-    3. Commit messages **MUST** be clean (see :ref:`Squashing Commits` for details)
+    1. Commit messages **MUST** be clear.
+    2. Commit messages **MUST** be descriptive.
+    3. Commit messages **MUST** be clean (see :ref:`Squashing Commits` for details).
 
 Commit messages should contain enough information in the first line to be able to scan a 
-list of patches and identify which one is being searched for. Do not use "auto-close" 
-keywords -- tickets should be closed manually. The auto-close keywords are "close[ds]", 
-"resolve[ds]", and "fix(e[ds])?"
+list of patches and identify which one is being searched for. You MAY use "auto-close" 
+keywords, but it's not necessary. The auto-close keywords are "close[ds]", "resolve[ds]",
+nd "fix(e[ds])?"
 
 While continuing to do development on a branch, keep in mind that other approved commits 
 are getting merged into ``master``.  In order to ensure there are minimal to no merge conflicts, 
@@ -160,8 +159,7 @@ Once you have confirmed your branch/remote is valid, issue the following command
 
 .. code-block:: bash
     
-    git fetch upstream
-    git rebase upstream/master
+    git pull --rebase upstream master
     git push -f
 
 If you have uncommitted changes, use ``git stash`` to preserve them:
@@ -169,8 +167,7 @@ If you have uncommitted changes, use ``git stash`` to preserve them:
 .. code-block:: bash
 
     git stash
-    git fetch upstream
-    git rebase upstream/master
+    git pull --rebase upstream master
     git push -f
     git stash pop
 
@@ -179,12 +176,15 @@ with ``master``. Without this, you will rebase with master and lose your local c
 
 Before committing changes, ensure your commit messages follow these guidelines:
 
-    1. Separate subject from body with a blank line
-    2. Limit the subject line to 50 characters
-    3. Capitalize the subject line
-    4. Do not end the subject line with a period
-    5. Wrap the body at 72 characters
-    6. Use the body to explain *what* and *why* vs. *how*
+    1. Separate subject from body with a blank line.
+    2. Limit the subject line to 50 characters.
+    3. Capitalize the subject line.
+    4. Do not end the subject line with a period.
+    5. If changing the ``zcash/zips`` repo, start the subject with "ZIP <number>:" or "Protocol spec:".
+    6. Wrap the body at 72 characters.
+    7. Use the body to explain *what* and *why* vs. *how*.
+
+(The line limits are guidelines, they're not essential.)
 
 Once synced with ``master``, let's commit our changes:
 
@@ -201,7 +201,7 @@ Now that all the files changed have been committed, let's continue to Create Pul
 Create Pull Request
 *******************
 
-On your Github page (e.g. https://github.com/your_username/zcash), you will notice a newly created 
+On your GitHub page (e.g. https://github.com/your_username/zcash), you will notice a newly created 
 banner containing your recent commit with a big green ``Compare & pull request`` button. Click on it.
 
 .. image:: images/github-cmp-pr-button.png
@@ -215,7 +215,7 @@ should be accepted. State whether the proposed change fixes part of the problem 
 if the change is temporary (a workaround) or permanent; if the problem also exists upstream 
 (Bitcoin) and, if so, if and how it was fixed there.
 
-If you click on `Commits`, you should see the diff of that commit; it's advisable to verify 
+If you click on *Commits*, you should see the diff of that commit; it's advisable to verify 
 it's what you expect. You can also click on the small plus signs that appear when you hover 
 over the lines on either the left or right side and add a comment specific to that part of 
 the code. This is very helpful, as you don't have to tell the reviewers (in a general comment)
@@ -263,7 +263,7 @@ can be done using the following approach:
     git checkout branch_name
     git rebase -i HEAD~4
 
-The integer value after `~` represents the number of commits you would like to interactively rebase. 
+The integer value after ``~`` represents the number of commits you would like to interactively rebase. 
 You can pick a value that makes sense for your situation. A template will pop-up in your terminal 
 requesting you to specify what commands you would like to do with each prior commit:
 
@@ -277,8 +277,9 @@ requesting you to specify what commands you would like to do with each prior com
     f, fixup = like "squash", but discard this commit's log message
     x, exec = run command (the rest of the line) using shell
 
-Modify each line with the according command, followed by the hash of the commit. For example, 
-if I wanted to squash my last 4 commits into the most recent commit for this PR:
+Modify each line with the according command, followed by the hash of the commit. You can also
+reorder commits by reordering lines. For example, if I wanted to squash my last 4 commits into
+the most recent commit for this PR:
 
 .. code-block:: bash
     
@@ -296,22 +297,19 @@ if I wanted to squash my last 4 commits into the most recent commit for this PR:
 Deploy / Merge PR
 *****************
 
-.. important:: **DO NOT** click on this button! We use a different process (``zkbot``, ``Homu``) to merge code
-
-   .. image:: images/github-merge-button.png
-
-
 .. admonition:: zkbot
 
-   We use a homu instance called ``zkbot`` to merge *all* PRs. (Direct pushing to the ``master`` branch of the repo is not allowed.) Here's just a quick overview of how it works.
+   We use a homu instance called ``zkbot`` to merge *all* PRs in ``zcash/zcash``. (Direct pushing to the ``master`` branch of the repo is not allowed.)
+   Here's just a quick overview of how it works.
 
    If you're on our team, you can do ``@zkbot <command>`` to tell zkbot to do things. Here are a few examples:
 
       * ``r+ [commithash]`` this will test the merge and then actually commit the merge into the repo if the tests succeed.
       * ``try`` this will test the merge and nothing else.
       * ``rollup`` this is like ``r+`` but for insignificant changes. Use this when we want to test a bunch of merges at once to save Buildbot time.
+        (In practice we don't often use ``rollup``.)
 
-   More instructions are found here: http://ci.z.cash:12477/
+   More instructions are found here: https://ci.z.cash/homu
 
 
 Once you have addressed the comments in your PR, and it has received two *ACKs* 
@@ -323,9 +321,9 @@ from reviewers, you can attempt to test merge the PR:
 
 .. note:: ``@zkbot`` commands are entered into Github tickets as comments
 
-This will instruct Buildbot(aka Homu) to test merging your PR with ``master`` and ensure it 
-passes the full test suite. You may or may not have permissions to run this command, but 
-Github will reply with output indicating if you can or not.
+This will instruct our Buildbot CI system to test merging your PR with ``master`` and ensure
+it passes the full test suite. You may or may not have permissions to run this command, but 
+zkbot will reply with output indicating if you can or not.
 
 If the ``@zkbot try`` fails, you will need to go back and address the issues accordingly. 
 Otherwise, you can now attempt to merge into ``master``:
@@ -334,7 +332,7 @@ Otherwise, you can now attempt to merge into ``master``:
     
     @zkbot r+
 
-.. note:: ``@zkbot`` commands are entered into Github tickets as comments
+.. note:: ``@zkbot`` commands are entered into GitHub tickets as comments
 
 There are very few people that have ``@zkbot r+`` privileges, so you can request one of these 
 people to merge the PR, or leave it for the release process to pick it up. Finally, when the 
@@ -346,8 +344,7 @@ are requested to rebase your PR, in order to gracefully merge into ``master``, p
 .. code-block:: bash
 
     git checkout branch_name
-    git fetch upstream
-    git rebase upstream/master
+    git pull --rebase upstream master
     git push -f
 
 ----
@@ -433,6 +430,12 @@ To run the RPC tests:
 .. code-block:: bash
 
     qa/pull-tester/rpc-tests.sh
+
+or for a single test implemented in ``TESTNAME.py``:
+
+.. code-block:: bash
+
+    qa/pull-tester/rpc-tests.sh TESTNAME
 
 The main test suite uses two different testing frameworks. Tests using the Boost 
 framework are under ``src/test/``; tests using the Google Test/Google Mock framework 
