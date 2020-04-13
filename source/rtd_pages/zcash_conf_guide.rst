@@ -17,13 +17,13 @@ Network-Related Settings
 |                         |                                                                                                          |
 |                         | .. code-block:: bash                                                                                     |
 |                         |                                                                                                          |
-|                         |    testnet=0                                                                                             |
+|                         |    testnet=1                                                                                             |
 +-------------------------+----------------------------------------------------------------------------------------------------------+
 | regtest                 | Run a regression test network                                                                            |
 |                         |                                                                                                          |
 |                         | .. code-block:: bash                                                                                     |
 |                         |                                                                                                          |
-|                         |    regtest=0                                                                                             |
+|                         |    regtest=1                                                                                             |
 +-------------------------+----------------------------------------------------------------------------------------------------------+
 | proxy                   | Connect via a SOCKS5 proxy                                                                               |
 |                         |                                                                                                          |
@@ -209,7 +209,7 @@ Transaction Fee
 |                         |                                                                                                          |
 |                         | .. code-block:: bash                                                                                     |
 |                         |                                                                                                          |
-|                         |    sendfreetransactions=0                                                                                |
+|                         |    sendfreetransactions=1                                                                                |
 +-------------------------+----------------------------------------------------------------------------------------------------------+
 | txconfirmtarget         | | Create transactions that have enough fees (or priority) so they are                                    |
 |                         | | likely to # begin confirmation within n blocks (default: 1). This                                      |
