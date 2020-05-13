@@ -1,17 +1,26 @@
 Zcash Improvement Proposals (ZIPs)
 ==================================
 
-Abstract
---------
+What are ZIPS? 
+-------------
 
-A Zcash Improvement Proposal (ZIP) is a design document providing information to the Zcash community, or describing a new feature for Zcash or its processes or environment. The ZIP should provide a concise technical specification of the feature and a rationale for the feature.
+Zcash Improvement Proposals (ZIPs) are the way to: 
 
-We intend ZIPs to be the primary mechanism for proposing new features, for collecting community input on an issue, and for documenting the design decisions that have gone into Zcash. The author(s) of the ZIP are responsible for building consensus within the community and documenting dissenting opinions.
+1) propose new features and  their rationale,
+2) specify the implementation details of the feature,
+3) collect community input on the proposal, and
+4) document design decisions. 
 
-Because the ZIPs are maintained as text files in a versioned repository, their revision history is the historical record of the feature proposal.
+Contributing ZIPs
+-------------
 
-See `ZIP 0 <https://github.com/zcash/zips/blob/master/zip-0000.rst>`_ for complete details including workflow, formatting and management.
+The author(s) of the ZIP are responsible for building consensus within the community and documeting/addressing dissenting opinions. 
 
-See the `ZIP repository in GitHub <https://github.com/zcash/zips/>`_ for a full list of accepted proposals and the `pull requests for that repository <https://github.com/zcash/zips/pulls>`_ for drafts and suggested updates.
+Anyone can write a ZIP! We encourage community contributions and decentralization of work on the Zcash protocol. If you'd like to bounce ideas before formally writing a ZIP, we encourage it! Visit the `community dischord channel <https://discord.com/invite/PXHqXV2>`_ to talk about your idea. 
 
+Past and Current ZIPs 
+---------------------
 
+Visit the `zips website <https://zips.z.cash/>`_ for a detailed list of all ZIPs. 
+
+.. image:: images/zips.png
