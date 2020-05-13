@@ -1,7 +1,7 @@
 Zcash Improvement Proposals (ZIPs)
 ==================================
 
-What are ZIPS? 
+What are ZIPs? 
 -------------
 
 Zcash Improvement Proposals (ZIPs) are the way to: 
@@ -14,7 +14,7 @@ Zcash Improvement Proposals (ZIPs) are the way to:
 Contributing ZIPs
 -------------
 
-The author(s) of the ZIP are responsible for building consensus within the community and documeting/addressing dissenting opinions. 
+The author(s) of the ZIP are responsible for building consensus within the community and documenting/addressing dissenting opinions. 
 
 Anyone can write a ZIP! We encourage community contributions and decentralization of work on the Zcash protocol. If you'd like to bounce ideas before formally writing a ZIP, we encourage it! Visit the `community dischord channel <https://discord.com/invite/PXHqXV2>`_ to talk about your idea. 
 
