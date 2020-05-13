@@ -24,3 +24,4 @@ Past and Current ZIPs
 Visit the `zips website <https://zips.z.cash/>`_ for a detailed list of all ZIPs. 
 
 .. image:: images/zips.png
+	:target: https://zips.z.cash/
