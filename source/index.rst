@@ -5,8 +5,36 @@
    :align: right
 
 ===================
-Zcash Documentation
+Welcome to Zcash!
 ===================
+
+This is the home for Zcash documentation for end users and developers. Check out our quickstarts, tutorials, API reference, and code examples. 
+
+.. image:: _images/shielded-support.png
+   :width: 49%
+   :target: https://z.cash/wallets/
+
+.. image:: _images/shielded-support.png
+   :width: 49%
+   :target: ../html/rtd_pages/user_guide.html
+
+.. image:: _images/shielded-support.png
+   :width: 49%
+   :target: ../html/rtd_pages/zig.html
+
+.. image:: _images/shielded-support.png
+   :width: 49%
+   :target: ../html/rtd_pages/lightclient_support.html
+
+.. image:: _images/shielded-support.png
+   :width: 49%
+   :target: https://zips.z.cash
+
+.. image:: _images/shielded-support.png
+   :width: 49%
+   :target: https://zcash-rpc.github.io/
+
+
 
 What is Zcash?
 --------------
