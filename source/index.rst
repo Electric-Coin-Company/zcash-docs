@@ -90,13 +90,6 @@ Answers to common questions from our users can be found in the `FAQ <https://z.c
     :fa:`magic` `Zcash-Wizards <https://discord.gg/VR7hw4q>`_
       Mad scientist brainstorming
 
-.. _License:
-
-License
--------
-
-   For license information please see :ref:`License`
-
 .. toctree::
    :caption: Using Zcashd
    :hidden:
