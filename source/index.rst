@@ -61,13 +61,6 @@ confidentiality of transaction metadata. For more technical details, please chec
       node sometime after this 16 week time period. The automatic feature
       is based on block height and can be explicitly disabled.
 
-.. _start:
-
-Getting Started
----------------
-
-For information on Zcash setup, upgrade, installation, build, configuration, and usage please see the :ref:`user_guide`.
-
 .. _help:
 
 Need Help?
