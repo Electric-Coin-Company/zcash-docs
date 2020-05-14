@@ -10,27 +10,27 @@ Welcome to Zcash!
 
 This is the home for Zcash documentation for end users and developers. Check out our quickstarts, tutorials, API reference, and code examples. 
 
-.. image:: _images/shielded-support.png
+.. image:: _images/grid-wallets.png
    :width: 49%
    :target: https://z.cash/wallets/
 
-.. image:: _images/shielded-support.png
+.. image:: _images/grid-zcashd.png
    :width: 49%
    :target: ../html/rtd_pages/user_guide.html
 
-.. image:: _images/shielded-support.png
+.. image:: _images/grid-zig.png
    :width: 49%
    :target: ../html/rtd_pages/zig.html
 
-.. image:: _images/shielded-support.png
+.. image:: _images/grid-lcs.png
    :width: 49%
    :target: ../html/rtd_pages/lightclient_support.html
 
-.. image:: _images/shielded-support.png
+.. image:: _images/grid-zips.png
    :width: 49%
    :target: https://zips.z.cash
 
-.. image:: _images/shielded-support.png
+.. image:: _images/grid-rpc.png
    :width: 49%
    :target: https://zcash-rpc.github.io/
 
