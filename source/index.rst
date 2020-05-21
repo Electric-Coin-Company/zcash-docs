@@ -40,10 +40,12 @@ What is Zcash?
 `Zcash <https://z.cash/>`__ is an implementation of the "Zerocash" protocol forked off Bitcoin. It is also used to refer to one unit of the cryptocurrency (ZEC), or Electric Coin Company (previously Zcash Company). 
 
 .. image:: rtd_pages/images/zcash-privacy.png
+  :width: 100%
 
 The Zcash protocol, and therefore, using ZEC, can offer a far higher standard of privacy than Bitcoin or other privacy-focused cryptocurrencies. We achieve this through a sophisticated zero-knowledge proving confidentiality of transaction metadata. For more technical details, please check out our `Protocol Specification <https://github.com/zcash/zips/raw/master/protocol/protocol.pdf>`_.
 
 .. image:: rtd_pages/images/txs.jpg
+  :width: 100%
 
 Zero knowledge proofs mean that shielded zcash transactions reveal zero information to the public, and the least amount of information between sender and receiver. They know the amount you sent, the time, and the transaction ID, but not your address and other metadata (unless you disclose it). 
 
