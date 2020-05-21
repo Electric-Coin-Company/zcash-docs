@@ -56,8 +56,8 @@ Zcash development is an open collaborative process. We want contributors like yo
 
 Important links: 
 
-* :ref:`code_of_conduct`
-* :ref:`development_guidelines` for setting up
+* :ref:`code_of_conduct` for working with others
+* :ref:`development_guidelines` for setting up zcash work
 * |grants| to fund your work 
 * |zips| to contribute to the zcash protocol
 
