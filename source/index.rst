@@ -59,7 +59,7 @@ Important links:
 * :ref:`code_of_conduct` for working with others
 * :ref:`development_guidelines` for setting up zcash work
 * |grants| to fund your work 
-* |zips| to contribute to the zcash protocol
+* |zips| to push changes to the zcash protocol
 
 .. |zips| raw:: html
 
