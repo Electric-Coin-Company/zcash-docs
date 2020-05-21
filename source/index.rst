@@ -37,16 +37,16 @@ This is the home for Zcash documentation for end users and developers. Check out
 What is Zcash?
 --------------
 
-`Zcash <https://z.cash/>`__ is an implementation of the "Zerocash" protocol forked off Bitcoin. It is also used to refer to one unit of the cryptocurrency (ZEC), or Electric Coin Company (previously Zcash Company). 
+`Zcash <https://z.cash/>`__ is an implementation of the “Zerocash” protocol forked off Bitcoin. It is also used to refer to one unit of the cryptocurrency (ZEC), or Electric Coin Company (previously Zcash Company). 
 
 .. image:: rtd_pages/images/zcash-privacy.png
   :width: 100%
 
 The Zcash protocol, and therefore, using ZEC, can offer a far higher standard of privacy than Bitcoin or other privacy-focused cryptocurrencies. We achieve this through a sophisticated zero-knowledge proving confidentiality of transaction metadata. For more technical details, please check out our `Protocol Specification <https://github.com/zcash/zips/raw/master/protocol/protocol.pdf>`_.
 
-Zero knowledge proofs mean that shielded zcash transactions can prove the validity of a transaction the public without disclosing the information. For instance, the sender, receiver, and amount sent are all encrypted, but can be proven that both entities exist, and the amount was a valid amount to be sent. 
+Zero knowledge proofs mean that shielded Zcash transactions can prove the validity of a transaction the public without disclosing the information. For instance, the sender, receiver, and amount sent are all encrypted, but can be proven that both entities exist, and the amount was a valid amount to be sent. 
 
-Other privacy schemes provide different, and less strict definitions of privacy.  Ring signatures used by Monero, only provide plausible deniability. Tumbler schemes, which mixes potentially identifiable currency with others to obsecure the souce, are insecure. 
+Other privacy schemes provide different, and less strict definitions of privacy.  Ring signatures used by Monero, only provide plausible deniability. Tumbler schemes, which mixes potentially identifiable currency with others to obscure the souce, are insecure. 
 
 .. _join:
 
