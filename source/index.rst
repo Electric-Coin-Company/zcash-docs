@@ -32,14 +32,14 @@ This is the home for Zcash documentation for end users and developers. Check out
 
 .. image:: rtd_pages/images/box_community.png
    :width: 49%
-   :target: https://zips.z.cash
+   :target: https://discord.gg/PhJY6Pm
 
 What is Zcash?
 --------------
 
 `Zcash <https://z.cash/>`__ is an implementation of the "Zerocash" protocol forked off Bitcoin. It is also used to refer to one unit of the cryptocurrency (ZEC), or Electric Coin Company (previously Zcash Company). 
 
-.. image:: rtd_pages/images/zcash-privacy.jpg
+.. image:: rtd_pages/images/zcash-privacy.png
 
 The Zcash protocol, and therefore, using ZEC, can offer a far higher standard of privacy than Bitcoin or other privacy-focused cryptocurrencies. We achieve this through a sophisticated zero-knowledge proving confidentiality of transaction metadata. For more technical details, please check out our `Protocol Specification <https://github.com/zcash/zips/raw/master/protocol/protocol.pdf>`_.
 
@@ -53,7 +53,7 @@ Other privacy schemes provide different, and less strict definitions of privacy.
 
 Join  the community! 
 --------------------
-Zcash development is an open collaborative process. We want contributors like you work along side us. 
+Zcash development is an open collaborative process. We want contributors like you! 
 
 Important links: 
 
