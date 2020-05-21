@@ -10,31 +10,29 @@ Welcome to Zcash!
 
 This is the home for Zcash documentation for end users and developers. Check out our quickstarts, tutorials, API reference, and code examples. 
 
-.. image:: rtd_pages/images/grid-wallets.png
+.. image:: rtd_pages/images/box_wallets.png
    :width: 49%
    :target: https://z.cash/wallets/
 
-.. image:: rtd_pages/images/grid-zcashd.png
+.. image:: rtd_pages/images/box_zcashd.png
    :width: 49%
    :target: ../html/rtd_pages/user_guide.html
 
-.. image:: rtd_pages/images/grid-zig.png
+.. image:: rtd_pages/images/box_zig.png
    :width: 49%
    :target: ../html/rtd_pages/zig.html
 
-.. image:: rtd_pages/images/grid-lcs.png
+.. image:: rtd_pages/images/box_mobile.png
    :width: 49%
    :target: ../html/rtd_pages/lightclient_support.html
 
-.. image:: rtd_pages/images/grid-zips.png
-   :width: 49%
-   :target: https://zips.z.cash
-
-.. image:: rtd_pages/images/grid-rpc.png
+.. image:: rtd_pages/images/box_rpc.png
    :width: 49%
    :target: https://zcash-rpc.github.io/
 
-We encourage you to read :ref:`code_of_conduct` and :ref:`development_guidelines`. 
+.. image:: rtd_pages/images/box_community.png
+   :width: 49%
+   :target: https://zips.z.cash
 
 What is Zcash?
 --------------
@@ -51,24 +49,34 @@ Zero knowledge proofs mean that shielded zcash transactions reveal zero informat
 
 Other privacy schemes provide different, and less strict definitions of privacy.  Ring signatures used by Monero, only provide plausible deniability. Tumbler schemes, which mixes potentially identifiable currency with others to obsecure the souce, are insecure. 
 
-.. _help:
+.. _join:
 
-Need Help?
-----------
+Join  the community! 
+--------------------
+Zcash development is an open collaborative process. We want contributors like you work along side us. 
 
-For immediate assistance, check out: 
+Important links: 
+
+* :ref:`code_of_conduct`
+* :ref:`development_guidelines` for setting up
+* |grants| to fund your work 
+* |zips| to contribute to the zcash protocol
+
+.. |zips| raw:: html
+
+   <a href="zips.z.cash" target="_blank">Zcash Improvement Proposals (ZIPs)</a> 
+
+.. |grants| raw:: html
+
+   <a href="https://grants.zfnd.org/requests" target="_blank">Community Grants</a> 
+
+For help: 
 
 * :ref:`glossary` of Zcash terms and concepts
 * `FAQ <https://z.cash/support/faq.html>`_ covering basic use 
 * :ref:`troubleshooting-guide` for debugging zcashd 
 
-We'd also be happy `chat <https://discord.gg/PhJY6Pm>`_ with you. 
-
-Join  the community! 
---------------------
-Zcash development is an open collaborative process. We want contributors like you work along side Electric Coin Company, Zcash Foundation, partner companies, and active community members. 
-
-There are lots of way to stay in touch: 
+Stay in touch: 
 
 * `Zcash Dischord <https://discord.gg/PhJY6Pm>`_ for live chat and collaboration 
 * `Zcash Community Website <https://www.zcashcommunity.com/>`_ for curation of news and resources
