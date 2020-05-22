@@ -63,7 +63,7 @@ Important links:
 
 .. |zips| raw:: html
 
-   <a href="zips.z.cash" target="_blank">Zcash Improvement Proposals (ZIPs)</a> 
+   <a href="https://zips.z.cash" target="_blank">Zcash Improvement Proposals (ZIPs)</a> 
 
 .. |grants| raw:: html
 
