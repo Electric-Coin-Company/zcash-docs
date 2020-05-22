@@ -5,69 +5,83 @@
    :align: right
 
 ===================
-Zcash Documentation
+Welcome to Zcash!
 ===================
+
+This is the home for Zcash documentation for end users and developers. Check out our quickstarts, tutorials, API reference, and code examples. 
+
+.. image:: rtd_pages/images/box_wallets.png
+   :width: 49%
+   :target: https://z.cash/wallets/
+
+.. image:: rtd_pages/images/box_zcashd.png
+   :width: 49%
+   :target: ../html/rtd_pages/user_guide.html
+
+.. image:: rtd_pages/images/box_zig.png
+   :width: 49%
+   :target: ../html/rtd_pages/zig.html
+
+.. image:: rtd_pages/images/box_mobile.png
+   :width: 49%
+   :target: ../html/rtd_pages/lightclient_support.html
+
+.. image:: rtd_pages/images/box_rpc.png
+   :width: 49%
+   :target: https://zcash-rpc.github.io/
+
+.. image:: rtd_pages/images/box_community.png
+   :width: 49%
+   :target: https://discord.gg/PhJY6Pm
 
 What is Zcash?
 --------------
 
-`Zcash <https://z.cash/>`__ is an implementation of the "Zerocash" protocol.
-Based on Bitcoin's code, it intends to offer a far higher standard of privacy
-through a sophisticated zero-knowledge proving scheme that preserves
-confidentiality of transaction metadata. For more technical details, please check out our `Protocol Specification <https://github.com/zcash/zips/raw/master/protocol/protocol.pdf>`_.
+`Zcash <https://z.cash/>`__ is an implementation of the “Zerocash” protocol forked off Bitcoin. It is also used to refer to one unit of the cryptocurrency (ZEC), or Electric Coin Company (previously Zcash Company). 
 
-**Before you get started with Zcash, please review the important items below:**
+.. image:: rtd_pages/images/zcash-privacy.png
+  :width: 100%
 
-    :fa:`user-circle` :ref:`code_of_conduct`
-      This project adheres to our Code of Conduct. By participating, you are expected to uphold this code.
+The Zcash protocol, and therefore, using ZEC, can offer a far higher standard of privacy than Bitcoin or other privacy-focused cryptocurrencies. We achieve this through a sophisticated zero-knowledge proving confidentiality of transaction metadata. For more technical details, please check out our `Protocol Specification <https://github.com/zcash/zips/raw/master/protocol/protocol.pdf>`_.
 
-    :fa:`code` :ref:`development_guidelines`
-      A set of guidelines and best practices to contribute to the development of Zcash.
+Zero knowledge proofs mean that shielded Zcash transactions can prove the validity of a transaction the public without disclosing the information. For instance, the sender, receiver, and amount sent are all encrypted, but can be proven that both entities exist, and the amount was a valid amount to be sent. 
 
-    :fa:`lock` `Security Information <https://z.cash/support/security/>`_
-      Zcash is experimental and a work-in-progress. Use at your own risk.
+Other privacy schemes provide different, and less strict definitions of privacy.  Ring signatures used by Monero, only provide plausible deniability. Tumbler schemes, which mixes potentially identifiable currency with others to obscure the souce, are insecure. 
 
-    :fa:`file-code-o` Deprecation Policy
-      A release is considered deprecated 16 weeks after the release day.
-      There is an automatic deprecation shutdown feature which will halt the
-      node sometime after this 16 week time period. The automatic feature
-      is based on block height and can be explicitly disabled.
+.. _join:
 
-.. _start:
+Join  the community! 
+--------------------
+Zcash development is an open collaborative process. We want contributors like you! 
 
-Getting Started
----------------
+Important links: 
 
-For information on Zcash setup, upgrade, installation, build, configuration, and usage please see the :ref:`user_guide`.
+* :ref:`code_of_conduct` for working with others
+* :ref:`development_guidelines` for setting up zcash work
+* |grants| to fund your work 
+* |zips| to push changes to the zcash protocol
 
-.. _help:
+.. |zips| raw:: html
 
-Need Help?
-----------
+   <a href="zips.z.cash" target="_blank">Zcash Improvement Proposals (ZIPs)</a> 
 
-Answers to common questions from our users can be found in the `FAQ <https://z.cash/support/faq.html>`_.
+.. |grants| raw:: html
 
-.. admonition:: Collaborate
+   <a href="https://grants.zfnd.org/requests" target="_blank">Community Grants</a> 
 
-   Zcash development is an open collaborative process. If you'd like to
-   contribute, join our `chat system <https://discord.gg/PhJY6Pm>`_
-   and check out some of these channels:
+For help: 
 
-    :fa:`comment` `Chat <https://discord.gg/8t4zXje>`_
-      Community Chat
+* :ref:`glossary` of Zcash terms and concepts
+* `FAQ <https://z.cash/support/faq.html>`_ covering basic use 
+* :ref:`troubleshooting-guide` for debugging zcashd 
 
-    :fa:`random` `Zcash-Dev <https://discord.gg/nejAVu6>`_
-      Software and Protocol Development
+Stay in touch: 
 
-    :fa:`magic` `Zcash-Wizards <https://discord.gg/VR7hw4q>`_
-      Mad scientist brainstorming
-
-.. _License:
-
-License
--------
-
-   For license information please see :ref:`License`
+* `Zcash Dischord <https://discord.gg/PhJY6Pm>`_ for live chat and collaboration 
+* `Zcash Community Website <https://www.zcashcommunity.com/>`_ for curation of news and resources
+* `Electric Coin Company Blog <https://electriccoin.co/blog/>`_ for updates on zcashd and zcash protocol
+* `Zcash Foundation Forumns <https://forum.zcashcommunity.com/>`_ for async discussion
+* `Youtube channel <https://www.youtube.com/channel/UCPIPwZtZRCCW-x0dEKul8jA>`_ for quarterly live streams and media content
 
 .. toctree::
    :caption: Using Zcashd

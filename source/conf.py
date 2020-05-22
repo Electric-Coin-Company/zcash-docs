@@ -39,7 +39,7 @@ release = u'2.1.2-3'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 # TODO research sphinxcontrib.osexample
-extensions = ['sphinx.ext.intersphinx', 'sphinx_fontawesome']
+extensions = ['sphinx.ext.intersphinx', 'sphinx_fontawesome',]
 
 
 # Add any paths that contain templates here, relative to this directory.
