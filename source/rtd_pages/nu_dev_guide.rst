@@ -25,7 +25,7 @@ Below is general advice that applies to all network upgrades:
     unavailable for about an hour at the activation block height.
 
 :fa:`arrow-circle-right` Defensive transition
-    Disable the initiation of new transactions starting 24 blocks (approximately
+    Disable the initiation of new transactions starting 48 blocks (approximately
     one hour) before the activation block-height. If a user sends a transaction 
     right before the upgrade, it is likely to not make it onto the chain. 
     This can cause user confusion and frustration.
