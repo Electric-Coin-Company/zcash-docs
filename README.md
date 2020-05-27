@@ -18,7 +18,7 @@ sudo apt-get install python3-pip
 Get required packages for ReadtheDocs build:
 
 ```bash
-pip3 install sphinx_rtd_theme sphinx sphinx-autobuild sphinx_fontawesome
+pip3 install sphinx_rtd_theme sphinx sphinx-autobuild sphinx_fontawesome recommonmark
 ```
 
 ### macOS
