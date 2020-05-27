@@ -44,7 +44,7 @@ What is Zcash?
 
 The Zcash protocol, and therefore, using ZEC, can offer a far higher standard of privacy than Bitcoin or other privacy-focused cryptocurrencies. We achieve this through a sophisticated zero-knowledge proving confidentiality of transaction metadata. For more technical details, please check out our `Protocol Specification <https://github.com/zcash/zips/raw/master/protocol/protocol.pdf>`_.
 
-Zero knowledge proofs mean that shielded Zcash transactions can prove the validity of a transaction the public without disclosing the information. For instance, the sender, receiver, and amount sent are all encrypted, but can be proven that both entities exist, and the amount was a valid amount to be sent. 
+Zero knowledge proofs mean that shielded Zcash transactions can prove the validity of a transaction the public without disclosing the information. For instance, the sender, receiver, and amount sent are all encrypted, but it can be proven that the amounts balance and that the sender had the private spending key.
 
 Other privacy schemes provide different, and less strict definitions of privacy.  Ring signatures used by Monero, only provide plausible deniability. Tumbler schemes, which mixes potentially identifiable currency with others to obscure the souce, are insecure. 
 
@@ -84,6 +84,22 @@ Stay in touch:
 * `Youtube channel <https://www.youtube.com/channel/UCPIPwZtZRCCW-x0dEKul8jA>`_ for quarterly live streams and media content
 
 .. toctree::
+   :caption: Introduction
+   :hidden:
+
+   rtd_pages/addresses.rst
+   rtd_pages/glossary.rst
+
+.. toctree::
+   :caption: Best Practices
+   :hidden:
+
+   rtd_pages/code_of_conduct.rst
+   rtd_pages/development_guidelines.rst
+   rtd_pages/supported_platform_policy.rst
+   rtd_pages/ux_wallet_checklist.rst
+
+.. toctree::
    :caption: Using Zcashd
    :hidden:
 
@@ -93,29 +109,34 @@ Stay in touch:
    rtd_pages/troubleshooting_guide.rst
    rtd_pages/payment_api.rst
    rtd_pages/wallet_backup.rst
-   rtd_pages/addresses.rst
    rtd_pages/sapling_turnstile.rst
    rtd_pages/zcash_conf_guide.rst
    rtd_pages/zcash_mining_guide.rst
    rtd_pages/security_warnings.rst
    rtd_pages/files.rst
    rtd_pages/tor.rst
-   rtd_pages/glossary.rst
+
+.. toctree::
+   :caption: Mobile
+   :hidden:
+
+   rtd_pages/lightclient_support.rst
+   rtd_pages/wallet_threat_model.md 
+
+.. toctree::
+   :caption: Integrating Zcash 
+   :hidden:
+
+   rtd_pages/zig.rst
 
 
 .. toctree::
    :caption: Developers & Contributors
    :hidden:
 
-   rtd_pages/zig.rst
-   rtd_pages/development_guidelines.rst
-   rtd_pages/supported_platform_policy.rst
    rtd_pages/index_zips.rst
    rtd_pages/nu_dev_guide.rst
    rtd_pages/testnet_guide.rst
-   rtd_pages/lightclient_support.rst
    rtd_pages/librustzcash_arch.rst
-   rtd_pages/ux_wallet_checklist.rst
-   rtd_pages/code_of_conduct.rst
    rtd_pages/dnsseed_policy.rst
    rtd_pages/insight_explorer.rst
