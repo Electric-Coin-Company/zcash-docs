@@ -16,15 +16,15 @@ This is the home for Zcash documentation for end users and developers. Check out
 
 .. image:: rtd_pages/images/box_zcashd.png
    :width: 49%
-   :target: ../rtd_pages/user_guide.html
+   :target: ../latest/rtd_pages/user_guide.html
 
 .. image:: rtd_pages/images/box_zig.png
    :width: 49%
-   :target: ../rtd_pages/zig.html
+   :target: ../latest/rtd_pages/zig.html
 
 .. image:: rtd_pages/images/box_mobile.png
    :width: 49%
-   :target: ../rtd_pages/lightclient_support.html
+   :target: ../latest/rtd_pages/lightclient_support.html
 
 .. image:: rtd_pages/images/box_rpc.png
    :width: 49%
