@@ -5,77 +5,76 @@
 Zcash Mining Guide
 ==================
 
-Welcome! This guide is intended to get you mining Zcash, a.k.a. "ZEC", on the Zcash mainnet. The unit for mining is Sol/s (Solutions per second).
+Welcome! In this guide, we'll cover how much you can make by mining Zcash and the various ways to mine Zcash. A win-win: Miners get Zcash, and mining strengthens the Zcash network by adding additional hash power. 
 
-If you run into snags, please let us know. There's plenty of work needed to make this usable and your input will help us
-prioritize the worst sharpest edges earlier. For user help, we recommend using our forum:
+If you need help, talk to us on |discord| or post on the |forum|. 
 
-https://forum.z.cash/
+.. |discord| raw:: html
 
-Setup
------
+   <a href="https://discord.gg/PhJY6Pm" target="_blank">discord</a> 
 
-First, you need to set up your local Zcash node. Follow the :ref:`user_guide` up to the end of the section :ref:`ugBuild` , then come back here. 
+.. |forum| raw:: html
 
-Configuration
--------------
+   <a href="https://forum.zcashcommunity.com/" target="_blank">forum</a> 
 
-Configure your node as per :ref:`ugConfiguration` , including the section 
-:ref:`Enable_CPU_Mining` .
 
-Mining
-------
+Calculating mining rewards
+--------------------------
 
-Now, start Mining!
-``./src/zcashd``
+We highly recommend you use a |mining-calc| to find out what your expected return is depending on your hash rate and electricity cost. In other words, find out if it's profitable for you, specifically, to mine Zcash before proceeding.  
 
-To run it in the background (without the node metrics screen that is normally displayed):
 
-``./src/zcashd -daemon``
+.. |mining-calc| raw:: html
 
-You should see the following output in the debug log (`~/.zcash/debug.log`):
+   <a href="https://www.cryptocompare.com/mining/calculator/zec" target="_blank">Zcash mining calculator</a> 
 
-.. code-block:: bash
+GPU mining
+-----------
+
+Our core platform, zcashd, can be configured to mine blocks in addition to acting as a wallet and verifying network transactions. This is the most accessible way to mine, and can be done on your personal computer. 
+
+1. Set up your local Zcash node. Follow the :ref:`user_guide` up to the end of the section :ref:`ugBuild` , then come back here. 
+
+2. Configure your node as per :ref:`ugConfiguration` , including the section :ref:`Enable_CPU_Mining` .
+
+3. Now, start mining by running zcashd: ``./src/zcashd``. To run it in the background, try: ``./src/zcashd -daemon``. 
+
+  
+  Congratulations! You are now mining Zcash.
+
+4. If you wish to verify that you are mining, look in the debug log (`~/.zcash/debug.log`), you should see:
+
+  .. code-block:: bash
 
    Zcash Miner started
 
-Congratulations! You are now mining on the mainnet.
+5. To stop, enter the command: ``./src/zcash-cli stop``
 
-To stop the Zcash daemon, enter the command:
+Note: The internal `zcashd` miner uses a new transparent address for each mined block. If you want to instead use the same address for every mined block, use the ``-mineraddress=`` option available in Zcash 1.0.6 and later.
 
-``./src/zcash-cli stop``
+ASIC mining
+-----------
+
+Another way to mine Zcash is to with specialized devices. An application-specific integrated circuit (ASIC) miner is a device that is designed for the sole purpose of mining—not coal, but rather digital currency. 
+
+Zcash is not ASIC-resistant, and you can purchase Zcash-specific or generalist ASICs that mine Zcash along with various other cryptocurrencies. We advise that you consider the tradeoffs of the cost or purchasing and running an ASIC versus the potential profit before making a purchase.
+
+We do not have any specific recommendations, or provide instructions, for ASIC mining devices. Check with the specific manufacturer and model for details.  
 
 Spending Mining Rewards
-~~~~~~~~~~~~~~~~~~~~~~~
+-----------------------
 
-Coins are mined into a t-addr (transparent address), but can only be spent to a z-addr (shielded address), 
-and must be swept out of the t-addr in one transaction with no change.
-Refer to our :ref:`payment_api` for instructions
-on how to use the ``z_sendmany`` command to send coins from a **t-addr** to a **z-addr**. 
-You will need at least 4GB of RAM for this operation.
+Starting with the Heartwood network upgrade (activating Q3 2020), mining rewards can be sent to a shielded address. We recommend this for practical and privacy reasons. 
+
+If coins are mined into a t-addr (transparent address), they can only be spent to a z-addr (shielded address), and must be swept out of the t-addr in one transaction with no change. Refer to our :ref:`payment_api` for instructions
+on how to use the ``z_sendmany`` command to send coins from a **t-addr** to a **z-addr**.  You will need at least 4GB of RAM for this operation.
 
 
 Mining Pools
-~~~~~~~~~~~~
+------------
 
-If you're mining by yourself or at home, you're most likely to succeed if you join an existing 
-mining pool. See this community-maintained `list of mining pools <https://www.zcashcommunity.com/mining/mining-pools/>`_ for further instructions.
+If you're mining by yourself or at home, you're unlikely to mine any Zcash unless you join a mining pool. A mining pool allows miners to pool resources together and share the hashing power while splitting the reward equally according to the amount of shares they contributed to solving a block. See this community-maintained |pools| for further instructions.
 
+.. |pools| raw:: html
 
-P2PKH transactions
-~~~~~~~~~~~~~~~~~~
-
-The internal `zcashd` miner inherited from Bitcoin used P2PK for coinbase transactions, 
-but Zcash 1.0.6 and later `use P2PKH by default <https://github.com/zcash/zcash/issues/945>`_ , 
-following the trend for Bitcoin.
-
-
-Configuration Options
----------------------
-
-Mine to a single address
-~~~~~~~~~~~~~~~~~~~~~~~~
-
-The internal `zcashd` miner uses a new transparent address for each mined block. 
-If you want to instead use the same address for every mined block, use the ``-mineraddress=`` 
-option available in Zcash 1.0.6 and later.
+   <a href="https://www.zcashcommunity.com/mining/mining-pools/" target="_blank">list of mining pools</a> 
