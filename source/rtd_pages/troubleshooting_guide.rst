@@ -3,9 +3,7 @@
 Troubleshooting Guide
 =====================
 
-The General FAQ has been reorganized and relocated to https://z.cash/support/faq.html. 
-Please check there for the latest updates to our frequently asked questions. The following 
-is a list of questions for Troubleshooting zcashd, the core Zcash client software.
+The following is a list of questions for Troubleshooting zcashd, the core Zcash client software. For general FAQ, see https://z.cash/support/faq.html. 
 
 System Requirements
 -------------------
@@ -68,18 +66,27 @@ zcashd crashes with the message:
 
 These messages indicate that your computer has run out of memory for running zcashd. This will most likely happen with mining nodes which require more resources than a full node without running a miner. This can also happen while creating a transaction involving a z-address. You'll need to allocate at least 4GB memory for these transactions.
 
-RPC Interface
+Zcashd commands
 -------------
 
-To get help with the RPC interface from the command line, use `zcash-cli help` to list all commands. 
+To get help with the RPC interface from the command line, use: 
 
-To get help with a particular command, use ``zcash-cli help $COMMAND``. 
+* ``zcash-cli help``, which lists all zcash-cli commands.  
+* ``zcash-cli help $COMMAND``, which lists details of a specific command
 
 There is also additional documentation under :ref:`payment_api` . 
 
-``zcash-cli` stops responding after I use the command `z_importkey``
+
+Restoring from backup
+----------------------
+
+`zcash-cli` stops responding after using the command `z_importkey`
 
 The command has added the key, but your node is currently scanning the blockchain for any transactions related to that key, causing there to be a delay before it returns. This immediate rescan is the default setting for `z_importkey`, which you can override by adding `false` to the command if you simply want to import the key, i.e. `zcash-cli z_importkey $KEY false`
+
+
+Custom transactions
+----------------------
 
 If, when attempting to execute the ``sendrawtransaction`` RPC method, you receive the error:
 
@@ -95,6 +102,8 @@ With ``createrawtransaction``, the fee is simply the sum of the inputs minus the
 
 .. admonition:: What if my question isn't answered here?
 
-   First search the issues section (https://github.com/zcash/zcash/issues) to see if someone else has posted a similar issue and if not, feel free to report your problem there. Please provide as much information about what you've tried and what failed so others can properly assess your situation to help.
+  Hop on the `Zcash Dischord <https://discord.gg/PhJY6Pm>`_ to chat with ECC, maintainers of zcashd, and community members. 
 
-.. important:: If you have ran into any issues upgrading to Overwinter, please see the :ref:`nu_dev_guide`
+  Search the issues section (https://github.com/zcash/zcash/issues) to see if someone else has posted a similar issue and if not, feel free to report your problem there. Please provide as much information about what you've tried and what failed so others can properly assess your situation to help.
+
+.. important:: If you have issues with a network upgrade, please see the :ref:`nu_dev_guide`
