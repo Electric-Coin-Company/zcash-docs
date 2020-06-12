@@ -4,14 +4,12 @@
 
 Tor Support in Zcash
 ====================
-**Warning: Do not assume Tor support does the correct thing in Zcash; better Tor support is a future feature goal.**
-
-It is possible to run Zcash as a Tor hidden service, and connect to such services.
+It is possible to run Zcash as a Tor hidden service, and connect to such services. *Warning: Tor support does not explicitly support Zcash nor Zcash explicitly support Tor.*
 
 The following directions assume you have a Tor proxy running on port 9050. Many distributions default to having a SOCKS proxy listening on port 9050, but others may not. In particular, the Tor Browser Bundle defaults to listening on port 9150. See `Tor Project FAQ:TBBSocksPort <https://www.torproject.org/docs/faq.html.en#TBBSocksPort>`_ for how to properly configure Tor.
 
 
-1. Run Zcash behind a Tor proxy
+1. Run Zcash through a Tor proxy
 -------------------------------
 
 The first step is running Zcash behind a Tor proxy. This will already make all

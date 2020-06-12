@@ -109,7 +109,7 @@ Stay in touch:
    rtd_pages/troubleshooting_guide.rst
    rtd_pages/payment_api.rst
    rtd_pages/wallet_backup.rst
-   rtd_pages/sapling_turnstile.rst
+   rtd_pages/memos.md
    rtd_pages/zcash_conf_guide.rst
    rtd_pages/zcash_mining_guide.rst
    rtd_pages/security_warnings.rst
