@@ -3,7 +3,7 @@
 Troubleshooting Guide
 =====================
 
-The following is a list of questions for Troubleshooting zcashd, the core Zcash client software. For general FAQ, see https://z.cash/support/faq.html. 
+The following is a list of questions for troubleshooting zcashd, the core Zcash client software. For general FAQ, see https://z.cash/support/faq.html. 
 
 System Requirements
 -------------------
