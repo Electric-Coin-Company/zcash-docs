@@ -9,136 +9,66 @@ It is possible to run Zcash as a Tor hidden service, and connect to such service
 The following directions assume you have a Tor proxy running on port 9050. Many distributions default to having a SOCKS proxy listening on port 9050, but others may not. In particular, the Tor Browser Bundle defaults to listening on port 9150. See `Tor Project FAQ:TBBSocksPort <https://www.torproject.org/docs/faq.html.en#TBBSocksPort>`_ for how to properly configure Tor.
 
 
-1. Run Zcash through a Tor proxy
--------------------------------
+1. Run Zcash through Tor
+------------------------
 
-The first step is running Zcash behind a Tor proxy. This will already make all
-outgoing connections be anonymized, but more is possible.
+Running Zcash through Tor will make all outgoing connections be anonymized on the network, and will suffice for most situations. This is actually quite easy to do! 
 
-	-proxy=ip:port
-	        Set the proxy server. If SOCKS5 is selected (default), this proxy 
-	        server will be used to try to reach .onion addresses as well.
-		
-	-onion=ip:port
-	        Set the proxy server to use for Tor hidden services. You do not 
-	        need to set this if it's the same as -proxy. You can use -noonion 
-	        to explicitly disable access to hidden service.
-		
-	\-listen
-	        When using -proxy, listening is disabled by default. If you want  
-	        to run a hidden service (see next section), you'll need to enable 
-		it explicitly.
-		
-	-connect=X, -addnode=X, -seednode=X
-	        When behind a Tor proxy, you can specify .onion addresses instead 
-	        of IP addresses or hostnames in these parameters. It requires
-		SOCKS5. In Tor mode, such addresses can also be exchanged with
-		other P2P nodes.
+Download and run Tor Browser. This will automatically run a SOCKS proxy on 127.0.0.1:9150 (with default configuration settings). While Tor Browser (and its proxy) is running, connect zcashd to it with: 
 
-In a typical situation, this suffices to run behind a Tor proxy:
-
-.. code-block:: bash
+	.. code-block:: bash
 		
-	$ zcashd -proxy=127.0.0.1:9050
+		$ zcashd -proxy=127.0.0.1:9050
+
+Zcashd flags used:
+
+	* ``-proxy=ip:port``: sets the proxy server. If SOCKS5 is selected (default), this server will be used to reach .onion addresses as well.
 
 2. Run a Zcash hidden server
 ----------------------------
 
-If you configure your Tor system accordingly, it is possible to make your node also reachable from the Tor network. Add these lines to your /etc/tor/torrc (or equivalent config file):
+It is possible to make a zcashd node reachable from the Tor network. 
 
-	HiddenServiceDir /var/lib/tor/zcash-service/
-	HiddenServicePort 8233 127.0.0.1:8233
-	HiddenServicePort 18233 127.0.0.1:18233
+To do so, add lines to your /etc/tor/torrc (or equivalent config file) that configures the ports on the Tor side. An example is below. The directory can be different, but the port numbers should be equal to your zcashd's P2P listen port (8233 by default).
 
-The directory can be different of course, but (both) port numbers should be equal to your zcashd's P2P listen port (8233 by default).
+	.. code-block:: bash
 
-	-externalip=X
-	       You can tell Zcash about its publicly reachable address using
-	       this option, and this can be a .onion address. Given the above
-	       configuration, you can find your onion address in
-	       /var/lib/tor/zcash-service/hostname. Onion addresses are given
-	       preference for your node to advertize itself with, for connections
-	       coming from unroutable addresses (such as 127.0.0.1, where the
-	       Tor proxy typically runs).
-	       
-	\-listen
-	       You'll need to enable listening for incoming connections, as this
-	       is off by default behind a proxy.
-	       
-	\-discover
-	       When -externalip is specified, no attempt is made to discover local
-	       IPv4 or IPv6 addresses. If you want to run a dual stack, reachable
-	       from both Tor and IPv4 (or IPv6), you'll need to either pass your
-	       other addresses using -externalip, or explicitly enable -discover.
-	       Note that both addresses of a dual-stack system may be easily
-	       linkable using traffic analysis.
+		$ HiddenServiceDir /var/lib/tor/zcash-service/
+		$ HiddenServicePort 8233 127.0.0.1:8233
+		$ HiddenServicePort 18233 127.0.0.1:18233
 
-In a typical situation, where you're only reachable via Tor, this should suffice:
+After that, configure the zcashd node to use the proxy, specific onion service, and turn on the listening feature should suffice. Try: 
 
-.. code-block:: bash
+	.. code-block:: bash
 
-	$ zcashd -proxy=127.0.0.1:9050 -externalip=zctestseie6wxgio.onion -listen
+		$ zcashd -proxy=127.0.0.1:9050 -externalip=zctestseie6wxgio.onion -listen
 
-(obviously, replace the Onion address with your own). It should be noted that you still
-listen on all devices and another node could establish a clearnet connection, when knowing
-your address. To mitigate this, additionally bind the address of your Tor proxy:
+Zcashd flags used: 
 
-.. code-block:: bash
-		
-	$ zcashd ... -bind=127.0.0.1
-
-If you don't care too much about hiding your node, and want to be reachable on IPv4
-as well, use `discover` instead:
-
-.. code-block:: bash
-		
-	$ zcashd ... -discover
-
-and open port 8233 on your firewall (or use -upnp).
-
-If you only want to use Tor to reach onion addresses, but not use it as a proxy
-for normal IPv4/IPv6 communication, use:
-
-.. code-block:: bash
-		
-	$ zcashd -onion=127.0.0.1:9050 -externalip=zctestseie6wxgio.onion -discover
+	* ``-proxy=ip:port``: sets the proxy server. If SOCKS5 is selected (default), this server will be used to reach .onion addresses as well.
+	* ``-externalip=X``: Tells Zcash about its publicly reachable address, which can be a, ip or .onion address. Onion addresses are given preference for advertising and connections. 
+	* ``-listen``: Enable listening for incoming connections with this flag; listening is off by default.
 
 
 3. Automatically listen on Tor
 --------------------------------
 
-Starting with Tor version 0.2.7.1 it is possible, through Tor's control socket
-API, to create and destroy 'ephemeral' hidden services programmatically.
-Zcash has been updated to make use of this.
+Starting with Tor version 0.2.7.1 it is possible, through Tor's control socket API, to create and destroy 'ephemeral' hidden services programmatically. Zcash has been updated to make use of this.
 
-This means that if Tor is running (and proper authentication has been configured),
-Zcash automatically creates a hidden service to listen on. Zcash will also use Tor
-automatically to connect to other .onion nodes if the control socket can be
-successfully opened. This will positively affect the number of available .onion
-nodes and their usage.
+If Tor is running (and proper authentication has been configured), Zcash automatically creates a hidden service to listen on. Zcash will also use Tor automatically to connect to other .onion nodes if the control socket can be successfully opened.
 
-This new feature is enabled by default if Zcash is listening (``-listen``), and
-requires a Tor connection to work. It can be explicitly disabled with ``-listenonion=0``
-and, if not disabled, configured using the ``-torcontrol`` and ``-torpassword`` settings.
-To show verbose debugging information, pass ``-debug=tor``.
+This new feature is enabled by default if Zcash is listening (``-listen``), and requires a Tor connection to work. It can be explicitly disabled with ``-listenonion=0`` and, if not disabled, configured using the ``-torcontrol`` and ``-torpassword`` settings. To show verbose debugging information, pass ``-debug=tor``.
 
-Connecting to Tor's control socket API requires one of two authentication methods to be 
-configured. For cookie authentication the user running zcashd must have write access 
-to the ``CookieAuthFile`` specified in Tor configuration. In some cases this is 
-preconfigured and the creation of a hidden service is automatic. If permission problems 
-are seen with ``-debug=tor`` they can be resolved by adding both the user running tor and 
-the user running zcashd to the same group and setting permissions appropriately. On 
-Debian-based systems the user running zcashd can be added to the debian-tor group, 
-which has the appropriate permissions. An alternative authentication method is the use 
-of the ``-torpassword`` flag and a ``hash-password`` which can be enabled and specified in 
-Tor configuration.
+Connecting to Tor's control socket API requires one of two authentication methods to be configured: 
+
+	1.  Cookie authentication, which requires write access to the ``CookieAuthFile`` specified in Tor configuration. In some cases, this is preconfigured and the creation of a hidden service is automatic. If permission problems are seen with ``-debug=tor`` they can be resolved by adding both the user running tor and  the user running zcashd to the same group and setting permissions appropriately. On Debian-based systems the user running zcashd can be added to the debian-tor group, which has the appropriate permissions. 
+	2. Authentication with the ``-torpassword`` flag and a ``hash-password``, which can be enabled and specified in Tor configuration.
 
 
 4. Connect to a Zcash hidden server
 -----------------------------------
 
-To test your set-up, you might want to try connecting via Tor on a different computer to just a
-a single Zcash hidden server. Launch zcashd as follows:
+To test your setup, try connecting via Tor on a different computer to a single Zcash hidden server. Launch zcashd as follows:
 
 .. code-block:: bash
 		
