@@ -70,7 +70,7 @@ $ zcash-cli z_listunspent
   }
 ]
 ```
-Or, either the sender or receiver (but no one else!) may use `z_listreceivedbyaddress`:
+The sender, receiver, or someone who has imported the sender or receiver's viewing key may use `z_listreceivedbyaddress`:
 ```
 zcash-cli z_listreceivedbyaddress ztestsapling1kg3u0y7szv6509732at34alct46cyn0g26kppgf2a7h5tpqxldtwm7cmhf8rqmhgtmpakcz5mdv
 [
