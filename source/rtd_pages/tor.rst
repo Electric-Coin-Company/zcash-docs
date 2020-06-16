@@ -9,10 +9,12 @@ It is possible to run Zcash as a Tor hidden service, and connect to such service
 The following directions assume you have a Tor proxy running on port 9050. Many distributions default to having a SOCKS proxy listening on port 9050, but others may not. In particular, the Tor Browser Bundle defaults to listening on port 9150. See `Tor Project FAQ:TBBSocksPort <https://www.torproject.org/docs/faq.html.en#TBBSocksPort>`_ for how to properly configure Tor.
 
 
-1. Run Zcash through a Tor proxy
--------------------------------
+1. Run Zcash through Tor
+------------------------
 
-The first step is running Zcash behind a Tor proxy. This will make all outgoing connections be anonymized, and will suffice for most situations:
+Running Zcash through Tor will make all outgoing connections be anonymized on the network, and will suffice for most situations. This is actually quite easy to do! 
+
+Download and run Tor Browser. This will automatically run a SOCKS proxy on 127.0.0.1:9150 (with default confirguration settings). While Tor Browser (and its proxy) is running, connect zcashd to it with: 
 
 	.. code-block:: bash
 		
