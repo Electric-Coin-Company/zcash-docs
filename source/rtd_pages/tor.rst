@@ -14,7 +14,7 @@ The following directions assume you have a Tor proxy running on port 9050. Many 
 
 Running Zcash through Tor will make all outgoing connections be anonymized on the network, and will suffice for most situations. This is actually quite easy to do! 
 
-Download and run Tor Browser. This will automatically run a SOCKS proxy on 127.0.0.1:9150 (with default confirguration settings). While Tor Browser (and its proxy) is running, connect zcashd to it with: 
+Download and run Tor Browser. This will automatically run a SOCKS proxy on 127.0.0.1:9150 (with default configuration settings). While Tor Browser (and its proxy) is running, connect zcashd to it with: 
 
 	.. code-block:: bash
 		
@@ -37,7 +37,7 @@ To do so, add lines to your /etc/tor/torrc (or equivalent config file) that conf
 		$ HiddenServicePort 8233 127.0.0.1:8233
 		$ HiddenServicePort 18233 127.0.0.1:18233
 
-After that, configure the zcashd node to use the proxy, speficic onion service, and turn on the listening feature should suffice. Try: 
+After that, configure the zcashd node to use the proxy, specific onion service, and turn on the listening feature should suffice. Try: 
 
 	.. code-block:: bash
 
