@@ -3,15 +3,6 @@
 User Guide
 ==========
 
-About
------
-
-The Zcash repository is a fork of `Bitcoin Core <https://github.com/bitcoin/bitcoin>`_ which contains protocol
-changes to support the `Zerocash protocol <https://z.cash/technology/index.html>`_. This implements the Zcash
-cryptocurrency, which maintains a separate ledger from the Bitcoin
-network, for several reasons, the most immediate of which is that the
-consensus protocol is different.
-
 Getting Started
 ---------------
 
@@ -23,10 +14,7 @@ Welcome! This guide is intended to get you running on the official Zcash network
 	| :fa:`hdd-o` ``25GB`` of free Disk (*the size of the block chain increases over time*)
 
 
-.. note:: Currently we only officially support Linux (Debian), but we are actively investigating development for other operating systems and platforms(e.g. macOS, Ubuntu, Windows, Fedora). 
-
-
-Please let us know if you run into snags. We plan to make it less memory/CPU intensive and support more architectures and operating systems in the future.
+.. note:: Currently we only officially support Linux (Debian), but you can build zcashd on other operating systems and platforms (e.g. macOS, Ubuntu, Windows, Fedora). MacOS requires special instructions, Windows requires a non-native cross-compile build.  
 
 If you are installing Zcash for the first time, please skip to the :ref:`Installation` section. Otherwise, the below upgrading section will provide information to update your current Zcash environment.
 
