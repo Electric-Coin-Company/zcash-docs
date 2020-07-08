@@ -67,7 +67,7 @@ zcashd crashes with the message:
 These messages indicate that your computer has run out of memory for running zcashd. This will most likely happen with mining nodes which require more resources than a full node without running a miner. This can also happen while creating a transaction involving a z-address. You'll need to allocate at least 4GB memory for these transactions.
 
 Zcashd commands
--------------
+---------------
 
 To get help with the RPC interface from the command line, use: 
 

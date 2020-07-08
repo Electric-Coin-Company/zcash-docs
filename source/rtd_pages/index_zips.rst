@@ -2,7 +2,7 @@ Zcash Improvement Proposals (ZIPs)
 ==================================
 
 What are ZIPs? 
--------------
+--------------
 
 Zcash Improvement Proposals (ZIPs) are the way to: 
 
@@ -12,7 +12,7 @@ Zcash Improvement Proposals (ZIPs) are the way to:
 4) document design decisions. 
 
 Contributing ZIPs
--------------
+-----------------
 
 The author(s) of the ZIP are responsible for building consensus within the community and documenting/addressing dissenting opinions. 
 

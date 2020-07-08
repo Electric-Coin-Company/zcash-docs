@@ -35,6 +35,20 @@ Below is general advice that applies to all network upgrades:
     transactions. Notify users with a message or at their next login after 
     the network transition. 
 
+:fa:`bullseye` Heartwood
+------------------------
+
+Heartwood is the fourth network upgrade for Zcash and enables more third-party integrations and better privacy through shielded coinbase.
+
+:fa:`arrow-circle-right` Consensus Branch ID change
+    See `ZIP 250 <https://zips.z.cash/zip-0250>`_
+
+:fa:`arrow-circle-right` Flyclient Support
+    Flyclient, specified through `ZIP 221 <https://zips.z.cash/zip-0221>`_, enables efficient proofs of Proof-of-Work for light clients. In addition to enabling improved light-client wallets, this improves many cross-chain protocols. This ZIP specifies modifications to be made to the Zcash block header format to include Merkle Mountain Range (MMR) commitments.
+
+:fa:`arrow-circle-right` Shielded Coinbase
+    `ZIP 213 <https://zips.z.cash/zip-0213>`_ defines modifications to the Zcash consensus rules that enable coinbase funds to be mined to shielded Sapling addresses. It does not disable the use of transparent addresses in coinbase transactions.
+
 :fa:`certificate` Blossom
 -------------------------
 
