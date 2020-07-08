@@ -1,7 +1,7 @@
 .. _lightclient_support:
 
 Light Client Support Resources
-==========================
+==============================
 
 Everything you need to integrate and support zcash light client wallets.
 
