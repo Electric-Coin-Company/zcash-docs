@@ -33,10 +33,10 @@ In addition, `zcashd` adds the `Payment API` (see :ref:`payment_api` reference).
 Example of using curl to make a ``z_sendmany`` call::
   
   curl --user "$USER:$PASSWORD" \
-  -X POST \
-  --data-binary "{ \"jsonrpc\": \"1.0\", \"id\":\"curltest\", \"method\": \"z_sendmany\", \"params\": [\"$FROM_ADDR\", [{\"address\": \"$TO_ADDR\" ,\"amount\": $AMOUNT}]] }" \
-  -H "Content-Type: text/plain;" \
-  http://127.0.0.1:8232
+    -X POST \
+    --data-binary "{ \"jsonrpc\": \"1.0\", \"id\":\"curltest\", \"method\": \"z_sendmany\", \"params\": [\"$FROM_ADDR\", [{\"address\": \"$TO_ADDR\" ,\"amount\": $AMOUNT}]] }" \
+    -H "Content-Type: text/plain;" \
+    http://127.0.0.1:8232
 
 This API does not yet support advanced Bitcoin transaction types, such as those involving multisig addresses.
 
