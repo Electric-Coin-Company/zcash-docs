@@ -40,11 +40,11 @@ If you're on a Debian-based distribution, you can follow the :ref:`install-debia
    git fetch origin
 
 | Ensure you check the current release version from :fa:`github` `here <https://github.com/zcash/zcash>`_ .
-| If ``v3.0.0`` was current, issue the following commands:
+| If ``v3.1.0`` was current, issue the following commands:
 
 .. code-block:: bash
 
-   git checkout v3.0.0
+   git checkout v3.1.0
    ./zcutil/fetch-params.sh
    ./zcutil/build.sh -j$(nproc)
 
@@ -205,7 +205,7 @@ Now we need to get the Zcash software from the repository:
 
    git clone https://github.com/zcash/zcash.git
    cd zcash/
-   git checkout v3.0.0
+   git checkout v3.1.0
    ./zcutil/fetch-params.sh
 
 This will fetch the parameters generated in the Sapling MPC, and place them into ``~/.zcash-params/ ``. These parameters are around 760 MB in size, so it may take some time to download them.
