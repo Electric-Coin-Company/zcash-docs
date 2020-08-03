@@ -5,40 +5,7 @@
 Zcash Integration Guide
 =======================
 
-Zcash is based on Bitcoin, and has a superset of functionality, both in the protocol and the RPC interface. This document describes Zcash integration into services and products. For help building and testing Zcash, see the :ref:`user_guide`.
-
-Address Types
--------------
-
-Zcash transparent addresses (aka t-addrs), begin with a “t” prefix and are very similar to Bitcoin addresses.
-
-Zcash shielded addresses (z-addrs) which begin with a “z” prefix, are used for sending and receiving shielded funds, with transactions cryptographically protected with zero-knowledge proofs. The `Sapling network upgrade <https://z.cash/upgrade/sapling/>`_ added an improved type of shielded addresses which are much more efficient and user friendly. The new Sapling addresses begin with “zs” whereas the legacy, Sprout addresses begin with “zc”. 
-
-For more information, see the guide to :ref:`zcash_addresses`.
-
-
-Bitcoin API
-------------
-
-The zcash daemon, `zcashd`, presents the same kind of RPC interface as Bitcoin Core, and this interface (see `Bitcoin RPC reference <https://bitcoin.org/en/developer-reference#remote-procedure-calls-rpcs>`_) provides a very similar set of `Bitcoin API calls <https://bitcoin.org/en/developer-reference#rpc-quick-reference>`_, which we call the `Bitcoin API`. Transactions which only involve transparent addresses can be created with this API just as for Bitcoin.
-
-This API can be used for advanced Bitcoin transactions, just as in Bitcoin Core, such as those involving multisig addresses. Multisig addresses begin with "t3" whereas standard transparent addresses begin with "t1".
-
-
-Zcash Payment API
------------------
-
-In addition, `zcashd` adds the `Payment API` (see :ref:`payment_api` reference). This is a high-level API that simplifies the common use cases of transfers. This API can send from or to both z-addrs and t-addrs through the ``z_sendmany`` call.
-
-Example of using curl to make a ``z_sendmany`` call::
-  
-  curl --user "$USER:$PASSWORD" \
-  -X POST \
-  --data-binary "{ \"jsonrpc\": \"1.0\", \"id\":\"curltest\", \"method\": \"z_sendmany\", \"params\": [\"$FROM_ADDR\", [{\"address\": \"$TO_ADDR\" ,\"amount\": $AMOUNT}]] }" \
-  -H "Content-Type: text/plain;" \
-  http://127.0.0.1:8232
-
-This API does not yet support advanced Bitcoin transaction types, such as those involving multisig addresses.
+Zcash is based on Bitcoin, and has a superset of functionality, both in the protocol and the RPC interface. This document describes Zcash integration into services and products. 
 
 
 Integration Path
@@ -62,11 +29,15 @@ A service that supports both z-addrs and multisig will use the Zcash API for all
                     Payment API              Payment API  Payment API
 ======= =========== ============ =========== ============ ===========
 
-Bitcoin API (JSON-RPC)
-----------------------
+Bitcoin API
+-----------
 
 - Backwards compatible with Bitcoin-Core 0.11.2 with minor modifications to JSON output.
 - Recommended for: time to market for existing Bitcoin applications, familiarity with Bitcoin and multi-sig.
+
+The zcash daemon, `zcashd`, presents the same kind of RPC interface as Bitcoin Core, and this interface (see `Bitcoin RPC reference <https://bitcoin.org/en/developer-reference#remote-procedure-calls-rpcs>`_) provides a very similar set of `Bitcoin API calls <https://bitcoin.org/en/developer-reference#rpc-quick-reference>`_, which we call the `Bitcoin API`. Transactions which only involve transparent addresses can be created with this API just as for Bitcoin.
+
+This API can be used for advanced Bitcoin transactions, just as in Bitcoin Core, such as those involving multisig addresses. Multisig addresses begin with "t3" whereas standard transparent addresses begin with "t1".
 
 
 Zcash Payment API
@@ -75,12 +46,24 @@ Zcash Payment API
 - For sending both transparent and private payments. Extends the existing Bitcoin API with new commands.
 - Recommended for: new applications looking to add private transactions and encrypted memo field support which do not need multisig.
 
+In addition, `zcashd` adds the `Payment API` (see :ref:`payment_api` reference). This is a high-level API that simplifies the common use cases of transfers. This API can send from or to both z-addrs and t-addrs through the ``z_sendmany`` call.
+
+Example of using curl to make a ``z_sendmany`` call::
+  
+  curl --user "$USER:$PASSWORD" \
+  -X POST \
+  --data-binary "{ \"jsonrpc\": \"1.0\", \"id\":\"curltest\", \"method\": \"z_sendmany\", \"params\": [\"$FROM_ADDR\", [{\"address\": \"$TO_ADDR\" ,\"amount\": $AMOUNT}]] }" \
+  -H "Content-Type: text/plain;" \
+  http://127.0.0.1:8232
+
+This API does not yet support advanced Bitcoin transaction types, such as those involving multisig addresses.
+
 Contact Us
 ----------
 
 For assistance with integrating Zcash into your product, send us a message at ecosystem@z.cash.
 
-Resources
+References
 ---------
 
 :fa:`arrow-circle-right` :ref:`user_guide`
