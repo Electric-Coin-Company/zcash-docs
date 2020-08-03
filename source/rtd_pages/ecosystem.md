@@ -1,6 +1,6 @@
 # Community Spaces
 
-foo
+Here's where to find us, and interact with us. Hope to see you soon!
 
 ## Code
 * [github/zcash](https://github.com/zcash): Electric Coin Company (ECC, founding entity of Zcash) projects.  

@@ -1,5 +1,0 @@
-# Community 
-
-foo
-
-## bar
