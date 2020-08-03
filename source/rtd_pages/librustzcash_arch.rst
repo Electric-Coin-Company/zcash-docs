@@ -1,5 +1,6 @@
-Zcash Rust Architecture
+Architecture and Cryptography
 =======================
+An overview of the cryptography inside Zcash. Don't worry if you don't understand what this means--this isn't required knowledge to use Zcash or build Zcash apps. However, this is required knowledge for developers who plan to contribute to cryptographic improvements.
 
 Current Design
 --------------
