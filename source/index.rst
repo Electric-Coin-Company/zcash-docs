@@ -8,29 +8,104 @@
 Welcome to Zcash!
 ===================
 
-This is the home for Zcash documentation for end users and developers. Check out our quickstarts, tutorials, API reference, and code examples. 
+This is the home for Zcash documentation for end users and developers. Check out our quickstarts, tutorials, API reference, and code examples.
 
-.. image:: rtd_pages/images/box_wallets.png
-   :width: 49%
-   :target: https://z.cash/wallets/
+.. raw:: html
 
-.. image:: rtd_pages/images/box_zcashd.png
-   :width: 49%
-   :target: ../latest/rtd_pages/user_guide.html
+    <div class="button-box-container">
+      <div class="button-box bg-orange">
+        <a href="https://z.cash/wallets/">
+          <div>
+            <img src="_static/images/box_wallets_icon.png" />
+          </div>
+          <div>
+            <p>
+              <strong>Zcash Wallets </strong>
+              <span>A list of wallet apps available for use</span>
+            </p>
+            <p>https://z.cash/wallets/</p>
+          </div>
+        </a>
+      </div>
 
-.. image:: rtd_pages/images/box_zig.png
-   :width: 49%
-   :target: ../latest/rtd_pages/zig.html
+     <div class="button-box bg-gray">
+       <a href="../latest/rtd_pages/user_guide.html">
+         <div>
+          <img src="_static/images/box_zcashd_icon.png" />
+         </div>
+         <div>
+           <p>
+             <strong>Zcashd Core Platform </strong>
+             <span>How to join the Zcash network</span>
+           </p>
+           <p>Read the Docs</p>
+         </div>
+       </a>
+     </div>
 
-.. image:: rtd_pages/images/box_mobile.png
-   :width: 49%
-   :target: ../latest/rtd_pages/lightclient_support.html
+    <div class="button-box bg-lgt-blue">
+      <a href="../latest/rtd_pages/zig.html">
+        <div>
+          <img src="_static/images/box_zig_icon.png" />
+        </div>
+        <div>
+          <p>
+            <strong>Integration Guide </strong>
+            <span>How to add Zcash to your project</span>
+          </p>
+          <p>Read the Docs</p>
+        </div>
+      </a>
+    </div>
 
-.. image:: rtd_pages/images/box_rpc.png
-   :width: 49%
-   :target: https://zcash-rpc.github.io/
+   <div class="button-box bg-yellow">
+     <a href="../latest/rtd_pages/lightclient_support.html">
+        <div>
+          <img src="_static/images/box_mobile_icon.png" />
+        </div>
+        <div>
+         <p>
+           <strong>Mobile Dev Resources </strong>
+           <span>Example implementations of SDKs/APIs</span>
+         </p>
+         <p>Read the Docs</p>
+       </div>
+     </a>
+   </div>
 
-.. image:: rtd_pages/images/box_community.png
+    <div class="button-box bg-yellow">
+      <a href="https://zcash-rpc.github.io/">
+        <div>
+          <img src="_static/images/box_mobile_icon.png" />
+        </div>
+        <div>
+          <p>
+            <strong>RPC Documentation </strong>
+            <span>Details on zcashd commands</span>
+          </p>
+          <p>https://zcash-rpc.github.io/</p>
+        </div>
+      </a>
+    </div>
+
+     <div class="button-box bg-lgt-blue">
+       <a href="https://discord.gg/PhJY6Pm">
+        <div>
+          <img src="_static/images/box_community_icon.png" />
+        </div>
+        <div>
+          <p>
+           <strong>Community Chat </strong>
+           <span>Say hi and see what we're up to</span>
+          </p>
+          <p>Discord</p>
+         </div>
+       </a>
+     </div>
+   </div>
+
+..
+  _image:: rtd_pages/images/box_community.png
    :width: 49%
    :target: https://discord.gg/PhJY6Pm
 
