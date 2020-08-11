@@ -6,7 +6,7 @@ Current Design
 --------------
 
 librustzcash/pairing
-    - `pairing` is a crate for using pairing-friendly elliptic curves. Currently, only the [BLS12-381](https://z.cash/blog/new-snark-curve.html) construction is implemented.
+    - `pairing` is a crate for using pairing-friendly elliptic curves. Currently, only the `BLS12-381 <https://z.cash/blog/new-snark-curve.html>`_. construction is implemented.
 librustzcash/bellman
     - `bellman` is a crate for building zk-SNARK circuits. It provides circuit traits and primitive structures, as well as basic gadget implementations such as booleans and number abstractions.
 librustzcash/jubjub
@@ -25,7 +25,7 @@ zcash/src/rust
 Current Issues
 --------------
 
-// TODO: update this based on open issues in `librustzcash` repo
+.. TODO: update this based on open issues in `librustzcash` repo
 
 - We’re doing lots of refactorings and improvements to the code, 
   but these will span many different crates until we get to a stable 
@@ -45,7 +45,7 @@ Current Issues
 Roadmap
 -------
 
-// TODO: update this based on open issues in `librustzcash` repo
+.. TODO: update this based on open issues in `librustzcash` repo
 
 librustzcash/pairing
     - `pairing` is being refactored into a generic library for working with pairing-friendly curves. After the refactor, `pairing` will provide basic traits for pairing-friendly elliptic curve constructions, while specific curves will be in separate crates.
@@ -79,5 +79,4 @@ End Goal
 - In the meantime, everything is CI’d and developed together
 
 - The coolest, most awesome crypto codebase written in Rust anywhere in the world
-
 
