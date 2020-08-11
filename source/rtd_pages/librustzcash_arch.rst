@@ -25,7 +25,7 @@ zcash/src/rust
 Current Issues
 --------------
 
-// TODO: update this based on open issues in `librustzcash` repo
+.. TODO: update this based on open issues in `librustzcash` repo
 
 - We’re doing lots of refactorings and improvements to the code, 
   but these will span many different crates until we get to a stable 
@@ -45,7 +45,7 @@ Current Issues
 Roadmap
 -------
 
-// TODO: update this based on open issues in `librustzcash` repo
+.. TODO: update this based on open issues in `librustzcash` repo
 
 librustzcash/pairing
     - `pairing` is being refactored into a generic library for working with pairing-friendly curves. After the refactor, `pairing` will provide basic traits for pairing-friendly elliptic curve constructions, while specific curves will be in separate crates.
