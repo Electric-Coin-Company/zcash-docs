@@ -2,7 +2,6 @@
 
 Zcash is a cryptocurrency that uses advanced applied cryptography to provide enhanced privacy via shielded addresses. Zcash is the first practical application of zk-SNARKs, a specific type of zero-knowledge proof.
 
-
 ## Overview
 
 Get a quick dive on Zcash in 8 minutes:
