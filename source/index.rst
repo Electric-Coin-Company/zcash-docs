@@ -1,5 +1,8 @@
 .. _root:
 
+.. meta::
+   :google-site-verification: 1h3YEKIGxsPBNbYQzQZ-DqaHkiMvoBXWSeGW3uWkvbQ
+
 .. image:: rtd_pages/images/zcash-logo-horizontal-fullcolor.png
    :scale: 15
    :align: right
