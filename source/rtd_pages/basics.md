@@ -1,26 +1,35 @@
 # Zcash Basics
 
-Zcash is a cryptocurrency that uses advanced applied cryptography to provide enhanced privacy. Zcash is the first practical application of zk-SNARKs, a specific type of zero-knowledge proof.
+Zcash is a cryptocurrency that uses advanced applied cryptography to provide enhanced privacy via shielded addresses. Zcash is the first practical application of zk-SNARKs, a specific type of zero-knowledge proof.
 
-Like Bitcoin, Zcash has a fixed total supply of 21 million units. Unlike Bitcoin, Zcash offers two types of addresses: private (z-addresses) or transparent (t-addresses). These two address types allow for different transaction types that offer varying levels of privacy. Today, most wallets and exchanges exclusively support t-addresses, although support for shielded addresses is available for mobile and desktop wallets. 
+## Overview
 
-As a crash course on the basics, we recommend this video series:
+Get a quick dive on Zcash in 8 minutes:
 
-* [What is Zcash?](https://www.youtube.com/watch?v=VHkZnuM-VLE) (2 min)
-* [Why financial privacy is important](https://www.youtube.com/watch?v=SAbbEJzsJB0) (3 min)
-* [How Zcash protects financial privacy](https://www.youtube.com/watch?v=4k5nI-ajDxk) (2 min)
+1. Introducing blockchains, Zcash vs Bitcoin, and Zcash's main feature (2 min)
+
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/VHkZnuM-VLE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+1. How we define financial privacy, and why financial privacy is important (3 min)
+
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/SAbbEJzsJB0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+3. How Zcash uses zero-knowledge proofs for financial privacy (2 min)
+
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/4k5nI-ajDxk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Zcash Features
 
 This is a quick summary; the [Zcash technology page](https://z.cash/technology/) has additional information and examples. 
 
 Primary features: 
-* **Addresses**: Zcash has two types of addresses: private (z-addresses) and transparent (t-addresses). Z-addresses start with a “z,” and t-addresses start with a "t."  The two Zcash address types are interoperable. Funds can be transferred between z-addresses and t-addresses. There are privacy implications of shielding or deshielding information through these transactions. 
+* **Addresses**: Zcash has two types of addresses: private (z-addresses) and transparent (t-addresses). Z-addresses start with a “z,” and t-addresses start with a "t."  The two Zcash address types are interoperable. Funds can be transferred between z-addresses and t-addresses. There are privacy implications of shielding or deshielding information through these transactions. Today, most wallets and exchanges exclusively support t-addresses, although support for shielded addresses is available for mobile and desktop wallets. 
 * **Transactions**: Transactions between two transparent addresses (t-addresses) work just like Bitcoin: the sender, receiver and transaction value are publicly visible. Transactions involving shielded addresses include shielded (z-to-z), shielding (t-to-z), and deshielding (z-to-t), with the z-address getting privacy protections. The most secure transaction is a shielded (z-to-z) one, which encrypts the sender and receiver addresses and transaction amount. However, all transactions appear on the public blockchain, so a transaction is known to have occured and what fees were paid. 
 * **Viewing keys**: The owner of a z-address can share its transaction details with trusted third parties via a view key--a key that grants read access but not spend authority over the address. This allows for "selective disclosure", where transactions are auditable but disclosure is under the participant's control. This allows compliance with payment for auditing, tax regulations, or anti-money laundering rules.
 
 
 Supporting features: 
+* Like Bitcoin, Zcash has a fixed total supply of 21 million units.
 * Low-fee transactions of .0001 ZEC; default for all transactions, but configurable.
 * Encrypted memos to pass along messages or other useful data.
 * Transaction expiration to reduce mempool bloat; default expiry is 20 blocks (50 min).
