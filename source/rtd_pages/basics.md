@@ -33,7 +33,7 @@ Supporting features:
 * Low-fee transactions of .0001 ZEC; default for all transactions, but configurable.
 * Encrypted memos to pass along messages or other useful data.
 * Transaction expiration to reduce mempool bloat; default expiry is 20 blocks (50 min).
-* Multisignature transactions; currently only available for public transactions.
+* Multisignature transactions currently only available for transparent transactions.
 
 
 ## Zcash Protocol 
