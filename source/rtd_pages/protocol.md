@@ -6,7 +6,7 @@ A blockchain protocol operates on top of the Internet, on a P2P network of compu
 
 ## Protocol Specs
 
-The most up-to-date [Zcash Protocol Specification](https://zips.z.cash/protocol/protocol.pdf) contains the most complete description of everything that happens with Zcash. It introduces the protocol abstractly, dives in technically, and details what each upgrade to the protocol has changed. The draft of the [spec including Canpoy](https://zips.z.cash/protocol/canopy.pdf) details what will change, but is subject to change frequently. 
+The most up-to-date [Zcash Protocol Specification](https://zips.z.cash/protocol/protocol.pdf) contains the most complete description of everything that happens with Zcash. It introduces the protocol abstractly, dives in technically, and details what each upgrade to the protocol has changed. The draft of the [spec including Canopy](https://zips.z.cash/protocol/canopy.pdf) details what will change, but is subject to change frequently. 
 
 ## Zcash Improvement Proposals (ZIPs)
 
