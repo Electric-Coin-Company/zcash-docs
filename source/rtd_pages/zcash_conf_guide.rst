@@ -8,7 +8,7 @@ Zcash.conf Guide
 Below contains information for additional configuration of the ``zcash.conf`` file.
 
 Notes: 
-
+* A blank zcash.conf file will run zcashd on mainnet. 
 * The most important setting to set is which network, mainnet, testnet, and regtest, zcashd to run. The other settings allow optimization of zcashd and how it interacts with other components it services. 
 * You can have multiple configuration files, and run zcashd with a flag ``-conf=<file>`` to run with a specific config file. We suggest keeping various configuration files to suit different needs, rather than editing your configuration file as needed. 
 * By default, the config file zcashd tries is ``$HOME/.zcash/zcash.conf`` on Debian and Windows, and ``/Users/yourusername/Library/Application\ Support/Zcash/zcash.conf`` on MacOS. 
@@ -224,6 +224,26 @@ Transaction Fee
 |                         | .. code-block:: bash                                                                                     |
 |                         |                                                                                                          |
 |                         |    txconfirmtarget=n                                                                                     |
++-------------------------+----------------------------------------------------------------------------------------------------------+
+
+Indexing
+--------
+
++-------------------------+----------------------------------------------------------------------------------------------------------+
+|**Parameter**            | **Description & Example**                                                                                |
++-------------------------+----------------------------------------------------------------------------------------------------------+
+| reindex                 | Rebuild block chain index from current blk000??.dat files on startup                                     |
+|                         |                                                                                                          |
+|                         | .. code-block:: bash                                                                                     |
+|                         |                                                                                                          |
+|                         |    reindex=1                                                                                             |
++-------------------------+----------------------------------------------------------------------------------------------------------+
+| txindex                 | | Maintain a full transaction index, used by the getrawtransaction rpc,                                  |
+|                         | | partitioncheck, pow, proxy, prune, rand, reindex, rpc, selectcoins, tor.                               |
+|                         |                                                                                                          |
+|                         | .. code-block:: bash                                                                                     |
+|                         |                                                                                                          |
+|                         |    txindex=1                                                                                             |
 +-------------------------+----------------------------------------------------------------------------------------------------------+
 
 Miscellaneous Options
