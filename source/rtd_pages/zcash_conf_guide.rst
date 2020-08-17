@@ -226,25 +226,7 @@ Transaction Fee
 |                         |    txconfirmtarget=n                                                                                     |
 +-------------------------+----------------------------------------------------------------------------------------------------------+
 
-Indexing
---------
 
-+-------------------------+----------------------------------------------------------------------------------------------------------+
-|**Parameter**            | **Description & Example**                                                                                |
-+-------------------------+----------------------------------------------------------------------------------------------------------+
-| reindex                 | Rebuild block chain index from current blk000??.dat files on startup                                     |
-|                         |                                                                                                          |
-|                         | .. code-block:: bash                                                                                     |
-|                         |                                                                                                          |
-|                         |    reindex=1                                                                                             |
-+-------------------------+----------------------------------------------------------------------------------------------------------+
-| txindex                 | | Maintain a full transaction index, used by the getrawtransaction rpc,                                  |
-|                         | | partitioncheck, pow, proxy, prune, rand, reindex, rpc, selectcoins, tor.                               |
-|                         |                                                                                                          |
-|                         | .. code-block:: bash                                                                                     |
-|                         |                                                                                                          |
-|                         |    txindex=1                                                                                             |
-+-------------------------+----------------------------------------------------------------------------------------------------------+
 
 Miscellaneous Options
 ---------------------
@@ -258,6 +240,13 @@ Miscellaneous Options
 |                         | .. code-block:: bash                                                                                     |
 |                         |                                                                                                          |
 |                         |    gen=1                                                                                                 |
++-------------------------+----------------------------------------------------------------------------------------------------------+
+| txindex                 | | Maintain a full transaction index, used by the getrawtransaction rpc,                                  |
+|                         | | partitioncheck, pow, proxy, prune, rand, reindex, rpc, selectcoins, tor.                               |
+|                         |                                                                                                          |
+|                         | .. code-block:: bash                                                                                     |
+|                         |                                                                                                          |
+|                         |    txindex=1                                                                                             |
 +-------------------------+----------------------------------------------------------------------------------------------------------+
 | genproclimit            | Set the number of threads to be used for mining Zcash (-1 = all cores).                                  |
 |                         |                                                                                                          |
