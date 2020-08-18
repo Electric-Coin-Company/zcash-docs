@@ -17,22 +17,22 @@ This is the home for Zcash documentation for end users and developers. Check out
 
     <div class="button-box-container">
       <div class="button-box bg-orange">
-        <a href="https://z.cash/wallets/">
+        <a href="rtd_pages/basics.html">
           <div>
-            <img src="_static/images/box_wallets_icon.png" />
+            <img src="_static/images/box_zcash_basics.png" />
           </div>
           <div>
             <p>
-              <strong>Zcash Wallets </strong>
-              <span>A list of wallet apps available for use</span>
+              <strong>Zcash Basics </strong>
+              <span>New to Zcash? Learn about it all, from A to ZEC </span>
             </p>
-            <p>https://z.cash/wallets/</p>
+            <p>Read the Docs</p>
           </div>
         </a>
       </div>
 
      <div class="button-box bg-gray">
-       <a href="../latest/rtd_pages/user_guide.html">
+       <a href="rtd_pages/user_guide.html">
          <div>
           <img src="_static/images/box_zcashd_icon.png" />
          </div>
@@ -47,7 +47,7 @@ This is the home for Zcash documentation for end users and developers. Check out
      </div>
 
     <div class="button-box bg-lgt-blue">
-      <a href="../latest/rtd_pages/zig.html">
+      <a href="rtd_pages/zig.html">
         <div>
           <img src="_static/images/box_zig_icon.png" />
         </div>
@@ -62,7 +62,7 @@ This is the home for Zcash documentation for end users and developers. Check out
     </div>
 
    <div class="button-box bg-yellow">
-     <a href="../latest/rtd_pages/lightclient_support.html">
+     <a href="rtd_pages/lightclient_support.html">
         <div>
           <img src="_static/images/box_mobile_icon.png" />
         </div>
