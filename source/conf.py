@@ -39,7 +39,7 @@ release = u'3.1.0'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 # TODO research sphinxcontrib.osexample
-extensions = ['sphinx.ext.intersphinx', 'sphinx_fontawesome','recommonmark']
+extensions = ['sphinx.ext.intersphinx', 'sphinx_fontawesome','recommonmark','sphinx_sitemap']
 
 
 # Add any paths that contain templates here, relative to this directory.
@@ -67,6 +67,7 @@ language = None
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path .
 #exclude_patterns = []
+html_extra_path = ['robots.txt']
 
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = 'sphinx'
@@ -172,6 +173,9 @@ texinfo_documents = [
      author, 'ZCashDocumentation', 'One line description of project.',
      'Miscellaneous'),
 ]
+
+# Set the value of html_baseurl for sphinx_sitemap
+html_baseurl = 'https://zcash.readthedocs.io/en/latest/'
 
 # Add additional JS files
 def setup(app):
