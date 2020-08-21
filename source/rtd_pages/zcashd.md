@@ -19,7 +19,7 @@ for a system in that category, try the debian package source
 for a system outside that category (e.g. red hat), try the tar file
 if neither of those work, try build-from-source (edited) --> 
 
-* **MacOS**: Follow these instructions to build [from source](user_guide.html). Zcashd & Zcash-cli are unsupported ("best effort" maintained) for macOS, but we recommend you to use it and develop on it--we sure do. The level of testing and integration is not up to par with our standards to call this officially supported.
+* [OSx](OSx-installation.md) ("best-effort" supported)
 
 * [Windows](windows-installation.md) (unsupported)
 <!--
