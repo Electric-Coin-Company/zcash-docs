@@ -1,13 +1,15 @@
 # Zcash Full Node and CLI
 
-Zcashd & Zcash-cli are the main flagship products maintained by Electric Coin Company (the founding team for Zcash).  A full node downloads a copy of the blockchains and fully enforces all of the rules of the network. The zcashd client is used to run a full node client on the Zcash network, and the zcash-cli allows interactions with the node (for instance, to tell it to send a transaction).
+Zcashd & Zcash-cli allow you to run a full node and interact with it via a command-line interface.  The zcashd full node downloads a copy of the Zcash blockchain,  enforces rules of the Zcash network, and can execute all functionalities. The zcash-cli allows interactions with the node (i.e. tell it to send a transaction).
+
+![zcashdandzcashcli](./images/zcashd_and_zcashcli.png)
+
+Zcashd & Zcash-cli are the maintained by Electric Coin Company (the founding team for Zcash).
 
 
 ## Installation
 
-* **Debian**: Of the multiple install methods, we recommend the [Debian Packages Setup](install_debian_bin_packages.html) (video above). Zcashd & Zcash-cli are only [officially supported](https://zcash.readthedocs.io/en/latest/rtd_pages/supported_platform_policy.html#supported-platform-policy) for Debian. Alternatively, you can install via a [Binary Tarball](install_binary_tarball.html) or [build from source](user_guide.html). 
-
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/hTKL0jPu7X0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+* [Debian/Ubuntu](Debian-Ubuntu-installation.md) ([officially](https://zcash.readthedocs.io/en/latest/rtd_pages/supported_platform_policy.html#supported-platform-policy) supported)
 
 * **Other Linux Systems**: try the [Binary Tarball Download and Setup](install_binary_tarball.html) to install Zcashd & Zcash-cli. The .tar file unzips into a directory and does not involve a package manager, so it is agnostic of whether that system uses an OS package manager or which one it uses. Alternatively, you can [build from source](user_guide.html).
 
