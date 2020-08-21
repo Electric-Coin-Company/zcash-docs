@@ -25,9 +25,14 @@ Todo: getting set up on the zcash.conf file here.
 -->
 
 <!--
-## Use
+## Syncing
 
-Todo: disclaimer about syncing
+Todo: disclaimer that it may take a while
+If available: IPFS!
+-->
+
+<!--
+## Use
 Todo: link RPC: https://zcash-rpc.github.io/
 Todo: initial send and receive instructions here.  
 --> 
