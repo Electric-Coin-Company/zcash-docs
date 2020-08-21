@@ -27,6 +27,7 @@ Todo: getting set up on the zcash.conf file here.
 <!--
 ## Use
 
+Todo: disclaimer about syncing
 Todo: link RPC: https://zcash-rpc.github.io/
 Todo: initial send and receive instructions here.  
 --> 
@@ -38,6 +39,8 @@ Todo: instructions here.
 -->
 
 ## References
+
+An extensive list of Zcashd & Zcash-cli pages, including ones linked inline in this page above. 
 * [User Guide](user_guide.html)
 * [Troubleshooting Guide](troubleshooting_guide.html)
 * [Zcash Payment API](payment_api.html)
