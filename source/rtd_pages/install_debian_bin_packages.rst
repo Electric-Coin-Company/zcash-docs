@@ -26,7 +26,7 @@ Add the repository to your sources:
 
 .. code-block:: bash
 
-   echo "deb [arch=amd64] https://apt.z.cash/ jessie main" | sudo tee /etc/apt/sources.list.d/zcash.list
+   echo "deb [arch=amd64] https://apt.z.cash/ stretch main" | sudo tee /etc/apt/sources.list.d/zcash.list
 
 Finally, update the cache of sources and install Zcash:
 
@@ -154,77 +154,3 @@ Then update the list again:
     sudo apt-get update
 
 At this point you should be able to upgrade with the new public key.
-
-Upgrading Debian 8 Jessie to Debian 9 Stretch
-----------------------------------------------
-
-Debian 8 will no longer be supported for zcashd v2.0.6 and above. The instructions here are provided as convenience for anyone still running Debian 8
-
-Before you begin upgrading from Debian 8 to Debian 9, we **strongly encourage** you to follow :ref:`wallet_backup` .
-
-At the very minimum, it is best to copy these backup wallet files somewhere that you will be able to access independently, e.g. an external USB.
-
-Once you have ensured all your keys, wallet, and conf files are backup properly it is worth reading through https://www.debian.org/releases/stable/amd64/release-notes/ch-upgrading.html
-
-Specifically, you will want to pay attention to items described in https://www.debian.org/releases/stretch/amd64/release-notes/ch-upgrading.en.html#trouble
-
-If you are comfortable with your Debian and Zcash backups, please follow the below instructions for a minimal system upgrade:
-
-1. It is recommended to have your Debian 8 Jessie system up to date before beginning. 
-
-   .. code-block:: bash
-
-       sudo apt-get update
-       sudo apt-get upgrade
-
-2. Edit your `/etc/apt/sources.list` file to replace all jessie fields with stretch.
-
-   .. code-block:: bash
-
-       sed -i 's/jessie/stretch/g' /etc/apt/sources.list
-
-   You should now notice the mirrors in `/etc/apt/sources.list` contain stretch fields, not jessie
-
-   Note: If you decide to use `stable` instead of `stretch`, you may run the risk of accidentally 
-   updating when Debian 10 becomes the stable version.
-
-3. Update and upgrade the list of available packages for Debian 9 Stretch.
-
-   .. code-block:: bash
-
-       sudo apt-get update
-       sudo apt-get upgrade
-
-4. Ensure you have proper disk space before completing system upgrade with latest available version
-
-   .. code-block:: bash
-
-       sudo apt-get dist-upgrade
-
-5. Once upgrade is complete, remove the packages that are no longer needed
-
-   .. code-block:: bash
-
-       sudo apt-get autoremove
-
-6. Reboot your system and sanity check the kernel version on boot
-
-    .. code-block:: bash
-
-       reboot
-    
-    System restarts
-
-    .. code-block:: bash
-
-       uname -a
-
-    OR 
-
-    .. code-block:: bash
-
-       cat /etc/debian_version
-
-You should see a Debian 9 field and the upgrade is complete!
-
-
