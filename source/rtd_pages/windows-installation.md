@@ -1,4 +1,4 @@
-# Installing Zcashd & Zcash-cli on Windows
+# Zcashd & Zcash-cli on Windows
 
 We do not currently support Zcashd & Zcash-cli on Windows.
 
