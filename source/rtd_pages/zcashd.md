@@ -21,8 +21,7 @@ if neither of those work, try build-from-source (edited) -->
 
 * **MacOS**: Follow these instructions to build [from source](user_guide.html). Zcashd & Zcash-cli are unsupported ("best effort" maintained) for macOS, but we recommend you to use it and develop on it--we sure do. The level of testing and integration is not up to par with our standards to call this officially supported.
 
-* **Windows**: We do not support zcashd and zcash-cli on Windows, do not have documented instructions, and do not recommend it. However, it is technically possible to run on Zcashd & Zcash-cli on windows with a cross-compile from Debian. 
-
+* [Windows](windows-installation.md) (unsupported)
 <!--
 ## Configuration
 
