@@ -128,7 +128,7 @@ This is the home for Zcash documentation for end users and developers. Check out
    rtd_pages/zcash_wallets.md
    rtd_pages/zig.rst
    rtd_pages/ECC_wallet.md
-   rtd_pages/zcashd.md
+   rtd_pages/user-guide.rst
    rtd_pages/protocol.md
 
 .. toctree::
