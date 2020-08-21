@@ -27,13 +27,14 @@ Todo: getting set up on the zcash.conf file here.
 <!--
 ## Use
 
+Todo: link RPC: https://zcash-rpc.github.io/
 Todo: initial send and receive instructions here.  
 --> 
 
 <!--
 ## Upgrading
 
-Todo: getting set up on the zcash.conf file here. 
+Todo: instructions here.
 -->
 
 ## References
