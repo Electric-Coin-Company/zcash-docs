@@ -7,7 +7,7 @@ Zcashd & Zcash-cli allow you to run a full node and interact with it via a comma
 Zcashd & Zcash-cli are the maintained by Electric Coin Company (the founding team for Zcash).
 
 
-## Installation and Build
+## Install
 
 * [Debian/Ubuntu](Debian-Ubuntu-installation.md) ([officially](https://zcash.readthedocs.io/en/latest/rtd_pages/supported_platform_policy.html#supported-platform-policy) supported)
 
