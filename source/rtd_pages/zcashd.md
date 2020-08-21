@@ -20,20 +20,28 @@ Zcashd & Zcash-cli are the maintained by Electric Coin Company (the founding tea
 
 ## Configuration
 
-Refer to the [Zcash.conf guide](zcash_conf_guide.html). 
+Zcashd requires a zcash.conf file to run. 
 
-<!--
-## Syncing
+To run with all default settings, generate a blank zcash.conf file: 
 
-Todo: disclaimer that it may take a while
-If available: IPFS!
--->
+```
+mkdir -p ~/.zcash
+touch ~./zcash/zcash.conf
+```
 
-<!--
+Zcashd can be configured in various ways to suit different use cases; see the [Zcash.conf guide](zcash_conf_guide.html) for an extensive list of options. 
+
+## Sync
+
+Depending on the speed of the network connection and the size of the blockchain, syncing to current chain height for Zcash may take anywhere from hours to a couple days. Please be patient! 
+
+You will not be able to run certain commands via Zcash-cli until Zcashd is synced to current height. 
+
 ## Use
-Todo: link RPC: https://zcash-rpc.github.io/
-Todo: initial send and receive instructions here.  
---> 
+
+Refer to this web-interface of [RPC commands](https://zcash-rpc.github.io/). This is one of our most-referenced resources. However, the same information is available in the terminal via the help command. 
+
+Try generating some addresses, then sending and receiving transactions! Note that there are separate commands for transparent and shielded addresses/transactions. 
 
 <!--
 ## Upgrading
