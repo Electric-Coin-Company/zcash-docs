@@ -1,6 +1,48 @@
-# Zcashd & Zcash-cli on Debian/Ubuntu
+# Building Zcashd & Zcash-cli on Debian/Ubuntu
 
+Zcashd & Zcash-cli are [officially supported](https://zcash.readthedocs.io/en/latest/rtd_pages/supported_platform_policy.html#supported-platform-policy) for Debian/Ubuntu. Since Debian/Ubuntu is the best supported platform, we recommend running Zcashd & Zcash-cli on Debian/Ubuntu if possible. 
 
-**Debian**: Of the multiple install methods, we recommend the [Debian Packages Setup](install_debian_bin_packages.html) (video above). Zcashd & Zcash-cli are only [officially supported](https://zcash.readthedocs.io/en/latest/rtd_pages/supported_platform_policy.html#supported-platform-policy) for Debian. Alternatively, you can install via a [Binary Tarball](install_binary_tarball.html) or [build from source](user_guide.html). 
+## Instructions
+
+There are multiple ways to download dependencies and build Zcashd & Zcash-cli. We've listed the various ways, in order of recommendation (try the packages first!). 
+
+* [Debian Packages Setup](install_debian_bin_packages.html); below video follows these instructions. 
 
   <iframe width="560" height="315" src="https://www.youtube.com/embed/hTKL0jPu7X0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+  	This is the easiest and most streamlined method. 
+
+* Building from source 
+
+	This requires downloading dependencies manually via the command line: 
+
+	```
+     sudo apt-get install \
+     build-essential pkg-config libc6-dev m4 g++-multilib \
+     autoconf libtool ncurses-dev unzip git python python-zmq \
+     zlib1g-dev curl bsdmainutils automake
+    ```
+
+    And downloading the source code from the repository:
+    ```
+     git clone https://github.com/zcash/zcash.git
+     cd zcash/
+     git checkout v3.1.0
+     ./zcutil/fetch-params.sh
+    ```
+
+    Then building Zcashd & Zcash-cli: 
+
+    ```
+    ./zcutil/build.sh -j$(nproc)
+    ```
+
+    (If you don't have ``nproc``, then substitute the number of cores on your system. If the build runs out of memory, try again without the ``-j`` argument, i.e. just ``./zcutil/build.sh``.)
+
+
+* [Binary Tarball Download and Setup](install_binary_tarball.html) 
+
+	The .tar file unzips into a directory and does not involve a package manager, so it is agnostic of whether that system uses an OS package manager or which one it uses.
+
+## Next steps
+Now that you've built Zcashd & Zcash-cli, we can move on to the next steps of: configuration, sync, and use. Refer back to the [Zcashd & Zcash-cli page](zcashd.html) for further instructions. 
