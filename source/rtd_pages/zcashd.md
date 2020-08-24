@@ -9,13 +9,13 @@ Zcashd & Zcash-cli are the maintained by Electric Coin Company (the founding tea
 
 ## Install
 
-* [Debian/Ubuntu](Debian-Ubuntu-installation.md) ([officially](https://zcash.readthedocs.io/en/latest/rtd_pages/supported_platform_policy.html#supported-platform-policy) supported)
+* [Debian/Ubuntu](Debian-Ubuntu-build.md) ([officially](https://zcash.readthedocs.io/en/latest/rtd_pages/supported_platform_policy.html#supported-platform-policy) supported)
 
-* [Other Linux Systems](Linux-misc-installation.md) ("best-effort" supported)
+* [Other Linux Systems](Linux-misc-build.md) ("best-effort" supported)
 
-* [OSx](OSx-installation.md) ("best-effort" supported)
+* [OSx](OSx-build.md) ("best-effort" supported)
 
-* [Windows](windows-installation.md) (unsupported)
+* [Windows](windows-build.md) (unsupported)
 
 
 ## Configuration
