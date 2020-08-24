@@ -9,7 +9,7 @@ Zcashd & Zcash-cli are maintained by Electric Coin Company (the founding team fo
 
 ## Install
 
-* [Docker](https://hub.docker.com/r/electriccoinco/zcashd)(containerized DebianOS)
+* [Docker](https://hub.docker.com/r/electriccoinco/zcashd) (containerized DebianOS)
 
 * [Debian/Ubuntu](Debian-Ubuntu-build.md) ([officially](https://zcash.readthedocs.io/en/latest/rtd_pages/supported_platform_policy.html#supported-platform-policy) supported)
 
