@@ -22,7 +22,7 @@ Zcashd & Zcash-cli are the maintained by Electric Coin Company (the founding tea
 
 Zcashd requires a zcash.conf file to run. 
 
-To run with all default settings, generate a blank zcash.conf file: 
+A blank zcash.conf file will run with all default settings. To generate one, run: 
 
 ```
 mkdir -p ~/.zcash
@@ -43,11 +43,26 @@ Refer to this web-interface of [RPC commands](https://zcash-rpc.github.io/). Thi
 
 Try generating some addresses, then sending and receiving transactions! Note that there are separate commands for transparent and shielded addresses/transactions. 
 
-<!--
 ## Upgrading
 
-Todo: instructions here.
--->
+<!--If you're on a Debian-based distribution, you can follow the :ref:`install-debian-bin-packages-guide` to install Zcash on your system. --> 
+
+To upgrade Zcashd & Zcash-cli, fetch the latest updates:
+  ```
+   git fetch origin
+  ```
+
+Run Zcashd again and verify that the version number matches that of the [source repository](https://github.com/zcash/zcash).
+
+Helpful tips: 
+* Upgrading to v3.0.0 may require a re-fetch of the parametes and a build; try the following: 
+  ```
+  git checkout v3.0.0
+   ./zcutil/fetch-params.sh
+   ./zcutil/build.sh -j$(nproc)
+  ```
+* Running ``make clean`` before building the update can eliminate random known link errors. 
+* If you run into issues upgrading, please see the [Network Upgrade Guide](nu_dev_guide.html).
 
 ## References
 
