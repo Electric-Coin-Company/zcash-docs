@@ -2,9 +2,9 @@
 
 Zcashd & Zcash-cli allow you to run a full node and interact with it via a command-line interface.  The zcashd full node downloads a copy of the Zcash blockchain,  enforces rules of the Zcash network, and can execute all functionalities. The zcash-cli allows interactions with the node (i.e. tell it to send a transaction).
 
-![zcashdandzcashcli](./images/zcashd_and_zcashcli.png)
+![](./images/zcashd_and_zcashcli.png)
 
-Zcashd & Zcash-cli are the maintained by Electric Coin Company (the founding team for Zcash).
+Zcashd & Zcash-cli are maintained by Electric Coin Company (the founding team for Zcash).
 
 
 ## Install
@@ -55,7 +55,7 @@ To upgrade Zcashd & Zcash-cli, fetch the latest updates:
 Run Zcashd again and verify that the version number matches that of the [source repository](https://github.com/zcash/zcash).
 
 Helpful tips: 
-* Upgrading to v3.0.0 may require a re-fetch of the parametes and a build; try the following: 
+* Upgrading to v3.0.0 may require a re-fetch of the parameters and a build; try the following: 
   ```
   git checkout v3.0.0
    ./zcutil/fetch-params.sh
