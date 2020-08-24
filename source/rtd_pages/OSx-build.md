@@ -38,7 +38,7 @@ Currently, the only way to install Zcashd & Zcash-cli on OSx is to build from so
      ./zcutil/fetch-params.sh
      ```
      <!--The message printed by ``git checkout`` about a "detached head" is normal and does not indicate a problem. --> 
-    This step includes fetching [zcash parameters](https://z.cash/technology/paramgen/), which are numerical dependecies for Zcash a result of the crypto inside. They are around 760 MB in size, so it will take time to download them.
+    This step includes fetching [zcash parameters](https://z.cash/technology/paramgen/), which are numerical dependencies for Zcash a result of the crypto inside. They are around 760 MB in size, so it will take time to download them.
 
 
 1. Build Zcashd & Zcash-cli
