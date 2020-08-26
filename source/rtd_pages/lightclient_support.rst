@@ -40,7 +40,6 @@ We maintain a SDK that allows for wallet functionalities (address management, se
 * Native Android SDK and app, written in Kotlin
 * Architecture: targeting ARM64, ARMv7 and x86
 * APIs: We support API 16+ but we optimize for API versions 21+
-* `Android SDK Threat Model <https://github.com/zcash/zcash-android-wallet-sdk/blob/master/docs/ThreatModel.md>`_
 
 iOS 
 ---
