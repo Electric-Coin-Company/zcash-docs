@@ -22,16 +22,14 @@ Zcashd (left) full node downloads a copy of the Zcash blockchain,  enforces rule
 
 ## Configuration
 
-Zcashd requires a zcash.conf file to run. 
+Zcashd requires a zcash.conf file to run. See the [Zcash.conf guide](zcash_conf_guide.html) for an extensive list of options. 
 
-A blank zcash.conf file will run with all default settings. To generate one, run: 
+A blank zcash.conf file will run with all default settings. To generate that, run: 
 
 ```
 mkdir -p ~/.zcash
 touch ~./zcash/zcash.conf
 ```
-
-Zcashd can be configured in various ways to suit different use cases; see the [Zcash.conf guide](zcash_conf_guide.html) for an extensive list of options. 
 
 ## Sync
 
