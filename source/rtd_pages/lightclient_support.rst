@@ -1,9 +1,9 @@
 .. _lightclient_support:
 
-Light Client Support Resources
-==============================
+Light Client Development
+========================
 
-Everything you need to integrate and support zcash light client wallets.
+The following resources allow development of apps and services that can transact on the blockchain without downloading an entire copy of the blockchain. A light client (also known as lightweight node) is referencing a trusted full node's copy of the blockchain, whereas a full node is a node that fully enforces all of the rules of the blockchain. 
 
 .. image:: images/shielded-support.png
 
@@ -65,3 +65,8 @@ WASM
 A minimal functioning demo web wallet that allows desktop OSes to use shielded addresses and separates web-specific wallet functionalities. 
 
 Originally built 2019, and is not actively maintained: https://github.com/str4d/zcon1-demo-wasm. 
+
+References 
+----------
+* `Light client threat model <wallet_threat_model.html>`_
+* `Contributing guidelines <https://github.com/zcash/ZcashLightClientKit/blob/master/CONTIBUTING.md>`_
