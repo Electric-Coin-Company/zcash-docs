@@ -14,6 +14,7 @@ A stateless server that serves light clients with blockchain information. It fet
 **Resources**
 
 * `Lightwalletd source code <https://github.com/zcash/lightwalletd>`_
+* `Lightwalletd instance setup guide <lightwalletd.html>`_
 * `Lightwalletd API docs <../lightwalletd/index.html>`_
 
 **Quick info**
