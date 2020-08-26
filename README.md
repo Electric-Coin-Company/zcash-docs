@@ -1,8 +1,8 @@
-# ReadtheDocs Overview 
+# ReadtheDocs Overview
 [![Documentation Status](https://readthedocs.org/projects/zcash/badge/?version=latest)](https://zcash.readthedocs.io/en/latest/?badge=latest)
 
 This repo contains material, code, and resources for Zcash ReadtheDocs environment. It is intended as a staging area for existing
-documentation to be updated during the ReadtheDocs migration. Additionally, it provides a local and non-local development environment using [Sphinx](http://www.sphinx-doc.org/en/master/), 
+documentation to be updated during the ReadtheDocs migration. Additionally, it provides a local and non-local development environment using [Sphinx](http://www.sphinx-doc.org/en/master/),
 [ReadtheDocs](https://readthedocs.org/), and [Python3+](https://www.python.org/)
 
 ## Installation
@@ -18,7 +18,7 @@ sudo apt-get install python3-pip
 Get required packages for ReadtheDocs build:
 
 ```bash
-pip3 install sphinx_rtd_theme sphinx sphinx-autobuild sphinx_fontawesome recommonmark
+pip3 install sphinx_rtd_theme sphinx sphinx-autobuild sphinx_fontawesome recommonmark sphinx-sitemap
 ```
 
 ### macOS
@@ -27,7 +27,7 @@ If you are using `brew`, please issue the following:
 
 ```bash
 brew install python3
-pip3 install sphinx_rtd_theme sphinx sphinx-autobuild sphinx_fontawesome recommonmark
+pip3 install sphinx_rtd_theme sphinx sphinx-autobuild sphinx_fontawesome recommonmark sphinx-sitemap
 ```
 
 If you are **not** using `brew`, please verify version of OS:
@@ -57,7 +57,7 @@ easy_install pip3
 Get required packages for ReadtheDocs build:
 
 ```bash
-pip3 install sphinx_rtd_theme sphinx sphinx-autobuild sphinx_fontawesome recommonmark
+pip3 install sphinx_rtd_theme sphinx sphinx-autobuild sphinx_fontawesome recommonmark sphinx-sitemap
 ```
 
 If you are unable to build the above packages, please compile them from source:
@@ -83,7 +83,7 @@ Here you will notice some important directories and files:
 :file_folder: source
 
 ### Local Development
-There are several options to create targets from the ReadtheDocs development environment. The core functionality 
+There are several options to create targets from the ReadtheDocs development environment. The core functionality
 is maintained in the below files, located in ```./source/``` :
 
 :page_facing_up: conf.py   (configuration file used to support local/non-local environment)
