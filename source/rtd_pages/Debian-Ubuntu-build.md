@@ -19,7 +19,7 @@ There are multiple ways to download dependencies and build Zcashd & Zcash-cli. W
 	```
      sudo apt-get install \
      build-essential pkg-config libc6-dev m4 g++-multilib \
-     autoconf libtool ncurses-dev unzip git python python-zmq \
+     autoconf libtool ncurses-dev unzip git python3 python3-zmq \
      zlib1g-dev curl bsdmainutils automake
     ```
 
