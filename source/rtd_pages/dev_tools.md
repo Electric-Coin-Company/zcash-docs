@@ -12,7 +12,7 @@ The [Zcash testnet](testnet_guide.html) is a blockchain that attempts to mimic t
 
 ## Private Containerized Network
 
-The [Zcash testnet-in-a-box (TNB))](https://github.com/zcash-hackworks/zcash-testnet-in-a-box) will deploy a collection of monitored and peered zcashd instances to a Kubernetes cluster. This is useful for isolated testing in a controlled environent, giving you the control of how many node are on the network, how many transactions are sent and mined, etc. New protocol development, or research on new RPCs will benefit greatly from this tool. 
+The [Zcash testnet-in-a-box (TNB)](https://github.com/zcash-hackworks/zcash-testnet-in-a-box) will deploy a collection of monitored and peered zcashd instances to a Kubernetes cluster. This is useful for isolated testing in a controlled environent, giving you the control of how many node are on the network, how many transactions are sent and mined, etc. New protocol development, or research on new RPCs will benefit greatly from this tool. 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/1360lSmfhnw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
