@@ -11,13 +11,13 @@ Zcashd & Zcash-cli are maintained by Electric Coin Company (the founding team fo
 
 * [Docker](https://hub.docker.com/r/electriccoinco/zcashd)(containerized DebianOS)
 
-* [Debian/Ubuntu](Debian-Ubuntu-build.md) ([officially](https://zcash.readthedocs.io/en/latest/rtd_pages/supported_platform_policy.html#supported-platform-policy) supported)
+* [Debian/Ubuntu](https://zcash.readthedocs.io/en/latest/rtd_pages/Debian-Ubuntu-build.md) ([officially](https://zcash.readthedocs.io/en/latest/rtd_pages/supported_platform_policy.html#supported-platform-policy) supported)
 
-* [Other Linux Systems](Linux-misc-build.md) ("best-effort" supported)
+* [Other Linux Systems](https://zcash.readthedocs.io/en/latest/rtd_pages/Linux-misc-build.md) ("best-effort" supported)
 
-* [OSx](OSx-build.md) ("best-effort" supported)
+* [OSx](https://zcash.readthedocs.io/en/latest/rtd_pages/OSx-build.md) ("best-effort" supported)
 
-* [Windows](windows-build.md) (unsupported)
+* [Windows](https://zcash.readthedocs.io/en/latest/rtd_pages/windows-build.md) (unsupported)
 
 
 ## Configuration
@@ -31,7 +31,7 @@ mkdir -p ~/.zcash
 touch ~./zcash/zcash.conf
 ```
 
-Zcashd can be configured in various ways to suit different use cases; see the [Zcash.conf guide](zcash_conf_guide.html) for an extensive list of options. 
+Zcashd can be configured in various ways to suit different use cases; see the [Zcash.conf guide](https://zcash.readthedocs.io/en/latest/rtd_pages/zcash_conf_guide.html) for an extensive list of options. 
 
 ## Sync
 
@@ -64,18 +64,18 @@ Helpful tips:
    ./zcutil/build.sh -j$(nproc)
   ```
 * Running ``make clean`` before building the update can eliminate random known link errors. 
-* If you run into issues upgrading, please see the [Network Upgrade Guide](nu_dev_guide.html).
+* If you run into issues upgrading, please see the [Network Upgrade Guide](https://zcash.readthedocs.io/en/latest/rtd_pages/nu_dev_guide.html).
 
 ## References
 
 An extensive list of Zcashd & Zcash-cli pages, including ones linked inline in this page above. 
-* [User Guide](user_guide.html)
-* [Troubleshooting Guide](troubleshooting_guide.html)
-* [Zcash Payment API](payment_api.html)
-* [Wallet Backup Instructions](wallet_backup.html)
-* [Sending Memos with Zcashd](memos.html)
-* [Zcash.conf guide](zcash_conf_guide.html)
-* [Zcash Mining guide](zcash_mining_guide.html)
-* [Security Warnings](security_warnings.html)
-* [Data Directory Files](files.html)
-* [Tor Support in zcashd](tor.html)
+* [User Guide](https://zcash.readthedocs.io/en/latest/rtd_pages/user_guide.html)
+* [Troubleshooting Guide](https://zcash.readthedocs.io/en/latest/rtd_pages/troubleshooting_guide.html)
+* [Zcash Payment API](https://zcash.readthedocs.io/en/latest/rtd_pages/payment_api.html)
+* [Wallet Backup Instructions](https://zcash.readthedocs.io/en/latest/rtd_pages/wallet_backup.html)
+* [Sending Memos with Zcashd](https://zcash.readthedocs.io/en/latest/rtd_pages/memos.html)
+* [Zcash.conf guide](https://zcash.readthedocs.io/en/latest/rtd_pages/zcash_conf_guide.html)
+* [Zcash Mining guide](https://zcash.readthedocs.io/en/latest/rtd_pages/zcash_mining_guide.html)
+* [Security Warnings](https://zcash.readthedocs.io/en/latest/rtd_pages/security_warnings.html)
+* [Data Directory Files](https://zcash.readthedocs.io/en/latest/rtd_pages/files.html)
+* [Tor Support in zcashd](https://zcash.readthedocs.io/en/latest/rtd_pages/tor.html)

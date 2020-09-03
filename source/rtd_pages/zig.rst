@@ -64,7 +64,7 @@ Contact Us
 For assistance with integrating Zcash into your product, send us a message at ecosystem@z.cash.
 
 References
----------
+----------
 
 :fa:`arrow-circle-right` :ref:`user_guide`
 

@@ -1,3 +1,5 @@
+:orphan:
+
 Zcash Improvement Proposals (ZIPs)
 ==================================
 
