@@ -1,3 +1,4 @@
+:orphan:
 .. _troubleshooting-guide:
 
 Troubleshooting Guide

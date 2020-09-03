@@ -1,3 +1,4 @@
+:orphan:
 .. _ux_wallet_checklist:
 
 Zcash Feature UX Checklist

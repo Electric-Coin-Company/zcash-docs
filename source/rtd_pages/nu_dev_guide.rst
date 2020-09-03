@@ -1,3 +1,4 @@
+:orphan:
 .. _nu_dev_guide:
 
 Network Upgrade Developer Guide

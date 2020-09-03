@@ -1,3 +1,4 @@
+:orphan:
 .. _dnsseed_policy:
 
 Expectations for DNS Seed operators

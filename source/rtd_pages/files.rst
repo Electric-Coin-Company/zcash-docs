@@ -1,3 +1,4 @@
+:orphan:
 .. _files:
 
 Data Directory Files

@@ -1,3 +1,4 @@
+:orphan:
 .. _payment_api:
 
 Zcash Payment API

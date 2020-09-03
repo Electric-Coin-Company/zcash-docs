@@ -138,3 +138,13 @@ This is the home for Zcash documentation for end users and developers. Check out
    rtd_pages/funding.md
    rtd_pages/learning.md
    rtd_pages/dev_tools.md
+
+.. (pages not included)
+  :hidden:
+   rtd_pages/lightwalletd.md
+   rtd_pages/Debian-Ubuntu-build.md
+   rtd_pages/OSx-build.md
+   rtd_pages/Linux-misc-build.md
+   rtd_pages/windows-build.md
+   rtd_pages/wallet_threat_model.md
+   rtd_pages/memos.md
