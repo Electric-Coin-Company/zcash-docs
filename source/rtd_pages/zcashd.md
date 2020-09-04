@@ -33,17 +33,27 @@ touch ~./zcash/zcash.conf
 
 Zcashd can be configured in various ways to suit different use cases; see the [Zcash.conf guide](https://zcash.readthedocs.io/en/latest/rtd_pages/zcash_conf_guide.html) for an extensive list of options. 
 
-## Sync
-
-Depending on the speed of the network connection and the size of the blockchain, syncing to current chain height for Zcash may take anywhere from hours to a couple days. Please be patient! 
-
-You will not be able to run certain commands via Zcash-cli until Zcashd is synced to current height. 
-
 ## Use
 
-Refer to this web-interface of [RPC commands](https://zcash-rpc.github.io/). This is one of our most-referenced resources. However, the same information is available in the terminal via the help command. 
+Now, run zcashd!
 
-Try generating some addresses, then sending and receiving transactions! Note that there are separate commands for transparent and shielded addresses/transactions. 
+```
+./src/zcashd
+```
+
+If you are running Zcash for the first time, the Zcashd node needs to fully sync before using the RPC. This may take a day or so. 
+
+With a fully-synced running ``zcashd`` in the background, open a new terminal window and run: 
+
+```
+./src/zcash-cli getinfo
+```
+
+See the available [RPC commands](https://zcash-rpc.github.io/) for all the capabilities of Zcashd & Zcash-cli. 
+
+Try generating some addresses, then sending and receiving transparent and shielded transactions! Note that there are separate commands for transparent and shielded addresses/transactions. 
+
+If you're running Zcashd for development, configure Zcashd to run on testnet, which takes significantly less time to sync than mainnet. Use the [Zcash Testnet Faucet](https://faucet.testnet.z.cash/) to get test funds. 
 
 ## Upgrading
 
@@ -64,18 +74,18 @@ Helpful tips:
    ./zcutil/build.sh -j$(nproc)
   ```
 * Running ``make clean`` before building the update can eliminate random known link errors. 
+* If you don't have ``nproc`` or if the build runs out of memory, try again without the ``-j`` argument,  just ``./zcutil/build.sh``. 
 * If you run into issues upgrading, please see the [Network Upgrade Guide](https://zcash.readthedocs.io/en/latest/rtd_pages/nu_dev_guide.html).
 
 ## References
 
 An extensive list of Zcashd & Zcash-cli pages, including ones linked inline in this page above. 
-* [User Guide](https://zcash.readthedocs.io/en/latest/rtd_pages/user_guide.html)
+* [Zcash RPC Commands](https://zcash-rpc.github.io/)
+* [Zcash.conf guide](https://zcash.readthedocs.io/en/latest/rtd_pages/zcash_conf_guide.html)
 * [Troubleshooting Guide](https://zcash.readthedocs.io/en/latest/rtd_pages/troubleshooting_guide.html)
-* [Zcash Payment API](https://zcash.readthedocs.io/en/latest/rtd_pages/payment_api.html)
 * [Wallet Backup Instructions](https://zcash.readthedocs.io/en/latest/rtd_pages/wallet_backup.html)
 * [Sending Memos with Zcashd](https://zcash.readthedocs.io/en/latest/rtd_pages/memos.html)
-* [Zcash.conf guide](https://zcash.readthedocs.io/en/latest/rtd_pages/zcash_conf_guide.html)
 * [Zcash Mining guide](https://zcash.readthedocs.io/en/latest/rtd_pages/zcash_mining_guide.html)
-* [Security Warnings](https://zcash.readthedocs.io/en/latest/rtd_pages/security_warnings.html)
+* [Known Issues](https://zcash.readthedocs.io/en/latest/rtd_pages/security_warnings.html)
 * [Data Directory Files](https://zcash.readthedocs.io/en/latest/rtd_pages/files.html)
 * [Tor Support in zcashd](https://zcash.readthedocs.io/en/latest/rtd_pages/tor.html)

@@ -32,7 +32,7 @@ This is the home for Zcash documentation for end users and developers. Check out
       </div>
 
      <div class="button-box bg-gray">
-       <a href="rtd_pages/user_guide.html">
+       <a href="rtd_pages/zcashd.html">
          <div>
           <img src="_static/images/box_zcashd_icon.png" />
          </div>
