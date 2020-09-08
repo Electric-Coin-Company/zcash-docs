@@ -11,13 +11,13 @@ Zcashd & Zcash-cli are maintained by Electric Coin Company (the founding team fo
 
 * [Docker](https://hub.docker.com/r/electriccoinco/zcashd)(containerized DebianOS)
 
-* [Debian/Ubuntu](https://zcash.readthedocs.io/en/latest/rtd_pages/Debian-Ubuntu-build.md) ([officially](https://zcash.readthedocs.io/en/latest/rtd_pages/supported_platform_policy.html#supported-platform-policy) supported)
+* [Debian/Ubuntu](https://zcash.readthedocs.io/en/latest/rtd_pages/Debian-Ubuntu-build.html) ([officially](https://zcash.readthedocs.io/en/latest/rtd_pages/supported_platform_policy.html#supported-platform-policy) supported)
 
-* [Other Linux Systems](https://zcash.readthedocs.io/en/latest/rtd_pages/Linux-misc-build.md) ("best-effort" supported)
+* [Other Linux Systems](https://zcash.readthedocs.io/en/latest/rtd_pages/Linux-misc-build.html) ("best-effort" supported)
 
-* [OSx](https://zcash.readthedocs.io/en/latest/rtd_pages/OSx-build.md) ("best-effort" supported)
+* [OSx](https://zcash.readthedocs.io/en/latest/rtd_pages/OSx-build.html) ("best-effort" supported)
 
-* [Windows](https://zcash.readthedocs.io/en/latest/rtd_pages/windows-build.md) (unsupported)
+* [Windows](https://zcash.readthedocs.io/en/latest/rtd_pages/windows-build.html) (unsupported)
 
 
 ## Configuration
