@@ -7,7 +7,7 @@ Binary Tarball Download & Setup
 
 The Electric Coin Company provides a binary tarball for download.
 
-`Download Tarball for Debian Stretch v4.0.0 <https://z.cash/downloads/zcash-3.1.0-linux64-debian-stretch.tar.gz>`_
+`Download Tarball for Debian Stretch v4.0.0 <https://z.cash/downloads/zcash-4.0.0-linux64-debian-stretch.tar.gz>`_
 
 After downloading but before extracting, verify that the checksum of the tarball matches the hash below for the version of the binary you downloaded:
 
