@@ -67,9 +67,9 @@ To upgrade Zcashd & Zcash-cli, fetch the latest updates:
 Run Zcashd again and verify that the version number matches that of the [source repository](https://github.com/zcash/zcash).
 
 Helpful tips: 
-* Upgrading to v3.0.0 may require a re-fetch of the parameters and a build; try the following: 
+* Upgrading to v4.0.0 may require a re-fetch of the parameters and a build; try the following: 
   ```
-  git checkout v3.0.0
+  git checkout v4.0.0
    ./zcutil/fetch-params.sh
    ./zcutil/build.sh -j$(nproc)
   ```
