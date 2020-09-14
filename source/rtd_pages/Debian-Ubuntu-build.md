@@ -34,6 +34,7 @@ There are multiple ways to download dependencies and build Zcashd & Zcash-cli. W
     Then building Zcashd & Zcash-cli: 
 
     ```
+    ./zcutil/clean.sh
     ./zcutil/build.sh -j$(nproc)
     ```
 
