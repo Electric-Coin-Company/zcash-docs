@@ -28,7 +28,7 @@ We highly recommend you use a |mining-calc| to find out what your expected retur
 
    <a href="https://www.cryptocompare.com/mining/calculator/zec" target="_blank">Zcash mining calculator</a> 
 
-GPU mining
+CPU mining
 -----------
 
 Our core platform, zcashd, can be configured to mine blocks in addition to acting as a wallet and verifying network transactions. This is the most accessible way to mine, and can be done on your personal computer. 
