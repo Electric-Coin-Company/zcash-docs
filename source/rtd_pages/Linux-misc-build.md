@@ -49,6 +49,7 @@ Currently, the only way to install Zcashd & Zcash-cli on Linux is to build from 
 
 1. Build Zcashd & Zcash-cli
     ```
+    ./zcutil/clean.sh
     ./zcutil/build.sh -j$(nproc)
     ```
 

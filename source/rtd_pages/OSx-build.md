@@ -43,6 +43,7 @@ Currently, the only way to install Zcashd & Zcash-cli on OSx is to build from so
 
 1. Build Zcashd & Zcash-cli
     ```
+    ./zcutil/clean.sh
     ./zcutil/build.sh -j$(nproc)
     ```
 
