@@ -4,7 +4,7 @@
 
 Tor Support in Zcash
 ====================
-It is possible to run Zcash as a Tor hidden service, and connect to such services. *Warning: Tor support does not explicitly support Zcash nor Zcash explicitly support Tor.*
+It is possible to run Zcash as a Tor hidden service and connect to such services. *Warning: Tor support does not explicitly support Zcash nor Zcash explicitly support Tor.*
 
 The following directions assume you have a Tor proxy running on port 9050. Many distributions default to having a SOCKS proxy listening on port 9050, but others may not. In particular, the Tor Browser Bundle defaults to listening on port 9150. See `Tor Project FAQ:TBBSocksPort <https://www.torproject.org/docs/faq.html.en#TBBSocksPort>`_ for how to properly configure Tor.
 
@@ -12,7 +12,7 @@ The following directions assume you have a Tor proxy running on port 9050. Many 
 1. Run Zcash through Tor
 ------------------------
 
-Running Zcash through Tor will make all outgoing connections be anonymized on the network, and will suffice for most situations. This is actually quite easy to do! 
+Running Zcash through Tor will make all outgoing connections be anonymized on the network and will suffice for most situations. This is actually quite easy to do! 
 
 Download and run Tor Browser. This will automatically run a SOCKS proxy on 127.0.0.1:9150 (with default configuration settings). While Tor Browser (and its proxy) is running, connect zcashd to it with: 
 
@@ -29,7 +29,7 @@ Zcashd flags used:
 
 It is possible to make a zcashd node reachable from the Tor network. 
 
-To do so, add lines to your /etc/tor/torrc (or equivalent config file) that configures the ports on the Tor side. An example is below. The directory can be different, but the port numbers should be equal to your zcashd's P2P listen port (8233 by default).
+Add lines to your /etc/tor/torrc (or equivalent config file) that configures the ports on the Tor side. The directory can be different but the port numbers should be equal to the zcashd P2P listen port (8233 by default). An example is below.
 
 	.. code-block:: bash
 
@@ -57,7 +57,7 @@ Starting with Tor version 0.2.7.1 it is possible, through Tor's control socket A
 
 If Tor is running (and proper authentication has been configured), Zcash automatically creates a hidden service to listen on. Zcash will also use Tor automatically to connect to other .onion nodes if the control socket can be successfully opened.
 
-This new feature is enabled by default if Zcash is listening (``-listen``), and requires a Tor connection to work. It can be explicitly disabled with ``-listenonion=0`` and, if not disabled, configured using the ``-torcontrol`` and ``-torpassword`` settings. To show verbose debugging information, pass ``-debug=tor``.
+This new feature is enabled by default if Zcash is listening (``-listen``) and requires a Tor connection to work. It can be explicitly disabled with ``-listenonion=0`` and, if not disabled, configured using the ``-torcontrol`` and ``-torpassword`` settings. To show verbose debugging information, pass ``-debug=tor``.
 
 Connecting to Tor's control socket API requires one of two authentication methods to be configured: 
 
