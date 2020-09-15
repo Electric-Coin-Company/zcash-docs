@@ -77,7 +77,7 @@ On Ubuntu Trusty, you can install gcc/g++ 4.9 as follows:
 Tor
 ---
 
-The repository is also accessible via Tor, after installing the `apt-transport-tor` package, at the address zcaptnv5ljsxpnjt.onion. Use the following pattern in your sources.list file: ``deb [arch=amd64] tor+http://zcaptnv5ljsxpnjt.onion/ jessie main``
+The repository is also accessible via Tor, after installing the `apt-transport-tor` package, at the address zcaptnv5ljsxpnjt.onion. Use the following pattern in your sources.list file: ``deb [arch=amd64] tor+http://zcaptnv5ljsxpnjt.onion/ stretch main``
 
 .. _updating_signing_keys:
 
@@ -145,7 +145,7 @@ Re-get the apt info:
 
 .. code-block:: bash
 
-    echo "deb [arch=amd64] https://apt.z.cash/ jessie main" | sudo tee /etc/apt/sources.list.d/zcash.list
+    echo "deb [arch=amd64] https://apt.z.cash/ stretch main" | sudo tee /etc/apt/sources.list.d/zcash.list
 
 Then update the list again:
 
