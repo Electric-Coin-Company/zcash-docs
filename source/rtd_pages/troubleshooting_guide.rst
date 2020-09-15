@@ -73,7 +73,7 @@ Zcashd commands
 To get help with the RPC interface from the command line, use: 
 
 * ``zcash-cli help``, which lists all zcash-cli commands.  
-* ``zcash-cli help $COMMAND``, which lists details of a specific command
+* ``zcash-cli help $COMMAND``, which lists details of a specific command.
 
 There is also additional documentation under :ref:`payment_api` . 
 
