@@ -37,7 +37,7 @@ Add lines to your /etc/tor/torrc (or equivalent config file) that configures the
 		$ HiddenServicePort 8233 127.0.0.1:8233
 		$ HiddenServicePort 18233 127.0.0.1:18233
 
-After that, configure the zcashd node to use the proxy, specific onion service, and turn on the listening feature should suffice. Try: 
+After that, configuring the zcashd node to use the proxy, specific onion service, and turn on the listening feature should suffice. Try: 
 
 	.. code-block:: bash
 
