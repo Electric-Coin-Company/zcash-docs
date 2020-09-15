@@ -29,7 +29,7 @@ Zcashd flags used:
 
 It is possible to make a zcashd node reachable from the Tor network. 
 
-To do so, add lines to your /etc/tor/torrc (or equivalent config file) that configures the ports on the Tor side. An example is below. The directory can be different, but the port numbers should be equal to your zcashd's P2P listen port (8233 by default).
+Add lines to your /etc/tor/torrc (or equivalent config file) that configures the ports on the Tor side. The directory can be different but the port numbers should be equal to the zcashd P2P listen port (8233 by default). An example is below.
 
 	.. code-block:: bash
 
