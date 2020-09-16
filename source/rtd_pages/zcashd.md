@@ -58,6 +58,9 @@ If you're running Zcashd for development, configure Zcashd to run on testnet, wh
 ## Upgrading
 
 <!--If you're on a Debian-based distribution, you can follow the :ref:`install-debian-bin-packages-guide` to install Zcash on your system. --> 
+If you use zcashd but have not upgraded within 16 weeks of a release, it will reach the end-of-support (EOS) halt and exit with an error message. See the [release cycle](https://z.cash/support/schedule/) for details. 
+
+The node gives a warning two weeks in advance if you have the metrics screen enabled. A getinfo and getdeprecationinfo rpc call will also return the date at which the node will halt. 
 
 To upgrade Zcashd & Zcash-cli, fetch the latest updates:
   ```
