@@ -1,6 +1,6 @@
 # Zcash Full Node and CLI
 
-Zcashd & Zcash-cli allow you to run a full node and interact with it via a command-line interface.  The zcashd full node downloads a copy of the Zcash blockchain,  enforces rules of the Zcash network, and can execute all functionalities. The zcash-cli allows interactions with the node (i.e. tell it to send a transaction).
+Zcashd & Zcash-cli allow you to run a full node and interact with it via a command-line interface.  The zcashd full node downloads a copy of the Zcash blockchain,  enforces rules of the Zcash network, and can execute all functionalities. The zcash-cli allows interactions with the node (e.g. to tell it to send a transaction).
 
 ![](./images/zcashd_and_zcashcli.png)
 
@@ -9,7 +9,7 @@ Zcashd & Zcash-cli are maintained by Electric Coin Company (the founding team fo
 
 ## Install
 
-* [Docker](https://hub.docker.com/r/electriccoinco/zcashd)(containerized DebianOS)
+* [Docker](https://hub.docker.com/r/electriccoinco/zcashd) (containerized DebianOS)
 
 * [Debian/Ubuntu](https://zcash.readthedocs.io/en/latest/rtd_pages/Debian-Ubuntu-build.html) ([officially](https://zcash.readthedocs.io/en/latest/rtd_pages/supported_platform_policy.html#supported-platform-policy) supported)
 
