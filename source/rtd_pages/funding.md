@@ -2,7 +2,7 @@
 
 We're building a decentralized collaborative community around Zcash, and paying contributors helps strengthen the project (even if they are not part of the two Zcash official entities). 
 
-Currently, we're using ZF Grants to fund community contributions. After the Canopy upgrade in Nov 2020, we'll be moving to the Major Grants system. 
+Currently, ZF Grants are used to fund community contributions. After the Canopy upgrade in Nov 2020, additional funds will be available via the Major Grants system.
 
 ## ZF Grants 
 
