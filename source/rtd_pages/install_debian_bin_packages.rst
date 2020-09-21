@@ -11,7 +11,7 @@ First install the following dependency so you can talk to our repository using H
 
 .. code-block:: bash
 
-   sudo apt-get install apt-transport-https wget gnupg2
+   sudo apt-get update && sudo apt-get install apt-transport-https wget gnupg2
 
 Next add the Zcash master signing key to apt's trusted keyring:
 
@@ -28,13 +28,19 @@ Add the repository to your sources:
 
    echo "deb [arch=amd64] https://apt.z.cash/ stretch main" | sudo tee /etc/apt/sources.list.d/zcash.list
 
-Finally, update the cache of sources and install Zcash:
+Update the cache of sources and install Zcash:
 
 .. code-block:: bash
    
-   sudo apt-get update && sudo apt-get install zcash
+   sudo apt-get install zcash
 
-Lastly you can run ``zcash-fetch-params`` to fetch the zero-knowledge parameters, and set up `~/.zcash/zcash.conf` before running Zcash as your local user, as documented in the :ref:`user_guide`. 
+Fetch the zero-knowledge parameters: 
+
+.. code-block:: bash
+   
+   zcash-fetch-params
+
+Lastly, `set up a configuration file <https://zcash.readthedocs.io/en/latest/rtd_pages/zcash_conf_guide.html>`_ (`~/.zcash/zcash.conf`) before runnning zcashd. It can be completely empty; it will then run with the default parameters.
 
 **Missing Public Key Error**
 
