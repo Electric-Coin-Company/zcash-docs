@@ -10,7 +10,7 @@ There are several reasons you may want to set up your own lightwalletd instance 
 There are two ways to deploy a lightwalletd instance:
 
 - Clone the lightwalletd source code from its [GitHub repo](https://github.com/zcash/lightwalletd/)
-- Run a binary instance using Docker.
+- Run a binary instance using Docker. The Docker host networking driver only works on Linux hosts, so we do not recommend this option for Mac or Windows.
 
 This rest of this guide helps with the second option, which is the easier of the two.
 You will need root (`sudo`) permissions. Install these if you haven't already:
