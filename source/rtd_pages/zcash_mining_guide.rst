@@ -57,7 +57,6 @@ Going direct to the manufacturer is an option for the latest-gen machines:
 ASIC resellers may also have miners available:
 
 * Blockware Mining: https://www.blockwaresolutions.com
-* Kaboom Racks: http://kaboomracks.com
 
 ASIC hosting
 ------------
