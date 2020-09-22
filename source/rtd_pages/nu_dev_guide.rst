@@ -1,8 +1,8 @@
 :orphan:
 .. _nu_dev_guide:
 
-Network Upgrade Developer Guide
-===============================
+Network Upgrade Guide
+=====================
 
 We recommend all wallets, exchanges, and clients that accept/support Zcash to follow 
 these guidelines to prepare for the upcoming network upgrade. Network upgrades on 
@@ -35,6 +35,27 @@ Below is general advice that applies to all network upgrades:
     Tell users when the upgrade has finished and re-enable initiation of 
     transactions. Notify users with a message or at their next login after 
     the network transition. 
+
+:fa:`tree` Canopy
+------------------
+
+Canopy is the fifth network upgrade for Zcash, coinciding with the first Zcash halving. Canopy will establish a new development fund for the next four years.
+
+:fa:`arrow-circle-right` Consensus Branch ID change
+    See `ZIP 251 <https://zips.z.cash/zip-0251>`_
+
+:fa:`arrow-circle-right` Development Fund ZIPs 
+    `ZIP 207 <https://zips.z.cash/zip-0207>`_ and `ZIP 214 <https://zips.z.cash/zip-0214>`_ are needed to establish a new development fund. ZIP 207 specifies a mechanism to support funding streams, distributed from a portion of the block subsidy for a specified range of block heights. ZIP 214 describes consensus rule changes interpreting the proposed structure of the Zcash Development Fund, which is to be enacted in Canopy and last for 4 years.
+
+:fa:`arrow-circle-right` Disabling Addition of New Value to Sprout Pool
+    `ZIP 211 <https://zips.z.cash/zip-0211>`_ disables the ability to add new value to the Sprout value pool balance. This takes a step toward being able to remove the Sprout protocol, thus reducing the overall complexity and attack surface of Zcash.
+
+:fa:`arrow-circle-right` Sapling Ephemeral Secret to Recipient in Note Plaintext
+    `ZIP 212 <https://zips.z.cash/zip-0212>`_ improves the security assumptions needed to ensure that diversified addresses are not linkable. It does this by introducing a new note plaintext format for Sapling Outputs in transactions.
+
+:fa:`arrow-circle-right` Fix Ed25519 Validation Rules to Allow Batch Validation
+    `ZIP 215 <https://zips.z.cash/zip-0215>`_ improves the validity criteria of Ed25519 signatures used in Sprout transactions by explicitly defining criteria and changing them to be compatible with batch validation.
+
 
 :fa:`bullseye` Heartwood
 ------------------------

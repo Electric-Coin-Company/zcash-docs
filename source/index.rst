@@ -124,13 +124,14 @@ This is the home for Zcash documentation for end users and developers. Check out
 .. toctree::
    :caption: Interact with Zcash
    :hidden:
-
-   rtd_pages/zcash_wallets.md
-   rtd_pages/zig.rst
-   rtd_pages/lightclient_support.rst
+   
+   rtd_pages/nu_dev_guide.rst
    rtd_pages/zcashd.md
    rtd_pages/protocol.md
+   rtd_pages/lightclient_support.rst
    rtd_pages/zcash_mining_guide.rst
+   rtd_pages/zig.rst
+   rtd_pages/zcash_wallets.md
 
 .. toctree::
    :caption: Resources
