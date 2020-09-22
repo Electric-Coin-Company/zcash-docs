@@ -5,76 +5,93 @@
 Zcash Mining Guide
 ==================
 
-Welcome! In this guide, we'll cover how much you can make by mining Zcash and the various ways to mine Zcash. A win-win: Miners get Zcash, and mining strengthens the Zcash network by adding additional hash power. 
+Welcome! Want to earn Zcash while strengthening the security of the Zcash network? Whether you are a hobbyist or a professional, mining is a great way to do it. Given the current network difficulty you must use an ASIC to mine Zcash.
 
-If you need help, talk to us on |discord| or post on the |forum|. 
+Thanks to `Luxor <https://mining.luxor.tech/>`_ for assistance with this mining guide. 
 
-.. |discord| raw:: html
+In this guide we cover:
 
-   <a href="https://discord.gg/PhJY6Pm" target="_blank">discord</a> 
+* Overview of the Zcash mining process
+* Calculating rewards
+* Purchasing specialized hardware (ASIC)
+* Finding a hosting solution for your hardware
+* Setting up your ASIC
+* Choosing and configuring a mining pool 
+* Setting up a Zcash wallet
 
-.. |forum| raw:: html
+Overview
+--------
+Like many blockchains, transactions on the Zcash network are secured using a cryptographic method known as Proof of Work (PoW). In this process, application-specific computers compete to find a solution to a difficult mathematical problem defined by the Equihash hashing algorithm. As a result of performing this work, miners are rewarded with newly minted coins. 
 
-   <a href="https://forum.zcashcommunity.com/" target="_blank">forum</a> 
+Just over 2 years ago, Equihash coins were being mined solely by GPUs. Since the release of the Antminer Z9 mini, more and more ASICs have been deployed to the network achieving a staggering 10x growth. A chart below shows the growth of the Zcash network difficulty with popular ASIC releases.
 
+.. image:: images/mining_zcash_difficulty.png 
 
-Calculating mining rewards
---------------------------
+Calculating rewards
+-------------------
 
-We highly recommend you use a |mining-calc| to find out what your expected return is depending on your hash rate and electricity cost. In other words, find out if it's profitable for you, specifically, to mine Zcash before proceeding.  
+Zcash mining economics can be distilled down to three inputs: revenue, operating expense & capital expenditure. 
 
+On the revenue side, you can check out the `current profitability <https://whattomine.com/asic>`_ using many publicly-available mining calculators. At the time of writing this guide, 1Msol of hashpower generates $55 in revenue a day. The next thing to do is to predict how this will change over the investment horizon (2-3 years). Usually, you want to assume some increase in network difficulty (decreasing the revenue) and make a prediction on the price of Zcash. Also, make sure to factor in changes to the block reward to miners. 
 
-.. |mining-calc| raw:: html
+On the operating expense side, this is largely dependent on your electricity cost. It is crucial that you source cheap electricity to use to power your equipment. As of 2020 you ideally want to pay less than 7-8 cents USD per kWh.
 
-   <a href="https://www.cryptocompare.com/mining/calculator/zec" target="_blank">Zcash mining calculator</a> 
+By leveraging expertise in equipment procurement, operating with low-cost power, and more, miners can generate solid risk-adjusted returns, in many cases over that of Bitcoin mining.
 
-CPU mining
------------
+Purchasing an ASIC
+------------------
 
-Our core platform, zcashd, can be configured to mine blocks in addition to acting as a wallet and verifying network transactions. This is the most accessible way to mine, and can be done on your personal computer. 
+ASIC stands for Application-Specific Integrated Circuit and describes a type of processor that is designed for a single purpose. ASICs are a popular choice for mining cryptocurrency because they can offer higher efficiency than CPU or GPU miners. 
 
-1. Set up your local Zcash node. Follow the :ref:`user_guide` up to the end of the section :ref:`ugBuild` , then come back here. 
+Please note that the information on this page may become obsolete due to the rapidly changing market. Make sure to do your own proper due diligence into any machine listed below.
 
-2. Configure your node as per :ref:`ugConfiguration` , including the section :ref:`Enable_CPU_Mining` .
+The following Equihash ASIC miners are available on the market today:
 
-3. Now, start mining by running zcashd: ``./src/zcashd``. To run it in the background, try: ``./src/zcashd -daemon``. 
+.. image:: images/mining_asics.png 
 
-  
-  Congratulations! You are now mining Zcash.
+Going direct to the manufacturer is an option for the latest-gen machines:
 
-4. If you wish to verify that you are mining, look in the debug log (`~/.zcash/debug.log`), you should see:
+* Bitmain: https://www.bitmain.com
+* Innosillicon: https://www.innosilicon.com
 
-  .. code-block:: bash
+ASIC resellers may also have miners available:
 
-   Zcash Miner started
+* Blockware Mining: https://www.blockwaresolutions.com
+* Kaboom Racks: http://kaboomracks.com
 
-5. To stop, enter the command: ``./src/zcash-cli stop``
-
-Note: The internal `zcashd` miner uses a new transparent address for each mined block. If you want to instead use the same address for every mined block, use the ``-mineraddress=`` option available in Zcash 1.0.6 and later.
-
-ASIC mining
------------
-
-Another way to mine Zcash is to with specialized devices. An application-specific integrated circuit (ASIC) miner is a device that is designed for the sole purpose of mining—not coal, but rather digital currency. 
-
-Zcash is not ASIC-resistant, and you can purchase Zcash-specific or generalist ASICs that mine Zcash along with various other cryptocurrencies. We advise that you consider the tradeoffs of the cost or purchasing and running an ASIC versus the potential profit before making a purchase.
-
-We do not have any specific recommendations, or provide instructions, for ASIC mining devices. Check with the specific manufacturer and model for details.  
-
-Spending Mining Rewards
------------------------
-
-Starting with the Heartwood network upgrade (activating Q3 2020), mining rewards can be sent to a shielded address. We recommend this for practical and privacy reasons. 
-
-If coins are mined into a t-addr (transparent address), they can only be spent to a z-addr (shielded address), and must be swept out of the t-addr in one transaction with no change. Refer to our :ref:`payment_api` for instructions
-on how to use the ``z_sendmany`` command to send coins from a **t-addr** to a **z-addr**.  You will need at least 4GB of RAM for this operation.
-
-
-Mining Pools
+ASIC hosting
 ------------
 
-If you're mining by yourself or at home, you're unlikely to mine any Zcash unless you join a mining pool. A mining pool allows miners to pool resources together and share the hashing power while splitting the reward equally according to the amount of shares they contributed to solving a block. See this community-maintained |pools| for further instructions.
+Some miners host ASICs in their own home if they have a good shed or basement. They also usually only do this in smaller volumes due to power constraints. ASICs can be intrusive in your home as they are extremely loud when operating (think a vacuum cleaner). In addition, mining hardware consumes a very significant amount of electricity, so running multiple mining ASICs in your home may damage your wiring or fuse board. It is key to understand these risks ahead of hosting an ASIC at home. 
 
-.. |pools| raw:: html
+Depending on the considerations above and your electricity rate, it could make sense to send your ASICs to a mining hosting site. The hosting business takes a “hosting fee” in return for setup, ensuring proper operations, electricity and ongoing maintenance.
 
-   <a href="https://www.zcashcommunity.com/mining/mining-pools/" target="_blank">list of mining pools</a> 
+There are many hosting options available in the US / Canada which can be found in a database `here <https://hashrateindex.com/farms>`_. This database contains some of the top facilities like Blockware, Compute North, Core Scientific, Frontier, Box Miner, and many more.  Please make sure to do your own research before making any decision on engaging a colocation business.
+
+ASIC setup
+----------
+
+* **Powering up the Miner**: Connect your machine to the power outlet via the built-in PSU. Then connect your miner to your internet-connected router or switch using a standard network cable. You are now ready to power up your miner.
+
+* **Scanning for Devices**: To get started, use a scanning tool like `AngryIP <https://angryip.org/>`_ or `Locator <https://minerstat.com/software/locator>`_ to scan every device on your local network and see its IP address. After you have identified your miner’s IP address, you are ready to proceed with Configuration.
+
+* **Configuration**: Enter the local network IP address of your miner in the URL bar of any web browser. A dashboard similar to the one shown below will pop up. 
+
+.. image:: images/mining_dashboard.png 
+
+Joining a mining pool
+---------------------
+
+* **Choosing a pool**: We highly recommend joining a mining pool rather than mining solo. It provides a more steady income stream based on the hash rate contributed, rather than only getting paid when your ASIC mines a block. In choosing a mining pool, you can consider the size of the pool, payout methods (PPS vs PPLNS), pool fee, geographic location of the pool, ping time to the server, user interface, statistics / data, and customer support. Ultimately you want to find a pool that can be trusted, has high payouts and a great user experience. A list of pools can be found `here <https://www.zcashcommunity.com/mining/mining-pools/>`_.
+
+* **Completing Configuration**: Once you have created a user account with a chosen mining pool, you will need to complete the setup process at the specific mining pool so that the ASIC is registered as a mining participant in the mining pool. We recommend that you contact the chosen mining pool directly with any assistance. 
+
+* **Monitoring Results**:  Each mining pool will have a different monitoring dashboard. Once set up, you should be able to see how much you are contributing to the mining pool, the status of the ASIC miner, and the estimated payout for the work. 
+
+Getting payment
+---------------
+
+The last step is to set up a Zcash wallet and corresponding zcash address to receive payouts. If you do not have one set up yet, we have a list of recommended wallets `here <https://z.cash/wallets/>`_. 
+
+Once you have your address, navigate to the settings or account details page in the respective mining pool’s interface, and add the address to pay out to. Commonly, payments are paid out either periodically or after a certain threshold of ZEC has been earned. What you chose is up to you, but we encourage you to be paid out to a zcash shielded address for enhanced privacy, if the mining pool supports this feature. 
+
