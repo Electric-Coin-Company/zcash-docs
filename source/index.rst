@@ -130,6 +130,7 @@ This is the home for Zcash documentation for end users and developers. Check out
    rtd_pages/lightclient_support.rst
    rtd_pages/zcashd.md
    rtd_pages/protocol.md
+   rtd_pages/zcash_mining_guide.rst
 
 .. toctree::
    :caption: Resources
