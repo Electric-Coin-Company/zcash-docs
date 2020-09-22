@@ -81,9 +81,11 @@ ASIC setup
 Joining a mining pool
 ---------------------
 
-* **Joining a pool**: We highly recommend joining a mining pool rather than mining solo. It provides a more steady income stream based on the hash rate contributed, rather than only getting paid when your ASIC mines a block. In choosing a mining pool, you can consider the size of the pool, payout methods (PPS vs PPLNS), pool fee, geographic location of the pool, ping time to the server, user interface, statistics / data, and customer support. Ultimately you want to find a pool that can be trusted, has high payouts and a great user experience. 
+* **Joining a pool**: We highly recommend joining a mining pool rather than mining solo. It provides a more steady income stream based on the hash rate contributed, rather than only getting paid when your ASIC mines a block. 
 
-We recommend the following mining pools, which are asic-compatible *and* support payment out to shielded addresses: `Luxor <https://mining.luxor.tech/>`_, `Bitfly <https://zcash.flypool.org/>`_, and `Slushpool <https://slushpool.com/>`_.   
+	In choosing a mining pool, the main consideration is the mining pool hash rate (the likelihood that the pool will mine Zcash), which you can find on `poolwatch <https://www.poolwatch.io/coin/zcash>`_. 
+
+	There are other considerations though: the size of the pool, payout methods (PPS vs PPLNS), pool fee, geographic location of the pool, ping time to the server, user interface, statistics / data, and customer support. Ultimately you want to find a pool that can be trusted, has high payouts and a great user experience. 
 
 * **Completing Configuration**: Once you have created a user account with a chosen mining pool, you will need to complete the setup process at the specific mining pool so that the ASIC is registered as a mining participant in the mining pool. We recommend that you contact the chosen mining pool directly with any assistance. 
 
