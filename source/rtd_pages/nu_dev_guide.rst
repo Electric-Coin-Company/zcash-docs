@@ -1,8 +1,8 @@
 :orphan:
 .. _nu_dev_guide:
 
-Network Upgrade Developer Guide
-===============================
+Network Upgrade Guide
+=====================
 
 We recommend all wallets, exchanges, and clients that accept/support Zcash to follow 
 these guidelines to prepare for the upcoming network upgrade. Network upgrades on 
