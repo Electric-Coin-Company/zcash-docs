@@ -65,7 +65,7 @@ Some miners host ASICs in their own home if they have a good shed or basement. T
 
 Depending on the considerations above and your electricity rate, it could make sense to send your ASICs to a mining hosting site. The hosting business takes a “hosting fee” in return for setup, ensuring proper operations, electricity and ongoing maintenance.
 
-There are many hosting options available in the US / Canada which can be found in a database `here <https://hashrateindex.com/farms>`_. This database contains some of the top facilities like Blockware, Compute North, Core Scientific, Frontier, Box Miner, and many more.  Please make sure to do your own research before making any decision on engaging a colocation business.
+There are many hosting options available in the US and Canada which can be found in a database `here <https://hashrateindex.com/farms>`_. This database contains some of the top facilities like Blockware, Compute North, Core Scientific, Frontier, Box Miner, and many more.  Please make sure to do your own research before making any decision on engaging a colocation business.
 
 ASIC setup
 ----------
@@ -74,7 +74,7 @@ ASIC setup
 
 * **Scanning for Devices**: To get started, use a scanning tool like `AngryIP <https://angryip.org/>`_ or `Locator <https://minerstat.com/software/locator>`_ to scan every device on your local network and see its IP address. After you have identified your miner’s IP address, you are ready to proceed with Configuration.
 
-* **Configuration**: Enter the local network IP address of your miner in the URL bar of any web browser. A dashboard similar to the one shown below will pop up. 
+* **Configuration**: Enter the local network IP address of your miner in the URL bar of any web browsr. A dashboard similar to the one shown below will pop up. 
 
 .. image:: images/mining_dashboard.png 
 
@@ -92,7 +92,7 @@ Joining a mining pool
 Getting payment
 ---------------
 
-The last step is to set up a Zcash wallet and corresponding zcash address to receive payouts. If you do not have one set up yet, we have a list of recommended wallets `here <https://z.cash/wallets/>`_. 
+The last step is to set up a Zcash wallet and corresponding Zcash address to receive payouts. If you do not have one set up yet, we have a list of recommended wallets `here <https://z.cash/wallets/>`_. 
 
-Once you have your address, navigate to the settings or account details page in the respective mining pool’s interface, and add the address to pay out to. Commonly, payments are paid out either periodically or after a certain threshold of ZEC has been earned. What you chose is up to you, but we encourage you to be paid out to a zcash shielded address for enhanced privacy, if the mining pool supports this feature. 
+Once you have your address, navigate to the settings or account details page in the respective mining pool’s interface, and add the address to pay out to. Commonly, payments are paid out either periodically or after a certain threshold of ZEC has been earned. What you choose is up to you, but we encourage you to be paid out to a zcash shielded address for enhanced privacy, if the mining pool supports this feature. 
 
