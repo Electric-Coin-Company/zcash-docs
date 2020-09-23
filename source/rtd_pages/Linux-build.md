@@ -1,11 +1,5 @@
 # Installing Zcashd & Zcash-cli on Linux
 
-<!--
-  TODO: This page is now primarily about installing Zcash and should be
-  renamed to avoid confusion with the new ./building-on-debian-ubuntu.md
-  page.
--->
-
 ## Debian & Ubuntu
 
 Zcashd & Zcash-cli are [officially supported](https://zcash.readthedocs.io/en/latest/rtd_pages/supported_platform_policy.html) for Debian/Ubuntu. Since Debian/Ubuntu is the best supported platform, we recommend running Zcashd & Zcash-cli on Debian/Ubuntu if possible. 
