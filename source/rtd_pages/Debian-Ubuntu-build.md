@@ -1,49 +1,31 @@
-# Building Zcashd & Zcash-cli on Debian/Ubuntu
+# Installing Zcashd & Zcash-cli on Linux
+
+<!--
+  TODO: This page is now primarily about installing Zcash and should be
+  renamed to avoid confusion with the new ./building-on-debian-ubuntu.md
+  page.
+-->
+
+## Debian & Ubuntu
 
 Zcashd & Zcash-cli are [officially supported](https://zcash.readthedocs.io/en/latest/rtd_pages/supported_platform_policy.html) for Debian/Ubuntu. Since Debian/Ubuntu is the best supported platform, we recommend running Zcashd & Zcash-cli on Debian/Ubuntu if possible. 
 
-## Instructions
+Please follow [Debian Packages Setup](https://zcash.readthedocs.io/en/latest/rtd_pages/install_debian_bin_packages.html) to install on Debian or Ubuntu, or follow these video instructions:
 
-There are multiple ways to download dependencies and build Zcashd & Zcash-cli. We've listed the various ways, in order of recommendation (try the packages first!). 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/hTKL0jPu7X0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-* [Debian Packages Setup](https://zcash.readthedocs.io/en/latest/rtd_pages/install_debian_bin_packages.html); below video follows these instructions. 
+## Other Distributions
 
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/hTKL0jPu7X0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+Some other distributions may have their own package maintenance for Zcash. If you know of some not mentioned on this page, [let us know](https://gitlab.com/zcash-docs/zcash-docs/-/issues) and we can link to them.
 
-  	This is the easiest and most streamlined method. 
+## Binary Tarballs
 
-* Building from source 
+If you need to install on a Linux system without a supported package, follow the [Binary Tarball Download and Setup](https://zcash.readthedocs.io/en/latest/rtd_pages/install_binary_tarball.html) instructions.
 
-	This requires downloading dependencies manually via the command line: 
+## Building from source
 
-	```
-     sudo apt-get install \
-     build-essential pkg-config libc6-dev m4 g++-multilib \
-     autoconf libtool ncurses-dev unzip git python3 python3-zmq \
-     zlib1g-dev curl bsdmainutils automake
-    ```
-
-    And downloading the source code from the repository:
-    ```
-     git clone https://github.com/zcash/zcash.git
-     cd zcash/
-     git checkout v4.0.0
-     ./zcutil/fetch-params.sh
-    ```
-
-    Then building Zcashd & Zcash-cli: 
-
-    ```
-    ./zcutil/clean.sh
-    ./zcutil/build.sh -j$(nproc)
-    ```
-
-    (If you don't have ``nproc``, then substitute the number of cores on your system. If the build runs out of memory, try again without the ``-j`` argument, i.e. just ``./zcutil/build.sh``.)
-
-
-* [Binary Tarball Download and Setup](https://zcash.readthedocs.io/en/latest/rtd_pages/install_binary_tarball.html) 
-
-	The .tar file unzips into a directory and does not involve a package manager, so it is agnostic of whether that system uses an OS package manager or which one it uses.
+If you want to build from source, please see [Build from Source](https://zcash.readthedocs.io/en/latest/rtd_pages/build-from-source.html).
 
 ## Next steps
+
 Now that you've built Zcashd & Zcash-cli, we can move on to the next steps of: configuration, sync, and use. Refer back to the [Zcashd & Zcash-cli page](https://zcash.readthedocs.io/en/latest/rtd_pages/zcashd.html) for further instructions. 
