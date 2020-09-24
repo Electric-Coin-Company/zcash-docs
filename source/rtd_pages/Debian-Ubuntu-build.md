@@ -1,5 +1,8 @@
 # Building Zcashd & Zcash-cli on Debian/Ubuntu
 
+*Please upgrade!* [End of Debian Jessie support is on October 1st 2020.](https://forum.zcashcommunity.com/t/end-of-debian-jessie-support-is-on-october-1st-2020/37313)
+
+
 Zcashd & Zcash-cli are [officially supported](https://zcash.readthedocs.io/en/latest/rtd_pages/supported_platform_policy.html) for Debian/Ubuntu. Since Debian/Ubuntu is the best supported platform, we recommend running Zcashd & Zcash-cli on Debian/Ubuntu if possible. 
 
 ## Instructions

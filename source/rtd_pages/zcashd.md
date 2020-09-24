@@ -11,7 +11,7 @@ Zcashd & Zcash-cli are maintained by Electric Coin Company (the founding team fo
 
 * [Docker](https://hub.docker.com/r/electriccoinco/zcashd) (containerized DebianOS)
 
-* [Debian/Ubuntu](https://zcash.readthedocs.io/en/latest/rtd_pages/Debian-Ubuntu-build.html) ([officially](https://zcash.readthedocs.io/en/latest/rtd_pages/supported_platform_policy.html#supported-platform-policy) supported)
+* [Debian/Ubuntu](https://zcash.readthedocs.io/en/latest/rtd_pages/Debian-Ubuntu-build.html) ([officially](https://zcash.readthedocs.io/en/latest/rtd_pages/supported_platform_policy.html#supported-platform-policy) supported) *[Debian Jessie support ends on Oct 1st 2020.](https://forum.zcashcommunity.com/t/end-of-debian-jessie-support-is-on-october-1st-2020/37313)*
 
 * [Other Linux Systems](https://zcash.readthedocs.io/en/latest/rtd_pages/Linux-misc-build.html) ("best-effort" supported)
 
