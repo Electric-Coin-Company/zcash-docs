@@ -1,7 +1,7 @@
 # Building Zcashd & Zcash-cli on OSx
 
 
-Zcashd & Zcash-cli are "best effort" supported for macOS.  It's ok to use it and develop on it--we sure do. The level of testing and integration is not up to par with our standards to call this [officially supported](https://zcash.readthedocs.io/en/latest/rtd_pages/supported_platform_policy.html#supported-platform-policy).
+Zcashd & Zcash-cli are "best effort" supported for macOS.  It's ok to use it and develop on it--we sure do. The level of testing and integration is not up to par with our standards to call this [officially supported](supported_platform_policy.html).
 
 ## Instructions
 
@@ -53,4 +53,4 @@ Currently, the only way to install Zcashd & Zcash-cli on OSx is to build from so
 
 
 ## Next steps
-Now that you've built Zcashd & Zcash-cli, we can move on to the next steps of: configuration, sync, and use. Refer back to the [Zcashd & Zcash-cli page](https://zcash.readthedocs.io/en/latest/rtd_pages/zcashd.html) for further instructions. 
+Now that you've built Zcashd & Zcash-cli, we can move on to the next steps of: configuration, sync, and use. Refer back to the [Zcashd & Zcash-cli page](zcashd.html) for further instructions. 
