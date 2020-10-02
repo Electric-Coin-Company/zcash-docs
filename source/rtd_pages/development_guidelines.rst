@@ -26,12 +26,12 @@ If not, visit `Github <https://github.com>`_ or `Gitlab <https://gitlab.com>`_ t
 
 .. _Fork Zcash Repository:
 
-Fork Zcash Repository
-*********************
+Fork Zcash Repository and Connect to Upstream
+*********************************************
 
-First, fork a repository `according to standard instructions <https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/fork-a-repo>`_ by navigating to the respository and clicking the 'fork' icon at the top right corner of the page. 
+First, fork the `zcash repository <https://github.com/zcash/zcash>`_ by navigating to the respository and clicking the 'fork' icon at the top right corner of the page (`standard github forking instructions <https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/fork-a-repo>`_). 
 
-Then, open up a terminal and issue the below commands:
+Then, open up a terminal and issue the below commands to connect to upstream:
 
 .. note:: Please replace ``your_username``, with your actual Github username
 
@@ -39,7 +39,7 @@ Then, open up a terminal and issue the below commands:
 
     git clone https://github.com/your_username/zcash.git
     cd zcash
-    git remote add upstream https://github.com/zcash/zcash.git
+    git remote add upstream git@github.com:zcash/zcash.git
     git remote set-url --push upstream DISABLED
     git fetch upstream
     git branch -u upstream/master master
