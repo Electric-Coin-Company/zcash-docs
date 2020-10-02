@@ -5,14 +5,7 @@
 Development Guidelines
 ======================
 
-We achieve our design goals primarily through this codebase as a
-reference implementation. This repository is a fork of `Bitcoin Core <https://github.com/bitcoin/bitcoin>`_
-as of upstream release 0.11.2 (many later Bitcoin PRs have also been
-ported to Zcash). It implements the `Zcash protocol <https://github.com/zcash/zips/blob/master/protocol/protocol.pdf>`_ 
-and a few other distinct features.
-
-    - Bitcoin Core: https://github.com/bitcoin/bitcoin
-    - Zcash Protocol: https://zips.z.cash/protocol/protocol.pdf
+The Zcash repository, https://github.com/zcash/zcash, is a fork of `Bitcoin Core <https://github.com/bitcoin/bitcoin>`_ release 0.11.2 (some upstream PRs merged in). It implements the `Zcash protocol <https://github.com/zcash/zips/blob/master/protocol/protocol.pdf>`_ and a few other distinct features.
 
 Zcash Github Workflow
 ---------------------
@@ -36,14 +29,14 @@ If not, visit `Github <https://github.com>`_ or `Gitlab <https://gitlab.com>`_ t
 Fork Zcash Repository
 *********************
 
-This step assumes you are starting with a new Github/Gitlab environment. 
-If you have already forked the Zcash repository, please continue to :ref:`Create Branch` 
-section. Otherwise, open up a terminal and issue the below commands:
+First, fork a repository `according to standard instructions <https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/fork-a-repo>`_ by navigating to the respository and clicking the 'fork' icon at the top right corner of the page. 
+
+Then, open up a terminal and issue the below commands:
 
 .. note:: Please replace ``your_username``, with your actual Github username
 
 .. code-block:: bash
-    
+
     git clone git@github.com:your_username/zcash.git
     cd zcash
     git remote set-url origin git@github.com:your_username/zcash.git
@@ -72,8 +65,7 @@ After issuing the above commands, your ``.git/config`` file should look similar 
         fetch = +refs/heads/*:refs/remotes/upstream/*
         pushurl = DISABLED
 
-This setup provides a single cloned environment to develop for Zcash. There are 
-alternative methods using multiple clones, but this document does not cover that process.
+This setup provides a single cloned environment to develop for Zcash starting with a new Github/Gitlab environment. There are alternative methods using multiple clones, but this document does not cover that process.
 
 .. _Create Branch:
 
