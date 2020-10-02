@@ -39,7 +39,6 @@ Then, open up a terminal and issue the below commands:
 
     git clone git@github.com:your_username/zcash.git
     cd zcash
-    git remote set-url origin git@github.com:your_username/zcash.git
     git remote add upstream git@github.com:zcash/zcash.git
     git remote set-url --push upstream DISABLED
     git fetch upstream
