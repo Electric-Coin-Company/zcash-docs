@@ -1,6 +1,6 @@
 # Development Best Practices
 
-We pledge to respect all contributors. In the interest of fostering an open and welcoming community, we also expect contributors to adhere to the [contributor code of conduct](https://zcash.readthedocs.io/en/latest/rtd_pages/code_of_conduct.html).
+We pledge to respect all contributors. In the interest of fostering an open and welcoming community, we also expect contributors to adhere to the [contributor code of conduct](code_of_conduct.html).
 
 ## Development workflow
 
