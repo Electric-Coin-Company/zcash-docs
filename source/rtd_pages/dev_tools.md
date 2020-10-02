@@ -8,7 +8,7 @@ Thee [Zcash RPC webpage](https://zcash-rpc.github.io/) makes it easy to look at 
 
 ## Public Test Network
 
-The [Zcash testnet](https://zcash.readthedocs.io/en/latest/rtd_pages/testnet_guide.html) is a blockchain that attempts to mimic the main Zcash network for testing purposes, with its own coins that hold no monetary value (TAZ). It's used by developers to experiment with Zcash apps having to use Zcash (ZEC) and test network upgrades before activating on the main Zcash network. Since it's public and long-running, you can see a lot of historical data, and interact with many peers. 
+The [Zcash testnet](testnet_guide.html) is a blockchain that attempts to mimic the main Zcash network for testing purposes, with its own coins that hold no monetary value (TAZ). It's used by developers to experiment with Zcash apps having to use Zcash (ZEC) and test network upgrades before activating on the main Zcash network. Since it's public and long-running, you can see a lot of historical data, and interact with many peers. 
 
 ## Private Containerized Network
 
@@ -18,7 +18,7 @@ The [Zcash testnet-in-a-box (TNB)](https://github.com/zcash-hackworks/zcash-test
 
 ## Block Explorer
 
-By default, zcashd will operate as a full node and wallet. However, zcashd can alternatively be run as a [full node with access to a block explorer](https://zcash.readthedocs.io/en/latest/rtd_pages/insight_explorer.html), which allows it to see and fetch additonal fields (i.e. utxos, spent txid). This zcashd mode is commonly used along with zcash-cli to service exchanges, wallets, and other zcash services, but cannot be used as a wallet itself since it will contain no private keys.
+By default, zcashd will operate as a full node and wallet. However, zcashd can alternatively be run as a [full node with access to a block explorer](insight_explorer.html), which allows it to see and fetch additonal fields (i.e. utxos, spent txid). This zcashd mode is commonly used along with zcash-cli to service exchanges, wallets, and other zcash services, but cannot be used as a wallet itself since it will contain no private keys.
 
 <!--## todo-->
 <!--grafana dashboard-->

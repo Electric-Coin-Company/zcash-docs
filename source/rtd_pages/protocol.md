@@ -14,4 +14,4 @@ The most up-to-date [Zcash Protocol Specification](https://zips.z.cash/protocol/
 
 ## Network Upgrade Guide
 
-The [Network Upgrade Guide](https://zcash.readthedocs.io/en/latest/rtd_pages/nu_dev_guide.html) gives advice on how to stay current with the Zcash protocol and network. It also details the changes made with each network upgrade, and if and how those changes necessitate changes on supporting services. Network upgrades on a bi-annual basis to maintain the Zcash network.
+The [Network Upgrade Guide](nu_dev_guide.html) gives advice on how to stay current with the Zcash protocol and network. It also details the changes made with each network upgrade, and if and how those changes necessitate changes on supporting services. Network upgrades on a bi-annual basis to maintain the Zcash network.
