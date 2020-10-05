@@ -37,7 +37,7 @@ Then, open up a terminal and issue the below commands to connect to upstream:
 
 .. code-block:: bash
 
-    git clone https://github.com/your_username/zcash.git
+    git clone git@github.com:your_username/zcash.git
     cd zcash
     git remote add upstream git@github.com:zcash/zcash.git
     git remote set-url --push upstream DISABLED
