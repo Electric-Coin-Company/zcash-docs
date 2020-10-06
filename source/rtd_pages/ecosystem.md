@@ -16,7 +16,7 @@ Here's where to find us, and interact with us. Hope to see you soon!
 * [Arborist call](https://zoom.us/webinar/register/WN_vdjDVeyMRn2BjFW80AjZcA): A monthly call about protocol development.
 
 ## Discussion
-* [Discord](https://discord.gg/Evz8Kt): The place everyone is at! Casual chat with ECC, ZF, and the community.
+* [Discord](https://discord.gg/c4pcTCA): The place everyone is at! Casual chat with ECC, ZF, and the community.
 * [Forums](https://forum.zcashcommunity.com/): A place to more formally discuss ideas and proposals.
 
 ## Social Media
