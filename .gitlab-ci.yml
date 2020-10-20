@@ -22,7 +22,7 @@ stages:
 # user-guide README
 before_script:
   - apk add make git
-  - pip3 install sphinx sphinx_rtd_theme sphinx-autobuild sphinx_fontawesome recommonmark sphinx-sitemap sphinx-copybutton
+  - pip3 install -r ./source/requirements.txt
 
 # main job to build the RTD stack in the docker runner  
 build_job:
