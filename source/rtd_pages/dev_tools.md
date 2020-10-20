@@ -6,7 +6,7 @@ Here are the most helpful tools to test and debug code.
 
 Thee [Zcash RPC webpage](https://zcash-rpc.github.io/) makes it easy to look at zcashd commands, their parameters, and examples. The content on that page is the formatted help text for each of the Zcash RPC calls, extracted by an open sourced tool. This is one of the most frequently used resources by core developers. 
 
-## Public Test Network
+## Zcash Testnet Guide
 
 The [Zcash testnet](testnet_guide.html) is a blockchain that attempts to mimic the main Zcash network for testing purposes, with its own coins that hold no monetary value (TAZ). It's used by developers to experiment with Zcash apps having to use Zcash (ZEC) and test network upgrades before activating on the main Zcash network. Since it's public and long-running, you can see a lot of historical data, and interact with many peers. 
 
