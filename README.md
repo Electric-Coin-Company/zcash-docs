@@ -18,7 +18,7 @@ sudo apt-get install python3-pip
 Get required packages for ReadtheDocs build:
 
 ```bash
-pip3 install sphinx_rtd_theme sphinx sphinx-autobuild sphinx_fontawesome recommonmark sphinx-sitemap
+pip3 install sphinx_rtd_theme sphinx sphinx-autobuild sphinx_fontawesome recommonmark sphinx-sitemap sphinx-copybutton
 ```
 
 ### macOS
@@ -27,7 +27,7 @@ If you are using `brew`, please issue the following:
 
 ```bash
 brew install python3
-pip3 install sphinx_rtd_theme sphinx sphinx-autobuild sphinx_fontawesome recommonmark sphinx-sitemap
+pip3 install sphinx_rtd_theme sphinx sphinx-autobuild sphinx_fontawesome recommonmark sphinx-sitemap sphinx-copybutton
 ```
 
 If you are **not** using `brew`, please verify version of OS:
@@ -57,7 +57,7 @@ easy_install pip3
 Get required packages for ReadtheDocs build:
 
 ```bash
-pip3 install sphinx_rtd_theme sphinx sphinx-autobuild sphinx_fontawesome recommonmark sphinx-sitemap
+pip3 install sphinx_rtd_theme sphinx sphinx-autobuild sphinx_fontawesome recommonmark sphinx-sitemap sphinx-copybutton
 ```
 
 If you are unable to build the above packages, please compile them from source:
