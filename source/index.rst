@@ -145,7 +145,7 @@ This is the home for Zcash documentation for end users and developers. Check out
   :hidden:
    rtd_pages/lightwalletd.md
    rtd_pages/Debian-Ubuntu-build.md
-   rtd_pages/OSx-build.md
+   rtd_pages/macOS-build.md
    rtd_pages/Linux-misc-build.md
    rtd_pages/windows-build.md
    rtd_pages/wallet_threat_model.md
