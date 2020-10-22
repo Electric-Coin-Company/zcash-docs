@@ -67,16 +67,15 @@ To upgrade Zcashd & Zcash-cli, fetch the latest updates:
    git fetch origin
   ```
 
-Run Zcashd again and verify that the version number matches that of the [source repository](https://github.com/zcash/zcash).
-
 Helpful tips: 
-* Upgrading to v4.0.0 may require a re-fetch of the parameters and a build; try the following: 
+* Upgrading to v4.0.0 requires a build; try the following: 
   ```
   git checkout v4.0.0
-   ./zcutil/fetch-params.sh
+   ./zcutil/clean.sh
    ./zcutil/build.sh -j$(nproc)
   ```
-* Running ``make clean`` before building the update can eliminate random known link errors. 
+* Run Zcashd again and verify that the version number matches that of the [source repository](https://github.com/zcash/zcash).
+* If parameters need re-running, try ``./zcutil/fetch-params.sh``. This is unlikely, and the node should tell you if this is necessary. 
 * If you don't have ``nproc`` or if the build runs out of memory, try again without the ``-j`` argument,  just ``./zcutil/build.sh``. 
 * If you run into issues upgrading, please see the [Network Upgrade Guide](nu_dev_guide.html).
 
