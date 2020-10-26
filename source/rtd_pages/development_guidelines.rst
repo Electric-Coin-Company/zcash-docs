@@ -183,7 +183,7 @@ Once synced with ``master``, let's commit our changes:
 
     git add [files...] # default is all files, be careful not to add unintended files
     git commit -m 'Message describing commit'
-    git push
+    git push origin [branch-name]
 
 Now that all the files changed have been committed, let's continue to Create Pull Request section.
 
