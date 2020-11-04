@@ -17,7 +17,7 @@ There are multiple ways to download dependencies and build Zcashd & Zcash-cli. W
 
 * Building from source 
 
-	This requires downloading dependencies manually via the command line: 
+	This requires downloading dependencies manually via the command line (libtinfo5 is required for v4.1.0): 
 
 	```
      sudo apt-get install \
@@ -25,7 +25,7 @@ There are multiple ways to download dependencies and build Zcashd & Zcash-cli. W
      autoconf libtool ncurses-dev unzip git python3 python3-zmq \
      zlib1g-dev curl bsdmainutils automake libtinfo5
     ```
-
+    
     And downloading the source code from the repository:
     ```
      git clone https://github.com/zcash/zcash.git
