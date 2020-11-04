@@ -46,7 +46,7 @@ Lastly, `set up a configuration file <https://zcash.readthedocs.io/en/latest/rtd
 
 If you see:
 
-``The following signatures couldn't be verified because the public key is not available: NO_PUBKEY C2A798EF998940FA``
+``The following signatures couldn't be verified because the public key is not available: NO_PUBKEY 70C830C67EB9DCB4``
 
 Get the new key either directly from the `z.cash site <https://apt.z.cash/zcash.asc>`_:
 
