@@ -7,7 +7,7 @@ Binary Tarball Download & Setup
 
 The Electric Coin Company provides a binary tarball for download.
 
-`Download Tarball for Debian Stretch v4.0.0 <https://z.cash/downloads/zcash-4.0.0-linux64-debian-stretch.tar.gz>`_
+`Download Tarball for Debian Stretch v4.1.0 <https://z.cash/downloads/zcash-1.0-linux64-debian-stretch.tar.gz>`_
 
 After downloading but before extracting, verify that the checksum of the tarball matches the hash below for the version of the binary you downloaded:
 
@@ -15,9 +15,9 @@ Debian Stretch:
 
 .. code-block:: bash
 
-   sha256sum zcash-4.0.0-linux64-debian-stretch.tar.gz
+   sha256sum zcash-4.1.0-linux64-debian-stretch.tar.gz
 
-Result: ``a0daf673d45e92fe97f2dd43bbaf6d6653940643aff62915f46df89af4d8c8b5``
+Result: ``a5b00242816c3152519976f987df1670f342f413ae32c0466acc8b64e0b7c319``
 
 This checksum was generated from our gitian deterministic build process. `View all gitian signatures <https://github.com/zcash/gitian.sigs/tree/master>`_.
 
@@ -25,9 +25,9 @@ Once you've verified that it matches, extract the files and move the binaries in
 
 .. code-block:: bash
 
-    tar -xvf zcash-4.0.0-linux64.tar.gz
+    tar -xvf zcash-4.1.0-linux64.tar.gz
 
-    mv -t /usr/local/bin/ zcash-4.0.0/bin/*
+    mv -t /usr/local/bin/ zcash-4.1.0/bin/*
 
 Now that Zcash is installed, run this command to download the parameters used to create and verify shielded transactions:
 
