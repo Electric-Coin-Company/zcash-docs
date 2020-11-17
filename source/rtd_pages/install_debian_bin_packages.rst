@@ -32,7 +32,7 @@ Update the cache of sources and install Zcash:
 
 .. code-block:: bash
    
-   sudo apt get update && sudo apt-get install zcash
+   sudo apt-get update && sudo apt-get install zcash
 
 Fetch the zero-knowledge parameters: 
 

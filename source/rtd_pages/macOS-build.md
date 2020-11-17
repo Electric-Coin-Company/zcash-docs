@@ -34,7 +34,7 @@ Currently, the only way to install Zcashd & Zcash-cli on macOS is to build from 
     ```
      git clone https://github.com/zcash/zcash.git
      cd zcash/
-     git checkout v4.1.0
+     git checkout v4.1.1
      ./zcutil/fetch-params.sh
      ```
      <!--The message printed by ``git checkout`` about a "detached head" is normal and does not indicate a problem. --> 
