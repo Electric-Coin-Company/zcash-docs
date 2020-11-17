@@ -17,7 +17,7 @@ There are multiple ways to download dependencies and build Zcashd & Zcash-cli. W
 
 * Building from source 
 
-	This requires downloading dependencies manually via the command line (libtinfo5 is required for v4.1.0): 
+	This requires downloading dependencies manually via the command line (libtinfo5 is required for v4.1.1): 
 
 	```
      sudo apt-get install \
@@ -30,7 +30,7 @@ There are multiple ways to download dependencies and build Zcashd & Zcash-cli. W
     ```
      git clone https://github.com/zcash/zcash.git
      cd zcash/
-     git checkout v4.1.0
+     git checkout v4.1.1
      ./zcutil/fetch-params.sh
     ```
 
