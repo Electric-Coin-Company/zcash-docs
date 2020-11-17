@@ -17,7 +17,8 @@ Next add the Zcash master signing key to apt's trusted keyring:
 
 .. code-block:: bash
 
-   wget -qO - https://apt.z.cash/zcash.asc | sudo apt-key add -
+   wget -qO - https://apt.z.cash/zcash.asc | gpg --import
+   gpg --export 3FE63B67F85EA808DE9B880E6DEF3BAF272766C0 | sudo apt-key add -
 
 
 ``Key fingerprint = 3FE6 3B67 F85E A808 DE9B  880E 6DEF 3BAF 2727 66C0``
@@ -48,13 +49,12 @@ If you see:
 
 ``The following signatures couldn't be verified because the public key is not available: NO_PUBKEY 70C830C67EB9DCB4``
 
-Get the new key either directly from the `z.cash site <https://apt.z.cash/zcash.asc>`_:
+Get the new key directly from the `z.cash site <https://apt.z.cash/zcash.asc>`_:
 
-``wget -qO - https://apt.z.cash/zcash.asc | sudo apt-key add -``
+.. code-block:: bash
 
-or download from a public keyserver:
-
-``sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 6DEF3BAF272766C0``
+   wget -qO - https://apt.z.cash/zcash.asc | gpg --import
+   gpg --export 3FE63B67F85EA808DE9B880E6DEF3BAF272766C0 | sudo apt-key add -
 
 to retrieve the new key and resolve this error.
 
@@ -108,7 +108,8 @@ Then retrieve the updated key:
 
 .. code-block:: bash
 
-    wget -qO - https://apt.z.cash/zcash.asc | sudo apt-key add -
+   wget -qO - https://apt.z.cash/zcash.asc | gpg --import
+   gpg --export 3FE63B67F85EA808DE9B880E6DEF3BAF272766C0 | sudo apt-key add -
 
 Then update the list again:
 
@@ -145,7 +146,8 @@ Then retrieve new key:
 
 .. code-block:: bash
 
-    wget -qO - https://apt.z.cash/zcash.asc | sudo apt-key add -
+   wget -qO - https://apt.z.cash/zcash.asc | gpg --import
+   gpg --export 3FE63B67F85EA808DE9B880E6DEF3BAF272766C0 | sudo apt-key add -
 
 Re-get the apt info:
 
