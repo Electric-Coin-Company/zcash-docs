@@ -28,7 +28,7 @@ Currently, the only way to install Zcashd & Zcash-cli on Linux is to build from 
        ```
 
 
-   		And then:    
+  		And then:        
        ```
        sudo yum install centos-release-scl-rh
        sudo yum install devtoolset-3-gcc devtoolset-3-gcc-c++
