@@ -9,26 +9,26 @@ Currently, the only way to install Zcashd & Zcash-cli on Linux is to build from 
 1. Get dependencies by running these commands in Terminal. If already installed, skip steps.
 
 	* Fedora: 
-		```
-	     sudo dnf install \
-	     git pkgconfig automake autoconf ncurses-devel python \
-	     python-zmq curl gtest-devel gcc gcc-c++ libtool \
-	     patch glibc-static libstdc++-static
-	     ```
-	 * REHL:
+	  ```
+	  sudo dnf install \
+	  git pkgconfig automake autoconf ncurses-devel ncurses-compat-libs \
+	  python python-zmq curl gtest-devel gcc gcc-c++ libtool \
+	  patch glibc-static libstdc++-static
+	  ```
+	* RHEL:
+	  Install devtoolset-3 and autotools-latest (if not previously installed). Run
+	  `scl enable devtoolset-3 'scl enable autotools-latest bash'` and do the remainder
+          of the build in the shell that this starts.
+	* CENTOS 7+
+	  ```
+	  sudo yum install \
+	  autoconf libtool unzip git python \
+	  wget curl  automake gcc gcc-c++ patch \
+	  glibc-static libstdc++-static
+	  ```
 
-	 	Install devtoolset-3 and autotools-latest (if not previously installed). Run
-	 	`scl enable devtoolset-3 'scl enable autotools-latest bash'` and do the remainder of the build in the shell that this starts.
-	 * CENTOS 7+
-	   ```
-       sudo yum install \
-       autoconf libtool unzip git python \
-       wget curl  automake gcc gcc-c++ patch \
-       glibc-static libstdc++-static
-       ```
 
-
-   		And then:    
+   And then:
        ```
        sudo yum install centos-release-scl-rh
        sudo yum install devtoolset-3-gcc devtoolset-3-gcc-c++
