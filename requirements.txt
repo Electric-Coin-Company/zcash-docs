@@ -1,0 +1,8 @@
+# install with python -m pip install -r requirements.txt
+sphinx_rtd_theme
+sphinx
+sphinx-autobuild
+sphinx_fontawesome
+recommonmark
+sphinx-sitemap
+sphinx-copybutton
