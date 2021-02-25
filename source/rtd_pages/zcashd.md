@@ -68,7 +68,7 @@ To upgrade Zcashd & Zcash-cli, fetch the latest updates:
   ```
 
 Helpful tips: 
-* Upgrading to v3.0 requires a build; try the following: 
+* Upgrading to v4.3.0 requires a build; try the following: 
   ```
   git checkout v4.3.0
    ./zcutil/clean.sh
