@@ -28,7 +28,7 @@ A blank zcash.conf file will run with all default settings. To generate one, run
 
 ```
 mkdir -p ~/.zcash
-touch ~./zcash/zcash.conf
+touch ~/.zcash/zcash.conf
 ```
 
 Zcashd can be configured in various ways to suit different use cases; see the [Zcash.conf guide](zcash_conf_guide.html) for an extensive list of options.
