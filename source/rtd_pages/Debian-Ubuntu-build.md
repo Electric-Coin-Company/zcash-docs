@@ -30,7 +30,7 @@ There are multiple ways to download dependencies and build Zcashd & Zcash-cli. W
     ```
      git clone https://github.com/zcash/zcash.git
      cd zcash/
-     git checkout v4.3.0
+     git checkout v4.4.1
      ./zcutil/fetch-params.sh
     ```
 

@@ -28,7 +28,7 @@ author = u'ECC'
 # The short X.Y version
 version = u''
 # The full version, including alpha/beta/rc tags
-release = u'4.4.0'
+release = u'4.4.1'
 
 # -- General configuration ---------------------------------------------------
 
@@ -180,7 +180,7 @@ html_baseurl = 'https://zcash.readthedocs.io/en/latest/'
 
 # Add additional JS files
 def setup(app):
-    app.add_javascript('//cdn.transifex.com/live.js')
-    app.add_javascript('js/transifex-api.js')
-    app.add_javascript('js/zcash-docs.js')
-    app.add_stylesheet('css/custom.css')
+    app.add_js_file('//cdn.transifex.com/live.js')
+    app.add_js_file('js/transifex-api.js')
+    app.add_js_file('js/zcash-docs.js')
+    app.add_css_file('css/custom.css')
