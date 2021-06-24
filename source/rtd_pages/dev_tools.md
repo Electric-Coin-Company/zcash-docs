@@ -20,6 +20,10 @@ The [Zcash testnet-in-a-box (TNB)](https://github.com/zcash-hackworks/zcash-test
 
 By default, zcashd will operate as a full node and wallet. However, zcashd can alternatively be run as a [full node with access to a block explorer](insight_explorer.html), which allows it to see and fetch additonal fields (i.e. utxos, spent txid). This zcashd mode is commonly used along with zcash-cli to service exchanges, wallets, and other zcash services, but cannot be used as a wallet itself since it will contain no private keys.
 
+## Ziggurat: Network Testing Suite
+
+[Ziggurat](https://github.com/eqlabs/ziggurat) is network test suite that provides the developers of `zcashd`, `zebra`, and any future ZCash implementations with a test suite that covers protocol **conformance**, node **performance**, and **resistance** to malicious actors. Ziggurat runs a strict battery of black-box tests against your target node, mitigating inconsistency between implementations and ensuring a scalable level of performance.
+
 <!--## todo-->
 <!--grafana dashboard-->
 <!--testnet in a box-->
