@@ -48,7 +48,7 @@ Transactions
 ++++++++++++
 
 Clearly state the fee structure
-    The default transaction fee is set at 0.0001 ZEC. We encourage that you use the default fee, 
+    The default transaction fee is set at 0.00001 ZEC. We encourage that you use the default fee, 
     so that transparent and shielded transactions have the same fee--that way, privacy doesn’t cost 
     more for users!
 
