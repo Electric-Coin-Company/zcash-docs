@@ -1,11 +1,13 @@
 Wallet App Threat Model
 ========================
 
-This threat model is intended for curious technical users of the ECC wallet
-apps as well as developers making use of the SDK in their own apps. See the
-[Invariant-Centric Threat Modeling](https://github.com/defuse/ictm) for a
-complete explanation of the threat modeling methodology we use. Here's a
-short summary of the methodology:
+This threat model is intended for curious technical users of the ECC wallet apps
+as well as developers making use of the SDK in their own apps. The threat model
+applies to the internal ECC reference wallet, and should apply to any Zcash
+wallet built on top of the ECC SDKs, unless significant modifications have been
+made. See the [Invariant-Centric Threat
+Modeling](https://github.com/defuse/ictm) for a complete explanation of the
+threat modeling methodology we use. Here's a short summary of the methodology:
 
 - This document lists "security invariants" that the apps and SDK should
 currently provide. Users and developers *should not* rely on any security or
