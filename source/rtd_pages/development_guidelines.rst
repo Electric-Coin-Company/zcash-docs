@@ -368,6 +368,13 @@ Below describes a standard workflow for developing code in the zcash repository:
 
             make
 
+    5. Run Zcashd
+        .. code-block:: bash
+
+            ./src/zcashd
+
+.. tip:: Logs are always written to ``debug.log`` in the data directory unless the ``-nodebuglogfile`` flag is specified. Use the ``-debug=category`` flag to enable specific debug :ref:`logging categories<Logging Categories>`. Include the ``-printtoconsole`` flag to stream logs to ``stdout``.
+
 This will allow you to create/edit existing Zcash code, and build it locally. 
 If you want to submit a PR for this newly created code, please refer back to
 :ref:`Make & Commit Changes` section. After completing those steps, please ensure
