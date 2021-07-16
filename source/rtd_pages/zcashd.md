@@ -51,6 +51,14 @@ With a fully-synced running ``zcashd`` in the background, open a new terminal wi
 
 See the available [RPC commands](https://zcash-rpc.github.io/) for all the capabilities of Zcashd & Zcash-cli.
 
+Every Zcashd comes with an embedded Zcash **wallet**. The private keys and transaction information are associated with this wallet are stored in:
+
+```
+~/.zcash/wallet.dat
+```
+
+Ensure this file is regularly backed up and permissions are private.
+
 Try generating some addresses, then sending and receiving transparent and shielded transactions! Note that there are separate commands for transparent and shielded addresses/transactions.
 
 If you're running Zcashd for development, configure Zcashd to run on testnet, which takes significantly less time to sync than mainnet. Use the [Zcash Testnet Faucet](https://faucet.testnet.z.cash/) to get test funds.
