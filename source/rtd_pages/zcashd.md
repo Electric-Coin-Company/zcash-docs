@@ -99,3 +99,5 @@ An extensive list of Zcashd & Zcash-cli pages, including ones linked inline in t
 * [Known Issues](security_warnings.html)
 * [Data Directory Files](files.html)
 * [Tor Support in zcashd](tor.html)
+* [Development Guidelines](development_guidelines.html)
+* [Privacy Recommendations and Best Practices](privacy_recommendations_best_practices.html)
