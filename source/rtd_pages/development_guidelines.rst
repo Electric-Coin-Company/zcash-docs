@@ -42,7 +42,7 @@ Then, open up a terminal and issue the below commands to connect to upstream:
     git remote add upstream git@github.com:zcash/zcash.git
     git remote set-url --push upstream DISABLED
     git fetch upstream
-    git branch -u upstream/master master
+    git branch -u upstream/main main
 
 After issuing the above commands, your ``.git/config`` file should look similar to the following:
 
@@ -56,9 +56,9 @@ After issuing the above commands, your ``.git/config`` file should look similar 
     [remote "origin"]
         url = git@github.com:your_username/zcash.git
         fetch = +refs/heads/*:refs/remotes/origin/*
-    [branch "master"]
+    [branch "main"]
         remote = upstream
-        merge = refs/heads/master
+        merge = refs/heads/main
     [remote "upstream"]
         url = git@github.com:zcash/zcash.git
         fetch = +refs/heads/*:refs/remotes/upstream/*
@@ -75,7 +75,7 @@ While working on the Zcash project, you are going to have bugs, features, and id
 Branching exists to aid these different tasks while you write code. Below are some conventions 
 of branching at Zcash:
 
-    1. ``master`` branch is **ALWAYS** deployable.
+    1. ``main`` branch is **ALWAYS** deployable.
     2. Branch names **MUST** be descriptive (e.g. ``issue#_short_description``).
 
 To create a new branch (assuming you are in ``zcash`` directory):
@@ -114,8 +114,8 @@ keywords, but it's not necessary. The auto-close keywords are "close[ds]", "reso
 nd "fix(e[ds])?"
 
 While continuing to do development on a branch, keep in mind that other approved commits 
-are getting merged into ``master``.  In order to ensure there are minimal to no merge conflicts, 
-we need ``rebase`` with master.
+are getting merged into ``main``.  In order to ensure there are minimal to no merge conflicts, 
+we need ``rebase`` with main.
 
 If you are new to this process, please sanity check your remotes:
 
@@ -134,9 +134,9 @@ This output should be consistent with your ``.git/config``:
 
 .. code-block:: bash
 
-    [branch "master"]
+    [branch "main"]
         remote = upstream
-        merge = refs/heads/master
+        merge = refs/heads/main
     [remote "origin"]
         url = git@github.com:your_username/zcash.git
         fetch = +refs/heads/*:refs/remotes/origin/*
@@ -150,7 +150,7 @@ Once you have confirmed your branch/remote is valid, issue the following command
 
 .. code-block:: bash
     
-    git pull --rebase upstream master
+    git pull --rebase upstream main
     git push -f
 
 If you have uncommitted changes, use ``git stash`` to preserve them:
@@ -158,12 +158,12 @@ If you have uncommitted changes, use ``git stash`` to preserve them:
 .. code-block:: bash
 
     git stash
-    git pull --rebase upstream master
+    git pull --rebase upstream main
     git push -f
     git stash pop
 
 Using ``git stash`` allows you to temporarily store your changes while you rebase 
-with ``master``. Without this, you will rebase with master and lose your local changes.
+with ``main``. Without this, you will rebase with main and lose your local changes.
 
 Before committing changes, ensure your commit messages follow these guidelines:
 
@@ -177,7 +177,7 @@ Before committing changes, ensure your commit messages follow these guidelines:
 
 (The line limits are guidelines, they're not essential.)
 
-Once synced with ``master``, let's commit our changes:
+Once synced with ``main``, let's commit our changes:
 
 .. code-block:: bash
 
@@ -224,7 +224,7 @@ learning experience for that person.
 Discuss / Review PR
 *******************
 
-In order to merge your PR with ``master``, you will need to convince the reviewers of the intentions of your code. 
+In order to merge your PR with ``main``, you will need to convince the reviewers of the intentions of your code. 
 
 .. important:: If your PR introduces code that does not have existing tests to ensure it operates gracefully, you **MUST** also create these tests to accompany your PR.
 
@@ -290,7 +290,7 @@ Deploy / Merge PR
 
 .. admonition:: zkbot
 
-   We use a homu instance called ``zkbot`` to merge *all* PRs in ``zcash/zcash``. (Direct pushing to the ``master`` branch of the repo is not allowed.)
+   We use a homu instance called ``zkbot`` to merge *all* PRs in ``zcash/zcash``. (Direct pushing to the ``main`` branch of the repo is not allowed.)
    Here's just a quick overview of how it works.
 
    If you're on our team, you can do ``@zkbot <command>`` to tell zkbot to do things. Here are a few examples:
@@ -312,12 +312,12 @@ from reviewers, you can attempt to test merge the PR:
 
 .. note:: ``@zkbot`` commands are entered into Github tickets as comments
 
-This will instruct our Buildbot CI system to test merging your PR with ``master`` and ensure
+This will instruct our Buildbot CI system to test merging your PR with ``main`` and ensure
 it passes the full test suite. You may or may not have permissions to run this command, but 
 zkbot will reply with output indicating if you can or not.
 
 If the ``@zkbot try`` fails, you will need to go back and address the issues accordingly. 
-Otherwise, you can now attempt to merge into ``master``:
+Otherwise, you can now attempt to merge into ``main``:
 
 .. code-block:: bash
     
@@ -327,15 +327,15 @@ Otherwise, you can now attempt to merge into ``master``:
 
 There are very few people that have ``@zkbot r+`` privileges, so you can request one of these 
 people to merge the PR, or leave it for the release process to pick it up. Finally, when the 
-PR is merged into ``master`` successfully, your PR will close.
+PR is merged into ``main`` successfully, your PR will close.
 
 There will be times when your PR is waiting for some portion of the above process. If you 
-are requested to rebase your PR, in order to gracefully merge into ``master``, please do the following:
+are requested to rebase your PR, in order to gracefully merge into ``main``, please do the following:
 
 .. code-block:: bash
 
     git checkout branch_name
-    git pull --rebase upstream master
+    git pull --rebase upstream main
     git push -f
 
 ----
