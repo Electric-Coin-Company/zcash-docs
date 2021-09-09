@@ -22,7 +22,7 @@ git remote set-url origin git@github.com:your_username/zcash.git
 git remote add upstream git@github.com:zcash/zcash.git
 git remote set-url --push upstream DISABLED
 git fetch upstream
-git branch -u upstream/master master
+git branch -u upstream/main main
 ```
 After issuing the above commands, your `.git/config` file should look similar to the following:
 
@@ -35,9 +35,9 @@ After issuing the above commands, your `.git/config` file should look similar to
 [remote "origin"]
 	url = git@github.com:your_username/zcash.git
 	fetch = +refs/heads/*:refs/remotes/origin/*
-[branch "master"]
+[branch "main"]
 	remote = upstream
-	merge = refs/heads/master
+	merge = refs/heads/main
 [remote "upstream"]
 	url = git@github.com:zcash/zcash.git
 	fetch = +refs/heads/*:refs/remotes/upstream/*
@@ -48,8 +48,8 @@ This setup provides a single cloned environment to develop for Zcash. There are 
 ## Create Branch
 While working on the Zcash project, you are going to have bugs, features, and ideas to work on. Branching exists to aid these different tasks while you write code. Below are some conventions of branching at Zcash:
 
-1. `master` branch is **ALWAYS** deployable
-2. Avoid branching directly off `master`, instead use your local fork
+1. `main` branch is **ALWAYS** deployable
+2. Avoid branching directly off `main`, instead use your local fork
 3. Branch names **MUST** be descriptive:
 	* General format: `issue#_short_description` 
 
@@ -74,7 +74,7 @@ If you have created a new branch or checked out an existing one, it is time to m
 2. Commit messages **MUST** be descriptive
 3. Commit messages **MUST** be clean (see squashing commits for details)
 
-While continuing to do developement on a branch, keep in mind that other approved commits are getting merged into `master`.  In order to ensure there are minimal to no merge conflicts, we need `rebase` with master.
+While continuing to do developement on a branch, keep in mind that other approved commits are getting merged into `main`.  In order to ensure there are minimal to no merge conflicts, we need `rebase` with main.
 
 If you are new to this process, please sanity check your remotes:
 
@@ -90,9 +90,9 @@ upstream    DISABLED (push)
 This output should be consistent with your `.git/config`:
 
 ```bash
-[branch "master"]
+[branch "main"]
 	remote = upstream
-	merge = refs/heads/master
+	merge = refs/heads/main
 [remote "origin"]
 	url = git@github.com:your_username/zcash.git
 	fetch = +refs/heads/*:refs/remotes/origin/*
@@ -105,7 +105,7 @@ Once you have confirmed your branch/remote is valid, issue the following command
 
 ```bash
 git fetch upstream
-git rebase upstream/master
+git rebase upstream/main
 git push -f
 ```
 If you have uncommited changes, use `git stash` to preserve them:
@@ -113,11 +113,11 @@ If you have uncommited changes, use `git stash` to preserve them:
 ```bash
 git stash
 git fetch upstream
-git rebase upstream/master
+git rebase upstream/main
 git push -f
 git stash pop
 ```
-Using `git stash` allows you to temporarly store your changes while you rebase with `master`. Without this, you will rebase with master and loose your local changes.
+Using `git stash` allows you to temporarly store your changes while you rebase with `main`. Without this, you will rebase with main and loose your local changes.
 
 Before commiting changes, ensure your commit messages follow these guidelines:
 
@@ -128,7 +128,7 @@ Before commiting changes, ensure your commit messages follow these guidelines:
 5. Wrap the body at 72 characters
 6. Use the body to explain *what* and *why* vs. *how*
 
-Once synced with `master`, let's commit our changes:
+Once synced with `main`, let's commit our changes:
 
 ```bash
 git add [files...] # default is all files, be careful not to add unintended files
@@ -149,7 +149,7 @@ If you click on `Commits`, you should see the diff of that commit; it's advisabl
 Add comments **before** adding reviewers, otherwise they will get a separate email for each comment you add. Once you're happy with the documentation you've added to your PR, select reviewers along the right side. For a trivial change (like the example here), one reviewer is enough, but generally you should have at least two reviewers, at least one of whom should be experienced. It may be good to add one less experienced engineer as a learning experience for that person.
 
 ## Discuss / Review PR
-In order to merge your PR with `master`, you will need to convince the reviewers of the intentions of your code. 
+In order to merge your PR with `main`, you will need to convince the reviewers of the intentions of your code. 
 
 **IMPORTANT:** If your PR introduces code that does not have existing tests to ensure it operates gracefully, you **MUST** also create these tests to accompany your PR.
 
@@ -203,22 +203,22 @@ Once you have addressed the comments in your PR, and it has received two *ACKs* 
 ```
 *Note: @zkbot commands are entered into Github tickets as comments*
 
-This will instruct Buildbot(aka Homu) to test merging your PR with `master` and ensure it passes the full test suite. You may or may not have permissions to run this command, but Github will reply with output indicating if you can or not.
+This will instruct Buildbot(aka Homu) to test merging your PR with `main` and ensure it passes the full test suite. You may or may not have permissions to run this command, but Github will reply with output indicating if you can or not.
 
-If the ```@zkbot try``` fails, you will need to go back and address the issues accordingly. Otherwise, you can now attempt to merge into `master`:
+If the ```@zkbot try``` fails, you will need to go back and address the issues accordingly. Otherwise, you can now attempt to merge into `main`:
 
 ```bash
 @zkbot r+
 ```
 *Note: @zkbot commands are entered into Github tickets as comments*
 
-There are very few people that have ```@zkbot r+``` privileges, so you can request one of these people to merge the PR, or leave it for the release process to pick it up. Finally, when the PR is merged into `master` successfully, your PR will close.
+There are very few people that have ```@zkbot r+``` privileges, so you can request one of these people to merge the PR, or leave it for the release process to pick it up. Finally, when the PR is merged into `main` successfully, your PR will close.
 
-There will be times when your PR is waiting for some portion of the above process. If you are requested to rebase your PR, in order to gracefully merge into `master`, please do the following:
+There will be times when your PR is waiting for some portion of the above process. If you are requested to rebase your PR, in order to gracefully merge into `main`, please do the following:
 
 ```bash
 git checkout branch_name
 git fetch upstream
-git rebase upstream/master
+git rebase upstream/main
 git push -f
 ```
