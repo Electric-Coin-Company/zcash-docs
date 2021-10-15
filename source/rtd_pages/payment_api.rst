@@ -34,7 +34,7 @@ We recommend this community-maintained |API|, which is automatically generated w
 
 .. |API| raw:: html
 
-   <a href="https://zcash-rpc.github.io/" target="_blank">Zcash Payment API documentation</a> 
+   <a href="https://zcash.github.io/" target="_blank">Zcash Payment API documentation</a> 
 
 .. image:: images/api.png
-  :target: https://zcash-rpc.github.io/
+  :target: https://zcash.github.io/
