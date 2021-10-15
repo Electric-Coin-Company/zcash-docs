@@ -77,7 +77,7 @@ This is the home for Zcash documentation for end users and developers. Check out
    </div>
 
     <div class="button-box bg-yellow">
-      <a href="https://zcash-rpc.github.io/">
+      <a href="https://zcash.github.io/">
         <div>
           <img src="_static/images/box_mobile_icon.png" />
         </div>
@@ -86,7 +86,7 @@ This is the home for Zcash documentation for end users and developers. Check out
             <strong>RPC Documentation </strong>
             <span>Details on zcashd commands</span>
           </p>
-          <p>https://zcash-rpc.github.io/</p>
+          <p>https://zcash.github.io/</p>
         </div>
       </a>
     </div>
