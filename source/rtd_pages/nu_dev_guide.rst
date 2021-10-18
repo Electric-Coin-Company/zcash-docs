@@ -36,6 +36,38 @@ Below is general advice that applies to all network upgrades:
     transactions. Notify users with a message or at their next login after 
     the network transition. 
 
+:fa:`pagelines` NU5
+------------------
+
+NU5 is the sixth major network upgrade for Zcash and a component of the 
+`Halo Arc <https://electriccoin.co/blog/halo-arc-for-zcash-proposed-for-release-later-this-year/>`_ product 
+suite release. NU5 represents the continued evolution of our zk-SNARK technology stack and will 
+move Zcash to the `Halo proving system <https://electriccoin.co/blog/announcing-zip-224-bringing-halo-2-to-zcash/>`_, 
+removing the need for the trusted setup and upgrading the protocol’s underlying cryptography.
+
+:fa:`arrow-circle-right` Consensus Branch ID change
+    See `ZIP 252 <https://zips.z.cash/zip-0252>`_ for full details on the deployment of NU5.
+
+:fa:`arrow-circle-right` Require Canonical Jubjub Point Encodings
+    `ZIP 216 <https://zips.z.cash/zip-0216>`_ fixes an oversight in the implementation of the Sapling consensus rules, by rejecting all non-canonical representations of Jubjub points.
+
+:fa:`arrow-circle-right` Orchard Shielded Protocol
+    `ZIP 224 <https://zips.z.cash/zip-0224>`_ introduces a new shielded pool with spending keys and payment addresses that are amenable to future scalability improvements. New pools with separate privacy sets are instituted at major network upgrades to `increase security <https://electriccoin.co/blog/turnstile-enforcement-against-counterfeiting/>`_ of the monetary base. 
+
+:fa:`arrow-circle-right` New Transaction Version Format
+    `ZIP 225 <https://zips.z.cash/zip-0225>`_ defines an update to the Zcash peer-to-peer transaction format to include support for data elements required to support the Orchard protocol. The new transaction format defines well-bounded regions of the serialized form to serve each of the existing pools of funds, and adds and describes a new region containing Orchard-specific elements.
+
+:fa:`arrow-circle-right` Relay of Version 5 Transactions
+    `ZIP 239 <https://zips.z.cash/zip-0239>`_ alters the peer-to-peer network protocol, adding a new inv message type which must be used for advertising V5 transactions. This ensures that network nodes cannot perform a denial-of-service attack on wallets that are submitting V5 transactions to the mempool.
+
+:fa:`arrow-circle-right` Non-malleable Transaction IDs
+    `ZIP 244 <https://zips.z.cash/zip-0244>`_ defines a new transaction digest algorithm for the NU5 network upgrade onward, in order to introduce non-malleable transaction identifiers that commit to all transaction data except for attestations to transaction validity.
+
+:fa:`arrow-circle-right` Unified addresses
+    `ZIP 316 <https://zips.z.cash/zip-0316>`_ defines a new future-proof Zcash address format that improves usability, increases the ease of interoperability, and supports shielding Zcash by default. UAs make Zcash easier to use by removing the complexity of multiple address types. This simplifies the user experience and increases interoperability between shielded-only applications and transparent-only applications.
+
+
+
 :fa:`tree` Canopy
 ------------------
 
