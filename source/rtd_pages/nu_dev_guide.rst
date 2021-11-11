@@ -294,7 +294,7 @@ mandatory-script-verify-flag-failed
 
         1. When creating raw transactions, the `signrawtransaction` step must be 
         completed correctly. There is a field in `signrawtransaction` called `prevtxs` 
-        which can be seen here (https://zcash.github.io/signrawtransaction.html). 
+        which can be seen here (https://zcash.github.io/rpc/signrawtransaction.html). 
         The `prevtxs` parameter is optional, but if it is specified, the `amount` 
         parameter must also be specified. This amount is the total amount of the 
         previous output. Prior to Overwinter the `amount` parameter was not required, 

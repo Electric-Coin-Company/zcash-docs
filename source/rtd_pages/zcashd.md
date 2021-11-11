@@ -49,7 +49,7 @@ With a fully-synced running ``zcashd`` in the background, open a new terminal wi
 ./src/zcash-cli getinfo
 ```
 
-See the available [RPC commands](https://zcash.github.io/) for all the capabilities of Zcashd & Zcash-cli.
+See the available [RPC commands](https://zcash.github.io/rpc/) for all the capabilities of Zcashd & Zcash-cli.
 
 Every Zcashd comes with an embedded Zcash **wallet**. The private keys and transaction information are associated with this wallet are stored in:
 
@@ -90,7 +90,7 @@ Helpful tips:
 ## References
 
 An extensive list of Zcashd & Zcash-cli pages, including ones linked inline in this page above.
-* [Zcash RPC Commands](https://zcash.github.io/)
+* [Zcash RPC Commands](https://zcash.github.io/rpc/)
 * [Zcash.conf guide](zcash_conf_guide.html)
 * [Troubleshooting Guide](troubleshooting_guide.html)
 * [Wallet Backup Instructions](wallet_backup.html)
