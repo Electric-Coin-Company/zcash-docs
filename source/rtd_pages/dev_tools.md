@@ -4,7 +4,7 @@ Here are the most helpful tools to test and debug code.
 
 ## Zcashd/Zcash-cli RPC Docs
 
-Thee [Zcash RPC webpage](https://zcash.github.io/) makes it easy to look at zcashd commands, their parameters, and examples. The content on that page is the formatted help text for each of the Zcash RPC calls, extracted by an open sourced tool. This is one of the most frequently used resources by core developers. 
+Thee [Zcash RPC webpage](https://zcash.github.io/rpc/) makes it easy to look at zcashd commands, their parameters, and examples. The content on that page is the formatted help text for each of the Zcash RPC calls, extracted by an open sourced tool. This is one of the most frequently used resources by core developers. 
 
 ## Zcash Testnet Guide
 
