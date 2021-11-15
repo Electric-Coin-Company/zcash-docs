@@ -6,3 +6,4 @@ sphinx_fontawesome
 recommonmark
 sphinx-sitemap
 sphinx-copybutton
+docutils<0.18
