@@ -2,8 +2,21 @@
 
 We do not currently support Zcashd & Zcash-cli on Windows.
 
-We do not have documented instructions to build Zcashd & Zcash-cli on Windows, and do not recommend doing so. 
+With the changes in Windows 11 and the introduction of the Windows Subsystem for Linux (WSL), it is possible to run the Debian/Ubuntu build through WSL on Windows. This will eliminate the need for a cross-compiled version of Zcashd.
 
-However, it is technically possible to run on them on Windows with a cross-compile from Debian. Follow the [install process for Debian/Ubuntu](Debian-Ubuntu-build.html), and then run the following command to cross-compile for Windows: ```HOST=x86_64-w64-mingw32 ./zcutil/build.sh -j$(nproc)```. 
+Prerequisite - install Windows Subsystem for Linux. Step-by-step directions are available at http://docs.microsoft.com/en-us/windows/wsl/install
 
-Next, transfer the binary over to a Windows machine to run Zcashd & Zcash-cli on Windows. Updating Zcashd & Zcash-cli on Windows will require a cross-compile every time. For this reason, if you are able to run Zcashd & Zcash-cli on another operating system, we recommend doing that instead.
+Set the WSL version to 2 with ```wsl --set-default-version 2```
+
+Once complete, you can access the Linux environment by entering  ```wsl``` on a comamnd-line.
+
+Inside the Linux subsystem, follow the same process for installing Zcashd on Debian/Ubuntu (Debian-Ubuntu-build.html).
+
+You are able to start Zcashd from a Windows Desktop icon or scheduled task by referencing the WSL command and the path to the Zcashd binary.
+
+Example:
+```wsl //mnt/c/Users/[username]/zcash/src/zcashd --daemon```
+
+will startup Zcasd in background mode. Replace the path as appropriate for your specific installation location.
+
+
