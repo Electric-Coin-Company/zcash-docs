@@ -57,6 +57,7 @@ Going direct to the manufacturer is an option for the latest-gen machines:
 ASIC resellers may also have miners available:
 
 * Blockware Mining: https://www.blockwaresolutions.com
+* Luxor Brokerage: https://brokerage.luxor.tech/dashboard
 
 ASIC hosting
 ------------
