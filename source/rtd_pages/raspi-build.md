@@ -50,8 +50,22 @@ apt-get install gcc-10 clang
 
 At this point, your Raspberry Pi has all the required components to compile zcashd. It is recommended that you reboot the Pi one more time before proceeding.
 
+5. Clone the zcashd repository and checkout the current code version.
 
+```
+git clone https://github.com/zcash/zcash.git
+cd zcash/
+git checkout v4.6.0-1
+./zcutil/fetch-params.sh
+```
 
+6. Build zcashd and zcash-cli.
 
+```
+./zcutil/clean.sh
+./zcutil/build.sh
+```
 
+For build.sh, do not attempt to use the ``-j$(nproc)`` argument. While the Raspberry Pi 4 is a multi-core computer, it does not have enough system memory available to complete a multi-core compile. The entire single-proc compile process will take 3-4 hours. 
 
+You now should have a compiled zcashd full node. Before proceeding to creating a default zcash.conf file and starting the zcashd process, reboot the Pi one final time.
