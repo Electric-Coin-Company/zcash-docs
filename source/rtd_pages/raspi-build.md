@@ -1,6 +1,6 @@
 # Zcashd & Zcash-cli on Raspberry Pi
 
-The Raspberry Pi provides a simple, compact computer suitable for running a Zcashd node. The instructions provided here assume you have a Raspberry Pi 4 Model B with the 8GB RAM option and at least a 64GB Micro SD card. Use of a Pi with less RAM or storage space will yield unpredictable results and may result in a failed compile.
+The Raspberry Pi provides a simple, compact computer suitable for running a Zcashd node. The instructions provided here assume you have a Raspberry Pi 4 Model B with the 8GB RAM option and at least a 64GB Micro SD card. Use of a Pi with less RAM or storage space will yield unpredictable results and may result in a failed compile. Given the current Zcash blockchain is >30GB, 64GB is the minimum storage size.
 
 The following instructions will guide you through compiling Zcashd natively on the Raspberry Pi.
 
@@ -50,8 +50,22 @@ apt-get install gcc-10 clang
 
 At this point, your Raspberry Pi has all the required components to compile zcashd. It is recommended that you reboot the Pi one more time before proceeding.
 
+5. Clone the zcashd repository and checkout the current code version.
 
+```
+git clone https://github.com/zcash/zcash.git
+cd zcash/
+git checkout v4.6.0-1
+./zcutil/fetch-params.sh
+```
 
+6. Build zcashd and zcash-cli.
 
+```
+./zcutil/clean.sh
+./zcutil/build.sh
+```
 
+For build.sh, do not attempt to use the ``-j$(nproc)`` argument. While the Raspberry Pi 4 is a multi-core computer, it does not have enough system memory available to complete a multi-core compile. The entire single-proc compile process will take 3-4 hours. 
 
+You now should have a compiled zcashd full node. Once you start the zcashd service, it will take approximately 2 days (48 hours) to fully sync the node.
