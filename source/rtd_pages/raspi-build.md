@@ -28,45 +28,44 @@ The first step is to prepare the prequisite software for the zcashd compile.
 *NOTE: All commands must be run via sudo or from a root command prompt. Use of root carrying additional risk, but might make the process easier. These instructions assume you have superuser rights.*
 
 1. Fully upgrade and update the OS.
-
-```
-apt-get upgrade && apt-get update
-```
+    ```
+    apt-get upgrade && apt-get update
+    ```
 
 2. Install dependencies required for the compiler. After installation, you wil be prompted to restart selected services.
-```
-apt-get install \
-build-essential pkg-config libc6-dev m4 \
-autoconf libtool libncurses-dev unzip git python3 python3-zmq \
-zlib1g-dev curl bsdmainutils automake libtinfo5
-```
+
+    ```
+    apt-get install \
+    build-essential pkg-config libc6-dev m4 \
+    autoconf libtool libncurses-dev unzip git python3 python3-zmq \
+    zlib1g-dev curl bsdmainutils automake libtinfo5
+    ```
 
 3. Reboot the Raspberry Pi via ``reboot``.
-
 4. The next step is to install the GCC compiler and the CLANG frontend.
 
-```
-apt-get install gcc-10 clang
-```
+    ```
+    apt-get install gcc-10 clang
+    ```
 
-At this point, your Raspberry Pi has all the required components to compile zcashd. It is recommended that you reboot the Pi one more time before proceeding.
+    At this point, your Raspberry Pi has all the required components to compile zcashd. It is recommended that you reboot the Pi one more time before proceeding.
 
 5. Clone the zcashd repository and checkout the current code version.
 
-```
-git clone https://github.com/zcash/zcash.git
-cd zcash/
-git checkout v4.6.0-1
-./zcutil/fetch-params.sh
-```
+    ```
+    git clone https://github.com/zcash/zcash.git
+    cd zcash/
+    git checkout v4.6.0-1
+    ./zcutil/fetch-params.sh
+    ```
 
 6. Build zcashd and zcash-cli.
 
-```
-./zcutil/clean.sh
-./zcutil/build.sh
-```
+    ```
+    ./zcutil/clean.sh
+    ./zcutil/build.sh
+    ```
 
-For build.sh, do not attempt to use the ``-j$(nproc)`` argument. While the Raspberry Pi 4 is a multi-core computer, it does not have enough system memory available to complete a multi-core compile. The entire single-proc compile process will take 3-4 hours. 
+    For build.sh, do not attempt to use the ``-j$(nproc)`` argument. While the Raspberry Pi 4 is a multi-core computer, it does not have enough system memory available to complete a multi-core compile. The entire single-proc compile process will take 3-4 hours. 
 
 You now should have a compiled zcashd full node. Once you start the zcashd service, it will take approximately 2 days (48 hours) to fully sync the node.
