@@ -24,6 +24,7 @@ Assuming you've successfully changed the password, the system should display a s
 # Configure Prerequisites
 
 The first step is to prepare the prequisite software for the zcashd compile.
+
 *NOTE: All commands must be run via sudo or from a root command prompt. Use of root carrying additional risk, but might make the process easier. These instructions assume you have superuser rights.*
 
 1. Fully upgrade and update the OS.
