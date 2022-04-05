@@ -27,7 +27,7 @@ Add the repository to your sources:
 
 .. code-block:: bash
 
-   echo "deb [arch=amd64] https://apt.z.cash/ stretch main" | sudo tee /etc/apt/sources.list.d/zcash.list
+   echo "deb [arch=amd64] https://apt.z.cash/ buster main" | sudo tee /etc/apt/sources.list.d/zcash.list
 
 Update the cache of sources and install Zcash:
 
@@ -153,7 +153,7 @@ Re-get the apt info:
 
 .. code-block:: bash
 
-    echo "deb [arch=amd64] https://apt.z.cash/ stretch main" | sudo tee /etc/apt/sources.list.d/zcash.list
+    echo "deb [arch=amd64] https://apt.z.cash/ buster main" | sudo tee /etc/apt/sources.list.d/zcash.list
 
 Then update the list again:
 

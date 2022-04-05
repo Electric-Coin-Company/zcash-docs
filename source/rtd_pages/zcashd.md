@@ -76,9 +76,9 @@ To upgrade Zcashd & Zcash-cli, fetch the latest updates:
   ```
 
 Helpful tips: 
-* Upgrading to v4.6.0-1 requires a build; try the following: 
+* Upgrading to v4.6.0-2 requires a build; try the following: 
   ```
-  git checkout v4.6.0-1
+  git checkout v4.6.0-2
    ./zcutil/clean.sh
    ./zcutil/build.sh -j$(nproc)
   ```
