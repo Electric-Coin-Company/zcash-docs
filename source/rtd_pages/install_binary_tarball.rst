@@ -21,9 +21,21 @@ Debian Buster:
 
 Result: ``9e18ded3b25cbc38f8189a7d276d2fefbeb122f1ac4d578404bbdf960c1b16e2``
 
+`Download Tarball for Debian Bullseye v4.6.0-2 <https://z.cash/downloads/zcash-4.6.0-2-linux64-debian-bullseye.tar.gz>`_
+
+After downloading but before extracting, verify that the checksum of the tarball matches the hash below for the version of the binary you downloaded:
+
+Debian Bullseye:
+
+.. code-block:: bash
+
+   sha256sum zcash-4.6.0-2-linux64-debian-bullseye.tar.gz
+
+Result: ``b959c35dee15a3623347222bd8646d56cda4d88153b6764b3e4dfc01daefa0e5``
+
 This checksum was generated from our gitian deterministic build process. `View all gitian signatures <https://github.com/zcash/gitian.sigs/tree/master>`_.
 
-Once you've verified that it matches, extract the files and move the binaries into your executables $PATH: 
+Once you've verified that it matches, extract the Buster or Bullseye files and move the binaries into your executables $PATH: 
 
 .. code-block:: bash
 
