@@ -23,11 +23,18 @@ Next add the Zcash master signing key to apt's trusted keyring:
 
 ``Key fingerprint = 3FE6 3B67 F85E A808 DE9B  880E 6DEF 3BAF 2727 66C0``
 
-Add the repository to your sources:
+Add the repository to your Buster sources:
 
 .. code-block:: bash
 
    echo "deb [arch=amd64] https://apt.z.cash/ buster main" | sudo tee /etc/apt/sources.list.d/zcash.list
+
+Or add the repository to your Bullseye sources:
+
+.. code-block:: bash
+
+   echo "deb [arch=amd64] https://apt.z.cash/ bullseye main" | sudo tee /etc/apt/sources.list.d/zcash.list
+
 
 Update the cache of sources and install Zcash:
 
