@@ -55,7 +55,7 @@ The first step is to prepare the prequisite software for the zcashd compile.
     ```
     git clone https://github.com/zcash/zcash.git
     cd zcash/
-    git checkout v4.7.0
+    git checkout v5.0.0
     ./zcutil/fetch-params.sh
     ```
 
