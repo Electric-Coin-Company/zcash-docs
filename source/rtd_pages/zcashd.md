@@ -19,6 +19,7 @@ Zcashd & Zcash-cli are maintained by Electric Coin Company (the founding team fo
 
 * [Windows](windows-build.html) (unsupported)
 
+* [ARM64](raspi-build.html) ("best-effort" supported)
 
 ## Configuration
 
