@@ -20,14 +20,4 @@ Using
 -----
 
 :fa:`arrow-circle-right` Obtain testnet coins (TAZ)
-    You can use the `testnet faucet <https://faucet.testnet.z.cash/>`_ or enable mining in your configuration to obtain TAZ
-    
-:fa:`arrow-circle-right` Creating transactions
-    Use the :ref:`payment_api` to create transactions on testnet
-
-:fa:`arrow-circle-right` Testnet explorers
-    You can use the `Zcash testnet explorer <https://explorer.testnet.z.cash/>`_ or other, third-party testnet explorers including `testnet.zcha.in <https://testnet.zcha.in/>`_.
-    
-    .. note::
-
-       See the :ref:`nu_dev_guide` for details on testing network upgrades.
+    Join our `Discord Support <https://discord.gg/jx7Hv8ug>`_ and ask how to obtain some TAZ
