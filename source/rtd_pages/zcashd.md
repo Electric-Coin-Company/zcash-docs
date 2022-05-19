@@ -62,7 +62,7 @@ Ensure this file is regularly backed up and permissions are private.
 
 Try generating some addresses, then sending and receiving transparent and shielded transactions! Note that there are separate commands for transparent and shielded addresses/transactions.
 
-If you're running Zcashd for development, configure Zcashd to run on testnet, which takes significantly less time to sync than mainnet. Use the [Zcash Testnet Faucet](https://faucet.testnet.z.cash/) to get test funds.
+If you're running Zcashd for development, configure Zcashd to run on testnet, which takes significantly less time to sync than mainnet. Join Discord at [Zcash](https://discord.gg/jx7Hv8ug) to get test fund support.
 
 ## Upgrading
 
