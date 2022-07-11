@@ -19,7 +19,7 @@ Debian Buster:
 
    sha256sum zcash-5.1.0-linux64-debian-buster.tar.gz
 
-Result: ``0063b65bc109fcfa1483fc6063ed013eda9dec202d0df37b4a8e6ef22bfeb3a1``
+Result: ``c4adf29d5c62804da7175d62f623db85e1726728c32628a38aa4f2db8ec1073b``
 
 `Download Tarball for Debian Bullseye v5.1.0 <https://z.cash/downloads/zcash-5.1.0-linux64-debian-bullseye.tar.gz>`_
 
