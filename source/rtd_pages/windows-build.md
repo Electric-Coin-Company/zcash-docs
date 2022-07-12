@@ -8,7 +8,7 @@ Prerequisite - install Windows Subsystem for Linux. Step-by-step directions are 
 
 Set the WSL version to 2 with ```wsl --set-default-version 2```
 
-Once complete, you can access the Linux environment by entering  ```wsl``` on a comamnd-line.
+Once complete, you can access the Linux environment by entering  ```wsl``` on a command-line.
 
 Inside the Linux subsystem, follow the same process for installing Zcashd on Debian/Ubuntu (Debian-Ubuntu-build.html).
 
@@ -17,6 +17,4 @@ You are able to start Zcashd from a Windows Desktop icon or scheduled task by re
 Example:
 ```wsl //mnt/c/Users/[username]/zcash/src/zcashd --daemon```
 
-will startup Zcasd in background mode. Replace the path as appropriate for your specific installation location.
-
-
+will startup Zcashd in background mode. Replace the path as appropriate for your specific installation location.
