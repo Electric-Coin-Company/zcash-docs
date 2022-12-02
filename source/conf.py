@@ -28,7 +28,7 @@ author = u'ECC'
 # The short X.Y version
 version = u''
 # The full version, including alpha/beta/rc tags
-release = u'5.3.0'
+release = u'5.3.1'
 
 # -- General configuration ---------------------------------------------------
 
