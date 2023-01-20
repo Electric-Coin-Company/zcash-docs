@@ -284,7 +284,7 @@ tx-overwinter-active
     mobile wallet, please file a support request with the developer 
     of the product and let us know in the 
     `#user-support <https://discord.gg/8t4zXje>`_ 
-    channel on the community chat - https://discord.gg/PhJY6Pm
+    channel on the community chat - https://discord.gg/GGtsUzyp
 
 mandatory-script-verify-flag-failed
     (Script evaluated without error but finished with a false/empty top stack element)
