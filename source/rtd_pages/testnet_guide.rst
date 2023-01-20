@@ -20,4 +20,4 @@ Using
 -----
 
 :fa:`arrow-circle-right` Obtain testnet coins (TAZ)
-    Join our `Discord Support <https://discord.gg/jx7Hv8ug>`_ and ask how to obtain some TAZ or try a `faucet <https://faucet.zecpages.com/>`_ 
+    Join our `Discord Support <https://discord.gg/GGtsUzyp>`_ and ask how to obtain some TAZ or try a `faucet <https://faucet.zecpages.com/>`_ 
