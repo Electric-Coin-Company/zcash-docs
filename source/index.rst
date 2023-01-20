@@ -92,7 +92,7 @@ This is the home for Zcash documentation for end users and developers. Check out
     </div>
 
      <div class="button-box bg-lgt-blue">
-       <a href="https://discord.gg/PhJY6Pm">
+       <a href="https://discord.gg/GGtsUzyp">
         <div>
           <img src="_static/images/box_community_icon.png" />
         </div>
@@ -110,7 +110,7 @@ This is the home for Zcash documentation for end users and developers. Check out
 ..
   _image:: rtd_pages/images/box_community.png
    :width: 49%
-   :target: https://discord.gg/PhJY6Pm
+   :target: https://discord.gg/GGtsUzyp
 
 .. toctree::
    :caption: Introduction
