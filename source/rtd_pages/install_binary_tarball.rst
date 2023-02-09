@@ -9,7 +9,7 @@ The Electric Coin Company provides a binary tarball for download.
 
 As of v5.0.0, we are no longer supporting Debian 9(Stretch) packages in apt.
 
-`Download Tarball for Debian Buster v5.3.2 <https://z.cash/downloads/zcash-5.3.2-linux64-debian-buster.tar.gz>`_
+`Download Tarball for Debian Buster v5.4.0 <https://z.cash/downloads/zcash-5.4.0-linux64-debian-buster.tar.gz>`_
 
 After downloading but before extracting, verify that the checksum of the tarball matches the hash below for the version of the binary you downloaded:
 
@@ -17,11 +17,11 @@ Debian Buster:
 
 .. code-block:: bash
 
-   sha256sum zcash-5.3.2-linux64-debian-buster.tar.gz
+   sha256sum zcash-5.4.0-linux64-debian-buster.tar.gz
 
-Result: ``37068d540972389e6fa75d24cefcdedf33c9ff9e8339c966e3990cc05dbbf0c4``
+Result: ``629acff33e687a52ddfe006b9607eda9dcfb1bba69d8533aad8750c8aad13229``
 
-`Download Tarball for Debian Bullseye v5.3.2 <https://z.cash/downloads/zcash-5.3.2-linux64-debian-bullseye.tar.gz>`_
+`Download Tarball for Debian Bullseye v5.4.0 <https://z.cash/downloads/zcash-5.4.0-linux64-debian-bullseye.tar.gz>`_
 
 After downloading but before extracting, verify that the checksum of the tarball matches the hash below for the version of the binary you downloaded:
 
@@ -29,9 +29,9 @@ Debian Bullseye:
 
 .. code-block:: bash
 
-   sha256sum zcash-5.3.2-linux64-debian-bullseye.tar.gz
+   sha256sum zcash-5.4.0-linux64-debian-bullseye.tar.gz
 
-Result: ``20b0aa39b72826fe5c2d967151ce8cccbd11c1cf1b6c2adf8ddad0c596e241fc``
+Result: ``d4ae16e06a29c0c8d31f5d109da83a374acaacc40032ab35cce017f47cdc7bae``
 
 This checksum was generated from our gitian deterministic build process. `View all gitian signatures <https://github.com/zcash/gitian.sigs/tree/master>`_.
 
@@ -39,9 +39,9 @@ Once you've verified that it matches, extract the Buster or Bullseye files and m
 
 .. code-block:: bash
 
-    tar -xvf zcash-5.3.2-linux64-debian-buster.tar.gz
+    tar -xvf zcash-5.4.0-linux64-debian-buster.tar.gz
 
-    mv -t /usr/local/bin/ zcash-5.3.2/bin/*
+    mv -t /usr/local/bin/ zcash-5.4.0/bin/*
 
 Now that Zcash is installed, run this command to download the parameters used to create and verify shielded transactions:
 
