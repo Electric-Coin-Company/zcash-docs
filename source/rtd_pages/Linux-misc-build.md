@@ -41,7 +41,7 @@ Currently, the only way to install Zcashd & Zcash-cli on Linux is to build from 
     ```
      git clone https://github.com/zcash/zcash.git
      cd zcash/
-     git checkout v5.5.0
+     git checkout v5.5.1
      ./zcutil/fetch-params.sh
      ```
      <!--The message printed by ``git checkout`` about a "detached head" is normal and does not indicate a problem. --> 
