@@ -7,7 +7,7 @@ Binary Tarball Download & Setup
 
 The Electric Coin Company provides a binary tarball for download.
 
-As of v5.0.0, we are no longer supporting Debian 9(Stretch) packages in apt.
+As of v5.0.0, We are no longer supporting Debian 9(Stretch) packages in apt.
 
 `Download Tarball for Debian Buster v5.5.1 <https://z.cash/downloads/zcash-5.5.1-linux64-debian-buster.tar.gz>`_
 
