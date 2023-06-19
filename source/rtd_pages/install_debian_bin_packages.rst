@@ -18,10 +18,10 @@ Next add the Zcash master signing key to apt's trusted keyring:
 .. code-block:: bash
 
    wget -qO - https://apt.z.cash/zcash.asc | gpg --import
-   gpg --export 3FE63B67F85EA808DE9B880E6DEF3BAF272766C0 | sudo apt-key add -
+   gpg --export B1C9095EAA1848DBB54D9DDA1D05FDC66B372CFE | sudo apt-key add -
 
-
-``Key fingerprint = 3FE6 3B67 F85E A808 DE9B  880E 6DEF 3BAF 2727 66C0``
+B54D9DDA1D05FDC66B372CFE
+``Key fingerprint = B1C9 095E AA18 48DB B54D 9DDA 1D05 FDC6 6B37 2CFE``
 
 Add the repository to your Buster sources:
 
