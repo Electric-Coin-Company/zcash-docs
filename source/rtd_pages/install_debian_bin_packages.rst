@@ -60,7 +60,7 @@ Get the new key directly from the `z.cash site <https://apt.z.cash/zcash.asc>`_:
 .. code-block:: bash
 
    wget -qO - https://apt.z.cash/zcash.asc | gpg --import
-   gpg --export 3FE63B67F85EA808DE9B880E6DEF3BAF272766C0 | sudo apt-key add -
+   gpg --export B1C9095EAA1848DBB54D9DDA1D05FDC66B372CFE | sudo apt-key add -
 
 to retrieve the new key and resolve this error.
 
@@ -115,7 +115,7 @@ Then retrieve the updated key:
 .. code-block:: bash
 
    wget -qO - https://apt.z.cash/zcash.asc | gpg --import
-   gpg --export 3FE63B67F85EA808DE9B880E6DEF3BAF272766C0 | sudo apt-key add -
+   gpg --export B1C9095EAA1848DBB54D9DDA1D05FDC66B372CFE | sudo apt-key add -
 
 Then update the list again:
 
@@ -153,7 +153,7 @@ Then retrieve new key:
 .. code-block:: bash
 
    wget -qO - https://apt.z.cash/zcash.asc | gpg --import
-   gpg --export 3FE63B67F85EA808DE9B880E6DEF3BAF272766C0 | sudo apt-key add -
+   gpg --export B1C9095EAA1848DBB54D9DDA1D05FDC66B372CFE | sudo apt-key add -
 
 Re-get the apt info:
 
