@@ -108,13 +108,13 @@ html_extra_path = ['_extra']
 #gettext_compact = False
 
 
-# -- Options for displaying GitLab content -------------------------------------------------
+# -- Options for displaying GitHub content -------------------------------------------------
 
 html_context = {
-    "display_gitlab": True, # Integrate Gitlab
-    "gitlab_user": "zcash-docs", # Username
-    "gitlab_repo": "zcash-docs", # Repo name
-    "gitlab_version": "master", # Version
+    "display_github": True, # Integrate github
+    "github_user": "zcash-docs", # Username
+    "github_repo": "zcash-docs", # Repo name
+    "github_version": "master", # Version
     "conf_py_path": "/source/" # Path in the checkout to the docs root
 }
 
