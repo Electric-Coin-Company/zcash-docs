@@ -9,7 +9,7 @@ The Electric Coin Company provides a binary tarball for download.
 
 As of v5.0.0, We are no longer supporting Debian 9(Stretch) packages in apt.
 
-`Download Tarball for Debian Buster v5.8.0 <https://z.cash/downloads/zcash-5.8.0-linux64-debian-buster.tar.gz>`_
+`Download Tarball for Debian Buster v5.8.0 <https://download.z.cash/downloads/zcash-5.8.0-linux64-debian-buster.tar.gz>`_
 
 After downloading but before extracting, verify that the checksum of the tarball matches the hash below for the version of the binary you downloaded:
 
@@ -21,7 +21,7 @@ Debian Buster:
 
 Result: ``4a1e889649be209f9cf19df6bd916bb52c35143430b1cd3f77ee5fcea291d05f``
 
-`Download Tarball for Debian Bullseye v5.8.0 <https://z.cash/downloads/zcash-5.8.0-linux64-debian-bullseye.tar.gz>`_
+`Download Tarball for Debian Bullseye v5.8.0 <https://download.z.cash/downloads/zcash-5.8.0-linux64-debian-bullseye.tar.gz>`_
 
 After downloading but before extracting, verify that the checksum of the tarball matches the hash below for the version of the binary you downloaded:
 
