@@ -31,7 +31,7 @@ We maintain a SDK that allows for wallet functionalities (address management, se
 **Resources**
 
 * `Android SDK source code <https://github.com/zcash/zcash-android-wallet-sdk>`_
-* `Android Demo app <https://github.com/zcash/zcash-android-wallet-sdk/tree/master/samples/demo-app>`_ 
+* `Android Demo app <https://github.com/Electric-Coin-Company/zcash-android-wallet-sdk/tree/main/demo-app>`_
 *  `Android API docs <../android/zcash-android-wallet-sdk/index.html>`_ 
 
  
