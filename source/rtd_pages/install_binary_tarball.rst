@@ -19,7 +19,7 @@ Debian Buster:
 
    sha256sum zcash-5.8.0-linux64-debian-buster.tar.gz
 
-Result: ``4a1e889649be209f9cf19df6bd916bb52c35143430b1cd3f77ee5fcea291d05f``
+Result: ``7a63b8f8a2aefc7b634cc3e572103600f4af8c383bd90ca1d333870ddaa004ef``
 
 `Download Tarball for Debian Bullseye v5.8.0 <https://download.z.cash/downloads/zcash-5.8.0-linux64-debian-bullseye.tar.gz>`_
 
@@ -31,7 +31,7 @@ Debian Bullseye:
 
    sha256sum zcash-5.8.0-linux64-debian-bullseye.tar.gz
 
-Result: ``2b7f3654c3538cf465b9e37add0dffc1ac27ec8eee7890e0ce51f3972a875f05``
+Result: ``d385b9fbeeb145f60b0b339d256cabb342713ed3014cd634cf2d68078365abd2``
 
 This checksum was generated from our gitian deterministic build process. `View all gitian signatures <https://github.com/zcash/gitian.sigs/tree/master>`_.
 
