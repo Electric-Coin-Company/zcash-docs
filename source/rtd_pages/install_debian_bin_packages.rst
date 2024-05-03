@@ -34,6 +34,11 @@ Or add the repository to your Bullseye sources:
 
    echo "deb [arch=amd64] https://apt.z.cash/ bullseye main" | sudo tee /etc/apt/sources.list.d/zcash.list
 
+Or add the repository to your Bookworm sources:
+
+.. code-block:: bash
+
+   echo "deb [arch=amd64] https://apt.z.cash/ bookworm main" | sudo tee /etc/apt/sources.list.d/zcash.list
 
 Update the cache of sources and install Zcash:
 
