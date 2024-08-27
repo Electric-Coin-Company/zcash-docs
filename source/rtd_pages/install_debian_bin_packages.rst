@@ -22,13 +22,7 @@ Next add the Zcash master signing key to apt's trusted keyring:
 
 ``Key fingerprint = B1C9 095E AA18 48DB B54D 9DDA 1D05 FDC6 6B37 2CFE``
 
-Add the repository to your Buster sources:
-
-.. code-block:: bash
-
-   echo "deb [arch=amd64] https://apt.z.cash/ buster main" | sudo tee /etc/apt/sources.list.d/zcash.list
-
-Or add the repository to your Bullseye sources:
+Add the repository to your Bullseye sources:
 
 .. code-block:: bash
 
@@ -105,7 +99,7 @@ If your Debian binary package isn't updating due to an error with the public key
 
 **Revoked Key error**
 
-If you see:
+If you see something similar to:
 
 ``The following signatures were invalid: REVKEYSIG AEFD26F966E279CD``
 
@@ -131,7 +125,7 @@ Then update the list again:
 
 **Expired Key error**
 
-If you see:
+If you see something similar to:
 
 ``The following signatures were invalid: KEYEXPIRED 1539886450``
 
@@ -139,7 +133,7 @@ Remove the old signing key:
 
 .. code-block:: bash
 
-    sudo apt-key del 63C4A2169C1B2FA2
+    sudo apt-key del 1539886450
 
 Remove the list item from local apt:
 
@@ -164,7 +158,7 @@ Re-get the apt info:
 
 .. code-block:: bash
 
-    echo "deb [arch=amd64] https://apt.z.cash/ buster main" | sudo tee /etc/apt/sources.list.d/zcash.list
+    echo "deb [arch=amd64] https://apt.z.cash/ bullseye main" | sudo tee /etc/apt/sources.list.d/zcash.list
 
 Then update the list again:
 
