@@ -5,6 +5,9 @@ build:
   tools:
     python: "3.6"
 
+sphinx:
+  configuration: source/conf.py
+
 python:
   install:
     - requirements: source/requirements.txt
