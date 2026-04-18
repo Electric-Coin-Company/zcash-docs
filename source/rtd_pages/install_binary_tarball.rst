@@ -7,9 +7,9 @@ Binary Tarball Download & Setup
 
 The Electric Coin Company provides a binary tarball for download.
 
-As of v6.12.0, We are no longer supporting Debian 10(Buster) packages in apt.
+As of v6.12.1, We are no longer supporting Debian 10(Buster) packages in apt.
 
-`Download Tarball for Debian Bullseye v6.12.0 <https://download.z.cash/downloads/zcash-6.12.0-linux64-debian-bullseye.tar.gz>`_
+`Download Tarball for Debian Bullseye v6.12.1 <https://download.z.cash/downloads/zcash-6.12.1-linux64-debian-bullseye.tar.gz>`_
 
 After downloading but before extracting, verify that the checksum of the tarball matches the hash below for the version of the binary you downloaded:
 
@@ -17,11 +17,11 @@ Debian Bullseye:
 
 .. code-block:: bash
 
-   sha256sum zcash-6.12.0-linux64-debian-bullseye.tar.gz
+   sha256sum zcash-6.12.1-linux64-debian-bullseye.tar.gz
 
-Result: ``9ae25da27b185b6fa016f5005dca39203629b763e7ec1b5f389cd3f5acb3e9c4``
+Result: ``62c4b44cfee86db341d55d7c0b553c3fe84f43a47170a5b5728b7314115c52fc``
 
-`Download Tarball for Debian Bookworm v6.12.0 <https://download.z.cash/downloads/zcash-6.12.0-linux64-debian-bookworm.tar.gz>`_
+`Download Tarball for Debian Bookworm v6.12.1 <https://download.z.cash/downloads/zcash-6.12.1-linux64-debian-bookworm.tar.gz>`_
 
 After downloading but before extracting, verify that the checksum of the tarball matches the hash below for the version of the binary you downloaded:
 
@@ -29,9 +29,9 @@ Debian Bookworm:
 
 .. code-block:: bash
 
-   sha256sum zcash-6.12.0-linux64-debian-bookworm.tar.gz
+   sha256sum zcash-6.12.1-linux64-debian-bookworm.tar.gz
 
-Result: ``a4c98f051e5053c144df8e1a9b55a6775025d2dffb3b9684dad1f3aef68a4aa9``
+Result: ``15110f45ce64ba2eaf1635080158c24ff8d8903e813c51da6655fd56f44a1a4f``
 
 This checksum was generated from our gitian deterministic build process. `View all gitian signatures <https://github.com/zcash/gitian.sigs/tree/master>`_.
 
@@ -39,9 +39,9 @@ Once you've verified that it matches, extract the Bullseye or Bookworm files and
 
 .. code-block:: bash
 
-    tar -xvf zcash-6.12.0-linux64-debian-Bookworm.tar.gz
+    tar -xvf zcash-6.12.1-linux64-debian-Bookworm.tar.gz
 
-    mv -t /usr/local/bin/ zcash-6.12.0/bin/*
+    mv -t /usr/local/bin/ zcash-6.12.1/bin/*
 
 Now that Zcash is installed, run this command to download the parameters used to create and verify shielded transactions:
 
