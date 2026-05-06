@@ -19,6 +19,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 `Security` in case of vulnerabilities.
 
+## [v6.12.2] - 2026-05-06
+
+### Security
+- v6.12.2 is a security-fix release. Operators are urged to upgrade.
+
+### Changed
+- Signing: Release artifacts (tarballs and APT `Release.gpg`) are now signed **only** with the ZODL key (`sysadmin@zodl.com`, fingerprint `0338 34DD 49DE CF9D BB99 34BC 6C93 CA8E 58E2 6AB1`). The legacy ECC key (`B1C9 095E AA18 48DB B54D 9DDA 1D05 FDC6 6B37 2CFE`, `sysadmin@z.cash`) is deprecated; revocation is planned for 2026-06-23. Users verifying with the ECC key alone will need to import the ZODL key from `https://apt.z.cash/zcash.asc`.
+- Docs: `install_debian_bin_packages.rst` now uses `/usr/share/keyrings/zcash.gpg` with `signed-by=...` instead of the deprecated `apt-key add` flow.
+
 ## [v6.12.1] - 2026-04-18
 
 ### Security
