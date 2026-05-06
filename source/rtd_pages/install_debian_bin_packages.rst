@@ -5,7 +5,22 @@
 Debian Binary Packages Setup
 ============================
 
-The Electric Coin Company operates a package repository for 64-bit Debian-based distributions. If you'd like to try out the binary packages, you can set it up on your system and install Zcash from there.
+The Zcash Open Development Lab (ZODL) operates a package repository at
+``apt.z.cash`` for 64-bit Debian-based distributions. If you'd like to try out
+the binary packages, you can set it up on your system and install Zcash from
+there.
+
+.. warning::
+
+   **Signing key rotation (2026).** Starting with v6.12.2, the APT repository
+   is signed **only** with the ZODL key. The previous ECC key
+   (``B1C9 095E AA18 48DB B54D 9DDA 1D05 FDC6 6B37 2CFE``, ``sysadmin@z.cash``)
+   is deprecated and its revocation is planned for 2026-06-23. Existing
+   installations will see ``NO_PUBKEY 7F4BBBBA23F0617F`` on ``apt-get update``
+   until the ZODL key is imported — follow the steps below to add it. See
+   `Rotation of the signing keys announcement
+   <https://forum.zcashcommunity.com/t/rotation-of-the-signing-keys-for-zcashd-zallet-and-standalone-android-binaries-for-zodl/55144>`_
+   on the Zcash Community Forum for background.
 
 First install the following dependency so you can talk to our repository using HTTPS:
 
@@ -13,26 +28,35 @@ First install the following dependency so you can talk to our repository using H
 
    sudo apt-get update && sudo apt-get install apt-transport-https wget gnupg2
 
-Next add the Zcash master signing key to apt's trusted keyring:
+Next add the ZODL signing key to apt's trusted keyring:
 
 .. code-block:: bash
 
-   wget -qO - https://apt.z.cash/zcash.asc | gpg --import
-   gpg --export B1C9095EAA1848DBB54D9DDA1D05FDC66B372CFE | sudo apt-key add -
+   wget -qO - https://apt.z.cash/zcash.asc | sudo gpg --dearmor -o /usr/share/keyrings/zcash.gpg
 
-``Key fingerprint = B1C9 095E AA18 48DB B54D 9DDA 1D05 FDC6 6B37 2CFE``
+``Key fingerprint = 0338 34DD 49DE CF9D BB99 34BC 6C93 CA8E 58E2 6AB1``  (ZODL, ``sysadmin@zodl.com``)
+
+The keyring served at ``https://apt.z.cash/zcash.asc`` contains both the ZODL
+key (used to sign v6.12.2 and later) and the legacy ECC key (needed only to
+verify older releases until it is revoked on 2026-06-23).
+
+.. note::
+
+   The older ``apt-key add`` method is deprecated on modern Debian and Ubuntu
+   systems. Use the ``/usr/share/keyrings/`` path above and reference it from
+   the ``sources.list`` entry with ``signed-by=...`` (see below).
 
 Add the repository to your Bullseye sources:
 
 .. code-block:: bash
 
-   echo "deb [arch=amd64] https://apt.z.cash/ bullseye main" | sudo tee /etc/apt/sources.list.d/zcash.list
+   echo "deb [arch=amd64 signed-by=/usr/share/keyrings/zcash.gpg] https://apt.z.cash/ bullseye main" | sudo tee /etc/apt/sources.list.d/zcash.list
 
 Or add the repository to your Bookworm sources:
 
 .. code-block:: bash
 
-   echo "deb [arch=amd64] https://apt.z.cash/ bookworm main" | sudo tee /etc/apt/sources.list.d/zcash.list
+   echo "deb [arch=amd64 signed-by=/usr/share/keyrings/zcash.gpg] https://apt.z.cash/ bookworm main" | sudo tee /etc/apt/sources.list.d/zcash.list
 
 Update the cache of sources and install Zcash:
 
@@ -50,20 +74,34 @@ Lastly, `set up a configuration file <https://zcash.readthedocs.io/en/latest/rtd
 
 **Missing Public Key Error**
 
-If you see:
+If you see something like:
 
-``The following signatures couldn't be verified because the public key is not available: NO_PUBKEY 70C830C67EB9DCB4``
+``The following signatures couldn't be verified because the public key is not available: NO_PUBKEY 7F4BBBBA23F0617F``
 
-Get the new key directly from the `z.cash site <https://apt.z.cash/zcash.asc>`_:
+this means your system trusts only the old ECC key. v6.12.2 and later are
+signed with the ZODL key (subkey ``7F4BBBBA23F0617F``, primary
+``6C93CA8E58E26AB1``). Import the updated keyring from ``apt.z.cash``:
 
 .. code-block:: bash
 
-   wget -qO - https://apt.z.cash/zcash.asc | gpg --import
-   gpg --export B1C9095EAA1848DBB54D9DDA1D05FDC66B372CFE | sudo apt-key add -
+   wget -qO - https://apt.z.cash/zcash.asc | sudo gpg --dearmor -o /usr/share/keyrings/zcash.gpg
+   # If you previously added the key via apt-key, also remove the old entry:
+   sudo apt-key del B1C9095EAA1848DBB54D9DDA1D05FDC66B372CFE 2>/dev/null || true
+   sudo apt-get update
 
-to retrieve the new key and resolve this error.
+If your ``/etc/apt/sources.list.d/zcash.list`` still references the key
+through ``apt-key`` (no ``signed-by=...`` option), update it to point at the
+new keyring:
 
-For any other signing key issues see :ref:`updating_signing_keys`
+.. code-block:: bash
+
+   echo "deb [arch=amd64 signed-by=/usr/share/keyrings/zcash.gpg] https://apt.z.cash/ bookworm main" | sudo tee /etc/apt/sources.list.d/zcash.list
+
+For any other signing key issues see :ref:`updating_signing_keys`.
+
+See `Rotation of the signing keys announcement
+<https://forum.zcashcommunity.com/t/rotation-of-the-signing-keys-for-zcashd-zallet-and-standalone-android-binaries-for-zodl/55144>`_
+for background on the key transition.
 
 Troubleshooting
 ---------------
