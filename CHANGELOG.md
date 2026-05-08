@@ -19,6 +19,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 `Security` in case of vulnerabilities.
 
+## [v6.12.3] - 2026-05-07
+
+### Security
+- v6.12.3 is a security-fix release. Operators are urged to upgrade promptly.
+
 ## [v6.12.2] - 2026-05-06
 
 ### Security
