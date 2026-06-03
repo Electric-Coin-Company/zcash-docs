@@ -19,6 +19,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 `Security` in case of vulnerabilities.
 
+## [v6.20.0] - 2026-06-03
+
+### Security
+- Fixed: A critical flaw in the Orchard zero-knowledge proof circuit (`halo2_gadgets`'s `ecc::chip::mul`) — the incomplete double-and-add loop was not anchored to the true base point, allowing a prover to produce proofs with a free constant base. NU6.2 deploys an updated verifying key for the Orchard circuit at activation height 3364600 (~03:00 UTC, June 3, 2026). User privacy and the total supply cap are not affected; exploitation could have permitted minting of funds within the Orchard pool. Reported privately by Taylor Hornby on 2026-05-29.
+- Fixed: Orchard transactions could contain arbitrary trailing data appended to valid proofs, which was not accounted for by ZIP 317 fee rules. NU6.2 enforces a strict length limit on Orchard proof data.
+
+### Changed
+- Network upgrade: NU6.2 mainnet activation at height **3364600**. All operators must upgrade to v6.20.0 (or any later release) to remain on the canonical chain.
+- Build: gitian builds now require Debian Bookworm. Bullseye support was dropped because the v6.20.0 toolchain pulls LLVM 22.1.2 in `depends/native_clang`, which links against glibc 2.32+; Bullseye ships glibc 2.31.
+- Build: BDB 6.2.23's deprecated `pthread_yield()` call was replaced with `sched_yield()` to support glibc 2.34+ where the unversioned symbol was removed.
+- Build: `configure.ac` silences clang 22's new `-Wunique-object-duplication` warning, which fires false-positives on Meyer-singleton statics under `-fvisibility=hidden`. zcashd ships as a statically linked binary so the duplication risk does not apply.
+
 ## [v6.12.2] - 2026-05-06
 
 ### Security
