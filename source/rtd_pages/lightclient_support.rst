@@ -3,13 +3,15 @@
 Light Client Development
 ========================
 
-The following resources allow development of apps and services that can transact on the blockchain without downloading an entire copy of the blockchain. A light client (also known as lightweight node) is referencing a trusted full node's copy of the blockchain, whereas a full node is a node that fully enforces all of the rules of the blockchain. 
+*Last reviewed: July 2026*
+
+The following resources allow development of apps and services that can transact on the blockchain without downloading an entire copy of the blockchain. A light client (also known as lightweight node) is referencing a trusted full node's copy of the blockchain, whereas a full node is a node that fully enforces all of the rules of the blockchain.
 
 .. image:: images/shielded-support.png
 
 Lightwalletd 
 ------------
-A stateless server that serves light clients with blockchain information. It fetches blockchain data from zcashd, processes them to reduce data, and stores it in a database. This allows light clients with different requirements to get relevant data without interacting with zcashd directly.
+A stateless server that serves light clients with blockchain information. It fetches blockchain data from a Zcash full node (historically zcashd, which is `being deprecated <https://z.cash/support/zcashd-deprecation/>`_ in favor of `zebrad <https://github.com/ZcashFoundation/zebra>`_), processes them to reduce data, and stores it in a database. This allows light clients with different requirements to get relevant data without interacting with the full node directly. A Rust successor, `Zaino <https://github.com/zingolabs/zaino>`_, is being developed to provide a lightwalletd-compatible interface as part of the post-zcashd stack.
 
 **Resources**
 
@@ -31,15 +33,15 @@ We maintain a SDK that allows for wallet functionalities (address management, se
 **Resources**
 
 * `Android SDK source code <https://github.com/zcash/zcash-android-wallet-sdk>`_
-* `Android Demo app <https://github.com/zcash/zcash-android-wallet-sdk/tree/master/samples/demo-app>`_ 
-*  `Android API docs <../android/zcash-android-wallet-sdk/index.html>`_ 
+* `Android Demo app <https://github.com/zcash/zcash-android-wallet-sdk/tree/main/demo-app>`_
+*  `Android API docs <../android/zcash-android-wallet-sdk/index.html>`_
 
- 
+
 **Quick info**
 
 * Native Android SDK and app, written in Kotlin
 * Architecture: targeting ARM64, ARMv7 and x86
-* APIs: We support API 16+ but we optimize for API versions 21+
+* APIs: minimum supported SDK version is API 27 (Android 8.1)
 
 iOS 
 ---
@@ -47,25 +49,25 @@ We maintain a SDK that allows for wallet functionalities (address management, se
 
 **Resources**
 
-* `iOS SDK source code <https://github.com/zcash/ZcashLightClientKit>`_
-* `iOS Demo app <https://github.com/zcash/ZcashLightClientKit/tree/master/Example/ZcashLightClientSample>`_
+* `iOS SDK source code <https://github.com/zcash/zcash-swift-wallet-sdk>`_
+* `iOS Demo app <https://github.com/zcash/zcash-swift-wallet-sdk/tree/main/Example/ZcashLightClientSample>`_
 * `iOS API docs <../ios/jazzy_docs/index.html>`_
 
 **Quick info**
 
 * Native iOS SDK and app, written in Swift
-* Less mature then Android SDK but working towards parity
-* Targeting the latest (past two 2 years) iPhones
+* Production-ready and at feature parity with the Android SDK; it powers `Zashi <https://z.cash/zashi/>`_, Electric Coin Company's flagship shielded wallet
+* Targeting recent iPhones
 
 
-WASM 
-----
+Web (WASM)
+----------
 
-A minimal functioning demo web wallet that allows desktop OSes to use shielded addresses and separates web-specific wallet functionalities. 
+Browser-based light client development is active. `WebZjs <https://github.com/ChainSafe/WebZjs>`_ by ChainSafe is a JavaScript/TypeScript library (compiled from Rust to WASM) for interacting with the Zcash network from the browser; the same project powers a MetaMask Snap for shielded Zcash.
 
-Originally built 2019, and is not actively maintained: https://github.com/str4d/zcon1-demo-wasm. 
+An earlier proof-of-concept demo web wallet from 2019 is preserved at https://github.com/str4d/zcon1-demo-wasm but is not actively maintained.
 
-References 
+References
 ----------
 * `Light client threat model <wallet_threat_model.html>`_
-* `Contributing guidelines <https://github.com/zcash/ZcashLightClientKit/blob/master/CONTIBUTING.md>`_
+* `Contributing guidelines <https://github.com/zcash/zcash-swift-wallet-sdk/blob/main/CONTRIBUTING.md>`_
