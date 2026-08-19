@@ -175,8 +175,19 @@ texinfo_documents = [
      'Miscellaneous'),
 ]
 
-# Set the value of html_baseurl for sphinx_sitemap
-html_baseurl = 'https://zcash.readthedocs.io/en/latest/'
+# Set the value of html_baseurl for sphinx_sitemap.
+# On Read the Docs this is the canonical URL of the version actually being built,
+# so a build of /en/master/ no longer advertises /en/latest/ URLs. The fallback
+# keeps local builds working.
+html_baseurl = os.environ.get(
+    'READTHEDOCS_CANONICAL_URL', 'https://zcash.readthedocs.io/en/latest/')
+
+# html_baseurl already ends in /en/latest/, so the default sitemap_url_scheme of
+# "{lang}{version}{link}" (sphinx-sitemap 2.2.0) prepends the language a second
+# time and emits .../en/latest/en/<page>.html. That is why every URL in the
+# published sitemap currently returns 404. ({version} expands to nothing here,
+# since `version` above is empty; only the language segment is duplicated.)
+sitemap_url_scheme = "{link}"
 
 # Add additional JS files
 def setup(app):
