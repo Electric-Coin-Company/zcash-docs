@@ -108,7 +108,7 @@ Heartwood is the fourth network upgrade for Zcash and enables more third-party i
 
 Blossom is the third network upgrade for Zcash.
 
-`Shorter Block Target Spacing <https://github.com/zcash/zips/blob/master/zip-0208.rst>`_
+`Shorter Block Target Spacing <https://zips.z.cash/zip-0208>`_
 
 This feature increases the frequency of blocks, allowing transactions to resolve faster. This will 
 improve Zcash’s usability and increase how many transactions per hour the 
@@ -119,13 +119,13 @@ supporting mainnet activation is released in September.
 
 
 :fa:`arrow-circle-right` Consensus Branch ID change
-    See `ZIP 206 <https://github.com/zcash/zips/blob/master/zip-0206.rst>`_
+    See `ZIP 206 <https://zips.z.cash/zip-0206>`_
 
 :fa:`arrow-circle-right` Amount of FR to be paid in coinbase transaction
-    See `ZIP 208 <https://github.com/zcash/zips/blob/master/zip-0208.rst>`_ and `Protocol Section 7.7 <https://github.com/zcash/zips/blob/master/protocol/protocol.pdf>`_
+    See `ZIP 208 <https://zips.z.cash/zip-0208>`_ and `Protocol Section 7.7 <https://zips.z.cash/protocol/protocol.pdf>`_
 
 :fa:`arrow-circle-right` Function from block height to FR has changed 
-    See `ZIP 208 <https://github.com/zcash/zips/blob/master/zip-0208.rst>`_ and `Protocol Section 7.8 <https://github.com/zcash/zips/blob/master/protocol/protocol.pdf>`_
+    See `ZIP 208 <https://zips.z.cash/zip-0208>`_ and `Protocol Section 7.8 <https://zips.z.cash/protocol/protocol.pdf>`_
 
 
 
@@ -137,14 +137,14 @@ Sapling is a network upgrade that introduces significant efficiency improvements
 :fa:`arrow-circle-right` Transaction formatting
     All transactions must use the new transaction format from Sapling onwards. Make sure that you can parse these `v4` transactions. Previous formats will not be valid after the Sapling upgrade, so if you create transactions, the `v4` format must be used after the upgrade has activated (but not until then). Hardware wallets and SPV clients are particularly affected here.
 
-   See `ZIP 243 <https://github.com/zcash/zips/blob/master/zip-0243.rst>`_. Test vectors for ZIP 243 have been pushed and are being reviewed.
+   See `ZIP 243 <https://zips.z.cash/zip-0243>`_. Test vectors for ZIP 243 have been pushed and are being reviewed.
 
 :fa:`arrow-circle-right` Shielded HD Wallets
-    All Sapling addresses will use hierarchical deterministic key generation according to `ZIP 32 <https://github.com/zcash/zips/blob/master/zip-0032.rst>`_ (``keypath m/32'/133'/k' on mainnet``). Transparent and Sprout addresses will still use traditional key generation.
+    All Sapling addresses will use hierarchical deterministic key generation according to `ZIP 32 <https://zips.z.cash/zip-0032>`_ (``keypath m/32'/133'/k' on mainnet``). Transparent and Sprout addresses will still use traditional key generation.
     
-    See `ZIP 32 <https://github.com/zcash/zips/blob/master/zip-0032.rst>`_.
+    See `ZIP 32 <https://zips.z.cash/zip-0032>`_.
 
-Also see `Sapling Protocol Specification <https://github.com/zcash/zips/blob/master/protocol/protocol.pdf>`_.
+Also see `Sapling Protocol Specification <https://zips.z.cash/protocol/protocol.pdf>`_.
 
 
 General Guidelines
@@ -162,7 +162,7 @@ Additionally, Sapling introduces new parameters which must be downloaded by runn
 Using custom code to create/sign/send transactions
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-If you manually create transactions, the following changes are `critical`. Reference section 7.1 of the `Sapling specification <https://github.com/zcash/zips/blob/master/protocol/protocol.pdf>`_ for complete details:
+If you manually create transactions, the following changes are `critical`. Reference section 7.1 of the `Sapling specification <https://zips.z.cash/protocol/protocol.pdf>`_ for complete details:
 
 - The transactions version number **MUST** be 4.
 - The version group ID **MUST** be 0x892F2085.
@@ -207,8 +207,8 @@ Overwinter activated successfully at block ``347500``,  mined at ``June 25``,
     you aren’t using our code). Previous formats will not be valid after the Overwinter 
     upgrade, so if you create transactions, the “v3” format must be used after the 
     upgrade has activated (but not until then). Hardware wallets and SPV clients 
-    are particularly affected here. See ZIPs `202 <https://github.com/zcash/zips/blob/master/zip-0202.rst>`_
-    and `203 <https://github.com/zcash/zips/blob/master/zip-0203.rst>`_ .
+    are particularly affected here. See ZIPs `202 <https://zips.z.cash/zip-0202>`_
+    and `203 <https://zips.z.cash/zip-0203>`_ .
 
 :fa:`arrow-circle-right` Transaction version number
      The 4-byte transaction version will have its most significant bit set from 
@@ -217,14 +217,14 @@ Overwinter activated successfully at block ``347500``,  mined at ``June 25``,
      example, existing “v1” and “v2” transactions use version numbers “1” 
      and “2”, but “v3” Overwinter transactions will use the unsigned version
      number “(1 << 31) | 3” in the transaction serialization format. See ZIP 
-     `202 <https://github.com/zcash/zips/blob/master/zip-0202.rst>`_ .
+     `202 <https://zips.z.cash/zip-0202>`_ .
 
 :fa:`arrow-circle-right` Version group IDs
     A transaction version will be uniquely paired with a version group ID to 
     ensure unambiguous transaction parsing. For example, a “v3” transaction 
     will always have the version group ID "0x03C48270" in its serialization 
     format, even after future network upgrades. See ZIP `202
-    <https://github.com/zcash/zips/blob/master/zip-0202.rst>`_ .
+    <https://zips.z.cash/zip-0202>`_ .
 
 :fa:`arrow-circle-right` Branch IDs
     Each network upgrade has an associated branch ID that identifies its 
@@ -232,19 +232,19 @@ Overwinter activated successfully at block ``347500``,  mined at ``June 25``,
     will require the branch ID of the current chain tip when signing a 
     transaction (in the BLAKE2b personalization field.) You can obtain 
     the branch ID of any block height from the getblock API. See ZIP 
-    `200 <https://github.com/zcash/zips/blob/master/zip-0200.rst>`_ .
+    `200 <https://zips.z.cash/zip-0200>`_ .
 
 :fa:`arrow-circle-right` Signature hashing
     There are new SegWit-like features in this upgrade, such as transaction 
     signatures committing to values of the inputs. We suggest reusing code 
     from SegWit (e.g. for hashing transparent outputs) when implementing the 
-    new SignatureHash function. See ZIP `143 <https://github.com/zcash/zips/blob/master/zip-0143.rst>`_ .
+    new SignatureHash function. See ZIP `143 <https://zips.z.cash/zip-0143>`_ .
 
 :fa:`arrow-circle-right` Transaction expiry
     We recommend that you do use the default expiry height (20 blocks/~1 hours) 
     and follow these UX guidelines so that Zcash users can develop a consistent 
     expectation of when Zcash transactions expire and what happens. Zee ZIP 
-    `203 <https://github.com/zcash/zips/blob/master/zip-0203.rst>`_ .
+    `203 <https://zips.z.cash/zip-0203>`_ .
 
 
 This isn't an exhaustive list of the changes. Look at the Overwinter Zcash 
@@ -252,11 +252,11 @@ Improvement Proposals (ZIPs) below for complete details on the changes that
 will be made. The five ZIPs cover network handshaking, transaction format, 
 transaction expiry, signature hashing, and network upgrade mechanisms.
 
-    - ``ZIP 143`` `Transaction Signature Verification for Overwinter <https://github.com/zcash/zips/blob/master/zip-0143.rst>`_
-    - ``ZIP 200`` `Network Upgrade Mechanism <https://github.com/zcash/zips/blob/master/zip-0200.rst>`_
-    - ``ZIP 201`` `Network Peer Management for Overwinter <https://github.com/zcash/zips/blob/master/zip-0201.rst>`_
-    - ``ZIP 202`` `Version 3 Transaction Format for Overwinter <https://github.com/zcash/zips/blob/master/zip-0202.rst>`_
-    - ``ZIP 203`` `Transaction Expiry <https://github.com/zcash/zips/blob/master/zip-0203.rst>`_
+    - ``ZIP 143`` `Transaction Signature Verification for Overwinter <https://zips.z.cash/zip-0143>`_
+    - ``ZIP 200`` `Network Upgrade Mechanism <https://zips.z.cash/zip-0200>`_
+    - ``ZIP 201`` `Network Peer Management for Overwinter <https://zips.z.cash/zip-0201>`_
+    - ``ZIP 202`` `Version 3 Transaction Format for Overwinter <https://zips.z.cash/zip-0202>`_
+    - ``ZIP 203`` `Transaction Expiry <https://zips.z.cash/zip-0203>`_
 
 The network upgrade is coordinated via an on-chain activation mechanism.
 

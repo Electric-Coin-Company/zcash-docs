@@ -126,7 +126,7 @@ As A Defense Mechanism Against Balance Violations
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 While maintaining proper balances in Zcash transactions are primarily checked through other means (such as zero-knowledge proofs), the turnstiles are a way to publicly validate this property on a per-value pool basis. From there, defensive measures can be implemented to contain balance violations within an affected value pool.
 
-A new consensus rule in Zcash is being implemented for this very purpose. As defined in `ZIP 209: Prohibit Negative Shielded Value Pool <https://github.com/zcash/zips/pull/210/files>`_, the rule states:
+A new consensus rule in Zcash is being implemented for this very purpose. As defined in `ZIP 209: Prohibit Negative Shielded Value Pool <https://zips.z.cash/zip-0209>`_, the rule states:
 
 > If the "Sprout value pool balance" or "Sapling value pool balance" were to become negative as a result of accepting a block, then all nodes MUST reject the block as invalid.
    

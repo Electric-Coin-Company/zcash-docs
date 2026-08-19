@@ -5,7 +5,7 @@
 Development Guidelines
 ======================
 
-The Zcash repository, https://github.com/zcash/zcash, is a fork of `Bitcoin Core <https://github.com/bitcoin/bitcoin>`_ release 0.11.2 (some upstream PRs merged in). It implements the `Zcash protocol <https://github.com/zcash/zips/blob/master/protocol/protocol.pdf>`_ and a few other distinct features.
+The Zcash repository, https://github.com/zcash/zcash, is a fork of `Bitcoin Core <https://github.com/bitcoin/bitcoin>`_ release 0.11.2 (some upstream PRs merged in). It implements the `Zcash protocol <https://zips.z.cash/protocol/protocol.pdf>`_ and a few other distinct features.
 
 Zcash Github Workflow
 ---------------------

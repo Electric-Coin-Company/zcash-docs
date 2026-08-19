@@ -114,7 +114,7 @@ adversary can...
     - They could omit the transaction, making it look like it failed when in fact it was mined on the Zcash network.
 
 We plan to eventually fix these issues by implementing the block header and
-note commitment tree validation specified in [ZIP 307](https://github.com/zcash/zips/issues/341).
+note commitment tree validation specified in [ZIP 307](https://zips.z.cash/zip-0307).
 
 Let's move on to the second-most powerful kind of adversary we will consider.
 
