@@ -37,7 +37,7 @@ Since the exposure of the migrated amount potentially compromises the privacy of
 
 The tool will migrate funds from any Sprout addresses in the wallet into a single destination Sapling address. The migration works by creating up to 5 transactions whenever the blockchain reaches a 500 block height interval. The transaction amounts are picked according to a random distribution. The migration will end once the wallet’s Sprout balance is below .01 ZEC.
 
-The full design of the tool is specified in `ZIP 308 <https://github.com/zcash/zips/blob/master/zip-0308.rst>`_.
+The full design of the tool is specified in `ZIP 308 <https://zips.z.cash/zip-0308>`_.
 
 Using the Migration Tool
 ~~~~~~~~~~~~~~~~~~~~~~~~

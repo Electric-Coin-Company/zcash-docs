@@ -63,7 +63,7 @@ Do not differentiate between types of transactions
     ability to send to/from a combination of shielded and transparent addresses.
 
 Use the default transaction expiry time 
-    Transaction expiry (see ZIP `here <https://github.com/zcash/zips/blob/master/zip-0203.rst>`_) is set 
+    Transaction expiry (see ZIP `here <https://zips.z.cash/zip-0203>`_) is set
     to 20 blocks by default, which is ~1 hour. Use this default global runtime option so Zcash users can 
     develop a consistent expectation of when Zcash transactions expire. We don’t support expiry time as 
     a per-transaction runtime option.
