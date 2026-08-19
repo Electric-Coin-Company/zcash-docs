@@ -1,0 +1,29 @@
+{% extends "!layout.html" %}
+
+{#
+  Site-wide notice: zcashd reached its end-of-support halt on 2026-07-18 and does
+  not support NU6.3 (Ironwood). Most of this site still documents zcashd, so the
+  notice is rendered on every page rather than edited into individual documents.
+  Remove this file to remove the notice.
+#}
+{%- block document %}
+<div class="admonition danger">
+  <p class="admonition-title">zcashd reached end of support on 18 July 2026</p>
+  <p>
+    Released <code>zcashd</code> binaries halt at a hard-coded deprecation height. Version 6.20.0
+    stopped at block 3,417,100 and refuses to restart, and <code>zcashd</code> does not support
+    NU6.3 (Ironwood), which has since activated on mainnet.
+  </p>
+  <p>
+    Run <a href="https://zebra.zfnd.org/">Zebra</a> instead. To migrate a <code>zcashd</code>
+    wallet, see <a href="https://zcash.github.io/zallet/">Zallet</a>. The migration path is
+    described in the official
+    <a href="https://z.cash/support/zcashd-deprecation/">zcashd deprecation notice</a> and on the
+    <a href="https://zcash.github.io/zcash/user/end-of-life.html">end-of-life page</a>.
+  </p>
+  <p>
+    Much of this site predates that transition.
+  </p>
+</div>
+{{ super() }}
+{%- endblock %}
